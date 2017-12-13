@@ -32,6 +32,9 @@ namespace HRB_LotteryManagermentSystem
         private SortableBindingList<clTuijianhaomalan_info> sortableList;
         List<clsJisuanqi_info> JisuanqiResult;
         private SortableBindingList<clsJisuanqi_info> sortableJisuanqiList;
+        List<clTuijianhaomalan_info> zhongjiangxinxi_Result;
+        private SortableBindingList<clTuijianhaomalan_info> sortableList_zhongjiangxinxi;
+
         public frmMain()
         {
             InitializeComponent();
@@ -41,7 +44,7 @@ namespace HRB_LotteryManagermentSystem
         }
         #region MyRegion
 
-      
+
 
         //clsAllnew BusinessHelp = new clsAllnew();
 
@@ -119,6 +122,7 @@ namespace HRB_LotteryManagermentSystem
             BusinessHelp.pbStatus = pbStatus;
             BusinessHelp.tsStatusLabel1 = toolStripLabel1;
             List<clTuijianhaomalan_info> Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, comboBox1.Text);
+            zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_Result;
 
 
             #region 计算逻辑
@@ -134,20 +138,53 @@ namespace HRB_LotteryManagermentSystem
                 item.tuijianhaoma = item.haomaileixing;
                 item.nizhuihaoqishu = item.zuidayilou;
 
+                //查找中奖的期数
+                string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
+          
+                foreach (clTuijianhaomalan_info temp in zhongjiangxinxi_Result)
+                {
+                    int time = 0;
+                    //string[] tatile2 = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
+                    for (int iq = 0; iq < tatile1.Length; iq++)
+                    {
+                        if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
+                            time++;
+
+                    }
+                    if (time == tatile1.Length)
+                    {
+                        item.zhongjiangqishu = temp.zhongjiangqishu;
+                        break;
+                    }
+                }
+
+
 
             }
             //中奖期数
-            List<clTuijianhaomalan_info> Result1 = NewResult.Where((x, i1) => NewResult.FindIndex(z => z.tuijianhaoma == x.tuijianhaoma) == i1).ToList();
-            foreach (clTuijianhaomalan_info item in Result1)
-            {
-                List<clTuijianhaomalan_info> Result2 = NewResult.FindAll(so => so.tuijianhaoma != null && so.tuijianhaoma == item.haomaileixing);
-                if (Result2.Count > 1)
-                    Result2[0].zhongjiangqishu = Result2[1].dangriqihao;
+            //List<clTuijianhaomalan_info> Result1 = NewResult.Where((x, i1) => NewResult.FindIndex(z => z.tuijianhaoma == x.tuijianhaoma) == i1).ToList();
+            //foreach (clTuijianhaomalan_info item in Result1)
+            //{
+            //    List<clTuijianhaomalan_info> Result2 = NewResult.FindAll(so => so.tuijianhaoma != null && so.tuijianhaoma == item.haomaileixing);
+            //    if (Result2.Count > 1)
+            //        Result2[0].zhongjiangqishu = Result2[1].dangriqihao;
 
-            }
+
+
+            //}
+            //var list = from x in str1
+            //           select new
+            //           {
+            //               Nchar = x,
+            //               Icount = str2.Count(c => c == x)
+            //           };
+            //foreach (var obj in list.Where(a => a.Icount > 0))
+            //{
+            //    Console.WriteLine("{0}出现{1}", obj.Nchar, obj.Icount);
+            //}
 
             #endregion
-           JisuanqiResult  =new List<clsJisuanqi_info>();
+            JisuanqiResult = new List<clsJisuanqi_info>();
 
             Showdave(Result);
 
@@ -176,6 +213,13 @@ namespace HRB_LotteryManagermentSystem
             dataGridView1.DataSource = this.bindingSource2;
 
             timers_resfresh = true;
+            //开奖信息
+            sortableList_zhongjiangxinxi = new SortableBindingList<clTuijianhaomalan_info>(zhongjiangxinxi_Result);
+            this.bindingSource4.DataSource = this.sortableList_zhongjiangxinxi;
+            dataGridView3.AutoGenerateColumns = false;
+            dataGridView3.DataSource = this.bindingSource4;
+
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -306,9 +350,11 @@ namespace HRB_LotteryManagermentSystem
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //NewMethod();
-
-//
+            NewMethod();
+            List<clTuijianhaomalan_info> Find_JisuanqiResult2 = NewResult.FindAll(so => so.zhongjiangqishu != null && so.zhongjiangqishu != "");
+            if (Find_JisuanqiResult2.Count == 0)
+                return  ;
+            //
             JisuanqiResult = new List<clsJisuanqi_info>();
 
 
@@ -316,7 +362,7 @@ namespace HRB_LotteryManagermentSystem
             clsAllnew BusinessHelp = new clsAllnew();
             BusinessHelp.pbStatus = pbStatus;
             BusinessHelp.tsStatusLabel1 = toolStripLabel1;
-            JisuanqiResult  = BusinessHelp.ReadHistroy(ref this.bgWorker, comboBox1.Text, NewResult);
+            JisuanqiResult = BusinessHelp.ReadHistroy(ref this.bgWorker, comboBox1.Text, NewResult);
             Showdave2(JisuanqiResult);
 
         }
@@ -325,8 +371,8 @@ namespace HRB_LotteryManagermentSystem
         {
             sortableJisuanqiList = new SortableBindingList<clsJisuanqi_info>(JisuanqiResult);
             this.bindingSource3.DataSource = this.sortableJisuanqiList;
-            dataGridView2.AutoGenerateColumns = true;
-            dataGridView2.DataSource = this.bindingSource3;    
+            dataGridView2.AutoGenerateColumns = false;
+            dataGridView2.DataSource = this.bindingSource3;
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)

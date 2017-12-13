@@ -44,8 +44,11 @@ namespace Lottery.DB
         public string zhongjiangjine { get; set; }
         //利润金额
         public string lirunjine { get; set; }
+        //开奖号码
+        public string kaijianghaoma { get; set; }
 
-
+        //方案期数
+        public string fanganqishu { get; set; }
     }
     public class clsJisuanqi_info
     {
@@ -54,10 +57,21 @@ namespace Lottery.DB
         public string benqitouru { get; set; }//本期投入  
         public string leijitouru { get; set; }//累计投入 
         public string benqishouyi { get; set; }//本期收益  
-        public string yilishouyi  { get; set; }//盈利收益  
+        public string yilishouyi { get; set; }//盈利收益  
         public string shouyilv { get; set; }//收益率  
-    
+
         public DateTime Input_Date { get; set; }// 
+
+        //当日期号
+        public string dangriqihao { get; set; }//当日期号
+        public string tuijianhaoma { get; set; }//推荐号码
+
+        public string zhongjiangqishu { get; set; }//中奖期数
+
+        //方案期数
+        public string fanganqishu { get; set; }
+        public string wanfazhonglei { get; set; }//玩法种类
+      
     }
 
 
