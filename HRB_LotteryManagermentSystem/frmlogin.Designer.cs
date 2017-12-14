@@ -58,13 +58,10 @@
             this.查询信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.导入彩票数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.修改登录信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pBBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.scrollingText1 = new Order.Common.ScrollingText();
+            this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,12 +77,14 @@
             this.eToolStripMenuItem.Name = "eToolStripMenuItem";
             this.eToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.eToolStripMenuItem.Text = "初始化用户";
+            this.eToolStripMenuItem.Click += new System.EventHandler(this.eToolStripMenuItem_Click);
             // 
             // 关于系统ToolStripMenuItem
             // 
             this.关于系统ToolStripMenuItem.Name = "关于系统ToolStripMenuItem";
             this.关于系统ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.关于系统ToolStripMenuItem.Text = "关于系统";
+            this.关于系统ToolStripMenuItem.Click += new System.EventHandler(this.关于系统ToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton3
             // 
@@ -140,17 +139,18 @@
             this.tsbLogin.Text = "登录";
             this.tsbLogin.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.tsbLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbLogin.Click += new System.EventHandler(this.tsbLogin_Click);
             // 
             // 查询信息ToolStripMenuItem
             // 
             this.查询信息ToolStripMenuItem.Name = "查询信息ToolStripMenuItem";
-            this.查询信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.查询信息ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.查询信息ToolStripMenuItem.Text = "工作日志";
             // 
             // 导入彩票数据ToolStripMenuItem
             // 
             this.导入彩票数据ToolStripMenuItem.Name = "导入彩票数据ToolStripMenuItem";
-            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.导入彩票数据ToolStripMenuItem.Text = "主页面";
             this.导入彩票数据ToolStripMenuItem.Click += new System.EventHandler(this.导入彩票数据ToolStripMenuItem_Click);
             // 
@@ -166,37 +166,11 @@
             this.toolStripDropDownButton1.Text = "数据";
             this.toolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // 修改登录信息ToolStripMenuItem
-            // 
-            this.修改登录信息ToolStripMenuItem.Enabled = false;
-            this.修改登录信息ToolStripMenuItem.Name = "修改登录信息ToolStripMenuItem";
-            this.修改登录信息ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
-            this.修改登录信息ToolStripMenuItem.Text = "修改登录信息";
-            // 
-            // pBBToolStripMenuItem
-            // 
-            this.pBBToolStripMenuItem.Name = "pBBToolStripMenuItem";
-            this.pBBToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
-            this.pBBToolStripMenuItem.Text = "用户管理";
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pBBToolStripMenuItem,
-            this.修改登录信息ToolStripMenuItem});
-            this.toolStripDropDownButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(55, 25);
-            this.toolStripDropDownButton2.Text = "选择";
-            this.toolStripDropDownButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton2,
             this.toolStripDropDownButton1,
             this.tsbLogin,
             this.toolStripSeparator1,
@@ -221,6 +195,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(966, 536);
             this.panel1.TabIndex = 10;
+            // 
+            // scrollingText1
+            // 
+            this.scrollingText1.BackColor = System.Drawing.Color.White;
+            this.scrollingText1.BorderColor = System.Drawing.Color.Black;
+            this.scrollingText1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.scrollingText1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.scrollingText1.ForegroundBrush = null;
+            this.scrollingText1.Location = new System.Drawing.Point(0, 0);
+            this.scrollingText1.Name = "scrollingText1";
+            this.scrollingText1.ScrollDirection = Order.Common.ScrollDirection.RightToLeft;
+            this.scrollingText1.ScrollText = "";
+            this.scrollingText1.ShowBorder = true;
+            this.scrollingText1.Size = new System.Drawing.Size(966, 40);
+            this.scrollingText1.StopScrollOnMouseOver = false;
+            this.scrollingText1.TabIndex = 10;
+            this.scrollingText1.TextScrollDistance = 2;
+            this.scrollingText1.TextScrollSpeed = 25;
+            this.scrollingText1.VerticleTextPosition = Order.Common.VerticleTextPosition.Center;
+            this.scrollingText1.Visible = false;
             // 
             // dockPanel2
             // 
@@ -281,26 +275,6 @@
             this.dockPanel2.Skin = dockPanelSkin1;
             this.dockPanel2.TabIndex = 9;
             // 
-            // scrollingText1
-            // 
-            this.scrollingText1.BackColor = System.Drawing.Color.White;
-            this.scrollingText1.BorderColor = System.Drawing.Color.Black;
-            this.scrollingText1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.scrollingText1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scrollingText1.ForegroundBrush = null;
-            this.scrollingText1.Location = new System.Drawing.Point(0, 0);
-            this.scrollingText1.Name = "scrollingText1";
-            this.scrollingText1.ScrollDirection = Order.Common.ScrollDirection.RightToLeft;
-            this.scrollingText1.ScrollText = "";
-            this.scrollingText1.ShowBorder = true;
-            this.scrollingText1.Size = new System.Drawing.Size(966, 40);
-            this.scrollingText1.StopScrollOnMouseOver = false;
-            this.scrollingText1.TabIndex = 10;
-            this.scrollingText1.TextScrollDistance = 2;
-            this.scrollingText1.TextScrollSpeed = 25;
-            this.scrollingText1.VerticleTextPosition = Order.Common.VerticleTextPosition.Center;
-            this.scrollingText1.Visible = false;
-            // 
             // frmlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,9 +308,6 @@
         private System.Windows.Forms.ToolStripMenuItem 查询信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 导入彩票数据ToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem 修改登录信息ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pBBToolStripMenuItem;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.Panel panel1;
         private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel2;

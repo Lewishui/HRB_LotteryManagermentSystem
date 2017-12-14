@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Timers;
@@ -40,6 +41,8 @@ namespace HRB_LotteryManagermentSystem
             InitializeComponent();
             this.comboBox1.SelectedIndex = 0;
             timers_resfresh = true;
+            this.pbStatus.Visible = false;
+
 
         }
         #region MyRegion
@@ -140,7 +143,7 @@ namespace HRB_LotteryManagermentSystem
 
                 //查找中奖的期数
                 string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
-          
+
                 foreach (clTuijianhaomalan_info temp in zhongjiangxinxi_Result)
                 {
                     int time = 0;
@@ -157,9 +160,6 @@ namespace HRB_LotteryManagermentSystem
                         break;
                     }
                 }
-
-
-
             }
             //中奖期数
             //List<clTuijianhaomalan_info> Result1 = NewResult.Where((x, i1) => NewResult.FindIndex(z => z.tuijianhaoma == x.tuijianhaoma) == i1).ToList();
@@ -353,7 +353,7 @@ namespace HRB_LotteryManagermentSystem
             NewMethod();
             List<clTuijianhaomalan_info> Find_JisuanqiResult2 = NewResult.FindAll(so => so.zhongjiangqishu != null && so.zhongjiangqishu != "");
             if (Find_JisuanqiResult2.Count == 0)
-                return  ;
+                return;
             //
             JisuanqiResult = new List<clsJisuanqi_info>();
 
@@ -373,20 +373,110 @@ namespace HRB_LotteryManagermentSystem
             this.bindingSource3.DataSource = this.sortableJisuanqiList;
             dataGridView2.AutoGenerateColumns = false;
             dataGridView2.DataSource = this.bindingSource3;
+            this.pbStatus.Visible = false;
+
+            this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
+
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             clsAllnew BusinessHelp = new clsAllnew();
-            DataTable dataTable = BusinessHelp.read();
-            dataGridView.AutoGenerateColumns = true;
-            dataGridView.DataSource = dataTable;
-            label1.Text = dataTable.Rows.Count.ToString();
+
+            int s = this.tabControl1.SelectedIndex;
+            if (s == 3)
+            {
+                DataTable dataTable = BusinessHelp.readKaijiang();
+                dataGridView3.AutoGenerateColumns = true;
+                dataGridView3.DataSource = dataTable;
+                label1.Text = dataTable.Rows.Count.ToString();
+
+            }
+            //DataTable dataTable = BusinessHelp.read();
+            //dataGridView.AutoGenerateColumns = true;
+            //dataGridView.DataSource = dataTable;
+            //label1.Text = dataTable.Rows.Count.ToString();
+
 
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            int s = this.tabControl1.SelectedIndex;
+            if (s == 0)
+            {
+                downEXCEL(dataGridView);
+            }
+            else if (s == 1)
+            {
+                downEXCEL(dataGridView2);
+            }
+            else if (s == 2)
+            {
+                downEXCEL(dataGridView1);
+            }
+            else if (s == 3)
+            {
+                downEXCEL(dataGridView3);
+            }
+        }
+        public void downEXCEL(DataGridView dgv)
+        {
+            if (dgv.Rows.Count == 0)
+            {
+                MessageBox.Show("Sorry , No Data Output !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".csv";
+            saveFileDialog.Filter = "csv|*.csv";
+            string strFileName = "System  Info" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.FileName = strFileName;
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                strFileName = saveFileDialog.FileName.ToString();
+            }
+            else
+            {
+                return;
+            }
+            FileStream fa = new FileStream(strFileName, FileMode.Create);
+            StreamWriter sw = new StreamWriter(fa, Encoding.Unicode);
+            string delimiter = "\t";
+            string strHeader = "";
+            for (int i = 0; i < dgv.Columns.Count; i++)
+            {
+                strHeader += dgv.Columns[i].HeaderText + delimiter;
+            }
+            sw.WriteLine(strHeader);
+
+            //output rows data
+            for (int j = 0; j < dgv.Rows.Count; j++)
+            {
+                string strRowValue = "";
+
+                for (int k = 0; k < dgv.Columns.Count; k++)
+                {
+                    if (dgv.Rows[j].Cells[k].Value != null)
+                    {
+                        strRowValue += dgv.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "") + delimiter;
+                        if (dgv.Rows[j].Cells[k].Value.ToString() == "LIP201507-35")
+                        {
+
+                        }
+
+                    }
+                    else
+                    {
+                        strRowValue += dgv.Rows[j].Cells[k].Value + delimiter;
+                    }
+                }
+                sw.WriteLine(strRowValue);
+            }
+            sw.Close();
+            fa.Close();
+            MessageBox.Show("Dear User, Down File  Successful ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
         }
 
@@ -394,7 +484,36 @@ namespace HRB_LotteryManagermentSystem
         {
             clsAllnew BusinessHelp = new clsAllnew();
 
-            BusinessHelp.inster();
+            BusinessHelp.inster(zhongjiangxinxi_Result);
+            MessageBox.Show("保存完成", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int s = this.tabControl1.SelectedIndex;
+            if (s == 0)
+            {
+
+                this.toolStripLabel1.Text = dataGridView.RowCount + " -条";
+            }
+            else if (s == 1)
+            {
+
+                this.toolStripLabel1.Text = dataGridView2.RowCount + " -条";
+            }
+            else if (s == 2)
+            {
+
+                this.toolStripLabel1.Text = dataGridView1.RowCount + " -条";
+            }
+            else if (s == 3)
+            {
+
+                this.toolStripLabel1.Text = dataGridView3.RowCount + " -条";
+            }
         }
     }
 }

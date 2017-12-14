@@ -69,5 +69,15 @@ namespace HRB_LotteryManagermentSystem.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap psd24876副本1 {
+            get {
+                object obj = ResourceManager.GetObject("psd24876副本1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

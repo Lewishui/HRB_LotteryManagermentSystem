@@ -13,6 +13,17 @@ namespace Order.Common
     /// </summary>
     public static class SQLiteHelper
     {
+        //public const string connStr = AppDomain.CurrentDomain.BaseDirectory+"Lottery.sqlite";
+        public static string connStr = "Data Source="+AppDomain.CurrentDomain.BaseDirectory + "Lottery.sqlite"; //ElandSalseDailyReport_qianduan   ElandSalseDailyReport1
+      
+        public static string CONNECTION_STRING_BASE
+        {
+            get
+            {
+                //connStr = AppDomain.CurrentDomain.BaseDirectory + "Lottery.sqlite";
+                return connStr;
+            }
+        }
         #region ExecuteNonQuery
         /// <summary>
         /// 执行数据库操作(新增、更新或删除)

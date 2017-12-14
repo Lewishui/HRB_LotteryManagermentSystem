@@ -85,6 +85,42 @@ namespace Lottery.Buiness
             return dataTable;
 
         }
+        public DataTable readKaijiang()
+        {
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            dbConn.Open();
+
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            DataTable dataTable = ReadKaijiang(dbCmd);
+            dbConn.Close();
+            return dataTable;
+
+        }
+        private DataTable ReadKaijiang(SQLiteCommand dbCmd)
+        {
+
+            dbCmd.CommandText = "SELECT * FROM KaijiangInfo";
+            //服务器端的
+            //string newsth = @"\\9.112.114.167\db\copy\Split\" + dataSource;
+
+            DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
+
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+            //SQLiteDataReader dataReader = dbCmd.ExecuteReader();
+
+            DataTable dataTable = new DataTable();
+            if (reader.HasRows)
+            {
+
+                dataTable.Load(reader);
+            }
+            return dataTable;
+
+            //dataReader.Close();
+        }
+
+
         private DataTable Read(SQLiteCommand dbCmd)
         {
 
@@ -119,10 +155,38 @@ namespace Lottery.Buiness
 
             Read(dbCmd);
         }
-        public void inster()
+        public void inster(List<clTuijianhaomalan_info> zhongjiangxinxi_Result)
         {
-            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + newsth);
 
+            foreach (clTuijianhaomalan_info item in zhongjiangxinxi_Result)
+            {
+               
+                //const string SQL_UPDATE = @"UPDATE T_LD_CASE_LIST SET ACTION_STATUS = @ACTION_STATUS WHERE ORDER_ID=@ID";
+
+                //dbCmd.CommandText = "UPDATE TelephoneBook SET personID=@personID,telephone=@telephone WHERE telephone='159'";
+                //string sql = "INSERT INTO TelephoneBook VALUES('MTB','1589','not mobile')";
+                //dbCmd.Parameters.Add("personID", DbType.String).Value = s;
+                //dbCmd.Parameters.Add("telephone", DbType.Int32).Value = n;
+                string sql = "INSERT INTO KaijiangInfo ( zhongjiangqishu, kaijianghaoma,Input_Date ) " +
+
+                "VALUES (\"" + item.zhongjiangqishu + "\"" +
+
+                       ",\"" + item.kaijianghaoma + "\"" +
+                     
+                       ",\"" + DateTime.Now.ToString("yyyy/MM/dd") + "\")";
+
+             //   sql = "CREATE TABLE KaijiangInfo(zhongjiangqishu varchar(20),kaijianghaoma varchar(30),Input_Date varchar(20))";
+
+
+                int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
+                {
+
+                }
+            }
+            return;
+
+
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + newsth);
             dbConn.Open();
             instder(dbConn);
 
@@ -797,7 +861,7 @@ namespace Lottery.Buiness
                 string fa = "";
                 //17121319
                 //171213129
-                var qushutxt = Convert.ToDouble(ITEM.zhongjiangqishu.Substring(6, ITEM.zhongjiangqishu.Length - 6)) - Convert.ToDouble(ITEM.dangriqihao.Substring(6, ITEM.dangriqihao.Length - 6));
+                var qushutxt = Convert.ToDouble(ITEM.zhongjiangqishu.Substring(6, ITEM.zhongjiangqishu.Length - 6)) - Convert.ToDouble(ITEM.dangriqihao.Substring(6, ITEM.dangriqihao.Length - 6))+1;
                 qushutxt = Math.Abs(Convert.ToDouble(qushutxt));
 
                 if (qushutxt < 337 && qushutxt > -337)
@@ -886,7 +950,7 @@ namespace Lottery.Buiness
                 {
                     int yue_valoume = System.Text.RegularExpressions.Regex.Matches(items.outerText, "\r\n").Count;
 
-                    if (items.outerText != null && items.outerText.Contains("收益率 ") && yue_valoume > 1)
+                    if (items.outerText != null && items.outerText.Contains("投入倍数") && yue_valoume >= 1)
                     {
 
                         HTMLTable materialTable = items as HTMLTable;
