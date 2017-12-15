@@ -46,7 +46,6 @@
             WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient7 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlogin));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.服务器设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -55,7 +54,6 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbLogin = new System.Windows.Forms.ToolStripButton();
-            this.查询信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.导入彩票数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -65,12 +63,6 @@
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // 服务器设置ToolStripMenuItem
-            // 
-            this.服务器设置ToolStripMenuItem.Name = "服务器设置ToolStripMenuItem";
-            this.服务器设置ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
-            this.服务器设置ToolStripMenuItem.Text = "服务器设置";
             // 
             // eToolStripMenuItem
             // 
@@ -90,8 +82,7 @@
             // 
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.关于系统ToolStripMenuItem,
-            this.eToolStripMenuItem,
-            this.服务器设置ToolStripMenuItem});
+            this.eToolStripMenuItem});
             this.toolStripDropDownButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
@@ -141,24 +132,18 @@
             this.tsbLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbLogin.Click += new System.EventHandler(this.tsbLogin_Click);
             // 
-            // 查询信息ToolStripMenuItem
-            // 
-            this.查询信息ToolStripMenuItem.Name = "查询信息ToolStripMenuItem";
-            this.查询信息ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
-            this.查询信息ToolStripMenuItem.Text = "工作日志";
-            // 
             // 导入彩票数据ToolStripMenuItem
             // 
             this.导入彩票数据ToolStripMenuItem.Name = "导入彩票数据ToolStripMenuItem";
-            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.导入彩票数据ToolStripMenuItem.Text = "主页面";
             this.导入彩票数据ToolStripMenuItem.Click += new System.EventHandler(this.导入彩票数据ToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.导入彩票数据ToolStripMenuItem,
-            this.查询信息ToolStripMenuItem});
+            this.导入彩票数据ToolStripMenuItem});
+            this.toolStripDropDownButton1.Enabled = false;
             this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -202,6 +187,7 @@
             this.scrollingText1.BorderColor = System.Drawing.Color.Black;
             this.scrollingText1.Cursor = System.Windows.Forms.Cursors.Default;
             this.scrollingText1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.scrollingText1.ForeColor = System.Drawing.Color.Red;
             this.scrollingText1.ForegroundBrush = null;
             this.scrollingText1.Location = new System.Drawing.Point(0, 0);
             this.scrollingText1.Name = "scrollingText1";
@@ -296,7 +282,6 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ToolStripMenuItem 服务器设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于系统ToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
@@ -305,7 +290,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsbLogin;
-        private System.Windows.Forms.ToolStripMenuItem 查询信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 导入彩票数据ToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStrip toolStrip1;

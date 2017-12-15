@@ -35,16 +35,20 @@ namespace HRB_LotteryManagermentSystem
         private SortableBindingList<clsJisuanqi_info> sortableJisuanqiList;
         List<clTuijianhaomalan_info> zhongjiangxinxi_Result;
         private SortableBindingList<clTuijianhaomalan_info> sortableList_zhongjiangxinxi;
-
+        private ListBox ListBoxInfo;
+        private List<string> selectitem = new List<string>();
+        List<clTuijianhaomalan_info> Result;
         public frmMain()
         {
             InitializeComponent();
-            this.comboBox1.SelectedIndex = 0;
+            //this.comboBox1.SelectedIndex = 0;
             timers_resfresh = true;
             this.pbStatus.Visible = false;
-
-
+            //NewMethod1();
+            this.Load += new EventHandler(frmMain_Load);
         }
+
+
         #region MyRegion
 
 
@@ -112,7 +116,30 @@ namespace HRB_LotteryManagermentSystem
         private void filterButton_Click(object sender, EventArgs e)
         {
 
+            get_combox();
+
             NewMethod();
+        }
+
+        private void get_combox()
+        {
+            selectitem = new List<string>();
+            int s = this.tabControl1.SelectedIndex;
+            if (s == 0)
+            {
+                string[] tatile1 = System.Text.RegularExpressions.Regex.Split(checkBoxComboBox1.Text, " ");
+
+                for (int i = 0; i < tatile1.Length; i++)
+                    selectitem.Add(tatile1[i]);
+            }
+            s = this.tabControl1.SelectedIndex;
+            if (s == 1)
+            {
+                string[] tatile1 = System.Text.RegularExpressions.Regex.Split(checkBoxComboBox2.Text, " ");
+
+                for (int i = 0; i < tatile1.Length; i++)
+                    selectitem.Add(tatile1[i]);
+            }
         }
         private void APIREST(object sender, EventArgs e)
         {
@@ -120,12 +147,14 @@ namespace HRB_LotteryManagermentSystem
         }
         private void NewMethod()
         {
+            Result = new List<clTuijianhaomalan_info>();
+
             this.pbStatus.Visible = true;
             clsAllnew BusinessHelp = new clsAllnew();
             BusinessHelp.pbStatus = pbStatus;
             BusinessHelp.tsStatusLabel1 = toolStripLabel1;
-            List<clTuijianhaomalan_info> Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, comboBox1.Text);
-            zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_Result;
+            Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, selectitem);
+            zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
 
 
             #region 计算逻辑
@@ -350,6 +379,8 @@ namespace HRB_LotteryManagermentSystem
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            get_combox();
+
             NewMethod();
             List<clTuijianhaomalan_info> Find_JisuanqiResult2 = NewResult.FindAll(so => so.zhongjiangqishu != null && so.zhongjiangqishu != "");
             if (Find_JisuanqiResult2.Count == 0)
@@ -362,7 +393,7 @@ namespace HRB_LotteryManagermentSystem
             clsAllnew BusinessHelp = new clsAllnew();
             BusinessHelp.pbStatus = pbStatus;
             BusinessHelp.tsStatusLabel1 = toolStripLabel1;
-            JisuanqiResult = BusinessHelp.ReadHistroy(ref this.bgWorker, comboBox1.Text, NewResult);
+            JisuanqiResult = BusinessHelp.ReadHistroy(ref this.bgWorker, selectitem, NewResult);
             Showdave2(JisuanqiResult);
 
         }
@@ -387,9 +418,18 @@ namespace HRB_LotteryManagermentSystem
             if (s == 3)
             {
                 DataTable dataTable = BusinessHelp.readKaijiang();
-                dataGridView3.AutoGenerateColumns = true;
+                //dataGridView3.AutoGenerateColumns = true;
                 dataGridView3.DataSource = dataTable;
                 label1.Text = dataTable.Rows.Count.ToString();
+
+            }
+            if (s == 2)
+            {
+                DataTable dataTable = BusinessHelp.read_yuanshizoushitu();
+                //dataGridView1.AutoGenerateColumns = true;
+                dataGridView1.DataSource = dataTable;
+                label1.Text = dataTable.Rows.Count.ToString();
+                this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
 
             }
             //DataTable dataTable = BusinessHelp.read();
@@ -483,11 +523,17 @@ namespace HRB_LotteryManagermentSystem
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             clsAllnew BusinessHelp = new clsAllnew();
-
-            BusinessHelp.inster(zhongjiangxinxi_Result);
-            MessageBox.Show("保存完成", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+            int s = this.tabControl1.SelectedIndex;
+            if (s == 3)
+            {
+                BusinessHelp.inster(zhongjiangxinxi_Result);
+                MessageBox.Show("保存开奖信息完成", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (s == 2)
+            {
+                BusinessHelp.inster_yuanshizoushixinxi(Result);
+                MessageBox.Show("保存走势图-数据-完成", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
@@ -514,6 +560,29 @@ namespace HRB_LotteryManagermentSystem
 
                 this.toolStripLabel1.Text = dataGridView3.RowCount + " -条";
             }
+        }
+
+        private void comboBox1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            ComboBox cb = sender as ComboBox;
+            Graphics g = e.Graphics;
+            Pen p = new Pen(Color.Blue, 1);
+            g.DrawRectangle(p, e.Bounds.X + 1, e.Bounds.Y + 1, 12, 12);
+            if (e.Index == cb.SelectedIndex)
+                g.DrawString("√", new Font(FontFamily.GenericSerif, 10), Brushes.Red,
+         e.Bounds.Location, StringFormat.GenericDefault);
+            g.DrawString(cb.GetItemText(cb.Items[e.Index]), new Font(FontFamily.GenericSerif, 9),
+                Brushes.Black, 15, e.Bounds.Y + 1, StringFormat.GenericDefault);
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            //comboBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            //comboBox1.DrawItem += new DrawItemEventHandler(comboBox1_DrawItem);
+            //comboBox1.Items.Add("sd1");
+            //comboBox1.Items.Add("sd2");
+            //comboBox1.Items.Add("sd3");
+
         }
     }
 }

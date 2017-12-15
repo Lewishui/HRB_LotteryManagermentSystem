@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PowerComboBoxDemo">
+</Property><Property Name="Solution File" Value="C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\PowerComboBoxDemo.sln">
+</Property><Property Name="Date" Value="Thursday, December 14, 2017">
+</Property><Property Name="Time" Value="22:56 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="PowerComboBoxDemo.sln" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\PowerComboBoxDemo.sln">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="PowerComboBoxDemo.csproj" Description="Project file successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\PowerComboBoxDemo.csproj">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="PowerComboBoxDemo.csproj.user" Description="Project user file successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\PowerComboBoxDemo.csproj.user">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="Form1.cs" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\Form1.cs">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="Form1.Designer.cs" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="My Project\AssemblyInfo.cs" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\My Project\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="My Project\Application.Designer.cs" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\My Project\Application.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="My Project\Resources.Designer.cs" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\My Project\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="My Project\Settings.Designer.cs" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\My Project\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="xcmb.cs" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\xcmb.cs">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="My Project\Application.myapp" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\My Project\Application.myapp">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="My Project\Settings.settings" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\My Project\Settings.settings">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="Form1.resx" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\Form1.resx">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="My Project\Resources.resx" Description="File successfully backed up as C:\mysteap\work_office\ProjectOut\HRB彩票\PowerComboBoxCSharp\PowerComboBoxCs\Backup\My Project\Resources.resx">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="PowerComboBoxDemo.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PowerComboBoxDemo" Source="PowerComboBoxDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="PowerComboBoxDemo.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="PowerComboBoxDemo.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PowerComboBoxDemo" Source="PowerComboBoxDemo.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

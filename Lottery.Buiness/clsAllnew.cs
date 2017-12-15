@@ -58,8 +58,10 @@ namespace Lottery.Buiness
         string newsth = @"\\9.112.114.167\db\copy\Split\";
         private int aog = 0;
         List<clTuijianhaomalan_info> Tuijianhaomalan_Result;
+        List<clTuijianhaomalan_info> Tuijianhaomalan_ResultAll;
         List<clsJisuanqi_info> jisuanqi_Result;
         public List<clTuijianhaomalan_info> zhongjiangxinxi_Result;
+        public List<clTuijianhaomalan_info> zhongjiangxinxi_ResultAll;
         string caizhong;
         bool loading;
         clTuijianhaomalan_info ITEM;
@@ -97,6 +99,18 @@ namespace Lottery.Buiness
             return dataTable;
 
         }
+        public DataTable read_yuanshizoushitu()
+        {
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            dbConn.Open();
+
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            DataTable dataTable = Read_yuanshizoushitu(dbCmd);
+            dbConn.Close();
+            return dataTable;
+
+        }
         private DataTable ReadKaijiang(SQLiteCommand dbCmd)
         {
 
@@ -119,7 +133,25 @@ namespace Lottery.Buiness
 
             //dataReader.Close();
         }
+        private DataTable Read_yuanshizoushitu(SQLiteCommand dbCmd)
+        {
+            
+            dbCmd.CommandText = "SELECT * FROM yuanshizoushixinxi";
+          
+            DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
 
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+           
+            DataTable dataTable = new DataTable();
+            if (reader.HasRows)
+            {
+
+                dataTable.Load(reader);
+            }
+            return dataTable;
+
+           
+        }
 
         private DataTable Read(SQLiteCommand dbCmd)
         {
@@ -160,7 +192,7 @@ namespace Lottery.Buiness
 
             foreach (clTuijianhaomalan_info item in zhongjiangxinxi_Result)
             {
-               
+
                 //const string SQL_UPDATE = @"UPDATE T_LD_CASE_LIST SET ACTION_STATUS = @ACTION_STATUS WHERE ORDER_ID=@ID";
 
                 //dbCmd.CommandText = "UPDATE TelephoneBook SET personID=@personID,telephone=@telephone WHERE telephone='159'";
@@ -172,10 +204,10 @@ namespace Lottery.Buiness
                 "VALUES (\"" + item.zhongjiangqishu + "\"" +
 
                        ",\"" + item.kaijianghaoma + "\"" +
-                     
+
                        ",\"" + DateTime.Now.ToString("yyyy/MM/dd") + "\")";
 
-             //   sql = "CREATE TABLE KaijiangInfo(zhongjiangqishu varchar(20),kaijianghaoma varchar(30),Input_Date varchar(20))";
+                //   sql = "CREATE TABLE KaijiangInfo(zhongjiangqishu varchar(20),kaijianghaoma varchar(30),Input_Date varchar(20))";
 
 
                 int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
@@ -201,6 +233,40 @@ namespace Lottery.Buiness
             dbConn.Close();
             dbConn.Dispose();
         }
+        public void inster_yuanshizoushixinxi(List<clTuijianhaomalan_info> zhongjiangxinxi_Result)
+        {
+
+            foreach (clTuijianhaomalan_info item in zhongjiangxinxi_Result)
+            {
+
+                string sql = "INSERT INTO yuanshizoushixinxi ( haomaileixing, chuxiancishu, pingjunyilou, zuidayilou, diwuyilou, disiyilou, disanyilou, dieryilou, shangciyilou, dangqianyilou, yuchujilv,Input_Date ) " +
+
+                "VALUES (\"" + item.haomaileixing + "\"" +
+
+                       ",\"" + item.chuxiancishu + "\"" +
+                                ",\"" + item.pingjunyilou + "\"" +
+                                         ",\"" + item.zuidayilou + "\"" +
+                                                  ",\"" + item.diwuyilou + "\"" +
+                                                           ",\"" + item.disiyilou + "\"" +
+                                                                    ",\"" + item.disanyilou + "\"" +
+                                                                             ",\"" + item.dieryilou + "\"" +
+                                                                                      ",\"" + item.shangciyilou + "\"" +
+                                                                                               ",\"" + item.dangqianyilou + "\"" +
+                                                                                                   ",\"" + item.yuchujilv + "\"" +
+
+                       ",\"" + DateTime.Now.ToString("yyyy/MM/dd") + "\")";
+
+
+               // sql = "CREATE TABLE yuanshizoushixinxi(haomaileixing varchar(20),chuxiancishu varchar(30),pingjunyilou varchar(30),zuidayilou varchar(30),diwuyilou varchar(30),disiyilou varchar(30),disanyilou varchar(30),dieryilou varchar(30),shangciyilou varchar(30),dangqianyilou varchar(30),yuchujilv varchar(30),Input_Date varchar(20))";
+
+                int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
+                {
+
+                }
+            }
+            return; 
+        }
+       
         private bool instder(SQLiteConnection conn)
         {
             using (DbTransaction dbTrans = conn.BeginTransaction())
@@ -222,21 +288,18 @@ namespace Lottery.Buiness
             return true;
 
         }
-
-        public List<clTuijianhaomalan_info> ReadWeb_Report(ref BackgroundWorker bgWorker, string wanfa)
+      
+        public List<clTuijianhaomalan_info> ReadWeb_Report(ref BackgroundWorker bgWorker, List<string> selectitem)
         {
 
-            caizhong = wanfa;
+            //caizhong = wanfa;
 
             bgWorker1 = bgWorker;
             try
             {
+                Tuijianhaomalan_ResultAll = new List<clTuijianhaomalan_info>();
+                zhongjiangxinxi_ResultAll = new List<clTuijianhaomalan_info>();
 
-                #region  //计算2014.09 到当前的月份的个数
-
-                //保存下载的数据的路径
-
-                #endregion
 
                 isrun = ProcessStatus.初始化;
 
@@ -245,26 +308,34 @@ namespace Lottery.Buiness
 
                 Tuijianhaomalan_Result = new List<clTuijianhaomalan_info>();
                 {
-                    aog = 0;
-                    isrun = ProcessStatus.初始化;
-
-                    tsStatusLabel1.Text = "读取中....";
-                    ReadWEBAquila();
-                    //if (DCN_downloadpath != "")
+                    for (int i = 0; i < selectitem.Count; i++)
                     {
-                        isrun = ProcessStatus.关闭页面;
-                        if (viewForm != null)
+                        caizhong = selectitem[i].Replace(",", "");
+
+                        aog = 0;
+                        isrun = ProcessStatus.初始化;
+
+                        tsStatusLabel1.Text = "读取中....";
+                        ReadWEBAquila();
+                        //if (DCN_downloadpath != "")
                         {
-                            MyWebBrower = null;
-                            viewForm.Close();
-                            // aTimer.Stop();
+                            isrun = ProcessStatus.关闭页面;
+                            if (viewForm != null)
+                            {
+                                MyWebBrower = null;
+                                viewForm.Close();
+                                // aTimer.Stop();
+                            }
                         }
+                        Tuijianhaomalan_ResultAll = Tuijianhaomalan_ResultAll.Concat(Tuijianhaomalan_Result).ToList();
+                        zhongjiangxinxi_ResultAll = zhongjiangxinxi_ResultAll.Concat(zhongjiangxinxi_Result).ToList();
+
                     }
                 }
                 //导入数据库
                 tsStatusLabel1.Text = "结束";
 
-                return Tuijianhaomalan_Result;
+                return Tuijianhaomalan_ResultAll;
                 #endregion
             }
             catch (Exception ex)
@@ -766,7 +837,7 @@ namespace Lottery.Buiness
         }
 
         #region 历史中奖烂
-        public List<clsJisuanqi_info> ReadHistroy(ref BackgroundWorker bgWorker, string wanfa, List<clTuijianhaomalan_info> NewResult)
+        public List<clsJisuanqi_info> ReadHistroy(ref BackgroundWorker bgWorker, List<string> selectitem, List<clTuijianhaomalan_info> NewResult)
         {
             login = 0;
             try
@@ -788,6 +859,7 @@ namespace Lottery.Buiness
 
                 while (!isOneFinished)
                 {
+                    tsStatusLabel1.Text = "玩命获取中...." + runtime + "/" + Find_JisuanqiResult2.Count.ToString();
 
                     System.Windows.Forms.Application.DoEvents();
                     DateTime rq2 = DateTime.Now;  //结束时间
@@ -861,7 +933,7 @@ namespace Lottery.Buiness
                 string fa = "";
                 //17121319
                 //171213129
-                var qushutxt = Convert.ToDouble(ITEM.zhongjiangqishu.Substring(6, ITEM.zhongjiangqishu.Length - 6)) - Convert.ToDouble(ITEM.dangriqihao.Substring(6, ITEM.dangriqihao.Length - 6))+1;
+                var qushutxt = Convert.ToDouble(ITEM.zhongjiangqishu.Substring(6, ITEM.zhongjiangqishu.Length - 6)) - Convert.ToDouble(ITEM.dangriqihao.Substring(6, ITEM.dangriqihao.Length - 6)) + 1;
                 qushutxt = Math.Abs(Convert.ToDouble(qushutxt));
 
                 if (qushutxt < 337 && qushutxt > -337)
@@ -886,7 +958,15 @@ namespace Lottery.Buiness
                 // 单倍奖金：： 
                 HtmlElement danbeijiangjin = myDoc.Document.GetElementById("sb");
                 if (danbeijiangjin != null)
-                    danbeijiangjin.SetAttribute("Value", "26");
+                {
+                    //查询值
+                    string inputJiangjin = "";
+
+                    inputJiangjin = chaxunjiangjin(inputJiangjin);
+
+                    if (inputJiangjin != "")
+                        danbeijiangjin.SetAttribute("Value", inputJiangjin);
+                }
                 //      全程收益率：：： 
                 HtmlElement quanchengshouyilv = myDoc.Document.GetElementById("sy1");
                 if (quanchengshouyilv != null)
@@ -915,6 +995,7 @@ namespace Lottery.Buiness
                     runtime++;
                     if (Find_JisuanqiResult2.Count > runtime)
                     {
+
                         MyWebBrower.Navigate("http://zx.dahecp.com/tool/beitou.aspx");
                         MyWebBrower.Refresh();
                         ITEM = Find_JisuanqiResult2[runtime];
@@ -934,6 +1015,37 @@ namespace Lottery.Buiness
 
             #endregion
 
+        }
+
+        private string chaxunjiangjin(string inputJiangjin)
+        {
+            if (ITEM.wanfazhonglei.Contains("任选一"))
+                inputJiangjin = "13";
+            else if (ITEM.wanfazhonglei.Contains("任二"))
+                inputJiangjin = "6";
+            else if (ITEM.wanfazhonglei.Contains("任三"))
+                inputJiangjin = "19";
+            else if (ITEM.wanfazhonglei.Contains("任四 "))
+                inputJiangjin = "78";
+            else if (ITEM.wanfazhonglei.Contains("任五"))
+                inputJiangjin = "540";
+            else if (ITEM.wanfazhonglei.Contains("任六"))
+                inputJiangjin = "90";
+            else if (ITEM.wanfazhonglei.Contains("任七"))
+                inputJiangjin = "26";
+            else if (ITEM.wanfazhonglei.Contains("任五"))
+                inputJiangjin = "540";
+            else if (ITEM.wanfazhonglei.Contains("任八"))
+                inputJiangjin = "9";
+            else if (ITEM.wanfazhonglei.Contains("二直"))
+                inputJiangjin = "130";
+            else if (ITEM.wanfazhonglei.Contains("二组"))
+                inputJiangjin = "65";
+            else if (ITEM.wanfazhonglei.Contains("三直"))
+                inputJiangjin = "1170";
+            else if (ITEM.wanfazhonglei.Contains("三组"))
+                inputJiangjin = "195";
+            return inputJiangjin;
         }
 
         private void NewMethod()
