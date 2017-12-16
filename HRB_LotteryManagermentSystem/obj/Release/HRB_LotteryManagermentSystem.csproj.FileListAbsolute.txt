@@ -1,0 +1,2 @@
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Release\Interop.SHDocVw.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Release\HRB_LotteryManagermentSystem.csproj.ResolveComReference.cache

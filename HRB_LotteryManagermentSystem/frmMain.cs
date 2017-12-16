@@ -53,9 +53,7 @@ namespace HRB_LotteryManagermentSystem
 
 
 
-        //clsAllnew BusinessHelp = new clsAllnew();
 
-        //BusinessHelp.delete();
 
         #endregion
 
@@ -216,11 +214,11 @@ namespace HRB_LotteryManagermentSystem
             JisuanqiResult = new List<clsJisuanqi_info>();
 
             Showdave(Result);
-             int s = this.tabControl1.SelectedIndex;
+            int s = this.tabControl1.SelectedIndex;
 
             if (s == 0)
-                this.toolStripLabel1.Text =NewResult.Count.ToString()+ "  刷新结束，请查看～";
-       
+                this.toolStripLabel1.Text = NewResult.Count.ToString() + "  刷新结束，请查看～";
+
             this.pbStatus.Visible = false;
 
             //MessageBox.Show(
@@ -423,22 +421,24 @@ namespace HRB_LotteryManagermentSystem
                 sql = form.conditions;
 
             }
-            else
-                return;
+            //else
+            //    return;
 
             clsAllnew BusinessHelp = new clsAllnew();
 
             int s = this.tabControl1.SelectedIndex;
-
+            string conditions = "";
             if (s == 3)
             {
-                string conditions = "";
 
 
-                conditions = "select * from KaijiangInfo " + sql;//成功
-                conditions = "select * from KaijiangInfo where Input_Date Between '2017-06-10' and  '2017-12-30' ";
-                conditions = "select * from KaijiangInfo where datetime(Input_Date) between datetime('"
-+ "2017-06-10" + "') and datetime('" + "2019-12-30" + "')";
+                if (sql == null || sql == "")
+                    conditions = "select * from KaijiangInfo";//成功
+                else
+                    conditions = "select * from KaijiangInfo where zhongjiangqishu like '" + sql;//成功
+                //                conditions = "select * from KaijiangInfo where Input_Date Between '2017-06-10' and  '2017-12-30' ";
+                //                conditions = "select * from KaijiangInfo where datetime(Input_Date) between datetime('"
+                //+ "2017-06-10" + "') and datetime('" + "2019-12-30" + "')";
                 DataTable dataTable = BusinessHelp.readKaijiang(conditions);
                 //dataGridView3.AutoGenerateColumns = true;
                 dataGridView3.DataSource = dataTable;
@@ -448,7 +448,12 @@ namespace HRB_LotteryManagermentSystem
             }
             if (s == 2)
             {
-                DataTable dataTable = BusinessHelp.read_yuanshizoushitu();
+                if (sql == null || sql == "")
+                    conditions = "select * from yuanshizoushixinxi";//成功
+                else
+                    conditions = "select * from yuanshizoushixinxi where haomaileixing like '" + sql;//成功
+
+                DataTable dataTable = BusinessHelp.read_yuanshizoushitu(conditions);
                 //dataGridView1.AutoGenerateColumns = true;
                 dataGridView1.DataSource = dataTable;
                 label1.Text = dataTable.Rows.Count.ToString();
@@ -457,7 +462,12 @@ namespace HRB_LotteryManagermentSystem
             }
             if (s == 1)
             {
-                DataTable dataTable = BusinessHelp.read_lishizhongjiang();
+                if (sql == null || sql == "")
+                    conditions = "select * from lishizongjiang";//成功
+                else
+                    conditions = "select * from lishizongjiang where dangriqihao like '" + sql;//成功
+
+                DataTable dataTable = BusinessHelp.read_lishizhongjiang(conditions);
                 //dataGridView1.AutoGenerateColumns = true;
                 dataGridView2.DataSource = dataTable;
                 label1.Text = dataTable.Rows.Count.ToString();
@@ -466,13 +476,18 @@ namespace HRB_LotteryManagermentSystem
             }
             if (s == 0)
             {
-                DataTable dataTable = BusinessHelp.read_tuixuanhaomalan();
-     
+                if (sql == null || sql == "")
+                    conditions = "select * from tuijanhaoma";//成功
+                else
+                    conditions = "select * from tuijanhaoma where dangriqihao like '" + sql;//成功
+
+                DataTable dataTable = BusinessHelp.read_tuixuanhaomalan(conditions);
+
                 dataGridView.DataSource = dataTable;
                 label1.Text = dataTable.Rows.Count.ToString();
                 this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
 
-            
+
             }
             //DataTable dataTable = BusinessHelp.read();
             //dataGridView.AutoGenerateColumns = true;
@@ -557,7 +572,7 @@ namespace HRB_LotteryManagermentSystem
             }
             sw.Close();
             fa.Close();
-            MessageBox.Show("Dear User, Down File  Successful ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("下载完成 ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
         }
@@ -580,7 +595,7 @@ namespace HRB_LotteryManagermentSystem
             {
                 BusinessHelp.inster_lishizongjianglan(JisuanqiResult);
                 MessageBox.Show("保存-历史中奖-完成", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
             }
             if (s == 0)
             {
@@ -640,6 +655,71 @@ namespace HRB_LotteryManagermentSystem
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            
+
+            try
+            {
+                string sql = "";
+
+                int s = this.tabControl1.SelectedIndex;
+                if (s == 3)
+                {
+                    if (MessageBox.Show("确认要删除全部开奖信息, 继续 ?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                    }
+                    else
+                        return;
+                    sql = "delete FROM KaijiangInfo";
+                }
+                if (s == 2)
+                {
+                    if (MessageBox.Show("确认要删除全部走势数据信息, 继续 ?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                    }
+                    else
+                        return;
+                    sql = "delete FROM yuanshizoushixinxi";
+                }
+                if (s == 1)
+                {
+                    if (MessageBox.Show("确认要删除全部历史中奖信息, 继续 ?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                    }
+                    else
+                        return;
+                    sql = "delete FROM lishizongjiang";
+                }
+                if (s == 0)
+                {
+                    if (MessageBox.Show("确认要删除全部推荐号码信息, 继续 ?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                    }
+                    else
+                        return;
+                    sql = "delete FROM tuijanhaoma";
+                }
+
+                clsAllnew BusinessHelp = new clsAllnew();
+
+                BusinessHelp.delete(sql);
+                this.toolStripLabel1.Text = " -删除成功！";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("错误" + ex);
+
+                return;
+
+                throw;
+            }
+
+        }
+
+        private void toolStripButton4_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+
 
         }
     }

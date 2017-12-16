@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -75,6 +76,17 @@ namespace Lottery.Buiness
 
 
         }
+        public bool read_sqlitefile()
+        { 
+            bool ishave=false;
+
+            if (File.Exists(newsth))
+            {
+                ishave = true;
+
+            }
+            return ishave;
+        }
         public DataTable read()
         {
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
@@ -99,38 +111,38 @@ namespace Lottery.Buiness
             return dataTable;
 
         }
-        public DataTable read_yuanshizoushitu()
+        public DataTable read_yuanshizoushitu(string sql)
         {
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
 
             dbConn.Open();
 
             SQLiteCommand dbCmd = dbConn.CreateCommand();
-            DataTable dataTable = Read_yuanshizoushitu(dbCmd);
+            DataTable dataTable = Read_yuanshizoushitu(dbCmd,  sql);
             dbConn.Close();
             return dataTable;
 
         }
-        public DataTable read_lishizhongjiang()
+        public DataTable read_lishizhongjiang(string sql)
         {
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
 
             dbConn.Open();
 
             SQLiteCommand dbCmd = dbConn.CreateCommand();
-            DataTable dataTable = Read_lishizhongjiang(dbCmd);
+            DataTable dataTable = Read_lishizhongjiang(dbCmd, sql);
             dbConn.Close();
             return dataTable;
 
         }
-        public DataTable read_tuixuanhaomalan()
+        public DataTable read_tuixuanhaomalan(string sql)
         {
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
 
             dbConn.Open();
 
             SQLiteCommand dbCmd = dbConn.CreateCommand();
-            DataTable dataTable = Read_tuijanhaoma(dbCmd);
+            DataTable dataTable = Read_tuijanhaoma(dbCmd, sql);
             dbConn.Close();
             return dataTable;
 
@@ -158,11 +170,11 @@ namespace Lottery.Buiness
 
             //dataReader.Close();
         }
-        private DataTable Read_yuanshizoushitu(SQLiteCommand dbCmd)
+        private DataTable Read_yuanshizoushitu(SQLiteCommand dbCmd, string sql)
         {
 
-            dbCmd.CommandText = "SELECT * FROM yuanshizoushixinxi";
-
+            //dbCmd.CommandText = "SELECT * FROM yuanshizoushixinxi";
+            dbCmd.CommandText = sql;
             DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
 
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
@@ -177,11 +189,12 @@ namespace Lottery.Buiness
 
 
         }
-        private DataTable Read_lishizhongjiang(SQLiteCommand dbCmd)
+        private DataTable Read_lishizhongjiang(SQLiteCommand dbCmd, string sql)
         {
 
-            dbCmd.CommandText = "SELECT * FROM lishizongjiang";
-
+            //dbCmd.CommandText = "SELECT * FROM lishizongjiang";
+            dbCmd.CommandText = sql;
+           
             DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
 
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
@@ -196,11 +209,12 @@ namespace Lottery.Buiness
 
 
         }
-        private DataTable Read_tuijanhaoma(SQLiteCommand dbCmd)
+        private DataTable Read_tuijanhaoma(SQLiteCommand dbCmd, string sql)
         {
 
-            dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
-
+            //dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
+            dbCmd.CommandText = sql;
+           
             DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
 
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
@@ -239,17 +253,18 @@ namespace Lottery.Buiness
 
             //dataReader.Close();
         }
-        public void delete()
+        public void delete(string sql)
         {
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
 
             SQLiteCommand dbCmd = dbConn.CreateCommand();
             dbCmd.CommandText = "delete FROM TelephoneBook  WHERE telephone ='159'";
             //服务器端的
+            dbCmd.CommandText = sql;
 
             var var = SQLiteHelper.ExecuteNonQuery("Data Source=" + newsth, dbCmd);
 
-            Read(dbCmd);
+           // Read(dbCmd);
         }
         public void inster(List<clTuijianhaomalan_info> zhongjiangxinxi_Result)
         {
@@ -269,9 +284,9 @@ namespace Lottery.Buiness
 
                        ",\"" + item.kaijianghaoma + "\"" +
 
-                       ",\"" + DateTime.Now.ToString("yyyy/MM/dd") + "\")";
+                       ",\"" + DateTime.Now + "\")";
 
-                //   sql = "CREATE TABLE KaijiangInfo(zhongjiangqishu varchar(20),kaijianghaoma varchar(30),Input_Date varchar(20))";
+               // sql = "CREATE TABLE KaijiangInfo(zhongjiangqishu varchar(20),kaijianghaoma varchar(30),Input_Date varchar(20))";
 
 
                 int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
@@ -537,7 +552,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                viewForm.Show();
+              //  viewForm.Show();
                 MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15");
                 if (caizhong.Contains("前一直"))
                 {

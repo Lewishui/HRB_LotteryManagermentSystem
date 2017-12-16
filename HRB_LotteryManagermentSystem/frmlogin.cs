@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Lottery.Buiness;
 using Microsoft.Win32;
 using Order.Common;
 
@@ -62,7 +63,26 @@ namespace HRB_LotteryManagermentSystem
             MessageBox.Show("当前为测试系统 !");
 
             #endregion
+            clsAllnew BusinessHelp = new clsAllnew();
 
+            bool isve = BusinessHelp.read_sqlitefile();
+            if (isve == false)
+            {
+              
+                string dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\HRB_LotteryManagermentSystem\\Lottery1.sqlite";
+                if (File.Exists(dir))
+                {
+                    string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ""), "");
+                   
+                    File.Copy(dir, ZFCEPath + "Lottery.sqlite");
+                }
+                else
+                {
+                    MessageBox.Show("请将初始安装包解压至桌面，然后重试！");
+                    
+
+                }
+            }
 
 
         }

@@ -25,17 +25,20 @@ namespace HRB_LotteryManagermentSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var startAt = this.stockOutDateTimePicker.Value.AddDays(0).Date;
-            var endAt = this.stockInDateTimePicker1.Value.AddDays(0).Date;
+            //var startAt = this.stockOutDateTimePicker.Value.AddDays(0).Date;
+            //var endAt = this.stockInDateTimePicker1.Value.AddDays(0).Date;
 
             //conditions = "where Input_Date BETWEEN #" + startAt + "# AND #" + endAt + "#";//成功
-            conditions = "where Input_Date >= '" + startAt + "' AND Input_Date<='" + endAt + "'";
-
+            //conditions = "where  datetime(Input_Date) >=datetime( '" + "" + startAt.ToString("yyyy-MM-dd HH:mm:ss")
+            //    + "'" + ")" + "AND datetime(Input_Date)<=datetime('" + "" + endAt.ToString("yyyy-MM-dd HH:mm:ss") + "'" + ")";
+            //conditions  = "where [Input_Date] >='2017-12-01 00:00:00" ;//成功
+           
             if (textBox8.Text.Length > 0)
             {
-                conditions += " And dangriqihao like '%" + textBox8.Text + "%'";
+                //conditions += " And dangriqihao like '%" + textBox8.Text + "%'";
+                conditions += "" + textBox8.Text + "'";
             }
-
+             
             this.Close();
 
         }
