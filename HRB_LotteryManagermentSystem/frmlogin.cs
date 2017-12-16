@@ -69,7 +69,7 @@ namespace HRB_LotteryManagermentSystem
             if (isve == false)
             {
               
-                string dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\HRB_LotteryManagermentSystem\\Lottery1.sqlite";
+                string dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\HRB_LotteryManagermentSystem\\Lottery.sqlite";
                 if (File.Exists(dir))
                 {
                     string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ""), "");
