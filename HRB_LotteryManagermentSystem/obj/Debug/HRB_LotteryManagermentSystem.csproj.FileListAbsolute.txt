@@ -29,3 +29,4 @@ C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_Lot
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.frmPassword.resources
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\CheckBoxComboBox.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\CheckBoxComboBox.pdb
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.frmFindinput.resources

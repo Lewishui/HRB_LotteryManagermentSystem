@@ -216,8 +216,11 @@ namespace HRB_LotteryManagermentSystem
             JisuanqiResult = new List<clsJisuanqi_info>();
 
             Showdave(Result);
+             int s = this.tabControl1.SelectedIndex;
 
-            this.toolStripLabel1.Text = "刷新结束，请查看～";
+            if (s == 0)
+                this.toolStripLabel1.Text =NewResult.Count.ToString()+ "  刷新结束，请查看～";
+       
             this.pbStatus.Visible = false;
 
             //MessageBox.Show(
@@ -412,15 +415,35 @@ namespace HRB_LotteryManagermentSystem
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
+            string sql = "";
+
+            var form = new frmFindinput();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                sql = form.conditions;
+
+            }
+            else
+                return;
+
             clsAllnew BusinessHelp = new clsAllnew();
 
             int s = this.tabControl1.SelectedIndex;
+
             if (s == 3)
             {
-                DataTable dataTable = BusinessHelp.readKaijiang();
+                string conditions = "";
+
+
+                conditions = "select * from KaijiangInfo " + sql;//成功
+                conditions = "select * from KaijiangInfo where Input_Date Between '2017-06-10' and  '2017-12-30' ";
+                conditions = "select * from KaijiangInfo where datetime(Input_Date) between datetime('"
++ "2017-06-10" + "') and datetime('" + "2019-12-30" + "')";
+                DataTable dataTable = BusinessHelp.readKaijiang(conditions);
                 //dataGridView3.AutoGenerateColumns = true;
                 dataGridView3.DataSource = dataTable;
                 label1.Text = dataTable.Rows.Count.ToString();
+                this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
 
             }
             if (s == 2)
@@ -431,6 +454,25 @@ namespace HRB_LotteryManagermentSystem
                 label1.Text = dataTable.Rows.Count.ToString();
                 this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
 
+            }
+            if (s == 1)
+            {
+                DataTable dataTable = BusinessHelp.read_lishizhongjiang();
+                //dataGridView1.AutoGenerateColumns = true;
+                dataGridView2.DataSource = dataTable;
+                label1.Text = dataTable.Rows.Count.ToString();
+                this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
+
+            }
+            if (s == 0)
+            {
+                DataTable dataTable = BusinessHelp.read_tuixuanhaomalan();
+     
+                dataGridView.DataSource = dataTable;
+                label1.Text = dataTable.Rows.Count.ToString();
+                this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
+
+            
             }
             //DataTable dataTable = BusinessHelp.read();
             //dataGridView.AutoGenerateColumns = true;
@@ -534,7 +576,18 @@ namespace HRB_LotteryManagermentSystem
                 BusinessHelp.inster_yuanshizoushixinxi(Result);
                 MessageBox.Show("保存走势图-数据-完成", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            if (s == 1)
+            {
+                BusinessHelp.inster_lishizongjianglan(JisuanqiResult);
+                MessageBox.Show("保存-历史中奖-完成", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            }
+            if (s == 0)
+            {
+                BusinessHelp.inster_tuijanhaoma(NewResult);
+                MessageBox.Show("保存-推选号码栏-完成", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -582,6 +635,11 @@ namespace HRB_LotteryManagermentSystem
             //comboBox1.Items.Add("sd1");
             //comboBox1.Items.Add("sd2");
             //comboBox1.Items.Add("sd3");
+
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
 
         }
     }

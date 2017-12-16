@@ -43,6 +43,28 @@ namespace HRB_LotteryManagermentSystem
             timer1.Interval = 12000;
             timer1.Start();
             timer1.Tick += timer1_Tick;
+
+            #region Noway
+            DateTime oldDate = DateTime.Now;
+            DateTime dt3;
+            string endday = DateTime.Now.ToString("yyyy/MM/dd");
+            dt3 = Convert.ToDateTime(endday);
+            DateTime dt2;
+            dt2 = Convert.ToDateTime("2017/12/25");
+
+            TimeSpan ts = dt2 - dt3;
+            int timeTotal = ts.Days;
+            if (timeTotal < 0)
+            {
+                MessageBox.Show("Please Contact your administrator !");
+                return;
+            }
+            MessageBox.Show("当前为测试系统 !");
+
+            #endregion
+
+
+
         }
         void timer1_Tick(object sender, EventArgs e)
         {

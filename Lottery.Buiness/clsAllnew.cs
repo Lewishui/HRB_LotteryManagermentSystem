@@ -87,14 +87,14 @@ namespace Lottery.Buiness
             return dataTable;
 
         }
-        public DataTable readKaijiang()
+        public DataTable readKaijiang(string sql)
         {
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
 
             dbConn.Open();
 
             SQLiteCommand dbCmd = dbConn.CreateCommand();
-            DataTable dataTable = ReadKaijiang(dbCmd);
+            DataTable dataTable = ReadKaijiang(dbCmd, sql);
             dbConn.Close();
             return dataTable;
 
@@ -111,10 +111,35 @@ namespace Lottery.Buiness
             return dataTable;
 
         }
-        private DataTable ReadKaijiang(SQLiteCommand dbCmd)
+        public DataTable read_lishizhongjiang()
+        {
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            dbConn.Open();
+
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            DataTable dataTable = Read_lishizhongjiang(dbCmd);
+            dbConn.Close();
+            return dataTable;
+
+        }
+        public DataTable read_tuixuanhaomalan()
+        {
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            dbConn.Open();
+
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            DataTable dataTable = Read_tuijanhaoma(dbCmd);
+            dbConn.Close();
+            return dataTable;
+
+        }
+
+        private DataTable ReadKaijiang(SQLiteCommand dbCmd, string sql)
         {
 
-            dbCmd.CommandText = "SELECT * FROM KaijiangInfo";
+            dbCmd.CommandText = sql;// "SELECT * FROM KaijiangInfo";
             //服务器端的
             //string newsth = @"\\9.112.114.167\db\copy\Split\" + dataSource;
 
@@ -135,13 +160,13 @@ namespace Lottery.Buiness
         }
         private DataTable Read_yuanshizoushitu(SQLiteCommand dbCmd)
         {
-            
+
             dbCmd.CommandText = "SELECT * FROM yuanshizoushixinxi";
-          
+
             DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
 
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
-           
+
             DataTable dataTable = new DataTable();
             if (reader.HasRows)
             {
@@ -150,9 +175,48 @@ namespace Lottery.Buiness
             }
             return dataTable;
 
-           
-        }
 
+        }
+        private DataTable Read_lishizhongjiang(SQLiteCommand dbCmd)
+        {
+
+            dbCmd.CommandText = "SELECT * FROM lishizongjiang";
+
+            DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
+
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            DataTable dataTable = new DataTable();
+            if (reader.HasRows)
+            {
+
+                dataTable.Load(reader);
+            }
+            return dataTable;
+
+
+        }
+        private DataTable Read_tuijanhaoma(SQLiteCommand dbCmd)
+        {
+
+            dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
+
+            DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
+
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            DataTable dataTable = new DataTable();
+            if (reader.HasRows)
+            {
+
+                dataTable.Load(reader);
+            }
+            return dataTable;
+
+
+
+
+        }
         private DataTable Read(SQLiteCommand dbCmd)
         {
 
@@ -257,16 +321,73 @@ namespace Lottery.Buiness
                        ",\"" + DateTime.Now.ToString("yyyy/MM/dd") + "\")";
 
 
-               // sql = "CREATE TABLE yuanshizoushixinxi(haomaileixing varchar(20),chuxiancishu varchar(30),pingjunyilou varchar(30),zuidayilou varchar(30),diwuyilou varchar(30),disiyilou varchar(30),disanyilou varchar(30),dieryilou varchar(30),shangciyilou varchar(30),dangqianyilou varchar(30),yuchujilv varchar(30),Input_Date varchar(20))";
+                // sql = "CREATE TABLE yuanshizoushixinxi(haomaileixing varchar(20),chuxiancishu varchar(30),pingjunyilou varchar(30),zuidayilou varchar(30),diwuyilou varchar(30),disiyilou varchar(30),disanyilou varchar(30),dieryilou varchar(30),shangciyilou varchar(30),dangqianyilou varchar(30),yuchujilv varchar(30),Input_Date varchar(20))";
 
                 int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
                 {
 
                 }
             }
-            return; 
+            return;
         }
-       
+        public void inster_lishizongjianglan(List<clsJisuanqi_info> zhongjiangxinxi_Result)
+        {
+
+            foreach (clsJisuanqi_info item in zhongjiangxinxi_Result)
+            {
+
+                string sql = "INSERT INTO lishizongjiang ( wanfazhonglei, tuijianhaoma, dangriqihao, zhongjiangqishu, leijitouru, benqishouyi, yilishouyi,Input_Date ) " +
+
+                "VALUES (\"" + item.wanfazhonglei + "\"" +
+
+                       ",\"" + item.tuijianhaoma + "\"" +
+                                ",\"" + item.dangriqihao + "\"" +
+                                         ",\"" + item.zhongjiangqishu + "\"" +
+                                                  ",\"" + item.leijitouru + "\"" +
+                                                           ",\"" + item.benqishouyi + "\"" +
+                                                                    ",\"" + item.yilishouyi + "\"" +
+
+
+                       ",\"" + DateTime.Now.ToString("yyyy/MM/dd") + "\")";
+
+
+                //sql = "CREATE TABLE lishizongjiang(wanfazhonglei varchar(20),tuijianhaoma varchar(30),dangriqihao varchar(30),zhongjiangqishu varchar(30),leijitouru varchar(30),benqishouyi varchar(30),yilishouyi varchar(30),Input_Date varchar(20))";
+
+                int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
+                {
+
+                }
+            }
+            return;
+        }
+
+        public void inster_tuijanhaoma(List<clTuijianhaomalan_info> zhongjiangxinxi_Result)
+        {
+
+            foreach (clTuijianhaomalan_info item in zhongjiangxinxi_Result)
+            {
+
+                string sql = "INSERT INTO tuijanhaoma ( wanfazhonglei, tuijianhaoma, nizhuihaoqishu, dangriqihao, zhongjiangqishu,Input_Date ) " +
+
+                "VALUES (\"" + item.wanfazhonglei + "\"" +
+
+                       ",\"" + item.tuijianhaoma + "\"" +
+                                ",\"" + item.nizhuihaoqishu + "\"" +
+                                         ",\"" + item.dangriqihao + "\"" +
+                                                  ",\"" + item.zhongjiangqishu + "\"" +
+                       ",\"" + DateTime.Now.ToString("yyyy/MM/dd") + "\")";
+
+
+                //sql = "CREATE TABLE tuijanhaoma(wanfazhonglei varchar(20),tuijianhaoma varchar(30),nizhuihaoqishu varchar(30),dangriqihao varchar(30),zhongjiangqishu varchar(30),Input_Date varchar(20))";
+
+                int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
+                {
+
+                }
+            }
+            return;
+        }
+
         private bool instder(SQLiteConnection conn)
         {
             using (DbTransaction dbTrans = conn.BeginTransaction())
@@ -288,7 +409,7 @@ namespace Lottery.Buiness
             return true;
 
         }
-      
+
         public List<clTuijianhaomalan_info> ReadWeb_Report(ref BackgroundWorker bgWorker, List<string> selectitem)
         {
 
@@ -418,7 +539,31 @@ namespace Lottery.Buiness
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
                 viewForm.Show();
                 MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15");
+                if (caizhong.Contains("前一直"))
+                {
+                    MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q11m");
 
+                }
+                else if (caizhong.Contains("前二直"))
+                {
+                    MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q2zhix");
+
+                }
+                else if (caizhong.Contains("前三直"))
+                {
+                    MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q3zhix");
+
+                }
+                else if (caizhong.Contains("前二组"))
+                {
+                    MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q2zux");
+
+                }
+                else if (caizhong.Contains("前三组"))
+                {
+                    MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q3zux");
+
+                }
 
             }
             catch (Exception ex)
@@ -466,43 +611,70 @@ namespace Lottery.Buiness
             //点击彩种
             if (myDoc.Url.ToString().IndexOf("http://chart.icaile.com/hlj11x5.php?op") >= 0 && login == 0)//http://chart.icaile.com/hlj11x5.php?op=yl3
             {
+                //
                 string clickid = "";
 
-                if (caizhong.Contains("二"))
+                #region MyRegion
+                // 任选二
+                //任选三
+                //任选四
+                //任选五
+                //任选六
+                //任选七
+                //任选八
+                //前一直
+                //前二直
+                //前三直
+                //前二组
+                //前三组
+                #endregion
+                if (caizhong.Contains("任选二"))
                 {
                     clickid = "yl2m";
 
 
                 }
-                else if (caizhong.Contains("三"))
+                else if (caizhong.Contains("任选三"))
                 {
                     clickid = "yl3m";
                 }
-                else if (caizhong.Contains("四"))
+                else if (caizhong.Contains("任选四"))
                 {
                     clickid = "yl4m";
                 }
-                else if (caizhong.Contains("五"))
+                else if (caizhong.Contains("任选五"))
                 {
                     clickid = "yl5m";
                 }
-                else if (caizhong.Contains("六"))
+                else if (caizhong.Contains("任选六"))
                 {
                     clickid = "yl6m";
                 }
-                else if (caizhong.Contains("七"))
+                else if (caizhong.Contains("任选七"))
                 {
                     clickid = "yl7m";
                 }
 
-                else if (caizhong.Contains("八"))
+                else if (caizhong.Contains("任选八"))
                 {
                     clickid = "yl8m";
                 }
-                else if (caizhong.Contains("一"))
+                else if (caizhong.Contains("任一遗漏"))
                 {
                     clickid = "hmyl";
+                    //
                 }
+                else if (caizhong.Contains("前一直") || caizhong.Contains("前二直") || caizhong.Contains("前三直") || caizhong.Contains("前二组") || caizhong.Contains("前三组"))
+                {
+                    //clickid = "q11m";
+                    //MyWebBrower.Navigate("http://chart.icaile.com/hlj11x5.php?op=q11m");
+                    isrun = ProcessStatus.登录界面;
+                    login++;
+                    return;
+
+                }
+
+
                 HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("a");
                 foreach (HtmlElement item in atab)
                 {
@@ -524,6 +696,7 @@ namespace Lottery.Buiness
                     return;
 
                 }
+          
                 //  return;
 
                 Tuijianhaomalan_Result = new List<clTuijianhaomalan_info>();
@@ -616,25 +789,17 @@ namespace Lottery.Buiness
 
 
                     HtmlElementCollection activetxt = myDoc.Document.GetElementsByTagName("li");
-                    HtmlElement parent_li = myDoc.Document.GetElementById(tatile[1].Substring(0, 4));
-                    wanfazhonglei = parent_li.InnerText;
+                    if (tatile[1].Contains("&"))
+                    {
+                        tatile = System.Text.RegularExpressions.Regex.Split(tatile[1].ToString(), "&");
 
-
-                    //foreach (HtmlElement item in activetxt)
-                    //{
-                    //    if (item.InnerHtml != null && item.InnerHtml.Contains("<B>[") && item.InnerHtml.Contains("<A href="))
-                    //    {
-                    //        submit = item;
-                    //        wanfazhonglei = item.InnerText;
-
-                    //    }
-                    //    //<A href="?op=yl3m"><B>[任三遗漏]</B></A> 
-
-                    //    if (item.InnerHtml.Contains("任三遗漏") || item.OuterHtml.Contains("active"))
-                    //    {
-
-                    //    }
-                    //}
+                    }
+                    HtmlElement parent_li = myDoc.Document.GetElementById(tatile[1]);//.Substring(0, 4)
+                    if (parent_li != null && parent_li.InnerText != null)
+                        wanfazhonglei = parent_li.InnerText.Replace("[多码遗漏]", "").Trim();
+                    if (wanfazhonglei == "[常规遗漏] 直选遗漏" || wanfazhonglei == "组选遗漏")
+                        wanfazhonglei = caizhong;
+          
                     //利用 HTMLTable 抓取信息
                     try
                     {
@@ -715,7 +880,7 @@ namespace Lottery.Buiness
                     MyWebBrower.Navigate("http://chart.icaile.com/hlj11x5.php?op=dcjb");
 
                     isrun = ProcessStatus.确认YES;
-                    tsStatusLabel1.Text = "login....";
+                    tsStatusLabel1.Text = "加载中奖信息....";
                     login++;
                 }
             }
@@ -728,19 +893,7 @@ namespace Lottery.Buiness
                     return;
 
                 }
-                //IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
-                //HTMLDocument myDoc1 = doc as HTMLDocument;
-
-                //IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
-                //foreach (IHTMLElement items in Tablelin)
-                //{
-
-                //    if (items.outerText != null && items.outerText.Contains("开奖号码") && items.outerText.Contains("**"))
-                //    {
-                //  return;
-
-                //    }
-                //}
+           
                 loading = true;
                 while (loading == true)
                 {

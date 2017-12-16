@@ -30,23 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            PresentationControls.CheckBoxProperties checkBoxProperties1 = new PresentationControls.CheckBoxProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            PresentationControls.CheckBoxProperties checkBoxProperties2 = new PresentationControls.CheckBoxProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            PresentationControls.CheckBoxProperties checkBoxProperties1 = new PresentationControls.CheckBoxProperties();
-            PresentationControls.CheckBoxProperties checkBoxProperties2 = new PresentationControls.CheckBoxProperties();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.pbStatus = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.filterButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxComboBox1 = new PresentationControls.CheckBoxComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -58,9 +56,9 @@
             this.zhongjiangqishu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.读取 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -75,6 +73,7 @@
             this.zhongjiangjine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lirunjine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBoxComboBox2 = new PresentationControls.CheckBoxComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -101,8 +100,7 @@
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.checkBoxComboBox1 = new PresentationControls.CheckBoxComboBox();
-            this.checkBoxComboBox2 = new PresentationControls.CheckBoxComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -161,35 +159,6 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "actn020.gif");
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(471, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 15);
-            this.label1.TabIndex = 90;
-            this.label1.Text = "*如果查找所有请填写\"*\"";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(15, 65);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(73, 20);
-            this.label24.TabIndex = 89;
-            this.label24.Text = "查找期号";
-            // 
-            // textBox8
-            // 
-            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(109, 63);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(356, 26);
-            this.textBox8.TabIndex = 8;
-            // 
             // filterButton
             // 
             this.filterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -205,7 +174,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 26);
+            this.label3.Location = new System.Drawing.Point(14, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 5;
@@ -214,10 +183,8 @@
             // groupBox2
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox2.Controls.Add(this.checkBoxComboBox1);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.checkBoxComboBox1);
             this.groupBox2.Controls.Add(this.filterButton);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.checkBox1);
@@ -228,6 +195,30 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Action";
+            // 
+            // checkBoxComboBox1
+            // 
+            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxComboBox1.CheckBoxProperties = checkBoxProperties1;
+            this.checkBoxComboBox1.DisplayMemberSingleItem = "";
+            this.checkBoxComboBox1.FormattingEnabled = true;
+            this.checkBoxComboBox1.Items.AddRange(new object[] {
+            "任选二",
+            "任选三",
+            "任选四",
+            "任选五",
+            "任选六",
+            "任选七",
+            "任选八",
+            "前一直",
+            "前二直",
+            "前三直",
+            "前二组",
+            "前三组"});
+            this.checkBoxComboBox1.Location = new System.Drawing.Point(71, 39);
+            this.checkBoxComboBox1.Name = "checkBoxComboBox1";
+            this.checkBoxComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.checkBoxComboBox1.TabIndex = 94;
             // 
             // checkBox1
             // 
@@ -339,13 +330,14 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton3
+            // 读取
             // 
-            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(79, 25);
-            this.toolStripButton3.Text = "删除";
+            this.读取.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.读取.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.读取.Name = "读取";
+            this.读取.Size = new System.Drawing.Size(79, 25);
+            this.读取.Text = "读取";
+            this.读取.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton1
             // 
@@ -356,14 +348,14 @@
             this.toolStripButton1.Text = "保存";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // 读取
+            // toolStripButton3
             // 
-            this.读取.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.读取.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.读取.Name = "读取";
-            this.读取.Size = new System.Drawing.Size(79, 25);
-            this.读取.Text = "读取";
-            this.读取.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(79, 25);
+            this.toolStripButton3.Text = "删除";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton2
             // 
@@ -509,6 +501,30 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Action";
+            // 
+            // checkBoxComboBox2
+            // 
+            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxComboBox2.CheckBoxProperties = checkBoxProperties2;
+            this.checkBoxComboBox2.DisplayMemberSingleItem = "";
+            this.checkBoxComboBox2.FormattingEnabled = true;
+            this.checkBoxComboBox2.Items.AddRange(new object[] {
+            "任选二",
+            "任选三",
+            "任选四",
+            "任选五",
+            "任选六",
+            "任选七",
+            "任选八",
+            "前一直",
+            "前二直",
+            "前三直",
+            "前二组",
+            "前三组"});
+            this.checkBoxComboBox2.Location = new System.Drawing.Point(62, 25);
+            this.checkBoxComboBox2.Name = "checkBoxComboBox2";
+            this.checkBoxComboBox2.Size = new System.Drawing.Size(121, 21);
+            this.checkBoxComboBox2.TabIndex = 95;
             // 
             // label2
             // 
@@ -705,53 +721,13 @@
             this.kaijianghaoma.HeaderText = "开奖号码";
             this.kaijianghaoma.Name = "kaijianghaoma";
             // 
-            // checkBoxComboBox1
+            // label1
             // 
-            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox1.CheckBoxProperties = checkBoxProperties1;
-            this.checkBoxComboBox1.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox1.FormattingEnabled = true;
-            this.checkBoxComboBox1.Items.AddRange(new object[] {
-            "任选二",
-            "任选三",
-            "任选四",
-            "任选五",
-            "任选六",
-            "任选七",
-            "任选八",
-            "前一直",
-            "前二直",
-            "前三直",
-            "前二组",
-            "前三组"});
-            this.checkBoxComboBox1.Location = new System.Drawing.Point(72, 24);
-            this.checkBoxComboBox1.Name = "checkBoxComboBox1";
-            this.checkBoxComboBox1.Size = new System.Drawing.Size(121, 21);
-            this.checkBoxComboBox1.TabIndex = 94;
-            // 
-            // checkBoxComboBox2
-            // 
-            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox2.CheckBoxProperties = checkBoxProperties2;
-            this.checkBoxComboBox2.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox2.FormattingEnabled = true;
-            this.checkBoxComboBox2.Items.AddRange(new object[] {
-            "任选二",
-            "任选三",
-            "任选四",
-            "任选五",
-            "任选六",
-            "任选七",
-            "任选八",
-            "前一直",
-            "前二直",
-            "前三直",
-            "前二组",
-            "前三组"});
-            this.checkBoxComboBox2.Location = new System.Drawing.Point(62, 25);
-            this.checkBoxComboBox2.Name = "checkBoxComboBox2";
-            this.checkBoxComboBox2.Size = new System.Drawing.Size(121, 21);
-            this.checkBoxComboBox2.TabIndex = 95;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(788, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 95;
             // 
             // frmMain
             // 
@@ -800,9 +776,6 @@
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripLabel1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button filterButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -862,6 +835,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lirunjine;
         private PresentationControls.CheckBoxComboBox checkBoxComboBox1;
         private PresentationControls.CheckBoxComboBox checkBoxComboBox2;
+        private System.Windows.Forms.Label label1;
 
     }
 }
