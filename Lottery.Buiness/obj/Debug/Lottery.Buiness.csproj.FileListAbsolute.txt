@@ -1,7 +1,5 @@
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Lottery.Buiness.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Lottery.Buiness.pdb
-C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\System.Data.SQLite.dll
-C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\System.Data.SQLite.xml
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.csprojResolveAssemblyReference.cache
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.pdb

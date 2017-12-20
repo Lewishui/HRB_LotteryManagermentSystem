@@ -14,10 +14,8 @@ C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.C
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Microsoft.Office.Interop.Excel.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\MySql.Data.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\MySql.Data.Entity.dll
-C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\System.Data.SQLite.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\office.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Microsoft.Office.Interop.Excel.xml
-C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\System.Data.SQLite.xml
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\office.xml
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.dll

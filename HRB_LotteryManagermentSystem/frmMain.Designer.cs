@@ -30,12 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            PresentationControls.CheckBoxProperties checkBoxProperties2 = new PresentationControls.CheckBoxProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            PresentationControls.CheckBoxProperties checkBoxProperties3 = new PresentationControls.CheckBoxProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            PresentationControls.CheckBoxProperties checkBoxProperties1 = new PresentationControls.CheckBoxProperties();
+            PresentationControls.CheckBoxProperties checkBoxProperties2 = new PresentationControls.CheckBoxProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.pbStatus = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -48,7 +51,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxComboBox1 = new PresentationControls.CheckBoxComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -70,15 +72,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourujine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zhongjiangjine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lirunjine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBoxComboBox2 = new PresentationControls.CheckBoxComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -106,6 +100,15 @@
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.checkBoxComboBox1 = new PresentationControls.CheckBoxComboBox();
+            this.checkBoxComboBox2 = new PresentationControls.CheckBoxComboBox();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tourujine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zhongjiangjine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lirunjine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -242,31 +245,6 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 95;
             // 
-            // checkBoxComboBox1
-            // 
-            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox1.CheckBoxProperties = checkBoxProperties2;
-            this.checkBoxComboBox1.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox1.FormattingEnabled = true;
-            this.checkBoxComboBox1.Items.AddRange(new object[] {
-            "任选二",
-            "任选三",
-            "任选四",
-            "任选五",
-            "任选六",
-            "任选七",
-            "任选八",
-            "前一直",
-            "前二直",
-            "前三直",
-            "前二组",
-            "前三组"});
-            this.checkBoxComboBox1.Location = new System.Drawing.Point(71, 39);
-            this.checkBoxComboBox1.Name = "checkBoxComboBox1";
-            this.checkBoxComboBox1.Size = new System.Drawing.Size(121, 21);
-            this.checkBoxComboBox1.TabIndex = 94;
-            this.checkBoxComboBox1.SelectedIndexChanged += new System.EventHandler(this.checkBoxComboBox1_SelectedIndexChanged);
-            // 
             // checkBox1
             // 
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -296,8 +274,8 @@
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -482,8 +460,8 @@
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -502,48 +480,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(892, 413);
             this.dataGridView2.TabIndex = 6;
             // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "wanfazhonglei";
-            this.dataGridViewTextBoxColumn12.HeaderText = "玩法种类";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "tuijianhaoma";
-            this.dataGridViewTextBoxColumn13.HeaderText = "推荐号码";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "dangriqihao";
-            this.dataGridViewTextBoxColumn15.HeaderText = "当日期号";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "zhongjiangqishu";
-            this.dataGridViewTextBoxColumn16.HeaderText = "中奖期数";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // tourujine
-            // 
-            this.tourujine.DataPropertyName = "leijitouru";
-            this.tourujine.HeaderText = "投入金额（利润〉1%）";
-            this.tourujine.Name = "tourujine";
-            // 
-            // zhongjiangjine
-            // 
-            this.zhongjiangjine.DataPropertyName = "benqishouyi";
-            this.zhongjiangjine.HeaderText = "中奖金额";
-            this.zhongjiangjine.Name = "zhongjiangjine";
-            // 
-            // lirunjine
-            // 
-            this.lirunjine.DataPropertyName = "yilishouyi";
-            this.lirunjine.HeaderText = "利润金额";
-            this.lirunjine.Name = "lirunjine";
-            // 
             // groupBox3
             // 
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -560,30 +496,6 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Action";
-            // 
-            // checkBoxComboBox2
-            // 
-            checkBoxProperties3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBoxComboBox2.CheckBoxProperties = checkBoxProperties3;
-            this.checkBoxComboBox2.DisplayMemberSingleItem = "";
-            this.checkBoxComboBox2.FormattingEnabled = true;
-            this.checkBoxComboBox2.Items.AddRange(new object[] {
-            "任选二",
-            "任选三",
-            "任选四",
-            "任选五",
-            "任选六",
-            "任选七",
-            "任选八",
-            "前一直",
-            "前二直",
-            "前三直",
-            "前二组",
-            "前三组"});
-            this.checkBoxComboBox2.Location = new System.Drawing.Point(62, 25);
-            this.checkBoxComboBox2.Name = "checkBoxComboBox2";
-            this.checkBoxComboBox2.Size = new System.Drawing.Size(121, 21);
-            this.checkBoxComboBox2.TabIndex = 95;
             // 
             // label2
             // 
@@ -649,8 +561,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -753,8 +665,8 @@
             // dataGridView3
             // 
             this.dataGridView3.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -788,6 +700,103 @@
             this.toolStripButton5.Size = new System.Drawing.Size(79, 25);
             this.toolStripButton5.Text = "全自动";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // checkBoxComboBox1
+            // 
+            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxComboBox1.CheckBoxProperties = checkBoxProperties1;
+            this.checkBoxComboBox1.DisplayMemberSingleItem = "";
+            this.checkBoxComboBox1.FormattingEnabled = true;
+            this.checkBoxComboBox1.Items.AddRange(new object[] {
+            "任选二",
+            "任选三",
+            "任选四",
+            "任选五",
+            "任选六",
+            "任选七",
+            "任选八",
+            "前一直",
+            "前二直",
+            "前三直",
+            "前二组",
+            "前三组"});
+            this.checkBoxComboBox1.Location = new System.Drawing.Point(71, 39);
+            this.checkBoxComboBox1.Name = "checkBoxComboBox1";
+            this.checkBoxComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.checkBoxComboBox1.TabIndex = 94;
+            this.checkBoxComboBox1.SelectedIndexChanged += new System.EventHandler(this.checkBoxComboBox1_SelectedIndexChanged);
+            // 
+            // checkBoxComboBox2
+            // 
+            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxComboBox2.CheckBoxProperties = checkBoxProperties2;
+            this.checkBoxComboBox2.DisplayMemberSingleItem = "";
+            this.checkBoxComboBox2.FormattingEnabled = true;
+            this.checkBoxComboBox2.Items.AddRange(new object[] {
+            "任选二",
+            "任选三",
+            "任选四",
+            "任选五",
+            "任选六",
+            "任选七",
+            "任选八",
+            "前一直",
+            "前二直",
+            "前三直",
+            "前二组",
+            "前三组"});
+            this.checkBoxComboBox2.Location = new System.Drawing.Point(62, 25);
+            this.checkBoxComboBox2.Name = "checkBoxComboBox2";
+            this.checkBoxComboBox2.Size = new System.Drawing.Size(121, 21);
+            this.checkBoxComboBox2.TabIndex = 95;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "wanfazhonglei";
+            this.dataGridViewTextBoxColumn12.HeaderText = "玩法种类";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "tuijianhaoma";
+            this.dataGridViewTextBoxColumn13.HeaderText = "推荐号码";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "dangriqihao";
+            this.dataGridViewTextBoxColumn15.HeaderText = "当日期号";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "zhongjiangqishu";
+            this.dataGridViewTextBoxColumn16.HeaderText = "中奖期数";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // tourujine
+            // 
+            this.tourujine.DataPropertyName = "leijitouru";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            this.tourujine.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tourujine.HeaderText = "投入金额（利润〉1%）";
+            this.tourujine.Name = "tourujine";
+            // 
+            // zhongjiangjine
+            // 
+            this.zhongjiangjine.DataPropertyName = "benqishouyi";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
+            this.zhongjiangjine.DefaultCellStyle = dataGridViewCellStyle4;
+            this.zhongjiangjine.HeaderText = "中奖金额";
+            this.zhongjiangjine.Name = "zhongjiangjine";
+            // 
+            // lirunjine
+            // 
+            this.lirunjine.DataPropertyName = "yilishouyi";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            this.lirunjine.DefaultCellStyle = dataGridViewCellStyle5;
+            this.lirunjine.HeaderText = "利润金额";
+            this.lirunjine.Name = "lirunjine";
             // 
             // frmMain
             // 
@@ -886,13 +895,6 @@
         private System.Windows.Forms.BindingSource bindingSource4;
         private System.Windows.Forms.DataGridViewTextBoxColumn zhongjiangqishuColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kaijianghaoma;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourujine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zhongjiangjine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lirunjine;
         private PresentationControls.CheckBoxComboBox checkBoxComboBox1;
         private PresentationControls.CheckBoxComboBox checkBoxComboBox2;
         private System.Windows.Forms.Label label1;
@@ -901,6 +903,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tourujine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zhongjiangjine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lirunjine;
 
     }
 }

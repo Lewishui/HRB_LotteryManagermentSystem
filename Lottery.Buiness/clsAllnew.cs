@@ -75,9 +75,20 @@ namespace Lottery.Buiness
         {
 
             newsth = AppDomain.CurrentDomain.BaseDirectory + "" + dataSource;
+          //  InitialSystemInfo();
 
 
         }
+        private void InitialSystemInfo()
+        {
+            #region 初始化配置
+            ProcessLogger = log4net.LogManager.GetLogger("ProcessLogger");
+            ExceptionLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
+            ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
+            #endregion
+        }
+
+
         public bool read_sqlitefile()
         {
             bool ishave = false;
@@ -258,14 +269,20 @@ namespace Lottery.Buiness
         }
         public List<clTuijianhaomalan_info> ReadServer_tuijanhaoma(string sql)
         {
-            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
 
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+            ProcessLogger.Fatal("ReadServer_tuijanhaoma open" + DateTime.Now.ToString());
             dbConn.Open();
+            ProcessLogger.Fatal("ReadServer_tuijanhaoma open 1" + DateTime.Now.ToString());
+         
             SQLiteCommand dbCmd = dbConn.CreateCommand();
             //dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
             dbCmd.CommandText = sql;
-
+            ProcessLogger.Fatal("ReadServer_tuijanhaoma open 2" + DateTime.Now.ToString());
+         
             DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
+            ProcessLogger.Fatal("ReadServer_tuijanhaoma open 3" + DateTime.Now.ToString());
+         
             List<clTuijianhaomalan_info> ClaimReport_Server = new List<clTuijianhaomalan_info>();
 
 
@@ -1301,12 +1318,10 @@ namespace Lottery.Buiness
                         ITEM = Find_JisuanqiResult2[runtime];
                         login = 0;
                         return;
-
                     }
-
                     isOneFinished = true;
                     isrun = ProcessStatus.关闭页面;
-                    tsStatusLabel1.Text = "login....";
+                    tsStatusLabel1.Text = "退出....";
                     login++;
                 }
 

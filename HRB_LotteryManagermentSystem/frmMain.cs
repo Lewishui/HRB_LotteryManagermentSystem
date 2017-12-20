@@ -19,6 +19,8 @@ namespace HRB_LotteryManagermentSystem
 {
     public partial class frmMain : DockContent
     {
+        public log4net.ILog ProcessLogger;
+        public log4net.ILog ExceptionLogger;
         // 后台执行控件
         private BackgroundWorker bgWorker;
         // 消息显示窗体
@@ -47,16 +49,25 @@ namespace HRB_LotteryManagermentSystem
         {
             InitializeComponent();
             //this.comboBox1.SelectedIndex = 0;
+           InitialSystemInfo();
+
             timers_resfresh = true;
             this.pbStatus.Visible = false;
             mapping_Result = new List<clszhongleiDuiyingQishu_info>();
             huoquduiyingqishu();
             //NewMethod1();
             this.Load += new EventHandler(frmMain_Load);
-
+        
 
         }
-
+        private void InitialSystemInfo()
+        {
+            #region 初始化配置
+            ProcessLogger = log4net.LogManager.GetLogger("ProcessLogger");
+            ExceptionLogger = log4net.LogManager.GetLogger("SystemExceptionLogger");
+            ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
+            #endregion
+        }
         private void huoquduiyingqishu()
         {
             clszhongleiDuiyingQishu_info item = new clszhongleiDuiyingQishu_info();
@@ -216,8 +227,12 @@ namespace HRB_LotteryManagermentSystem
 
                 this.pbStatus.Visible = true;
                 clsAllnew BusinessHelp = new clsAllnew();
+                BusinessHelp.ProcessLogger = ProcessLogger;
+                BusinessHelp.ExceptionLogger = ExceptionLogger;
                 BusinessHelp.pbStatus = pbStatus;
                 BusinessHelp.tsStatusLabel1 = toolStripLabel1;
+               ProcessLogger.Fatal("读取NewMethod" + DateTime.Now.ToString());
+
                 Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, selectitem, mapping_Result);
                 zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
 
@@ -228,6 +243,7 @@ namespace HRB_LotteryManagermentSystem
                 string conditions = "select * from tuijanhaoma where Input_Date like '" + DateTime.Now.ToString("yyyy/MM/dd") + "'";//成功
 
                 List<clTuijianhaomalan_info> ClaimReport_Server = BusinessHelp.ReadServer_tuijanhaoma(conditions);
+                ProcessLogger.Fatal("ReadServer_lishizhongjian 1" + DateTime.Now.ToString());
 
 
                 conditions = "select * from lishizongjiang where Input_Date like '" + DateTime.Now.ToString("yyyy/MM/dd") + "'";//成功
@@ -378,30 +394,51 @@ namespace HRB_LotteryManagermentSystem
 
             if (checkBox1.Checked == true && timers_resfresh == true)
             {
+                this.button1.Enabled = false;
+                this.toolStripLabel1.Text = "自动获取中,无需任何操作...";
 
-                System.Threading.ThreadStart start = new System.Threading.ThreadStart(Auto);
-                System.Threading.Thread th = new System.Threading.Thread(start);
-
-                return;
-
-                Control.CheckForIllegalCrossThreadCalls = false;
-                if (backgroundWorker2.IsBusy != true)
+                if (toolStripButton5.Text == "全自动")
                 {
-                    backgroundWorker2.RunWorkerAsync(new WorkerArgument { OrderCount = 0, CurrentIndex = 0 });
+                    Control.CheckForIllegalCrossThreadCalls = false;
 
+                    aTimer = new System.Timers.Timer(30000);
+                    aTimer.Elapsed += new System.Timers.ElapsedEventHandler(TimeControl);
+                    aTimer.AutoReset = true;
+                    aTimer.Start();
+                    toolStripButton5.Text = "已自动";
+
+                }
+                else
+                {
+                    toolStripButton5.Text = "全自动";
+                    aTimer.Stop();
 
                 }
 
 
+
                 //System.Threading.ThreadStart start = new System.Threading.ThreadStart(Auto);
                 //System.Threading.Thread th = new System.Threading.Thread(start);
-                //th.ApartmentState = System.Threading.ApartmentState.STA;//关键
+
+                //return;
+
+                //Control.CheckForIllegalCrossThreadCalls = false;
+                //if (backgroundWorker2.IsBusy != true)
+                //{
+                //    backgroundWorker2.RunWorkerAsync(new WorkerArgument { OrderCount = 0, CurrentIndex = 0 });
 
 
-                this.button1.Enabled = false;
+                //}
 
-                // Auto();
-                timers_resfresh = false;
+
+                ////System.Threading.ThreadStart start = new System.Threading.ThreadStart(Auto);
+                ////System.Threading.Thread th = new System.Threading.Thread(start);
+                ////th.ApartmentState = System.Threading.ApartmentState.STA;//关键
+
+
+             
+                //// Auto();
+                //timers_resfresh = false;
 
             }
             else
@@ -879,7 +916,7 @@ namespace HRB_LotteryManagermentSystem
             {
                 Control.CheckForIllegalCrossThreadCalls = false;
           
-                aTimer = new System.Timers.Timer(20000);
+                aTimer = new System.Timers.Timer(30000);
                 aTimer.Elapsed += new System.Timers.ElapsedEventHandler(TimeControl);
                 aTimer.AutoReset = true;
                 aTimer.Start();
@@ -900,6 +937,8 @@ namespace HRB_LotteryManagermentSystem
             {
                 IsRun = true;
                 GetDataforRawDataThread = new Thread(Main);
+                GetDataforRawDataThread.SetApartmentState(ApartmentState.STA);
+
                 GetDataforRawDataThread.Start();
             }
         }

@@ -2,3 +2,4 @@ C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.DB\bin\Debug\Lottery.DB.pdb
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.DB\obj\Debug\Lottery.DB.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.DB\obj\Debug\Lottery.DB.pdb
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.DB\obj\Debug\Lottery.DB.csprojResolveAssemblyReference.cache

@@ -354,6 +354,7 @@
 		<row><td>MySql.Data.dll</td><td>{296D7E4F-E915-4F66-A636-F15D2A82D1BE}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{EEB61DC6-9E00-4306-9402-AC7A1D9E539D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Order.Common.dll</td><td>{C63714AA-AA53-4B96-9832-2B72BCCD90D7}</td><td>INSTALLDIR</td><td>2</td><td/><td>order.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Data.SQLite.dll</td><td>{6FEED1E9-5D92-427B-A97D-E1AF7D9420AB}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{65417780-95E2-4721-AE4E-719AD17EABFB}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>log4net.dll</td><td>{9BF49939-0E76-4C7A-9AC0-5D1142D4B69F}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>office.dll</td><td>{946A6CAE-0A91-473D-8047-5BB9B4719FE3}</td><td>INSTALLDIR</td><td>2</td><td/><td>office.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1890,6 +1891,7 @@
 		<row><td>AlwaysInstall</td><td>MySql.Data.dll</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent1</td></row>
 		<row><td>AlwaysInstall</td><td>Order.Common.dll</td></row>
+		<row><td>AlwaysInstall</td><td>System.Data.SQLite.dll</td></row>
 		<row><td>AlwaysInstall</td><td>WeifenLuo.WinFormsUI.Docking.dll</td></row>
 		<row><td>AlwaysInstall</td><td>log4net.dll</td></row>
 		<row><td>AlwaysInstall</td><td>office.dll</td></row>
@@ -1929,6 +1931,8 @@
 		<row><td>order.common.dll</td><td>Order.Common.dll</td><td>ORDERC~1.DLL|Order.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Order.Common.dll</td><td>1</td><td/></row>
 		<row><td>order.common.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDERC~1.PDB|Order.Common.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Order.Common.pdb</td><td>1</td><td/></row>
 		<row><td>pagecolor1.ssk</td><td>ISX_DEFAULTCOMPONENT</td><td>PAGECO~1.SSK|PageColor1.ssk</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\PageColor1.ssk</td><td>1</td><td/></row>
+		<row><td>system.data.sqlite.dll</td><td>System.Data.SQLite.dll</td><td>SYSTEM~1.DLL|System.Data.SQLite.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\System.Data.SQLite.dll</td><td>1</td><td/></row>
+		<row><td>system.data.sqlite.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>SYSTEM~1.XML|System.Data.SQLite.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\System.Data.SQLite.xml</td><td>1</td><td/></row>
 		<row><td>weifenluo.winformsui.docking</td><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>WEIFEN~1.DLL|WeifenLuo.WinFormsUI.Docking.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</td><td>1</td><td/></row>
 	</table>
 
@@ -2200,6 +2204,7 @@
 		<row><td>MySql.Data.dll</td><td/><td/><td>_6B14790A_5C51_417E_8AA0_9286301E88F4_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_7F1F928F_D2D9_4ADF_9F08_CE37561D255A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Order.Common.dll</td><td/><td/><td>_3B8EAD78_3C36_4A0A_B625_43C514BD24C0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Data.SQLite.dll</td><td/><td/><td>_707A8447_1D76_49C6_9906_BCB07A5BE619_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_BD69DA67_C2D8_4A35_AABD_8F828A0AB98E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>log4net.dll</td><td/><td/><td>_D7F991B5_4399_443B_9510_43F17367DF92_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>office.dll</td><td/><td/><td>_C26A8AE1_C43D_46F2_B86F_B0B85B903D9A_FILTER</td><td/><td/><td/><td/></row>
