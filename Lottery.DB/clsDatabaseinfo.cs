@@ -14,7 +14,7 @@ namespace Lottery.DB
         public string zhongjiangqishu { get; set; }//中奖期数
 
 
-        public DateTime Input_Date { get; set; }
+        public string Input_Date { get; set; }
         //新增的标记
         public string xinzeng { get; set; }
 
@@ -60,7 +60,7 @@ namespace Lottery.DB
         public string yilishouyi { get; set; }//盈利收益  
         public string shouyilv { get; set; }//收益率  
 
-        public DateTime Input_Date { get; set; }// 
+        public string Input_Date { get; set; }// 
 
         //当日期号
         public string dangriqihao { get; set; }//当日期号
@@ -73,7 +73,11 @@ namespace Lottery.DB
         public string wanfazhonglei { get; set; }//玩法种类
       
     }
-
-
+    public class clszhongleiDuiyingQishu_info
+    {
+        public string wanfazhonglei { get; set; }//投入倍数 
+       
+        public string qishu { get; set; }//期数 
+    }
 
 }

@@ -45,25 +45,7 @@ namespace HRB_LotteryManagermentSystem
             timer1.Start();
             timer1.Tick += timer1_Tick;
 
-            #region Noway
-            DateTime oldDate = DateTime.Now;
-            DateTime dt3;
-            string endday = DateTime.Now.ToString("yyyy/MM/dd");
-            dt3 = Convert.ToDateTime(endday);
-            DateTime dt2;
-            dt2 = Convert.ToDateTime("2017/12/25");
-
-            TimeSpan ts = dt2 - dt3;
-            int timeTotal = ts.Days;
-            if (timeTotal < 0)
-            {
-                MessageBox.Show("Please Contact your administrator !");
-                return;
-            }
-            MessageBox.Show("当前为测试系统 !");
-
-            #endregion
-            clsAllnew BusinessHelp = new clsAllnew();
+             clsAllnew BusinessHelp = new clsAllnew();
 
             bool isve = BusinessHelp.read_sqlitefile();
             if (isve == false)
@@ -229,6 +211,26 @@ namespace HRB_LotteryManagermentSystem
 
         private void tsbLogin_Click(object sender, EventArgs e)
         {
+            #region Noway
+            DateTime oldDate = DateTime.Now;
+            DateTime dt3;
+            string endday = DateTime.Now.ToString("yyyy/MM/dd");
+            dt3 = Convert.ToDateTime(endday);
+            DateTime dt2;
+            dt2 = Convert.ToDateTime("2018/07/25");
+
+            TimeSpan ts = dt2 - dt3;
+            int timeTotal = ts.Days;
+            if (timeTotal < 0)
+            {
+                MessageBox.Show("六个月运行期已到，请将剩余费用付清 !");
+                return;
+            }
+           // MessageBox.Show("当前为测试系统 !");
+
+            #endregion
+         
+
             //, 
             if (this.txtSAPUserId.Text == "Admin" || this.txtSAPUserId.Text == "Lewis")
             {

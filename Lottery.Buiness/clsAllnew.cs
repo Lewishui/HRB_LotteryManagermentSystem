@@ -64,6 +64,8 @@ namespace Lottery.Buiness
         public List<clTuijianhaomalan_info> zhongjiangxinxi_Result;
         public List<clTuijianhaomalan_info> zhongjiangxinxi_ResultAll;
         string caizhong;
+        string filter_qishu;
+
         bool loading;
         clTuijianhaomalan_info ITEM;
         List<clTuijianhaomalan_info> Find_JisuanqiResult2;
@@ -77,8 +79,8 @@ namespace Lottery.Buiness
 
         }
         public bool read_sqlitefile()
-        { 
-            bool ishave=false;
+        {
+            bool ishave = false;
 
             if (File.Exists(newsth))
             {
@@ -118,7 +120,7 @@ namespace Lottery.Buiness
             dbConn.Open();
 
             SQLiteCommand dbCmd = dbConn.CreateCommand();
-            DataTable dataTable = Read_yuanshizoushitu(dbCmd,  sql);
+            DataTable dataTable = Read_yuanshizoushitu(dbCmd, sql);
             dbConn.Close();
             return dataTable;
 
@@ -194,7 +196,7 @@ namespace Lottery.Buiness
 
             //dbCmd.CommandText = "SELECT * FROM lishizongjiang";
             dbCmd.CommandText = sql;
-           
+
             DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
 
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
@@ -206,6 +208,91 @@ namespace Lottery.Buiness
                 dataTable.Load(reader);
             }
             return dataTable;
+
+
+        }
+
+        public List<clsJisuanqi_info> ReadServer_lishizhongjiang(string sql)
+        {
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            dbConn.Open();
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            //dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
+            dbCmd.CommandText = sql;
+
+            DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
+            List<clsJisuanqi_info> ClaimReport_Server = new List<clsJisuanqi_info>();
+
+
+            while (reader.Read())
+            {
+                clsJisuanqi_info item = new clsJisuanqi_info();
+
+                if (reader.GetValue(0) != null && Convert.ToString(reader.GetValue(0)) != "")
+                    item.wanfazhonglei = reader.GetString(0);
+                if (reader.GetValue(1) != null && Convert.ToString(reader.GetValue(1)) != "")
+                    item.tuijianhaoma = reader.GetString(1);
+                if (reader.GetValue(2) != null && Convert.ToString(reader.GetValue(2)) != "")
+                    item.dangriqihao = reader.GetString(2);
+                if (reader.GetValue(3) != null && Convert.ToString(reader.GetValue(3)) != "")
+                    item.zhongjiangqishu = reader.GetString(3);
+                if (reader.GetValue(4) != null && Convert.ToString(reader.GetValue(4)) != "")
+                    item.leijitouru = reader.GetString(4);
+                if (reader.GetValue(5) != null && Convert.ToString(reader.GetValue(5)) != "")
+                    item.benqishouyi = reader.GetString(5);
+
+                if (reader.GetValue(6) != null && Convert.ToString(reader.GetValue(6)) != "")
+                    item.yilishouyi = reader.GetString(6);
+                if (reader.GetValue(7) != null && Convert.ToString(reader.GetValue(7)) != "")
+                    item.Input_Date = reader.GetString(7);
+
+                ClaimReport_Server.Add(item);
+
+            }
+            return ClaimReport_Server;
+
+
+
+
+        }
+        public List<clTuijianhaomalan_info> ReadServer_tuijanhaoma(string sql)
+        {
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            dbConn.Open();
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            //dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
+            dbCmd.CommandText = sql;
+
+            DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
+            List<clTuijianhaomalan_info> ClaimReport_Server = new List<clTuijianhaomalan_info>();
+
+
+            while (reader.Read())
+            {
+                clTuijianhaomalan_info item = new clTuijianhaomalan_info();
+
+                if (reader.GetValue(0) != null && Convert.ToString(reader.GetValue(0)) != "")
+                    item.wanfazhonglei = reader.GetString(0);
+                if (reader.GetValue(1) != null && Convert.ToString(reader.GetValue(1)) != "")
+                    item.tuijianhaoma = reader.GetString(1);
+                if (reader.GetValue(2) != null && Convert.ToString(reader.GetValue(2)) != "")
+                    item.nizhuihaoqishu = reader.GetString(2);
+                if (reader.GetValue(3) != null && Convert.ToString(reader.GetValue(3)) != "")
+                    item.dangriqihao = reader.GetString(3);
+                if (reader.GetValue(4) != null && Convert.ToString(reader.GetValue(4)) != "")
+                    item.zhongjiangqishu = reader.GetString(4);
+                if (reader.GetValue(5) != null && Convert.ToString(reader.GetValue(5)) != "")
+                    item.Input_Date = reader.GetString(5);
+
+
+                ClaimReport_Server.Add(item);
+
+            }
+            return ClaimReport_Server;
+
+
 
 
         }
@@ -214,7 +301,7 @@ namespace Lottery.Buiness
 
             //dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
             dbCmd.CommandText = sql;
-           
+
             DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
 
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
@@ -231,6 +318,7 @@ namespace Lottery.Buiness
 
 
         }
+
         private DataTable Read(SQLiteCommand dbCmd)
         {
 
@@ -264,8 +352,10 @@ namespace Lottery.Buiness
 
             var var = SQLiteHelper.ExecuteNonQuery("Data Source=" + newsth, dbCmd);
 
-           // Read(dbCmd);
+            // Read(dbCmd);
         }
+
+
         public void inster(List<clTuijianhaomalan_info> zhongjiangxinxi_Result)
         {
 
@@ -286,7 +376,7 @@ namespace Lottery.Buiness
 
                        ",\"" + DateTime.Now + "\")";
 
-               // sql = "CREATE TABLE KaijiangInfo(zhongjiangqishu varchar(20),kaijianghaoma varchar(30),Input_Date varchar(20))";
+                // sql = "CREATE TABLE KaijiangInfo(zhongjiangqishu varchar(20),kaijianghaoma varchar(30),Input_Date varchar(20))";
 
 
                 int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
@@ -350,6 +440,8 @@ namespace Lottery.Buiness
 
             foreach (clsJisuanqi_info item in zhongjiangxinxi_Result)
             {
+                string dele_sql = "delete FROM lishizongjiang  WHERE wanfazhonglei ='" + item.wanfazhonglei + "'And tuijianhaoma='" + item.tuijianhaoma + "'And dangriqihao='" + item.dangriqihao + "'And zhongjiangqishu='" + item.zhongjiangqishu + "'And leijitouru='" + item.leijitouru + "'And benqishouyi='" + item.benqishouyi + "'And yilishouyi='" + item.yilishouyi + "'And Input_Date='" + item.Input_Date + "'";
+                delete_step(dele_sql);
 
                 string sql = "INSERT INTO lishizongjiang ( wanfazhonglei, tuijianhaoma, dangriqihao, zhongjiangqishu, leijitouru, benqishouyi, yilishouyi,Input_Date ) " +
 
@@ -381,6 +473,12 @@ namespace Lottery.Buiness
 
             foreach (clTuijianhaomalan_info item in zhongjiangxinxi_Result)
             {
+                if (item.wanfazhonglei == null || item.wanfazhonglei == "")
+                    continue;
+
+                string dele_sql = "delete FROM tuijanhaoma  WHERE dangriqihao ='" + item.dangriqihao + "'And wanfazhonglei='" + item.wanfazhonglei + "'";
+                delete_step(dele_sql);
+
 
                 string sql = "INSERT INTO tuijanhaoma ( wanfazhonglei, tuijianhaoma, nizhuihaoqishu, dangriqihao, zhongjiangqishu,Input_Date ) " +
 
@@ -402,7 +500,19 @@ namespace Lottery.Buiness
             }
             return;
         }
+        public void delete_step(string sql)
+        {
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
 
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            dbCmd.CommandText = sql;
+            //服务器端的
+            dbCmd.CommandText = sql;
+
+            var var = SQLiteHelper.ExecuteNonQuery("Data Source=" + newsth, dbCmd);
+
+            // Read(dbCmd);
+        }
         private bool instder(SQLiteConnection conn)
         {
             using (DbTransaction dbTrans = conn.BeginTransaction())
@@ -425,7 +535,7 @@ namespace Lottery.Buiness
 
         }
 
-        public List<clTuijianhaomalan_info> ReadWeb_Report(ref BackgroundWorker bgWorker, List<string> selectitem)
+        public List<clTuijianhaomalan_info> ReadWeb_Report(ref BackgroundWorker bgWorker, List<string> selectitem, List<clszhongleiDuiyingQishu_info> mapping_Result)
         {
 
             //caizhong = wanfa;
@@ -448,6 +558,17 @@ namespace Lottery.Buiness
                     {
                         caizhong = selectitem[i].Replace(",", "");
 
+                        clszhongleiDuiyingQishu_info qishuitem = mapping_Result.Find(so => so.wanfazhonglei != null && so.wanfazhonglei == caizhong);
+                        if (qishuitem != null)
+                        {
+                            filter_qishu = qishuitem.qishu;
+                        }
+                        if (filter_qishu == null || filter_qishu == "")
+                        {
+                            MessageBox.Show(caizhong + "期数填写有误");
+                            continue;
+
+                        }
                         aog = 0;
                         isrun = ProcessStatus.初始化;
 
@@ -552,8 +673,8 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-              //  viewForm.Show();
-                MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15");
+                // viewForm.Show();
+                MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
                 if (caizhong.Contains("前一直"))
                 {
                     MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q11m");
@@ -646,8 +767,6 @@ namespace Lottery.Buiness
                 if (caizhong.Contains("任选二"))
                 {
                     clickid = "yl2m";
-
-
                 }
                 else if (caizhong.Contains("任选三"))
                 {
@@ -688,8 +807,6 @@ namespace Lottery.Buiness
                     return;
 
                 }
-
-
                 HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("a");
                 foreach (HtmlElement item in atab)
                 {
@@ -703,6 +820,7 @@ namespace Lottery.Buiness
                 login++;
 
             }
+            //
             else if (myDoc.Url.ToString().IndexOf("http://chart.icaile.com/hlj11x5.php?op") >= 0 && isrun == ProcessStatus.登录界面)//http://chart.icaile.com/hlj11x5.php?op=yl3
             {
                 if (login < 2)
@@ -711,7 +829,21 @@ namespace Lottery.Buiness
                     return;
 
                 }
-          
+                int ii = 0;
+                MyWebBrower.Navigate(myDoc.Url.ToString() + "&num=" + filter_qishu.ToString());
+                login++;
+                isrun = ProcessStatus.第一页面;
+
+            }
+            else if (myDoc.Url.ToString().IndexOf("http://chart.icaile.com/hlj11x5.php?op") >= 0 && isrun == ProcessStatus.第一页面)//http://chart.icaile.com/hlj11x5.php?op=yl3
+            {
+                if (login < 4)
+                {
+                    login++;
+                    return;
+
+                }
+
                 //  return;
 
                 Tuijianhaomalan_Result = new List<clTuijianhaomalan_info>();
@@ -814,7 +946,7 @@ namespace Lottery.Buiness
                         wanfazhonglei = parent_li.InnerText.Replace("[多码遗漏]", "").Trim();
                     if (wanfazhonglei == "[常规遗漏] 直选遗漏" || wanfazhonglei == "组选遗漏")
                         wanfazhonglei = caizhong;
-          
+
                     //利用 HTMLTable 抓取信息
                     try
                     {
@@ -902,13 +1034,13 @@ namespace Lottery.Buiness
             //获取中奖信息
             else if (myDoc.Url.ToString().IndexOf("http://chart.icaile.com/hlj11x5.php?op=dcjb") >= 0 && isrun == ProcessStatus.确认YES)
             {
-                if (login < 5)
+                if (login < 7)
                 {
                     login++;
                     return;
 
                 }
-           
+
                 loading = true;
                 while (loading == true)
                 {
@@ -1077,7 +1209,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                viewForm.Show();
+                // viewForm.Show();
                 MyWebBrower.Url = new Uri("http://zx.dahecp.com/tool/beitou.aspx");
 
 
@@ -1104,10 +1236,10 @@ namespace Lottery.Buiness
                 var qushutxt = Convert.ToDouble(ITEM.zhongjiangqishu.Substring(6, ITEM.zhongjiangqishu.Length - 6)) - Convert.ToDouble(ITEM.dangriqihao.Substring(6, ITEM.dangriqihao.Length - 6)) + 1;
                 qushutxt = Math.Abs(Convert.ToDouble(qushutxt));
 
-                if (qushutxt < 337 && qushutxt > -337)
+                if (qushutxt < 67 && qushutxt > -67)
                     fa = Convert.ToInt32(qushutxt.ToString()).ToString().Replace("-", "").ToString();
                 else
-                    fa = "336";
+                    fa = "66";
                 ITEM.fanganqishu = fa;
 
                 HtmlElement qishu = myDoc.Document.GetElementById("sq");
@@ -1124,7 +1256,7 @@ namespace Lottery.Buiness
                     qishibeishu.SetAttribute("Value", "1");
 
                 // 单倍奖金：： 
-                HtmlElement danbeijiangjin = myDoc.Document.GetElementById("sb");
+                HtmlElement danbeijiangjin = myDoc.Document.GetElementById("dj");
                 if (danbeijiangjin != null)
                 {
                     //查询值
@@ -1143,7 +1275,7 @@ namespace Lottery.Buiness
                 //      最低收益：：：： 
                 HtmlElement zuidi = myDoc.Document.GetElementById("syRMB");
                 if (zuidi != null)
-                    zuidi.SetAttribute("Value", "100");
+                    zuidi.SetAttribute("Value", "1");
                 HtmlElement submit = myDoc.Document.GetElementById("submit");
                 if (submit != null)
                     submit.InvokeMember("Click");
@@ -1187,32 +1319,37 @@ namespace Lottery.Buiness
 
         private string chaxunjiangjin(string inputJiangjin)
         {
-            if (ITEM.wanfazhonglei.Contains("任选一"))
-                inputJiangjin = "13";
-            else if (ITEM.wanfazhonglei.Contains("任二"))
-                inputJiangjin = "6";
-            else if (ITEM.wanfazhonglei.Contains("任三"))
-                inputJiangjin = "19";
-            else if (ITEM.wanfazhonglei.Contains("任四 "))
-                inputJiangjin = "78";
-            else if (ITEM.wanfazhonglei.Contains("任五"))
-                inputJiangjin = "540";
-            else if (ITEM.wanfazhonglei.Contains("任六"))
-                inputJiangjin = "90";
-            else if (ITEM.wanfazhonglei.Contains("任七"))
-                inputJiangjin = "26";
-            else if (ITEM.wanfazhonglei.Contains("任五"))
-                inputJiangjin = "540";
-            else if (ITEM.wanfazhonglei.Contains("任八"))
-                inputJiangjin = "9";
-            else if (ITEM.wanfazhonglei.Contains("二直"))
-                inputJiangjin = "130";
-            else if (ITEM.wanfazhonglei.Contains("二组"))
-                inputJiangjin = "65";
-            else if (ITEM.wanfazhonglei.Contains("三直"))
-                inputJiangjin = "1170";
-            else if (ITEM.wanfazhonglei.Contains("三组"))
-                inputJiangjin = "195";
+            if (ITEM.wanfazhonglei != null)
+            {
+                if (ITEM.wanfazhonglei.Contains("任选一"))
+                    inputJiangjin = "13";
+                else if (ITEM.wanfazhonglei.Contains("任二"))
+                    inputJiangjin = "6";
+                else if (ITEM.wanfazhonglei.Contains("任三"))
+                    inputJiangjin = "19";
+                else if (ITEM.wanfazhonglei.Contains("任四 "))
+                    inputJiangjin = "78";
+                else if (ITEM.wanfazhonglei.Contains("任五"))
+                    inputJiangjin = "540";
+                else if (ITEM.wanfazhonglei.Contains("任六"))
+                    inputJiangjin = "90";
+                else if (ITEM.wanfazhonglei.Contains("任七"))
+                    inputJiangjin = "26";
+                else if (ITEM.wanfazhonglei.Contains("任五"))
+                    inputJiangjin = "540";
+                else if (ITEM.wanfazhonglei.Contains("任八"))
+                    inputJiangjin = "9";
+                else if (ITEM.wanfazhonglei.Contains("二直"))
+                    inputJiangjin = "130";
+                else if (ITEM.wanfazhonglei.Contains("二组"))
+                    inputJiangjin = "65";
+                else if (ITEM.wanfazhonglei.Contains("三直"))
+                    inputJiangjin = "1170";
+                else if (ITEM.wanfazhonglei.Contains("三组"))
+                    inputJiangjin = "195";
+            }
+            else
+                inputJiangjin = "1";
             return inputJiangjin;
         }
 
@@ -1274,6 +1411,7 @@ namespace Lottery.Buiness
                             item.wanfazhonglei = ITEM.wanfazhonglei;
                             item.zhongjiangqishu = ITEM.zhongjiangqishu;
                             item.fanganqishu = ITEM.fanganqishu;
+                            item.Input_Date = DateTime.Now.ToString("yyyy/MM/dd");
                             jisuanqi_Result.Add(item);
                             KeyInfoRowIndex++;
                         }

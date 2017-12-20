@@ -345,6 +345,7 @@
 		<row><td>HRB_LotteryManagermentSystem.exe</td><td>{2F0A4DFB-DF11-4F0E-8E57-0325C03952B2}</td><td>INSTALLDIR</td><td>2</td><td/><td>hrb_lotterymanagermentsystem</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>{9E8CFAB5-39D7-46AF-A6AE-9D05E18B959A}</td><td>INSTALLDIR</td><td>2</td><td/><td>hrb_lotterymanagermentsystem2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{3B40D05C-477D-44F7-99AE-1213BC19339B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{4FF1376D-6703-4BF9-B49C-E0B9FBD4AB0A}</td><td>SYSTEM</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Interop.SHDocVw.dll</td><td>{5A689B57-BCA1-48E0-9CF2-90F07F8E359C}</td><td>INSTALLDIR</td><td>2</td><td/><td>interop.shdocvw.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IrisSkin2.dll</td><td>{82AC655F-A7D9-41BF-B5FE-ECC3F64E82A1}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Lottery.Buiness.dll</td><td>{FF697E42-794A-4866-853D-91A3F59DA974}</td><td>INSTALLDIR</td><td>2</td><td/><td>lottery.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1170,6 +1171,7 @@
 		<row><td>ProgramMenuFolder</td><td>TARGETDIR</td><td>.:Programs</td><td/><td>3</td><td/></row>
 		<row><td>RecentFolder</td><td>TARGETDIR</td><td>.:Recent</td><td/><td>0</td><td/></row>
 		<row><td>SETUP</td><td>DIRECTORY</td><td>Setup</td><td/><td>0</td><td/></row>
+		<row><td>SYSTEM</td><td>INSTALLDIR</td><td>System</td><td/><td>0</td><td/></row>
 		<row><td>SendToFolder</td><td>TARGETDIR</td><td>.:SendTo</td><td/><td>3</td><td/></row>
 		<row><td>StartMenuFolder</td><td>TARGETDIR</td><td>.:STARTM~1|Start Menu</td><td/><td>3</td><td/></row>
 		<row><td>StartupFolder</td><td>TARGETDIR</td><td>.:StartUp</td><td/><td>3</td><td/></row>
@@ -1879,6 +1881,7 @@
 		<row><td>AlwaysInstall</td><td>HRB_LotteryManagermentSystem.exe</td></row>
 		<row><td>AlwaysInstall</td><td>HRB_LotteryManagermentSystem.vshost.exe</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>Interop.SHDocVw.dll</td></row>
 		<row><td>AlwaysInstall</td><td>IrisSkin2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Lottery.Buiness.dll</td></row>
@@ -1906,6 +1909,7 @@
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>checkboxcombobox.dll</td><td>CheckBoxComboBox.dll</td><td>CHECKB~1.DLL|CheckBoxComboBox.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\CheckBoxComboBox.dll</td><td>1</td><td/></row>
 		<row><td>checkboxcombobox.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>CHECKB~1.PDB|CheckBoxComboBox.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\CheckBoxComboBox.pdb</td><td>1</td><td/></row>
+		<row><td>confing.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>confing.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\System\confing.txt</td><td>1</td><td/></row>
 		<row><td>hrb_lotterymanagermentsystem</td><td>HRB_LotteryManagermentSystem.exe</td><td>HRB_LO~1.EXE|HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>1</td><td/></row>
 		<row><td>hrb_lotterymanagermentsystem1</td><td>ISX_DEFAULTCOMPONENT</td><td>HRB_LO~1.PDB|HRB_LotteryManagermentSystem.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.pdb</td><td>1</td><td/></row>
 		<row><td>hrb_lotterymanagermentsystem2</td><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>HRB_LO~1.EXE|HRB_LotteryManagermentSystem.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.vshost.exe</td><td>1</td><td/></row>
@@ -2187,6 +2191,7 @@
 		<row><td>HRB_LotteryManagermentSystem.exe</td><td/><td/><td>_E2206621_A21C_43FB_AE77_F5BA2384E700_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td/><td/><td>_96BA07A0_3BB9_4010_B37C_33BED1A8103A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_A721902A_10AF_4130_9DF4_A5558FD6BE3C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_4531927B_5F4C_4C0A_9FDC_DD8A0DFA44A1_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Interop.SHDocVw.dll</td><td/><td/><td>_24B1C67F_6460_484F_8DD5_BB21D4A79647_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IrisSkin2.dll</td><td/><td/><td>_012DC766_69AD_4A52_89CE_18B3D15EC6AB_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Lottery.Buiness.dll</td><td/><td/><td>_E7BED0A2_496A_4C71_84E9_CA0708B39702_FILTER</td><td/><td/><td/><td/></row>

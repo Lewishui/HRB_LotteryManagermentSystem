@@ -44,6 +44,9 @@
             this.filterButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxComboBox1 = new PresentationControls.CheckBoxComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -61,6 +64,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -101,7 +105,7 @@
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -165,7 +169,7 @@
             this.filterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.filterButton.Location = new System.Drawing.Point(788, 26);
             this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(101, 41);
+            this.filterButton.Size = new System.Drawing.Size(98, 41);
             this.filterButton.TabIndex = 78;
             this.filterButton.Text = "查找";
             this.filterButton.UseVisualStyleBackColor = true;
@@ -184,6 +188,9 @@
             // groupBox2
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.checkBoxComboBox1);
             this.groupBox2.Controls.Add(this.filterButton);
@@ -196,6 +203,36 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Action";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(289, 36);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 25);
+            this.button2.TabIndex = 99;
+            this.button2.Text = "修改";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(209, 41);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 19);
+            this.label7.TabIndex = 98;
+            this.label7.Text = "->";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(242, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 20);
+            this.label6.TabIndex = 96;
+            this.label6.Text = "期数";
             // 
             // label1
             // 
@@ -228,6 +265,7 @@
             this.checkBoxComboBox1.Name = "checkBoxComboBox1";
             this.checkBoxComboBox1.Size = new System.Drawing.Size(121, 21);
             this.checkBoxComboBox1.TabIndex = 94;
+            this.checkBoxComboBox1.SelectedIndexChanged += new System.EventHandler(this.checkBoxComboBox1_SelectedIndexChanged);
             // 
             // checkBox1
             // 
@@ -332,7 +370,8 @@
             this.toolStripButton1,
             this.toolStripButton3,
             this.toolStripButton2,
-            this.toolStripButton4});
+            this.toolStripButton4,
+            this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -375,6 +414,16 @@
             this.toolStripButton2.Size = new System.Drawing.Size(79, 25);
             this.toolStripButton2.Text = "下载";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(79, 25);
+            this.toolStripButton4.Text = "退出";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click_1);
             // 
             // groupBox1
             // 
@@ -567,7 +616,7 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Location = new System.Drawing.Point(788, 26);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 41);
@@ -731,15 +780,14 @@
             this.kaijianghaoma.HeaderText = "开奖号码";
             this.kaijianghaoma.Name = "kaijianghaoma";
             // 
-            // toolStripButton4
+            // toolStripButton5
             // 
-            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(79, 25);
-            this.toolStripButton4.Text = "退出";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click_1);
+            this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(79, 25);
+            this.toolStripButton5.Text = "全自动";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // frmMain
             // 
@@ -849,6 +897,10 @@
         private PresentationControls.CheckBoxComboBox checkBoxComboBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
 
     }
 }
