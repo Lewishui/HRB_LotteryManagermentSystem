@@ -1,0 +1,7 @@
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\bin\x86\Debug\CheckBoxComboBox.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\bin\x86\Debug\CheckBoxComboBox.pdb
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\x86\Debug\CheckBoxComboBox.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\x86\Debug\PresentationControls.PopupComboBox.resources
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\x86\Debug\CheckBoxComboBox.csproj.GenerateResource.Cache
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\x86\Debug\CheckBoxComboBox.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\x86\Debug\CheckBoxComboBox.pdb

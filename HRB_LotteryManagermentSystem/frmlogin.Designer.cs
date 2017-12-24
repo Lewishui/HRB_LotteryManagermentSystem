@@ -58,8 +58,9 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.scrollingText1 = new Order.Common.ScrollingText();
             this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.scrollingText1 = new Order.Common.ScrollingText();
+            this.初始化数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +83,8 @@
             // 
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.关于系统ToolStripMenuItem,
-            this.eToolStripMenuItem});
+            this.eToolStripMenuItem,
+            this.初始化数据ToolStripMenuItem});
             this.toolStripDropDownButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
@@ -135,7 +137,7 @@
             // 导入彩票数据ToolStripMenuItem
             // 
             this.导入彩票数据ToolStripMenuItem.Name = "导入彩票数据ToolStripMenuItem";
-            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.导入彩票数据ToolStripMenuItem.Text = "主页面";
             this.导入彩票数据ToolStripMenuItem.Click += new System.EventHandler(this.导入彩票数据ToolStripMenuItem_Click);
             // 
@@ -180,27 +182,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(966, 536);
             this.panel1.TabIndex = 10;
-            // 
-            // scrollingText1
-            // 
-            this.scrollingText1.BackColor = System.Drawing.Color.White;
-            this.scrollingText1.BorderColor = System.Drawing.Color.Black;
-            this.scrollingText1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.scrollingText1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scrollingText1.ForeColor = System.Drawing.Color.Red;
-            this.scrollingText1.ForegroundBrush = null;
-            this.scrollingText1.Location = new System.Drawing.Point(0, 0);
-            this.scrollingText1.Name = "scrollingText1";
-            this.scrollingText1.ScrollDirection = Order.Common.ScrollDirection.RightToLeft;
-            this.scrollingText1.ScrollText = "";
-            this.scrollingText1.ShowBorder = true;
-            this.scrollingText1.Size = new System.Drawing.Size(966, 40);
-            this.scrollingText1.StopScrollOnMouseOver = false;
-            this.scrollingText1.TabIndex = 10;
-            this.scrollingText1.TextScrollDistance = 2;
-            this.scrollingText1.TextScrollSpeed = 25;
-            this.scrollingText1.VerticleTextPosition = Order.Common.VerticleTextPosition.Center;
-            this.scrollingText1.Visible = false;
             // 
             // dockPanel2
             // 
@@ -261,6 +242,34 @@
             this.dockPanel2.Skin = dockPanelSkin1;
             this.dockPanel2.TabIndex = 9;
             // 
+            // scrollingText1
+            // 
+            this.scrollingText1.BackColor = System.Drawing.Color.White;
+            this.scrollingText1.BorderColor = System.Drawing.Color.Black;
+            this.scrollingText1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.scrollingText1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.scrollingText1.ForeColor = System.Drawing.Color.Red;
+            this.scrollingText1.ForegroundBrush = null;
+            this.scrollingText1.Location = new System.Drawing.Point(0, 0);
+            this.scrollingText1.Name = "scrollingText1";
+            this.scrollingText1.ScrollDirection = Order.Common.ScrollDirection.RightToLeft;
+            this.scrollingText1.ScrollText = "";
+            this.scrollingText1.ShowBorder = true;
+            this.scrollingText1.Size = new System.Drawing.Size(966, 40);
+            this.scrollingText1.StopScrollOnMouseOver = false;
+            this.scrollingText1.TabIndex = 10;
+            this.scrollingText1.TextScrollDistance = 2;
+            this.scrollingText1.TextScrollSpeed = 25;
+            this.scrollingText1.VerticleTextPosition = Order.Common.VerticleTextPosition.Center;
+            this.scrollingText1.Visible = false;
+            // 
+            // 初始化数据ToolStripMenuItem
+            // 
+            this.初始化数据ToolStripMenuItem.Name = "初始化数据ToolStripMenuItem";
+            this.初始化数据ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.初始化数据ToolStripMenuItem.Text = "初始化数据";
+            this.初始化数据ToolStripMenuItem.Click += new System.EventHandler(this.初始化数据ToolStripMenuItem_Click);
+            // 
             // frmlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +305,7 @@
         private System.Windows.Forms.Panel panel1;
         private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel2;
         private Order.Common.ScrollingText scrollingText1;
+        private System.Windows.Forms.ToolStripMenuItem 初始化数据ToolStripMenuItem;
 
     }
 }

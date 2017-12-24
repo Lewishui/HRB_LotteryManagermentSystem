@@ -45,27 +45,57 @@ namespace HRB_LotteryManagermentSystem
             timer1.Start();
             timer1.Tick += timer1_Tick;
 
-             clsAllnew BusinessHelp = new clsAllnew();
+            clsAllnew BusinessHelp = new clsAllnew();
 
             bool isve = BusinessHelp.read_sqlitefile();
             if (isve == false)
             {
-              
-                string dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\HRB_LotteryManagermentSystem\\Lottery.sqlite";
-                if (File.Exists(dir))
+                copydb_file();
+
+            }
+        }
+
+        private static void copydb_file()
+        {
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            bool isve = BusinessHelp.read_sqlitefile();
+            if (isve == true)
+                if (MessageBox.Show("确认要覆盖之前版本数据, 继续 ?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ""), "");
-                   
-                    File.Copy(dir, ZFCEPath + "Lottery.sqlite");
                 }
                 else
+                    return;
+
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\HRB_LotteryManagermentSystem\\Lottery.sqlite";
+            if (File.Exists(dir))
+            {
+                string ZFCEPath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ""), "");
+                if (File.Exists(dir))
                 {
-                    MessageBox.Show("请将初始安装包解压至桌面，然后重试！");
-                    
+                    System.IO.FileInfo fileInfo = new System.IO.FileInfo(ZFCEPath + "Lottery.sqlite");
+                    System.Diagnostics.FileVersionInfo info = System.Diagnostics.FileVersionInfo.GetVersionInfo(ZFCEPath + "Lottery.sqlite");
+                    string changedate = fileInfo.LastWriteTime.ToString("yyyy-MM-dd HH:mm:ss");
+                    string big = System.Math.Ceiling(fileInfo.Length / 1024.0).ToString();
 
+
+                    System.IO.FileInfo fileInfo_desktop = new System.IO.FileInfo(dir);
+                    string big_desktop = System.Math.Ceiling(fileInfo_desktop.Length / 1024.0).ToString();
+                    string changedate_desktop = fileInfo_desktop.LastWriteTime.ToString("yyyy-MM-dd HH:mm:ss");
+                    if (changedate_desktop != changedate)
+                    {
+                        File.Copy(dir, ZFCEPath + "Lottery1.sqlite", true);
+                        MessageBox.Show("完成,请重新打开软件");
+
+
+                    }
                 }
-            }
 
+            }
+            else
+            {
+                MessageBox.Show("安装方式错误，请将原始安装包解压至电脑桌面，然后重新安装！");
+            }
 
         }
         void timer1_Tick(object sender, EventArgs e)
@@ -226,10 +256,10 @@ namespace HRB_LotteryManagermentSystem
                 MessageBox.Show("六个月运行期已到，请将剩余费用付清 !");
                 return;
             }
-           // MessageBox.Show("当前为测试系统 !");
+            // MessageBox.Show("当前为测试系统 !");
 
             #endregion
-         
+
 
             //, 
             if (this.txtSAPUserId.Text == "Admin" || this.txtSAPUserId.Text == "Lewis")
@@ -239,7 +269,8 @@ namespace HRB_LotteryManagermentSystem
                     this.WindowState = FormWindowState.Maximized;
                     tsbLogin.Text = "登录成功";
                     toolStripDropDownButton1.Enabled = true;
-
+                    if (chkSaveInfo.Checked == true)
+                        saveUserAndPassword();
                     this.scrollingText1.Visible = true;
 
                 }
@@ -261,6 +292,11 @@ namespace HRB_LotteryManagermentSystem
             {
 
             }
+        }
+
+        private void 初始化数据ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            copydb_file();
         }
 
 

@@ -45,11 +45,14 @@ namespace HRB_LotteryManagermentSystem
         private List<clszhongleiDuiyingQishu_info> mapping_Result;
         private bool IsRun = false;
         private Thread GetDataforRawDataThread;
+        int rowcount = 0;
+        int RowRemark = 0;
+        int cloumn = 0;
         public frmMain()
         {
             InitializeComponent();
             //this.comboBox1.SelectedIndex = 0;
-           InitialSystemInfo();
+            InitialSystemInfo();
 
             timers_resfresh = true;
             this.pbStatus.Visible = false;
@@ -57,7 +60,7 @@ namespace HRB_LotteryManagermentSystem
             huoquduiyingqishu();
             //NewMethod1();
             this.Load += new EventHandler(frmMain_Load);
-        
+
 
         }
         private void InitialSystemInfo()
@@ -207,10 +210,10 @@ namespace HRB_LotteryManagermentSystem
             s = this.tabControl1.SelectedIndex;
             if (s == 1)
             {
-                string[] tatile1 = System.Text.RegularExpressions.Regex.Split(checkBoxComboBox2.Text, " ");
+                //string[] tatile1 = System.Text.RegularExpressions.Regex.Split(checkBoxComboBox2.Text, " ");
 
-                for (int i = 0; i < tatile1.Length; i++)
-                    selectitem.Add(tatile1[i]);
+                //for (int i = 0; i < tatile1.Length; i++)
+                //    selectitem.Add(tatile1[i]);
             }
         }
         private void APIREST(object sender, EventArgs e)
@@ -231,22 +234,27 @@ namespace HRB_LotteryManagermentSystem
                 BusinessHelp.ExceptionLogger = ExceptionLogger;
                 BusinessHelp.pbStatus = pbStatus;
                 BusinessHelp.tsStatusLabel1 = toolStripLabel1;
-               ProcessLogger.Fatal("读取NewMethod" + DateTime.Now.ToString());
+                ProcessLogger.Fatal("读取NewMethod" + DateTime.Now.ToString());
 
                 Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, selectitem, mapping_Result);
                 zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
+
+                this.toolStripLabel1.Text = "整理数据中....";
 
                 #region 计算逻辑
 
                 #region 如果新推选号码与已经中奖但还未转到历史中奖栏中的原推选号码一致，新推选号码显示在推荐号码栏中。
 
                 string conditions = "select * from tuijanhaoma where Input_Date like '" + DateTime.Now.ToString("yyyy/MM/dd") + "'";//成功
+                this.toolStripLabel1.Text = "查询当日推荐号....";
 
                 List<clTuijianhaomalan_info> ClaimReport_Server = BusinessHelp.ReadServer_tuijanhaoma(conditions);
                 ProcessLogger.Fatal("ReadServer_lishizhongjian 1" + DateTime.Now.ToString());
 
 
                 conditions = "select * from lishizongjiang where Input_Date like '" + DateTime.Now.ToString("yyyy/MM/dd") + "'";//成功
+
+                this.toolStripLabel1.Text = "查询当日历史中奖....";
 
                 List<clsJisuanqi_info> Jisuanqi_Server = BusinessHelp.ReadServer_lishizhongjiang(conditions);
 
@@ -270,18 +278,33 @@ namespace HRB_LotteryManagermentSystem
                              select o);
                     NewResult = q.ToList();
                     NewResult = NewResult.FindAll(s => s.chuxiancishu != null && s.chuxiancishu == NewResult[0].chuxiancishu);
-                    q = (from o in NewResult
-                         orderby o.zuidayilou descending
-                         select o);
-                    var qq = q.Last();
-                    clTuijianhaomalan_info yete = new clTuijianhaomalan_info();
-                    NewResult = new List<clTuijianhaomalan_info>();
+                    List<clTuijianhaomalan_info> NewResultNew = q.ToList().FindAll(s => s.chuxiancishu != null && s.chuxiancishu == NewResult[0].chuxiancishu);
+                    dataGridView4.DataSource = NewResultNew;
 
-                    NewResult.Add(qq);
+                    //descending ascending
+
+                    q = (from o in NewResult
+                         orderby Convert.ToInt32(o.zuidayilou) descending
+                         select o);
+
+
+
+                    var qq = q.Last();
+                    List<clTuijianhaomalan_info> zuidayilou_same = NewResult.FindAll(s => s.zuidayilou != null && s.zuidayilou == qq.zuidayilou);
+
+                    //clTuijianhaomalan_info yete = new clTuijianhaomalan_info();
+                    NewResult = new List<clTuijianhaomalan_info>();
+                    if (zuidayilou_same != null && zuidayilou_same.Count == 1)
+                        NewResult.Add(qq);
+                    else if (zuidayilou_same != null && zuidayilou_same.Count >= 1)
+                    {
+                        foreach (clTuijianhaomalan_info itemadd in zuidayilou_same)
+                            NewResult.Add(itemadd);
+                    }
                     foreach (clTuijianhaomalan_info item in NewResult)
                     {
                         //如果以前已存在此推荐号则不追加
-                        clTuijianhaomalan_info temp1 = ClaimReport_Server.Find(s => s.tuijianhaoma != null && s.tuijianhaoma == item.tuijianhaoma);
+                        clTuijianhaomalan_info temp1 = ClaimReport_Server.Find(s => s.tuijianhaoma != null && s.tuijianhaoma == item.haomaileixing);
                         if (temp1 != null)
                             break;
 
@@ -298,7 +321,7 @@ namespace HRB_LotteryManagermentSystem
                         List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) >= Convert.ToDouble(item.dangriqihao));
 
                         if (filter_zhongjiangxinxi != null && filter_zhongjiangxinxi.Count > 0)
-                            foreach (clTuijianhaomalan_info temp in zhongjiangxinxi_Result)
+                            foreach (clTuijianhaomalan_info temp in filter_zhongjiangxinxi)
                             {
 
                                 int time = 0;
@@ -319,15 +342,46 @@ namespace HRB_LotteryManagermentSystem
                         hebing_NewResult.Add(item);
                     }
                 }
+
+                NewResult = new List<clTuijianhaomalan_info>();
+                NewResult = hebing_NewResult.Concat(ClaimReport_Server).ToList();
+                //计算 中奖信息
+                #region MyRegion
+                foreach (clTuijianhaomalan_info item in NewResult)
+                {
+                    //查找中奖的期数
+                    string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
+                    List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) >= Convert.ToDouble(item.dangriqihao));
+
+                    if (filter_zhongjiangxinxi != null && filter_zhongjiangxinxi.Count > 0)
+                        foreach (clTuijianhaomalan_info temp in filter_zhongjiangxinxi)
+                        {
+
+                            int time = 0;
+                            for (int iq = 0; iq < tatile1.Length; iq++)
+                            {
+                                if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
+                                    time++;
+                            }
+                            if (time == tatile1.Length)
+                            {
+                                item.zhongjiangqishu = temp.zhongjiangqishu;
+
+                                break;
+                            }
+                        }
+                }
                 //保存新的推荐号
                 int ss1 = this.tabControl1.SelectedIndex;
                 if (ss1 == 0)
                 {
-                    if (hebing_NewResult.Count > 0)
-                        BusinessHelp.inster_tuijanhaoma(hebing_NewResult);
+
+                    if (NewResult.Count > 0)
+                        BusinessHelp.inster_tuijanhaoma(NewResult);
                 }
-                NewResult = new List<clTuijianhaomalan_info>();
-                NewResult = hebing_NewResult.Concat(ClaimReport_Server).ToList();
+
+                #endregion
+
                 Zhongjiangle_Result = NewResult.FindAll(so => so.zhongjiangqishu != null && so.zhongjiangqishu != "");
                 //去除已中奖的条目
                 NewResult = NewResult.Except(Zhongjiangle_Result).ToList();
@@ -335,9 +389,16 @@ namespace HRB_LotteryManagermentSystem
                 #endregion
                 JisuanqiResult = new List<clsJisuanqi_info>();
                 #region 查询金额
+                this.toolStripLabel1.Text = "计算金额....";
+
+
                 JisuanqiResult = BusinessHelp.ReadHistroy(ref this.bgWorker, selectitem, Zhongjiangle_Result);
-                BusinessHelp.inster_lishizongjianglan(JisuanqiResult);
-                JisuanqiResult = JisuanqiResult.Concat(Jisuanqi_Server).ToList();
+                if (JisuanqiResult != null && JisuanqiResult.Count > 0)
+                    BusinessHelp.inster_lishizongjianglan(JisuanqiResult);
+                //JisuanqiResult = JisuanqiResult.Concat(Jisuanqi_Server).ToList();
+                //刷新读取数据库数据
+
+                JisuanqiResult = BusinessHelp.ReadServer_lishizhongjiang(conditions);
 
                 Showdave2(JisuanqiResult);
                 #endregion
@@ -377,6 +438,11 @@ namespace HRB_LotteryManagermentSystem
             this.bindingSource2.DataSource = this.sortableList;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = this.bindingSource2;
+            //List<User> nonDuplicateList2 = Result.Where((x, i) => Result.FindIndex(z => z.wanfazhonglei == x.wanfazhonglei) == i).ToList();
+            List<string> quchongnashuidanwei = (from v in Result select v.wanfazhonglei).Distinct().ToList();
+            comboBox2.DataSource = quchongnashuidanwei;
+            comboBox2.SelectedIndex = 0;
+
 
             timers_resfresh = true;
             //开奖信息
@@ -390,11 +456,11 @@ namespace HRB_LotteryManagermentSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-       
+
 
             if (checkBox1.Checked == true && timers_resfresh == true)
             {
-                this.button1.Enabled = false;
+                //this.button1.Enabled = false;
                 this.toolStripLabel1.Text = "自动获取中,无需任何操作...";
 
                 if (toolStripButton5.Text == "全自动")
@@ -436,14 +502,14 @@ namespace HRB_LotteryManagermentSystem
                 ////th.ApartmentState = System.Threading.ApartmentState.STA;//关键
 
 
-             
+
                 //// Auto();
                 //timers_resfresh = false;
 
             }
             else
             {
-                this.button1.Enabled = true;
+                //this.button1.Enabled = true;
                 aTimer.Stop();
 
             }
@@ -576,6 +642,14 @@ namespace HRB_LotteryManagermentSystem
             dataGridView2.DataSource = this.bindingSource3;
             this.pbStatus.Visible = false;
 
+            List<clsJisuanqi_info> JisuanqiResultcombox = JisuanqiResult.FindAll(s => s.wanfazhonglei != null && s.wanfazhonglei != "");
+            List<string> quchongnashuidanwei = (from v in JisuanqiResultcombox select v.wanfazhonglei).Distinct().ToList();
+            if (quchongnashuidanwei.Count != 0)
+            {
+
+                comboBox1.DataSource = quchongnashuidanwei;
+                comboBox1.SelectedIndex = 0;
+            }
             this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
 
         }
@@ -911,11 +985,11 @@ namespace HRB_LotteryManagermentSystem
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-              
+
             if (toolStripButton5.Text == "全自动")
             {
                 Control.CheckForIllegalCrossThreadCalls = false;
-          
+
                 aTimer = new System.Timers.Timer(30000);
                 aTimer.Elapsed += new System.Timers.ElapsedEventHandler(TimeControl);
                 aTimer.AutoReset = true;
@@ -941,6 +1015,76 @@ namespace HRB_LotteryManagermentSystem
 
                 GetDataforRawDataThread.Start();
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<clTuijianhaomalan_info> FilterResult = Result.FindAll(s => s.wanfazhonglei != null && s.wanfazhonglei.Contains(comboBox2.Text));
+
+            //bindingSource2.Filter = "wanfazhonglei = '" + comboBox2.Text + "'";
+
+            sortableList = new SortableBindingList<clTuijianhaomalan_info>(FilterResult);
+            this.bindingSource2.DataSource = this.sortableList;
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = this.bindingSource2;
+            this.toolStripLabel1.Text = bindingSource2.Count + " -刷新结束，请查看～";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<clsJisuanqi_info> FilterResult = JisuanqiResult.FindAll(s => s.wanfazhonglei != null && s.wanfazhonglei.Contains(comboBox1.Text));
+
+            sortableJisuanqiList = new SortableBindingList<clsJisuanqi_info>(FilterResult);
+            this.bindingSource3.DataSource = this.sortableJisuanqiList;
+            dataGridView2.AutoGenerateColumns = false;
+            dataGridView2.DataSource = this.bindingSource3;
+            this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
+        }
+
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsAllnew BusinessHelp = new clsAllnew();
+            //var oids = GetOrderIdsBySelectedGridCell();
+            string dangriqihao = Convert.ToString(dataGridView.Rows[RowRemark].Cells["dangriqihao"].Value);
+            string wanfazhonglei = Convert.ToString(dataGridView.Rows[RowRemark].Cells["wanfazhonglei"].Value);
+
+            string dele_sql = "delete FROM tuijanhaoma  WHERE dangriqihao ='" + dangriqihao + "'And wanfazhonglei='" + wanfazhonglei + "'";
+
+            BusinessHelp.delete(dele_sql);
+            this.toolStripLabel1.Text = " -删除成功！";
+        }
+        private List<long> GetOrderIdsBySelectedGridCell()
+        {
+
+            List<long> order_ids = new List<long>();
+            var rows = GetSelectedRowsBySelectedCells(dataGridView1);
+            foreach (DataGridViewRow row in rows)
+            {
+                var Diningorder = row.DataBoundItem as clTuijianhaomalan_info;
+                //order_ids.Add((long)Diningorder.dangriqihao);
+            }
+
+            return order_ids;
+        }
+        private IEnumerable<DataGridViewRow> GetSelectedRowsBySelectedCells(DataGridView dgv)
+        {
+            List<DataGridViewRow> rows = new List<DataGridViewRow>();
+            foreach (DataGridViewCell cell in dgv.SelectedCells)
+            {
+                rows.Add(cell.OwningRow);
+                clsAllnew BusinessHelp = new clsAllnew();
+
+
+            }
+            rowcount = dgv.SelectedCells.Count;
+
+            return rows.Distinct();
+        }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowRemark = e.RowIndex;
+            cloumn = e.ColumnIndex;
         }
     }
 }
