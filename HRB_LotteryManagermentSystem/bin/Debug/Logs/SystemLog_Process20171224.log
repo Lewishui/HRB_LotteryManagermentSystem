@@ -1,163 +1,1711 @@
-2017-12-24 10:31:56,099 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:31:56
-2017-12-24 10:31:56,154 [10] FATAL ProcessLogger [(null)] - login12/24/2017 10:31:56
-2017-12-24 10:32:01,818 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:32:01
-2017-12-24 10:32:08,797 [10] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 10:32:08
-2017-12-24 10:32:48,801 [10] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 10:32:48
-2017-12-24 10:32:48,858 [10] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 10:32:48
-2017-12-24 10:32:48,859 [10] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 10:32:48
-2017-12-24 10:32:48,860 [10] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 10:32:48
-2017-12-24 10:32:48,860 [10] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 10:32:48
-2017-12-24 10:33:59,554 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:33:59
-2017-12-24 10:33:59,605 [10] FATAL ProcessLogger [(null)] - login12/24/2017 10:33:59
-2017-12-24 10:34:21,621 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:34:21
-2017-12-24 10:34:21,690 [9] FATAL ProcessLogger [(null)] - login12/24/2017 10:34:21
-2017-12-24 10:34:25,627 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:34:25
-2017-12-24 10:34:30,176 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 10:34:30
-2017-12-24 10:35:10,466 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 10:35:10
-2017-12-24 10:35:10,518 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 10:35:10
-2017-12-24 10:35:10,518 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 10:35:10
-2017-12-24 10:35:10,521 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 10:35:10
-2017-12-24 10:35:10,521 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 10:35:10
-2017-12-24 10:37:38,998 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 10:37:38
-2017-12-24 10:38:24,483 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 10:38:24
-2017-12-24 10:38:24,484 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 10:38:24
-2017-12-24 10:38:24,484 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 10:38:24
-2017-12-24 10:38:24,484 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 10:38:24
-2017-12-24 10:38:24,485 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 10:38:24
-2017-12-24 10:38:31,440 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:38:31
-2017-12-24 10:38:31,497 [9] FATAL ProcessLogger [(null)] - login12/24/2017 10:38:31
-2017-12-24 10:38:35,506 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:38:35
-2017-12-24 10:40:52,786 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 10:40:52
-2017-12-24 10:41:42,530 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 10:41:42
-2017-12-24 10:41:42,583 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 10:41:42
-2017-12-24 10:41:42,583 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 10:41:42
-2017-12-24 10:41:42,585 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 10:41:42
-2017-12-24 10:41:42,588 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 10:41:42
-2017-12-24 10:45:18,781 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 10:45:18
-2017-12-24 10:46:02,946 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 10:46:02
-2017-12-24 10:46:02,948 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 10:46:02
-2017-12-24 10:46:02,949 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 10:46:02
-2017-12-24 10:46:02,951 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 10:46:02
-2017-12-24 10:46:02,951 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 10:46:02
-2017-12-24 10:47:40,854 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:47:40
-2017-12-24 10:47:40,909 [9] FATAL ProcessLogger [(null)] - login12/24/2017 10:47:40
-2017-12-24 10:47:47,931 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:47:47
-2017-12-24 10:47:57,004 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 10:47:57
-2017-12-24 10:48:42,346 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 10:48:42
-2017-12-24 10:48:42,400 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 10:48:42
-2017-12-24 10:48:42,401 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 10:48:42
-2017-12-24 10:48:42,403 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 10:48:42
-2017-12-24 10:48:42,406 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 10:48:42
-2017-12-24 10:53:00,603 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:53:00
-2017-12-24 10:53:00,674 [9] FATAL ProcessLogger [(null)] - login12/24/2017 10:53:00
-2017-12-24 10:53:04,696 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:53:04
-2017-12-24 10:53:09,635 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 10:53:09
-2017-12-24 10:53:59,030 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 10:53:59
-2017-12-24 10:53:59,098 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 10:53:59
-2017-12-24 10:53:59,098 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 10:53:59
-2017-12-24 10:53:59,101 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 10:53:59
-2017-12-24 10:53:59,106 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 10:53:59
-2017-12-24 10:54:39,770 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:54:39
-2017-12-24 10:54:39,852 [9] FATAL ProcessLogger [(null)] - login12/24/2017 10:54:39
-2017-12-24 10:54:43,266 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 10:54:43
-2017-12-24 10:54:47,938 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 10:54:47
-2017-12-24 10:55:31,986 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 10:55:31
-2017-12-24 10:55:32,037 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 10:55:32
-2017-12-24 10:55:32,037 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 10:55:32
-2017-12-24 10:55:32,040 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 10:55:32
-2017-12-24 10:55:32,044 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 10:55:32
-2017-12-24 11:04:50,399 [8] FATAL ProcessLogger [(null)] - System Start 12/24/2017 11:04:50
-2017-12-24 11:04:50,457 [8] FATAL ProcessLogger [(null)] - login12/24/2017 11:04:50
-2017-12-24 11:04:55,028 [8] FATAL ProcessLogger [(null)] - System Start 12/24/2017 11:04:55
-2017-12-24 11:04:59,734 [8] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 11:04:59
-2017-12-24 11:05:47,004 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 11:05:47
-2017-12-24 11:05:47,054 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 11:05:47
-2017-12-24 11:05:47,055 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 11:05:47
-2017-12-24 11:05:47,056 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 11:05:47
-2017-12-24 11:05:47,060 [8] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 11:05:47
-2017-12-24 11:06:21,709 [8] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 11:06:21
-2017-12-24 11:07:18,809 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 11:07:18
-2017-12-24 11:07:18,811 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 11:07:18
-2017-12-24 11:07:18,811 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 11:07:18
-2017-12-24 11:07:18,812 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 11:07:18
-2017-12-24 11:07:18,813 [8] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 11:07:18
-2017-12-24 11:07:55,671 [8] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 11:07:55
-2017-12-24 11:08:40,751 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 11:08:40
-2017-12-24 11:08:40,753 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 11:08:40
-2017-12-24 11:08:40,753 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 11:08:40
-2017-12-24 11:08:40,754 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 11:08:40
-2017-12-24 11:08:40,754 [8] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 11:08:40
-2017-12-24 11:09:46,705 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 11:09:46
-2017-12-24 11:09:46,760 [9] FATAL ProcessLogger [(null)] - login12/24/2017 11:09:46
-2017-12-24 11:09:50,777 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 11:09:50
-2017-12-24 11:09:59,199 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 11:09:59
-2017-12-24 11:10:38,941 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 11:10:38
-2017-12-24 11:10:38,942 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 11:10:38
-2017-12-24 11:10:38,943 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 11:10:38
-2017-12-24 11:10:38,944 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 11:10:38
-2017-12-24 11:10:38,945 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 11:10:38
-2017-12-24 12:27:24,952 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 12:27:24
-2017-12-24 12:27:25,006 [9] FATAL ProcessLogger [(null)] - login12/24/2017 12:27:25
-2017-12-24 12:27:32,747 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 12:27:32
-2017-12-24 12:27:38,530 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 12:27:38
-2017-12-24 12:28:39,251 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 12:28:39
-2017-12-24 12:28:39,314 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 12:28:39
-2017-12-24 12:28:39,314 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 12:28:39
-2017-12-24 12:28:39,317 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 12:28:39
-2017-12-24 12:28:39,320 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 12:28:39
-2017-12-24 13:51:03,534 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 13:51:03
-2017-12-24 13:52:57,399 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 13:52:57
-2017-12-24 13:52:57,400 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 13:52:57
-2017-12-24 13:52:57,401 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 13:52:57
-2017-12-24 13:52:57,402 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 13:52:57
-2017-12-24 13:52:57,402 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 13:52:57
-2017-12-24 13:59:35,313 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 13:59:35
-2017-12-24 13:59:35,367 [9] FATAL ProcessLogger [(null)] - login12/24/2017 13:59:35
-2017-12-24 13:59:58,925 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 13:59:58
-2017-12-24 13:59:58,984 [10] FATAL ProcessLogger [(null)] - login12/24/2017 13:59:58
-2017-12-24 14:00:35,602 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 14:00:35
-2017-12-24 14:00:35,656 [9] FATAL ProcessLogger [(null)] - login12/24/2017 14:00:35
-2017-12-24 14:00:43,362 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 14:00:43
-2017-12-24 14:00:54,352 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 14:00:54
-2017-12-24 14:01:44,387 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 14:01:44
-2017-12-24 14:01:44,387 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 14:01:44
-2017-12-24 14:01:44,387 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 14:01:44
-2017-12-24 14:01:44,388 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 14:01:44
-2017-12-24 14:01:44,389 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 14:01:44
-2017-12-24 14:18:31,099 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 14:18:31
-2017-12-24 14:18:31,152 [9] FATAL ProcessLogger [(null)] - login12/24/2017 14:18:31
-2017-12-24 14:18:34,816 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 14:18:34
-2017-12-24 14:18:39,517 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 14:18:39
-2017-12-24 14:19:24,183 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 14:19:24
-2017-12-24 14:19:24,228 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 14:19:24
-2017-12-24 14:19:24,228 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 14:19:24
-2017-12-24 14:19:24,230 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 14:19:24
-2017-12-24 14:19:24,233 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 14:19:24
-2017-12-24 14:22:12,544 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 14:22:12
-2017-12-24 14:22:12,601 [10] FATAL ProcessLogger [(null)] - login12/24/2017 14:22:12
-2017-12-24 14:22:16,125 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 14:22:16
-2017-12-24 14:22:21,141 [10] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 14:22:21
-2017-12-24 14:23:06,066 [10] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 14:23:06
-2017-12-24 14:23:06,110 [10] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 14:23:06
-2017-12-24 14:23:06,111 [10] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 14:23:06
-2017-12-24 14:23:06,113 [10] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 14:23:06
-2017-12-24 14:23:06,116 [10] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 14:23:06
-2017-12-24 14:24:27,674 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 14:24:27
-2017-12-24 14:24:27,764 [10] FATAL ProcessLogger [(null)] - login12/24/2017 14:24:27
-2017-12-24 14:25:17,059 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 14:25:17
-2017-12-24 14:25:17,110 [9] FATAL ProcessLogger [(null)] - login12/24/2017 14:25:17
-2017-12-24 15:35:30,530 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 15:35:30
-2017-12-24 15:35:30,604 [10] FATAL ProcessLogger [(null)] - login12/24/2017 15:35:30
-2017-12-24 15:39:18,042 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 15:39:18
-2017-12-24 15:39:18,097 [9] FATAL ProcessLogger [(null)] - login12/24/2017 15:39:18
-2017-12-24 16:01:39,792 [8] FATAL ProcessLogger [(null)] - System Start 12/24/2017 16:01:39
-2017-12-24 16:01:39,858 [8] FATAL ProcessLogger [(null)] - login12/24/2017 16:01:39
-2017-12-24 16:01:46,517 [8] FATAL ProcessLogger [(null)] - System Start 12/24/2017 16:01:46
-2017-12-24 16:01:57,744 [8] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 16:01:57
-2017-12-24 16:02:45,963 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 16:02:45
-2017-12-24 16:02:45,963 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 16:02:45
-2017-12-24 16:02:45,963 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 16:02:45
-2017-12-24 16:02:45,964 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 16:02:45
-2017-12-24 16:02:45,964 [8] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 16:02:45
-2017-12-24 16:10:00,110 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 16:10:00
-2017-12-24 16:10:00,163 [9] FATAL ProcessLogger [(null)] - login12/24/2017 16:10:00
+2017-12-24 18:07:24,175 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:07:24
+2017-12-24 18:07:24,233 [9] FATAL ProcessLogger [(null)] - login12/24/2017 18:07:24
+2017-12-24 18:07:31,645 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:07:31
+2017-12-24 18:07:37,572 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 18:07:37
+2017-12-24 18:23:54,472 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:23:54
+2017-12-24 18:23:54,526 [9] FATAL ProcessLogger [(null)] - login12/24/2017 18:23:54
+2017-12-24 18:23:59,926 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:23:59
+2017-12-24 18:24:10,691 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 18:24:10
+2017-12-24 18:24:13,114 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:13
+2017-12-24 18:24:40,424 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:40
+2017-12-24 18:24:41,698 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:41
+2017-12-24 18:24:41,714 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:41
+2017-12-24 18:24:41,718 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:41
+2017-12-24 18:24:45,031 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:45
+2017-12-24 18:24:45,034 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:45
+2017-12-24 18:24:45,249 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:45
+2017-12-24 18:24:48,179 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:48
+2017-12-24 18:24:48,181 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:48
+2017-12-24 18:24:48,186 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:24:48
+2017-12-24 18:24:49,451 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 18:24:49
+2017-12-24 18:24:49,492 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 18:24:49
+2017-12-24 18:24:49,492 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 18:24:49
+2017-12-24 18:24:49,494 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 18:24:49
+2017-12-24 18:24:49,497 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 18:24:49
+2017-12-24 18:35:50,020 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:35:50
+2017-12-24 18:35:50,075 [9] FATAL ProcessLogger [(null)] - login12/24/2017 18:35:50
+2017-12-24 18:35:54,263 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:35:54
+2017-12-24 18:35:57,919 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 18:35:57
+2017-12-24 18:35:59,055 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:35:59
+2017-12-24 18:35:59,055 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 18:35:59
+2017-12-24 18:35:59,118 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 18:35:59
+2017-12-24 18:35:59,120 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:35:59
+2017-12-24 18:35:59,120 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 18:35:59
+2017-12-24 18:36:01,793 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:01
+2017-12-24 18:36:01,793 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 18:36:01
+2017-12-24 18:36:01,794 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:01
+2017-12-24 18:36:01,799 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:01
+2017-12-24 18:36:04,820 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:04
+2017-12-24 18:36:04,820 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 18:36:04
+2017-12-24 18:36:04,821 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:04
+2017-12-24 18:36:04,821 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 18:36:04
+2017-12-24 18:36:04,821 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 18:36:04
+2017-12-24 18:36:04,914 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 18:36:04
+2017-12-24 18:36:05,034 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 18:36:05
+2017-12-24 18:36:05,125 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:05
+2017-12-24 18:36:08,027 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:08
+2017-12-24 18:36:08,028 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:36:08
+2017-12-24 18:36:08,029 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:08
+2017-12-24 18:36:08,029 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:36:08
+2017-12-24 18:36:08,034 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:08
+2017-12-24 18:36:08,035 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:36:08
+2017-12-24 18:36:08,035 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 18:36:08
+2017-12-24 18:36:09,169 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 18:36:09
+2017-12-24 18:36:09,196 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 18:36:09
+2017-12-24 18:36:09,196 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 18:36:09
+2017-12-24 18:36:10,205 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:10
+2017-12-24 18:36:10,206 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 18:36:10
+2017-12-24 18:36:10,225 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 18:36:10
+2017-12-24 18:36:10,226 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:10
+2017-12-24 18:36:10,226 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 18:36:10
+2017-12-24 18:36:13,097 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:13
+2017-12-24 18:36:13,097 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 18:36:13
+2017-12-24 18:36:13,098 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:13
+2017-12-24 18:36:17,637 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:17
+2017-12-24 18:36:17,637 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 18:36:17
+2017-12-24 18:36:17,638 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:17
+2017-12-24 18:36:17,638 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 18:36:17
+2017-12-24 18:36:17,639 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 18:36:17
+2017-12-24 18:36:17,677 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 18:36:17
+2017-12-24 18:36:17,913 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 18:36:17
+2017-12-24 18:36:17,925 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:17
+2017-12-24 18:36:22,603 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:22
+2017-12-24 18:36:22,603 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:36:22
+2017-12-24 18:36:22,607 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:22
+2017-12-24 18:36:22,608 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:36:22
+2017-12-24 18:36:22,615 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:36:22
+2017-12-24 18:36:22,616 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:36:22
+2017-12-24 18:36:22,616 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 18:36:22
+2017-12-24 18:36:23,703 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 18:36:23
+2017-12-24 18:36:23,726 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 18:36:23
+2017-12-24 18:36:23,726 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 18:36:23
+2017-12-24 18:36:23,857 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 18:36:23
+2017-12-24 18:36:23,907 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 18:36:23
+2017-12-24 18:36:23,907 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 18:36:23
+2017-12-24 18:36:23,909 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 18:36:23
+2017-12-24 18:36:23,912 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 18:36:23
+2017-12-24 18:36:23,985 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 18:36:23
+2017-12-24 18:38:56,433 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:38:56
+2017-12-24 18:38:56,486 [9] FATAL ProcessLogger [(null)] - login12/24/2017 18:38:56
+2017-12-24 18:38:59,936 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:38:59
+2017-12-24 18:39:05,147 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 18:39:05
+2017-12-24 18:39:06,280 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:06
+2017-12-24 18:39:06,281 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 18:39:06
+2017-12-24 18:39:06,340 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 18:39:06
+2017-12-24 18:39:06,341 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:06
+2017-12-24 18:39:06,341 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 18:39:06
+2017-12-24 18:39:09,194 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:09
+2017-12-24 18:39:09,194 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 18:39:09
+2017-12-24 18:39:09,195 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:09
+2017-12-24 18:39:11,675 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:11
+2017-12-24 18:39:11,675 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 18:39:11
+2017-12-24 18:39:11,676 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:11
+2017-12-24 18:39:11,676 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 18:39:11
+2017-12-24 18:39:11,676 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 18:39:11
+2017-12-24 18:39:11,744 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 18:39:11
+2017-12-24 18:39:11,884 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 18:39:11
+2017-12-24 18:39:14,423 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:14
+2017-12-24 18:39:14,424 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:39:14
+2017-12-24 18:39:14,425 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:14
+2017-12-24 18:39:14,425 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:39:14
+2017-12-24 18:39:14,432 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 18:39:14
+2017-12-24 18:39:14,432 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 18:39:14
+2017-12-24 18:39:14,432 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 18:39:14
+2017-12-24 18:39:15,558 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 18:39:15
+2017-12-24 18:39:15,583 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 18:39:15
+2017-12-24 18:39:15,583 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 18:39:15
+2017-12-24 18:39:15,721 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 18:39:15
+2017-12-24 18:39:15,764 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 18:39:15
+2017-12-24 18:39:15,764 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 18:39:15
+2017-12-24 18:39:15,766 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 18:39:15
+2017-12-24 18:39:15,769 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 18:39:15
+2017-12-24 18:39:15,851 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 18:39:15
+2017-12-24 18:43:05,056 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:43:05
+2017-12-24 18:43:05,114 [10] FATAL ProcessLogger [(null)] - login12/24/2017 18:43:05
+2017-12-24 18:43:39,840 [10] FATAL ProcessLogger [(null)] - System Start 12/24/2017 18:43:39
+2017-12-24 18:43:39,899 [10] FATAL ProcessLogger [(null)] - login12/24/2017 18:43:39
+2017-12-24 19:10:13,078 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 19:10:13
+2017-12-24 19:10:13,136 [9] FATAL ProcessLogger [(null)] - login12/24/2017 19:10:13
+2017-12-24 19:12:30,300 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 19:12:30
+2017-12-24 19:12:30,352 [9] FATAL ProcessLogger [(null)] - login12/24/2017 19:12:30
+2017-12-24 19:14:11,802 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 19:14:11
+2017-12-24 19:14:11,859 [9] FATAL ProcessLogger [(null)] - login12/24/2017 19:14:11
+2017-12-24 19:28:55,536 [8] FATAL ProcessLogger [(null)] - System Start 12/24/2017 19:28:55
+2017-12-24 19:28:55,586 [8] FATAL ProcessLogger [(null)] - login12/24/2017 19:28:55
+2017-12-24 19:28:59,557 [8] FATAL ProcessLogger [(null)] - System Start 12/24/2017 19:28:59
+2017-12-24 19:29:02,795 [8] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 19:29:02
+2017-12-24 19:29:02,803 [8] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 19:29:02
+2017-12-24 19:29:02,831 [8] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 19:29:02
+2017-12-24 19:29:02,885 [8] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 19:29:02
+2017-12-24 19:29:04,232 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:04
+2017-12-24 19:29:08,720 [8] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 19:29:08
+2017-12-24 19:29:08,793 [8] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 19:29:08
+2017-12-24 19:29:08,803 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:08
+2017-12-24 19:29:09,627 [8] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 19:29:09
+2017-12-24 19:29:10,143 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:10
+2017-12-24 19:29:11,039 [8] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 19:29:11
+2017-12-24 19:29:11,041 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:11
+2017-12-24 19:29:14,211 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:14
+2017-12-24 19:29:14,727 [8] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 19:29:14
+2017-12-24 19:29:14,728 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:14
+2017-12-24 19:29:15,283 [8] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 19:29:15
+2017-12-24 19:29:15,283 [8] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 19:29:15
+2017-12-24 19:29:15,353 [8] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 19:29:15
+2017-12-24 19:29:15,488 [8] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 19:29:15
+2017-12-24 19:29:15,493 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:15
+2017-12-24 19:29:18,733 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:18
+2017-12-24 19:29:19,262 [8] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 19:29:19
+2017-12-24 19:29:19,263 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:19
+2017-12-24 19:29:19,893 [8] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 19:29:19
+2017-12-24 19:29:19,899 [8] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:29:19
+2017-12-24 19:29:21,495 [8] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 19:29:21
+2017-12-24 19:29:21,495 [8] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 19:29:21
+2017-12-24 19:29:21,525 [8] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 19:29:21
+2017-12-24 19:29:21,550 [8] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 19:29:21
+2017-12-24 19:29:21,551 [8] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 19:29:21
+2017-12-24 19:29:21,686 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 19:29:21
+2017-12-24 19:29:21,727 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 19:29:21
+2017-12-24 19:29:21,728 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 19:29:21
+2017-12-24 19:29:21,729 [8] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 19:29:21
+2017-12-24 19:29:21,733 [8] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 19:29:21
+2017-12-24 19:29:21,818 [8] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 19:29:21
+2017-12-24 19:29:22,041 [8] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 19:29:22
+2017-12-24 19:29:22,041 [8] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 19:29:22
+2017-12-24 19:29:22,089 [8] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 19:29:22
+2017-12-24 19:29:22,837 [8] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 19:29:22
+2017-12-24 19:29:22,837 [8] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 19:29:22
+2017-12-24 19:29:22,838 [8] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 19:29:22
+2017-12-24 19:29:23,565 [8] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 19:29:23
+2017-12-24 19:29:23,565 [8] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 19:29:23
+2017-12-24 19:29:23,566 [8] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 19:29:23
+2017-12-24 19:58:59,125 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 19:58:59
+2017-12-24 19:58:59,189 [9] FATAL ProcessLogger [(null)] - login12/24/2017 19:58:59
+2017-12-24 19:59:06,206 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 19:59:06
+2017-12-24 19:59:17,245 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 19:59:17
+2017-12-24 19:59:17,260 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 19:59:17
+2017-12-24 19:59:17,287 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 19:59:17
+2017-12-24 19:59:17,347 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 19:59:17
+2017-12-24 19:59:20,406 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:20
+2017-12-24 19:59:20,406 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 19:59:20
+2017-12-24 19:59:20,486 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 19:59:20
+2017-12-24 19:59:20,489 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:20
+2017-12-24 19:59:20,489 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 19:59:20
+2017-12-24 19:59:24,091 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:24
+2017-12-24 19:59:24,092 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 19:59:24
+2017-12-24 19:59:24,093 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:24
+2017-12-24 19:59:24,103 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:24
+2017-12-24 19:59:28,533 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:28
+2017-12-24 19:59:28,533 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 19:59:28
+2017-12-24 19:59:28,535 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:28
+2017-12-24 19:59:28,535 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 19:59:28
+2017-12-24 19:59:28,536 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 19:59:28
+2017-12-24 19:59:28,639 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 19:59:28
+2017-12-24 19:59:28,839 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 19:59:28
+2017-12-24 19:59:28,850 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:28
+2017-12-24 19:59:33,021 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:33
+2017-12-24 19:59:33,022 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 19:59:33
+2017-12-24 19:59:33,024 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:33
+2017-12-24 19:59:33,025 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 19:59:33
+2017-12-24 19:59:33,036 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:33
+2017-12-24 19:59:33,037 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 19:59:33
+2017-12-24 19:59:33,037 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 19:59:33
+2017-12-24 19:59:34,924 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 19:59:34
+2017-12-24 19:59:34,964 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 19:59:34
+2017-12-24 19:59:34,964 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 19:59:34
+2017-12-24 19:59:35,179 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 19:59:35
+2017-12-24 19:59:35,182 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 19:59:35
+2017-12-24 19:59:35,185 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 19:59:35
+2017-12-24 19:59:36,406 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:36
+2017-12-24 19:59:36,407 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 19:59:36
+2017-12-24 19:59:36,448 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 19:59:36
+2017-12-24 19:59:36,451 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:36
+2017-12-24 19:59:36,451 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 19:59:36
+2017-12-24 19:59:40,918 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:40
+2017-12-24 19:59:40,918 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 19:59:40
+2017-12-24 19:59:40,919 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:40
+2017-12-24 19:59:40,930 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:40
+2017-12-24 19:59:55,584 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:55
+2017-12-24 19:59:55,584 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 19:59:55
+2017-12-24 19:59:55,586 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:55
+2017-12-24 19:59:55,586 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 19:59:55
+2017-12-24 19:59:55,587 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 19:59:55
+2017-12-24 19:59:55,640 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 19:59:55
+2017-12-24 19:59:55,969 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 19:59:55
+2017-12-24 19:59:55,984 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 19:59:55
+2017-12-24 20:00:03,932 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:03
+2017-12-24 20:00:03,932 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:00:03
+2017-12-24 20:00:03,935 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:03
+2017-12-24 20:00:03,936 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:00:03
+2017-12-24 20:00:03,945 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:03
+2017-12-24 20:00:03,946 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:00:03
+2017-12-24 20:00:03,946 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:00:03
+2017-12-24 20:00:05,748 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:00:05
+2017-12-24 20:00:05,782 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:00:05
+2017-12-24 20:00:05,782 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:00:05
+2017-12-24 20:00:05,960 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:00:05
+2017-12-24 20:00:05,965 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:00:05
+2017-12-24 20:00:05,969 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:00:05
+2017-12-24 20:00:07,277 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:07
+2017-12-24 20:00:07,278 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:00:07
+2017-12-24 20:00:07,306 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:00:07
+2017-12-24 20:00:07,309 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:07
+2017-12-24 20:00:07,310 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:00:07
+2017-12-24 20:00:12,344 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:12
+2017-12-24 20:00:12,344 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:00:12
+2017-12-24 20:00:12,349 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:12
+2017-12-24 20:00:19,648 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:19
+2017-12-24 20:00:19,648 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:00:19
+2017-12-24 20:00:19,651 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:19
+2017-12-24 20:00:19,651 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:00:19
+2017-12-24 20:00:19,651 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:00:19
+2017-12-24 20:00:19,786 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:00:19
+2017-12-24 20:00:20,253 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:00:20
+2017-12-24 20:00:26,907 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:26
+2017-12-24 20:00:26,907 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:00:26
+2017-12-24 20:00:26,909 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:26
+2017-12-24 20:00:26,910 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:00:26
+2017-12-24 20:00:26,921 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:00:26
+2017-12-24 20:00:26,922 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:00:26
+2017-12-24 20:00:26,923 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:00:26
+2017-12-24 20:00:28,750 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:00:28
+2017-12-24 20:00:28,817 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:00:28
+2017-12-24 20:00:28,817 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:00:28
+2017-12-24 20:00:29,047 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:00:29
+2017-12-24 20:00:29,111 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:00:29
+2017-12-24 20:00:29,112 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:00:29
+2017-12-24 20:00:29,115 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:00:29
+2017-12-24 20:00:29,119 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:00:29
+2017-12-24 20:00:32,559 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:00:32
+2017-12-24 20:00:32,871 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:00:32
+2017-12-24 20:00:32,871 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:00:32
+2017-12-24 20:00:32,940 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:00:32
+2017-12-24 20:00:33,642 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:00:33
+2017-12-24 20:00:33,642 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:00:33
+2017-12-24 20:00:33,644 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:00:33
+2017-12-24 20:00:34,434 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:00:34
+2017-12-24 20:00:34,434 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:00:34
+2017-12-24 20:00:34,435 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:00:34
+2017-12-24 20:00:35,227 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:00:35
+2017-12-24 20:00:35,227 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:00:35
+2017-12-24 20:00:35,228 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:00:35
+2017-12-24 20:08:49,911 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:08:49
+2017-12-24 20:08:49,913 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:08:49
+2017-12-24 20:08:49,918 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:08:49
+2017-12-24 20:08:49,922 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:08:49
+2017-12-24 20:08:51,233 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:51
+2017-12-24 20:08:51,234 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:08:51
+2017-12-24 20:08:51,257 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:08:51
+2017-12-24 20:08:51,258 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:51
+2017-12-24 20:08:51,258 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:08:51
+2017-12-24 20:08:54,733 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:54
+2017-12-24 20:08:54,733 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:08:54
+2017-12-24 20:08:54,735 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:54
+2017-12-24 20:08:54,751 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:54
+2017-12-24 20:08:56,896 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:56
+2017-12-24 20:08:56,896 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:08:56
+2017-12-24 20:08:56,898 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:56
+2017-12-24 20:08:56,898 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:08:56
+2017-12-24 20:08:56,898 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:08:56
+2017-12-24 20:08:56,910 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:08:56
+2017-12-24 20:08:56,963 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:08:56
+2017-12-24 20:08:56,970 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:56
+2017-12-24 20:08:59,524 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:59
+2017-12-24 20:08:59,524 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:08:59
+2017-12-24 20:08:59,527 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:59
+2017-12-24 20:08:59,528 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:08:59
+2017-12-24 20:08:59,540 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:08:59
+2017-12-24 20:08:59,541 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:08:59
+2017-12-24 20:08:59,541 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:08:59
+2017-12-24 20:09:01,381 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:09:01
+2017-12-24 20:09:01,435 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:09:01
+2017-12-24 20:09:01,435 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:09:01
+2017-12-24 20:09:01,663 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:09:01
+2017-12-24 20:09:01,667 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:09:01
+2017-12-24 20:09:01,670 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:09:01
+2017-12-24 20:09:02,783 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:02
+2017-12-24 20:09:02,784 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:09:02
+2017-12-24 20:09:02,839 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:09:02
+2017-12-24 20:09:02,840 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:02
+2017-12-24 20:09:02,840 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:09:02
+2017-12-24 20:09:06,781 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:06
+2017-12-24 20:09:06,781 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:09:06
+2017-12-24 20:09:06,784 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:06
+2017-12-24 20:09:06,792 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:06
+2017-12-24 20:09:11,915 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:11
+2017-12-24 20:09:11,915 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:09:11
+2017-12-24 20:09:11,919 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:11
+2017-12-24 20:09:11,920 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:09:11
+2017-12-24 20:09:11,920 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:09:11
+2017-12-24 20:09:11,947 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:09:11
+2017-12-24 20:09:12,098 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:09:12
+2017-12-24 20:09:12,110 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:12
+2017-12-24 20:09:15,967 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:15
+2017-12-24 20:09:15,968 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:09:15
+2017-12-24 20:09:15,970 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:15
+2017-12-24 20:09:15,970 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:09:15
+2017-12-24 20:09:15,979 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:09:15
+2017-12-24 20:09:15,979 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:09:15
+2017-12-24 20:09:15,980 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:09:15
+2017-12-24 20:09:17,903 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:09:17
+2017-12-24 20:09:17,948 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:09:17
+2017-12-24 20:09:17,948 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:09:17
+2017-12-24 20:09:18,224 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:09:18
+2017-12-24 20:09:18,225 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:09:18
+2017-12-24 20:09:18,225 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:09:18
+2017-12-24 20:09:18,226 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:09:18
+2017-12-24 20:09:18,227 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:09:18
+2017-12-24 20:09:18,259 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:09:18
+2017-12-24 20:09:18,657 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:09:18
+2017-12-24 20:09:18,657 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:09:18
+2017-12-24 20:09:18,658 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:09:18
+2017-12-24 20:14:50,884 [13] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:14:50
+2017-12-24 20:14:55,040 [13] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:14:55
+2017-12-24 20:14:55,073 [13] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:14:55
+2017-12-24 20:14:55,080 [13] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:14:55
+2017-12-24 20:14:56,297 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:14:56
+2017-12-24 20:14:56,300 [13] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:14:56
+2017-12-24 20:14:56,329 [13] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:14:56
+2017-12-24 20:14:56,335 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:14:56
+2017-12-24 20:14:56,335 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:14:56
+2017-12-24 20:14:59,434 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:14:59
+2017-12-24 20:14:59,434 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:14:59
+2017-12-24 20:14:59,440 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:14:59
+2017-12-24 20:14:59,459 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:14:59
+2017-12-24 20:15:01,426 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:01
+2017-12-24 20:15:01,427 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:15:01
+2017-12-24 20:15:01,441 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:01
+2017-12-24 20:15:01,442 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:15:01
+2017-12-24 20:15:01,447 [13] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:15:01
+2017-12-24 20:15:01,458 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:15:01
+2017-12-24 20:15:01,511 [13] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:15:01
+2017-12-24 20:15:01,541 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:01
+2017-12-24 20:15:03,913 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:03
+2017-12-24 20:15:03,916 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:03
+2017-12-24 20:15:03,919 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:03
+2017-12-24 20:15:03,923 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:03
+2017-12-24 20:15:03,933 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:03
+2017-12-24 20:15:03,937 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:03
+2017-12-24 20:15:03,937 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:15:03
+2017-12-24 20:15:05,664 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:15:05
+2017-12-24 20:15:05,701 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:15:05
+2017-12-24 20:15:05,701 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:15:05
+2017-12-24 20:15:05,874 [13] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:15:05
+2017-12-24 20:15:05,884 [13] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:15:05
+2017-12-24 20:15:05,889 [13] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:15:05
+2017-12-24 20:15:06,897 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:06
+2017-12-24 20:15:06,899 [13] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:15:06
+2017-12-24 20:15:06,931 [13] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:15:06
+2017-12-24 20:15:06,938 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:06
+2017-12-24 20:15:06,938 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:15:06
+2017-12-24 20:15:10,461 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:10
+2017-12-24 20:15:10,461 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:15:10
+2017-12-24 20:15:10,466 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:10
+2017-12-24 20:15:10,475 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:10
+2017-12-24 20:15:14,286 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:14
+2017-12-24 20:15:14,286 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:15:14
+2017-12-24 20:15:14,302 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:14
+2017-12-24 20:15:14,303 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:15:14
+2017-12-24 20:15:14,309 [13] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:15:14
+2017-12-24 20:15:14,338 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:15:14
+2017-12-24 20:15:14,489 [13] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:15:14
+2017-12-24 20:15:14,500 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:14
+2017-12-24 20:15:18,490 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:18
+2017-12-24 20:15:18,492 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:18
+2017-12-24 20:15:18,496 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:18
+2017-12-24 20:15:18,499 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:18
+2017-12-24 20:15:18,516 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:18
+2017-12-24 20:15:18,521 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:18
+2017-12-24 20:15:18,521 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:15:18
+2017-12-24 20:15:20,214 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:15:20
+2017-12-24 20:15:20,261 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:15:20
+2017-12-24 20:15:20,262 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:15:20
+2017-12-24 20:15:20,489 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:15:20
+2017-12-24 20:15:20,490 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:15:20
+2017-12-24 20:15:20,491 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:15:20
+2017-12-24 20:15:20,492 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:15:20
+2017-12-24 20:15:20,492 [13] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:15:20
+2017-12-24 20:15:20,534 [13] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:15:20
+2017-12-24 20:15:20,806 [13] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:15:20
+2017-12-24 20:15:20,806 [13] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:15:20
+2017-12-24 20:15:20,808 [13] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:15:20
+2017-12-24 20:15:39,587 [15] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:15:39
+2017-12-24 20:15:40,891 [15] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:15:40
+2017-12-24 20:15:40,913 [15] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:15:40
+2017-12-24 20:15:40,922 [15] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:15:40
+2017-12-24 20:15:42,074 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:42
+2017-12-24 20:15:42,077 [15] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:15:42
+2017-12-24 20:15:42,104 [15] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:15:42
+2017-12-24 20:15:42,108 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:42
+2017-12-24 20:15:42,108 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:15:42
+2017-12-24 20:15:45,289 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:45
+2017-12-24 20:15:45,289 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:15:45
+2017-12-24 20:15:45,298 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:45
+2017-12-24 20:15:45,311 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:45
+2017-12-24 20:15:48,380 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:48
+2017-12-24 20:15:48,381 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:15:48
+2017-12-24 20:15:48,393 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:48
+2017-12-24 20:15:48,393 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:15:48
+2017-12-24 20:15:48,403 [15] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:15:48
+2017-12-24 20:15:48,412 [15] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:15:48
+2017-12-24 20:15:48,463 [15] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:15:48
+2017-12-24 20:15:48,484 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:48
+2017-12-24 20:15:50,809 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:50
+2017-12-24 20:15:50,814 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:50
+2017-12-24 20:15:50,823 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:50
+2017-12-24 20:15:50,828 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:50
+2017-12-24 20:15:50,838 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:50
+2017-12-24 20:15:50,841 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:15:50
+2017-12-24 20:15:50,841 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:15:50
+2017-12-24 20:15:52,445 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:15:52
+2017-12-24 20:15:52,483 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:15:52
+2017-12-24 20:15:52,483 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:15:52
+2017-12-24 20:15:52,642 [15] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:15:52
+2017-12-24 20:15:52,658 [15] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:15:52
+2017-12-24 20:15:52,665 [15] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:15:52
+2017-12-24 20:15:54,880 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:54
+2017-12-24 20:15:54,884 [15] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:15:54
+2017-12-24 20:15:54,919 [15] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:15:54
+2017-12-24 20:15:54,926 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:54
+2017-12-24 20:15:54,926 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:15:54
+2017-12-24 20:15:58,571 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:58
+2017-12-24 20:15:58,571 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:15:58
+2017-12-24 20:15:58,582 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:58
+2017-12-24 20:15:58,587 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:15:58
+2017-12-24 20:16:02,400 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:02
+2017-12-24 20:16:02,400 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:16:02
+2017-12-24 20:16:02,407 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:02
+2017-12-24 20:16:02,407 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:16:02
+2017-12-24 20:16:02,410 [15] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:16:02
+2017-12-24 20:16:02,438 [15] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:16:02
+2017-12-24 20:16:02,597 [15] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:16:02
+2017-12-24 20:16:02,616 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:02
+2017-12-24 20:16:06,218 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:06
+2017-12-24 20:16:06,221 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:16:06
+2017-12-24 20:16:06,224 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:06
+2017-12-24 20:16:06,227 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:16:06
+2017-12-24 20:16:06,238 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:06
+2017-12-24 20:16:06,245 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:16:06
+2017-12-24 20:16:06,245 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:16:06
+2017-12-24 20:16:07,817 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:16:07
+2017-12-24 20:16:07,855 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:16:07
+2017-12-24 20:16:07,856 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:16:07
+2017-12-24 20:16:08,071 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:16:08
+2017-12-24 20:16:08,073 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:16:08
+2017-12-24 20:16:08,074 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:16:08
+2017-12-24 20:16:08,075 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:16:08
+2017-12-24 20:16:08,075 [15] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:16:08
+2017-12-24 20:16:08,114 [15] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:16:08
+2017-12-24 20:16:08,461 [15] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:16:08
+2017-12-24 20:16:08,462 [15] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:16:08
+2017-12-24 20:16:08,463 [15] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:16:08
+2017-12-24 20:16:39,063 [13] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:16:39
+2017-12-24 20:16:39,072 [13] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:16:39
+2017-12-24 20:16:39,085 [13] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:16:39
+2017-12-24 20:16:39,097 [13] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:16:39
+2017-12-24 20:16:40,381 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:40
+2017-12-24 20:16:40,386 [13] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:16:40
+2017-12-24 20:16:40,419 [13] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:16:40
+2017-12-24 20:16:40,422 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:40
+2017-12-24 20:16:40,422 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:16:40
+2017-12-24 20:16:43,675 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:43
+2017-12-24 20:16:43,676 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:16:43
+2017-12-24 20:16:43,687 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:43
+2017-12-24 20:16:45,443 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:45
+2017-12-24 20:16:45,443 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:16:45
+2017-12-24 20:16:45,454 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:45
+2017-12-24 20:16:45,454 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:16:45
+2017-12-24 20:16:45,456 [13] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:16:45
+2017-12-24 20:16:45,464 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:16:45
+2017-12-24 20:16:45,517 [13] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:16:45
+2017-12-24 20:16:45,534 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:45
+2017-12-24 20:16:47,871 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:47
+2017-12-24 20:16:47,874 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:16:47
+2017-12-24 20:16:47,878 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:47
+2017-12-24 20:16:47,880 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:16:47
+2017-12-24 20:16:47,897 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:47
+2017-12-24 20:16:47,908 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:16:47
+2017-12-24 20:16:47,908 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:16:47
+2017-12-24 20:16:49,566 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:16:49
+2017-12-24 20:16:49,601 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:16:49
+2017-12-24 20:16:49,601 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:16:49
+2017-12-24 20:16:49,794 [13] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:16:49
+2017-12-24 20:16:49,807 [13] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:16:49
+2017-12-24 20:16:49,811 [13] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:16:49
+2017-12-24 20:16:50,858 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:50
+2017-12-24 20:16:50,870 [13] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:16:50
+2017-12-24 20:16:50,898 [13] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:16:50
+2017-12-24 20:16:50,903 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:50
+2017-12-24 20:16:50,903 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:16:50
+2017-12-24 20:16:54,647 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:54
+2017-12-24 20:16:54,648 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:16:54
+2017-12-24 20:16:54,655 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:54
+2017-12-24 20:16:54,677 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:54
+2017-12-24 20:16:58,244 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:58
+2017-12-24 20:16:58,244 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:16:58
+2017-12-24 20:16:58,250 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:58
+2017-12-24 20:16:58,250 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:16:58
+2017-12-24 20:16:58,253 [13] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:16:58
+2017-12-24 20:16:58,282 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:16:58
+2017-12-24 20:16:58,425 [13] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:16:58
+2017-12-24 20:16:58,437 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:16:58
+2017-12-24 20:17:02,016 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:02
+2017-12-24 20:17:02,023 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:02
+2017-12-24 20:17:02,027 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:02
+2017-12-24 20:17:02,029 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:02
+2017-12-24 20:17:02,038 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:02
+2017-12-24 20:17:02,045 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:02
+2017-12-24 20:17:02,045 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:17:02
+2017-12-24 20:17:03,726 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:17:03
+2017-12-24 20:17:03,765 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:17:03
+2017-12-24 20:17:03,766 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:17:03
+2017-12-24 20:17:03,972 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:17:03
+2017-12-24 20:17:03,974 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:17:03
+2017-12-24 20:17:03,974 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:17:03
+2017-12-24 20:17:03,975 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:17:03
+2017-12-24 20:17:03,975 [13] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:17:03
+2017-12-24 20:17:04,021 [13] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:17:04
+2017-12-24 20:17:04,182 [13] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:17:04
+2017-12-24 20:17:04,182 [13] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:17:04
+2017-12-24 20:17:04,184 [13] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:17:04
+2017-12-24 20:17:07,052 [16] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:17:07
+2017-12-24 20:17:07,060 [16] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:17:07
+2017-12-24 20:17:07,077 [16] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:17:07
+2017-12-24 20:17:07,085 [16] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:17:07
+2017-12-24 20:17:08,480 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:08
+2017-12-24 20:17:08,483 [16] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:17:08
+2017-12-24 20:17:08,512 [16] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:17:08
+2017-12-24 20:17:08,516 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:08
+2017-12-24 20:17:08,516 [16] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:17:08
+2017-12-24 20:17:11,743 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:11
+2017-12-24 20:17:11,743 [16] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:17:11
+2017-12-24 20:17:11,754 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:11
+2017-12-24 20:17:11,774 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:11
+2017-12-24 20:17:13,883 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:13
+2017-12-24 20:17:13,884 [16] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:17:13
+2017-12-24 20:17:13,905 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:13
+2017-12-24 20:17:13,905 [16] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:17:13
+2017-12-24 20:17:13,908 [16] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:17:13
+2017-12-24 20:17:13,919 [16] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:17:13
+2017-12-24 20:17:13,968 [16] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:17:13
+2017-12-24 20:17:13,992 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:13
+2017-12-24 20:17:16,419 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:16
+2017-12-24 20:17:16,424 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:16
+2017-12-24 20:17:16,432 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:16
+2017-12-24 20:17:16,441 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:16
+2017-12-24 20:17:16,629 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:16
+2017-12-24 20:17:16,631 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:16
+2017-12-24 20:17:16,632 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:17:16
+2017-12-24 20:17:18,403 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:17:18
+2017-12-24 20:17:18,445 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:17:18
+2017-12-24 20:17:18,446 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:17:18
+2017-12-24 20:17:18,629 [16] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:17:18
+2017-12-24 20:17:18,693 [16] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:17:18
+2017-12-24 20:17:18,697 [16] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:17:18
+2017-12-24 20:17:19,931 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:19
+2017-12-24 20:17:19,937 [16] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:17:19
+2017-12-24 20:17:19,965 [16] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:17:19
+2017-12-24 20:17:22,524 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:22
+2017-12-24 20:17:22,524 [16] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:17:22
+2017-12-24 20:17:23,491 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:23
+2017-12-24 20:17:23,491 [16] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:17:23
+2017-12-24 20:17:23,500 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:23
+2017-12-24 20:17:27,754 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:27
+2017-12-24 20:17:27,754 [16] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:17:27
+2017-12-24 20:17:27,762 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:27
+2017-12-24 20:17:27,763 [16] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:17:27
+2017-12-24 20:17:27,766 [16] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:17:27
+2017-12-24 20:17:27,790 [16] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:17:27
+2017-12-24 20:17:27,954 [16] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:17:27
+2017-12-24 20:17:27,967 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:27
+2017-12-24 20:17:33,932 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:33
+2017-12-24 20:17:33,937 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:33
+2017-12-24 20:17:33,941 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:33
+2017-12-24 20:17:33,945 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:33
+2017-12-24 20:17:33,980 [16] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:33
+2017-12-24 20:17:33,984 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:33
+2017-12-24 20:17:33,984 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:17:33
+2017-12-24 20:17:35,673 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:17:35
+2017-12-24 20:17:35,707 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:17:35
+2017-12-24 20:17:35,707 [16] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:17:35
+2017-12-24 20:17:35,891 [16] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:17:35
+2017-12-24 20:17:35,893 [16] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:17:35
+2017-12-24 20:17:35,893 [16] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:17:35
+2017-12-24 20:17:35,894 [16] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:17:35
+2017-12-24 20:17:35,894 [16] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:17:35
+2017-12-24 20:17:35,943 [16] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:17:35
+2017-12-24 20:17:36,059 [16] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:17:36
+2017-12-24 20:17:36,059 [16] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:17:36
+2017-12-24 20:17:36,060 [16] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:17:36
+2017-12-24 20:17:37,063 [13] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:17:37
+2017-12-24 20:17:37,067 [13] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:17:37
+2017-12-24 20:17:37,090 [13] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:17:37
+2017-12-24 20:17:37,101 [13] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:17:37
+2017-12-24 20:17:38,010 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:38
+2017-12-24 20:17:38,015 [13] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:17:38
+2017-12-24 20:17:38,060 [13] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:17:38
+2017-12-24 20:17:38,066 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:38
+2017-12-24 20:17:38,066 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:17:38
+2017-12-24 20:17:45,795 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:45
+2017-12-24 20:17:45,795 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:17:45
+2017-12-24 20:17:45,813 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:45
+2017-12-24 20:17:45,823 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:45
+2017-12-24 20:17:47,779 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:47
+2017-12-24 20:17:47,779 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:17:47
+2017-12-24 20:17:48,859 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:48
+2017-12-24 20:17:48,859 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:17:48
+2017-12-24 20:17:48,862 [13] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:17:48
+2017-12-24 20:17:48,870 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:17:48
+2017-12-24 20:17:48,917 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:17:48
+2017-12-24 20:17:48,917 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:17:48
+2017-12-24 20:17:48,917 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:17:48
+2017-12-24 20:17:48,921 [13] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:17:48
+2017-12-24 20:17:48,938 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:48
+2017-12-24 20:17:50,132 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:50
+2017-12-24 20:17:50,135 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:50
+2017-12-24 20:17:50,138 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:50
+2017-12-24 20:17:50,142 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:50
+2017-12-24 20:17:50,162 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:50
+2017-12-24 20:17:50,169 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:17:50
+2017-12-24 20:17:50,169 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:17:50
+2017-12-24 20:17:51,802 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:17:51
+2017-12-24 20:17:51,838 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:17:51
+2017-12-24 20:17:51,838 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:17:51
+2017-12-24 20:17:52,038 [13] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:17:52
+2017-12-24 20:17:52,116 [13] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:17:52
+2017-12-24 20:17:52,120 [13] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:17:52
+2017-12-24 20:17:53,167 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:53
+2017-12-24 20:17:53,171 [13] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:17:53
+2017-12-24 20:17:53,208 [13] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:17:53
+2017-12-24 20:17:53,219 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:53
+2017-12-24 20:17:53,220 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:17:53
+2017-12-24 20:17:56,816 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:56
+2017-12-24 20:17:56,816 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:17:56
+2017-12-24 20:17:56,828 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:56
+2017-12-24 20:17:56,858 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:17:56
+2017-12-24 20:18:00,708 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:00
+2017-12-24 20:18:00,709 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:18:00
+2017-12-24 20:18:00,715 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:00
+2017-12-24 20:18:00,715 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:18:00
+2017-12-24 20:18:00,718 [13] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:18:00
+2017-12-24 20:18:00,769 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:18:00
+2017-12-24 20:18:00,913 [13] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:18:00
+2017-12-24 20:18:01,084 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:01
+2017-12-24 20:18:04,781 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:04
+2017-12-24 20:18:04,787 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:18:04
+2017-12-24 20:18:04,791 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:04
+2017-12-24 20:18:04,794 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:18:04
+2017-12-24 20:18:04,800 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:04
+2017-12-24 20:18:04,803 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:18:04
+2017-12-24 20:18:04,803 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:18:04
+2017-12-24 20:18:06,545 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:18:06
+2017-12-24 20:18:06,591 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:18:06
+2017-12-24 20:18:06,591 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:18:06
+2017-12-24 20:18:06,785 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:18:06
+2017-12-24 20:18:06,787 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:18:06
+2017-12-24 20:18:06,787 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:18:06
+2017-12-24 20:18:06,788 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:18:06
+2017-12-24 20:18:06,788 [13] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:18:06
+2017-12-24 20:18:07,834 [13] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:18:07
+2017-12-24 20:18:08,063 [13] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:18:08
+2017-12-24 20:18:08,063 [13] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:18:08
+2017-12-24 20:18:08,064 [13] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:18:08
+2017-12-24 20:18:37,109 [15] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:18:37
+2017-12-24 20:18:37,124 [15] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:18:37
+2017-12-24 20:18:37,166 [15] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:18:37
+2017-12-24 20:18:37,174 [15] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:18:37
+2017-12-24 20:18:38,575 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:38
+2017-12-24 20:18:38,581 [15] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:18:38
+2017-12-24 20:18:38,611 [15] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:18:38
+2017-12-24 20:18:38,623 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:38
+2017-12-24 20:18:38,623 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:18:38
+2017-12-24 20:18:41,770 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:41
+2017-12-24 20:18:41,770 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:18:41
+2017-12-24 20:18:41,786 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:41
+2017-12-24 20:18:41,882 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:41
+2017-12-24 20:18:43,781 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:43
+2017-12-24 20:18:43,781 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:18:43
+2017-12-24 20:18:43,787 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:43
+2017-12-24 20:18:43,787 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:18:43
+2017-12-24 20:18:43,792 [15] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:18:43
+2017-12-24 20:18:43,803 [15] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:18:43
+2017-12-24 20:18:43,852 [15] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:18:43
+2017-12-24 20:18:43,867 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:43
+2017-12-24 20:18:46,291 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:46
+2017-12-24 20:18:46,297 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:18:46
+2017-12-24 20:18:46,301 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:46
+2017-12-24 20:18:46,307 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:18:46
+2017-12-24 20:18:46,479 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:46
+2017-12-24 20:18:46,482 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:18:46
+2017-12-24 20:18:46,482 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:18:46
+2017-12-24 20:18:48,121 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:18:48
+2017-12-24 20:18:48,171 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:18:48
+2017-12-24 20:18:48,171 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:18:48
+2017-12-24 20:18:48,355 [15] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:18:48
+2017-12-24 20:18:48,368 [15] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:18:48
+2017-12-24 20:18:48,376 [15] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:18:48
+2017-12-24 20:18:49,723 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:49
+2017-12-24 20:18:49,726 [15] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:18:49
+2017-12-24 20:18:49,750 [15] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:18:49
+2017-12-24 20:18:49,756 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:49
+2017-12-24 20:18:49,756 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:18:49
+2017-12-24 20:18:53,457 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:53
+2017-12-24 20:18:53,458 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:18:53
+2017-12-24 20:18:53,467 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:53
+2017-12-24 20:18:53,475 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:53
+2017-12-24 20:18:57,011 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:57
+2017-12-24 20:18:57,011 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:18:57
+2017-12-24 20:18:57,021 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:18:57
+2017-12-24 20:18:57,021 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:18:57
+2017-12-24 20:18:57,024 [15] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:18:57
+2017-12-24 20:18:57,047 [15] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:18:57
+2017-12-24 20:18:57,190 [15] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:18:57
+2017-12-24 20:19:00,404 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:00
+2017-12-24 20:19:00,412 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:00
+2017-12-24 20:19:00,419 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:00
+2017-12-24 20:19:00,423 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:00
+2017-12-24 20:19:00,432 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:00
+2017-12-24 20:19:00,437 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:00
+2017-12-24 20:19:00,437 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:19:00
+2017-12-24 20:19:02,054 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:19:02
+2017-12-24 20:19:02,100 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:19:02
+2017-12-24 20:19:02,100 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:19:02
+2017-12-24 20:19:02,297 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:19:02
+2017-12-24 20:19:02,298 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:19:02
+2017-12-24 20:19:02,298 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:19:02
+2017-12-24 20:19:02,299 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:19:02
+2017-12-24 20:19:02,299 [15] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:19:02
+2017-12-24 20:19:02,348 [15] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:19:02
+2017-12-24 20:19:02,490 [15] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:19:02
+2017-12-24 20:19:02,490 [15] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:19:02
+2017-12-24 20:19:02,493 [15] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:19:02
+2017-12-24 20:19:07,116 [17] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:19:07
+2017-12-24 20:19:07,121 [17] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:19:07
+2017-12-24 20:19:07,135 [17] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:19:07
+2017-12-24 20:19:07,140 [17] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:19:07
+2017-12-24 20:19:08,181 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:08
+2017-12-24 20:19:08,186 [17] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:19:08
+2017-12-24 20:19:08,214 [17] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:19:08
+2017-12-24 20:19:08,219 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:08
+2017-12-24 20:19:08,220 [17] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:19:08
+2017-12-24 20:19:11,286 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:11
+2017-12-24 20:19:11,287 [17] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:19:11
+2017-12-24 20:19:11,295 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:11
+2017-12-24 20:19:11,396 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:11
+2017-12-24 20:19:13,535 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:13
+2017-12-24 20:19:13,536 [17] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:19:13
+2017-12-24 20:19:13,546 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:13
+2017-12-24 20:19:13,546 [17] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:19:13
+2017-12-24 20:19:13,552 [17] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:19:13
+2017-12-24 20:19:13,560 [17] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:19:13
+2017-12-24 20:19:13,614 [17] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:19:13
+2017-12-24 20:19:13,626 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:13
+2017-12-24 20:19:16,299 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:16
+2017-12-24 20:19:16,309 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:16
+2017-12-24 20:19:16,319 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:16
+2017-12-24 20:19:16,322 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:16
+2017-12-24 20:19:16,511 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:16
+2017-12-24 20:19:16,514 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:16
+2017-12-24 20:19:16,515 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:19:16
+2017-12-24 20:19:18,362 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:19:18
+2017-12-24 20:19:18,410 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:19:18
+2017-12-24 20:19:18,410 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:19:18
+2017-12-24 20:19:18,662 [17] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:19:18
+2017-12-24 20:19:18,673 [17] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:19:18
+2017-12-24 20:19:18,679 [17] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:19:18
+2017-12-24 20:19:19,862 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:19
+2017-12-24 20:19:19,865 [17] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:19:19
+2017-12-24 20:19:19,894 [17] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:19:19
+2017-12-24 20:19:19,898 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:19
+2017-12-24 20:19:19,899 [17] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:19:19
+2017-12-24 20:19:23,580 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:23
+2017-12-24 20:19:23,580 [17] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:19:23
+2017-12-24 20:19:23,592 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:23
+2017-12-24 20:19:23,596 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:23
+2017-12-24 20:19:27,198 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:27
+2017-12-24 20:19:27,198 [17] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:19:27
+2017-12-24 20:19:27,205 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:27
+2017-12-24 20:19:27,205 [17] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:19:27
+2017-12-24 20:19:27,209 [17] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:19:27
+2017-12-24 20:19:27,230 [17] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:19:27
+2017-12-24 20:19:27,360 [17] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:19:27
+2017-12-24 20:19:27,497 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:27
+2017-12-24 20:19:34,336 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:34
+2017-12-24 20:19:34,340 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:34
+2017-12-24 20:19:34,349 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:34
+2017-12-24 20:19:34,353 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:34
+2017-12-24 20:19:34,364 [17] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:34
+2017-12-24 20:19:34,368 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:34
+2017-12-24 20:19:34,368 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:19:34
+2017-12-24 20:19:35,724 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:19:35
+2017-12-24 20:19:35,754 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:19:35
+2017-12-24 20:19:35,754 [17] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:19:35
+2017-12-24 20:19:36,026 [17] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:19:36
+2017-12-24 20:19:36,026 [17] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:19:36
+2017-12-24 20:19:36,026 [17] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:19:36
+2017-12-24 20:19:36,027 [17] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:19:36
+2017-12-24 20:19:36,027 [17] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:19:36
+2017-12-24 20:19:36,068 [17] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:19:36
+2017-12-24 20:19:36,323 [17] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:19:36
+2017-12-24 20:19:36,323 [17] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:19:36
+2017-12-24 20:19:36,331 [17] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:19:36
+2017-12-24 20:19:37,130 [15] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:19:37
+2017-12-24 20:19:37,140 [15] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:19:37
+2017-12-24 20:19:37,163 [15] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:19:37
+2017-12-24 20:19:37,169 [15] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:19:37
+2017-12-24 20:19:41,917 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:41
+2017-12-24 20:19:42,153 [15] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:19:42
+2017-12-24 20:19:42,324 [15] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:19:42
+2017-12-24 20:19:42,377 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:42
+2017-12-24 20:19:42,377 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:19:42
+2017-12-24 20:19:46,056 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:46
+2017-12-24 20:19:46,056 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:19:46
+2017-12-24 20:19:46,062 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:46
+2017-12-24 20:19:46,069 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:46
+2017-12-24 20:19:47,958 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:47
+2017-12-24 20:19:47,958 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:19:47
+2017-12-24 20:19:47,967 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:47
+2017-12-24 20:19:47,967 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:19:47
+2017-12-24 20:19:47,971 [15] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:19:47
+2017-12-24 20:19:47,997 [15] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:19:47
+2017-12-24 20:19:48,055 [15] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:19:48
+2017-12-24 20:19:48,084 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:48
+2017-12-24 20:19:50,427 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:50
+2017-12-24 20:19:50,430 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:50
+2017-12-24 20:19:50,436 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:50
+2017-12-24 20:19:50,440 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:50
+2017-12-24 20:19:50,451 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:50
+2017-12-24 20:19:50,459 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:19:50
+2017-12-24 20:19:50,459 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:19:50
+2017-12-24 20:19:52,544 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:19:52
+2017-12-24 20:19:52,586 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:19:52
+2017-12-24 20:19:52,586 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:19:52
+2017-12-24 20:19:52,810 [15] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:19:52
+2017-12-24 20:19:52,819 [15] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:19:52
+2017-12-24 20:19:52,830 [15] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:19:52
+2017-12-24 20:19:54,502 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:54
+2017-12-24 20:19:54,506 [15] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:19:54
+2017-12-24 20:19:54,542 [15] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:19:54
+2017-12-24 20:19:54,546 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:54
+2017-12-24 20:19:54,546 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:19:54
+2017-12-24 20:19:57,854 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:57
+2017-12-24 20:19:57,854 [15] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:19:57
+2017-12-24 20:19:57,867 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:57
+2017-12-24 20:19:57,875 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:19:57
+2017-12-24 20:20:01,725 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:20:01
+2017-12-24 20:20:01,725 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:20:01
+2017-12-24 20:20:01,734 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:20:01
+2017-12-24 20:20:01,735 [15] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:20:01
+2017-12-24 20:20:01,740 [15] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:20:01
+2017-12-24 20:20:01,767 [15] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:20:01
+2017-12-24 20:20:01,918 [15] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:20:01
+2017-12-24 20:20:01,928 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:20:01
+2017-12-24 20:20:37,428 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:20:37
+2017-12-24 20:20:37,431 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:20:37
+2017-12-24 20:20:37,436 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:20:37
+2017-12-24 20:20:37,440 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:20:37
+2017-12-24 20:20:37,469 [15] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:20:37
+2017-12-24 20:20:37,471 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:20:37
+2017-12-24 20:20:37,471 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:20:37
+2017-12-24 20:20:38,898 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:20:38
+2017-12-24 20:20:38,929 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:20:38
+2017-12-24 20:20:38,929 [15] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:20:38
+2017-12-24 20:20:39,095 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:20:39
+2017-12-24 20:20:39,096 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:20:39
+2017-12-24 20:20:39,096 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:20:39
+2017-12-24 20:20:39,097 [15] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:20:39
+2017-12-24 20:20:39,097 [15] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:20:39
+2017-12-24 20:20:39,132 [15] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:20:39
+2017-12-24 20:20:39,361 [15] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:20:39
+2017-12-24 20:20:39,361 [15] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:20:39
+2017-12-24 20:20:39,363 [15] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:20:39
+2017-12-24 20:21:07,160 [13] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:21:07
+2017-12-24 20:21:19,782 [13] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:21:19
+2017-12-24 20:21:20,848 [13] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:21:20
+2017-12-24 20:21:20,868 [13] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:21:20
+2017-12-24 20:21:22,422 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:22
+2017-12-24 20:21:22,423 [13] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:21:22
+2017-12-24 20:21:22,448 [13] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:21:22
+2017-12-24 20:21:22,449 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:22
+2017-12-24 20:21:22,449 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:21:22
+2017-12-24 20:21:25,200 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:25
+2017-12-24 20:21:25,200 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:21:25
+2017-12-24 20:21:25,202 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:25
+2017-12-24 20:21:35,373 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:35
+2017-12-24 20:21:35,373 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:21:35
+2017-12-24 20:21:35,378 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:35
+2017-12-24 20:21:35,378 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:21:35
+2017-12-24 20:21:35,379 [13] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:21:35
+2017-12-24 20:21:35,385 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:21:35
+2017-12-24 20:21:35,434 [13] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:21:35
+2017-12-24 20:21:37,139 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:37
+2017-12-24 20:21:37,140 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:21:37
+2017-12-24 20:21:37,142 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:37
+2017-12-24 20:21:37,142 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:21:37
+2017-12-24 20:21:37,149 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:37
+2017-12-24 20:21:37,150 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:21:37
+2017-12-24 20:21:37,150 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:21:37
+2017-12-24 20:21:38,505 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:21:38
+2017-12-24 20:21:38,547 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:21:38
+2017-12-24 20:21:38,547 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:21:38
+2017-12-24 20:21:45,997 [13] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:21:45
+2017-12-24 20:21:46,778 [13] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:21:46
+2017-12-24 20:21:46,795 [13] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:21:46
+2017-12-24 20:21:47,847 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:47
+2017-12-24 20:21:50,673 [13] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:21:50
+2017-12-24 20:21:54,535 [13] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:21:54
+2017-12-24 20:21:54,540 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:54
+2017-12-24 20:21:54,541 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:21:54
+2017-12-24 20:21:57,434 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:57
+2017-12-24 20:21:57,435 [13] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:21:57
+2017-12-24 20:21:57,442 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:57
+2017-12-24 20:21:57,450 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:21:57
+2017-12-24 20:22:04,434 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:22:04
+2017-12-24 20:22:04,435 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:22:04
+2017-12-24 20:22:04,456 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:22:04
+2017-12-24 20:22:04,457 [13] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:22:04
+2017-12-24 20:22:04,461 [13] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:22:04
+2017-12-24 20:22:04,479 [13] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:22:04
+2017-12-24 20:22:04,631 [13] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:22:04
+2017-12-24 20:22:04,643 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:22:04
+2017-12-24 20:22:16,802 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:22:16
+2017-12-24 20:22:16,805 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:22:16
+2017-12-24 20:22:16,808 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:22:16
+2017-12-24 20:22:16,811 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:22:16
+2017-12-24 20:22:16,822 [13] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:22:16
+2017-12-24 20:22:16,829 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:22:16
+2017-12-24 20:22:16,829 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:22:16
+2017-12-24 20:22:18,318 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:22:18
+2017-12-24 20:22:18,355 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:22:18
+2017-12-24 20:22:18,355 [13] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:22:18
+2017-12-24 20:22:18,536 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:22:18
+2017-12-24 20:22:18,537 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:22:18
+2017-12-24 20:22:18,537 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:22:18
+2017-12-24 20:22:18,538 [13] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:22:18
+2017-12-24 20:22:18,538 [13] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:22:18
+2017-12-24 20:22:18,581 [13] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:22:18
+2017-12-24 20:22:18,764 [13] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:22:18
+2017-12-24 20:22:18,764 [13] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:22:18
+2017-12-24 20:22:18,766 [13] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:22:18
+2017-12-24 20:22:37,209 [19] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:22:37
+2017-12-24 20:22:43,929 [19] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:22:43
+2017-12-24 20:22:46,207 [19] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:22:46
+2017-12-24 20:22:46,222 [19] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:22:46
+2017-12-24 20:22:47,172 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:22:47
+2017-12-24 20:22:49,612 [19] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:22:49
+2017-12-24 20:23:03,465 [19] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:23:03
+2017-12-24 20:23:03,576 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:03
+2017-12-24 20:23:05,083 [19] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:23:05
+2017-12-24 20:23:16,029 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:16
+2017-12-24 20:23:23,591 [19] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:23:23
+2017-12-24 20:23:23,864 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:23
+2017-12-24 20:23:23,947 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:23
+2017-12-24 20:23:25,481 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:25
+2017-12-24 20:23:25,481 [19] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:23:25
+2017-12-24 20:23:25,485 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:25
+2017-12-24 20:23:25,485 [19] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:23:25
+2017-12-24 20:23:25,486 [19] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:23:25
+2017-12-24 20:23:25,494 [19] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:23:25
+2017-12-24 20:23:25,555 [19] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:23:25
+2017-12-24 20:23:25,573 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:25
+2017-12-24 20:23:28,076 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:28
+2017-12-24 20:23:28,079 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:28
+2017-12-24 20:23:28,082 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:28
+2017-12-24 20:23:28,085 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:28
+2017-12-24 20:23:28,095 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:28
+2017-12-24 20:23:28,098 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:28
+2017-12-24 20:23:28,098 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:23:28
+2017-12-24 20:23:29,587 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:23:29
+2017-12-24 20:23:29,623 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:23:29
+2017-12-24 20:23:29,623 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:23:29
+2017-12-24 20:23:32,323 [19] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:23:32
+2017-12-24 20:23:32,407 [19] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:23:32
+2017-12-24 20:23:32,413 [19] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:23:32
+2017-12-24 20:23:33,410 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:33
+2017-12-24 20:23:35,625 [19] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:23:35
+2017-12-24 20:23:39,217 [19] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:23:39
+2017-12-24 20:23:39,230 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:39
+2017-12-24 20:23:39,230 [19] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:23:39
+2017-12-24 20:23:42,240 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:42
+2017-12-24 20:23:42,240 [19] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:23:42
+2017-12-24 20:23:42,247 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:42
+2017-12-24 20:23:42,252 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:42
+2017-12-24 20:23:46,419 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:46
+2017-12-24 20:23:46,419 [19] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:23:46
+2017-12-24 20:23:46,426 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:46
+2017-12-24 20:23:46,426 [19] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:23:46
+2017-12-24 20:23:46,429 [19] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:23:46
+2017-12-24 20:23:46,450 [19] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:23:46
+2017-12-24 20:23:46,592 [19] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:23:46
+2017-12-24 20:23:46,603 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:46
+2017-12-24 20:23:49,640 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:49
+2017-12-24 20:23:49,644 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:49
+2017-12-24 20:23:49,647 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:49
+2017-12-24 20:23:49,652 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:49
+2017-12-24 20:23:49,664 [19] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:49
+2017-12-24 20:23:49,668 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:49
+2017-12-24 20:23:49,668 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:23:49
+2017-12-24 20:23:50,136 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:23:50
+2017-12-24 20:23:50,137 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:23:50
+2017-12-24 20:23:50,139 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:23:50
+2017-12-24 20:23:50,144 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:23:50
+2017-12-24 20:23:51,299 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:23:51
+2017-12-24 20:23:51,355 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:23:51
+2017-12-24 20:23:51,355 [19] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:23:51
+2017-12-24 20:23:52,135 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:52
+2017-12-24 20:23:52,135 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:23:52
+2017-12-24 20:23:52,158 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:23:52
+2017-12-24 20:23:52,159 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:52
+2017-12-24 20:23:52,159 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:23:52
+2017-12-24 20:23:52,171 [19] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:23:52
+2017-12-24 20:23:52,172 [19] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:23:52
+2017-12-24 20:23:52,172 [19] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:23:52
+2017-12-24 20:23:52,173 [19] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:23:52
+2017-12-24 20:23:52,173 [19] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:23:52
+2017-12-24 20:23:54,562 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:54
+2017-12-24 20:23:54,562 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:23:54
+2017-12-24 20:23:54,563 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:54
+2017-12-24 20:23:54,637 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:54
+2017-12-24 20:23:55,631 [19] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:23:55
+2017-12-24 20:23:55,961 [19] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:23:55
+2017-12-24 20:23:55,961 [19] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:23:55
+2017-12-24 20:23:55,963 [19] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:23:55
+2017-12-24 20:23:56,591 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:56
+2017-12-24 20:23:56,591 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:23:56
+2017-12-24 20:23:56,592 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:56
+2017-12-24 20:23:56,592 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:23:56
+2017-12-24 20:23:56,592 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:23:56
+2017-12-24 20:23:56,599 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:23:56
+2017-12-24 20:23:56,645 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:23:56
+2017-12-24 20:23:56,653 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:56
+2017-12-24 20:23:58,881 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:58
+2017-12-24 20:23:58,882 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:58
+2017-12-24 20:23:58,883 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:58
+2017-12-24 20:23:58,884 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:58
+2017-12-24 20:23:58,891 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:23:58
+2017-12-24 20:23:58,892 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:23:58
+2017-12-24 20:23:58,892 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:23:58
+2017-12-24 20:24:00,352 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:24:00
+2017-12-24 20:24:00,384 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:24:00
+2017-12-24 20:24:00,384 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:24:00
+2017-12-24 20:24:00,551 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:24:00
+2017-12-24 20:24:00,551 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:24:00
+2017-12-24 20:24:00,551 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:24:00
+2017-12-24 20:24:00,552 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:24:00
+2017-12-24 20:24:00,552 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:24:00
+2017-12-24 20:24:00,586 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:24:00
+2017-12-24 20:24:00,715 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:24:00
+2017-12-24 20:24:00,715 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:24:00
+2017-12-24 20:24:00,716 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:24:00
+2017-12-24 20:24:31,652 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:24:31
+2017-12-24 20:24:31,654 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:24:31
+2017-12-24 20:24:31,660 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:24:31
+2017-12-24 20:24:31,666 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:24:31
+2017-12-24 20:24:32,703 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:32
+2017-12-24 20:24:32,703 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:24:32
+2017-12-24 20:24:32,726 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:24:32
+2017-12-24 20:24:32,727 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:32
+2017-12-24 20:24:32,727 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:24:32
+2017-12-24 20:24:35,173 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:35
+2017-12-24 20:24:35,173 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:24:35
+2017-12-24 20:24:35,174 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:35
+2017-12-24 20:24:35,245 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:35
+2017-12-24 20:24:37,182 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:37
+2017-12-24 20:24:37,182 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:24:37
+2017-12-24 20:24:37,183 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:37
+2017-12-24 20:24:37,183 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:24:37
+2017-12-24 20:24:37,184 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:24:37
+2017-12-24 20:24:37,192 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:24:37
+2017-12-24 20:24:37,229 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:24:37
+2017-12-24 20:24:37,235 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:37
+2017-12-24 20:24:39,043 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:39
+2017-12-24 20:24:39,043 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:24:39
+2017-12-24 20:24:39,044 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:39
+2017-12-24 20:24:39,044 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:24:39
+2017-12-24 20:24:39,054 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:24:39
+2017-12-24 20:24:39,055 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:24:39
+2017-12-24 20:24:39,055 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:24:39
+2017-12-24 20:24:40,395 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:24:40
+2017-12-24 20:24:40,429 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:24:40
+2017-12-24 20:24:40,429 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:24:40
+2017-12-24 20:24:40,567 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:24:40
+2017-12-24 20:24:40,568 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:24:40
+2017-12-24 20:24:40,569 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:24:40
+2017-12-24 20:24:40,569 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:24:40
+2017-12-24 20:24:40,569 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:24:40
+2017-12-24 20:24:40,600 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:24:40
+2017-12-24 20:24:40,708 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:24:40
+2017-12-24 20:24:40,708 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:24:40
+2017-12-24 20:24:40,710 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:24:40
+2017-12-24 20:26:34,115 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 20:26:34
+2017-12-24 20:26:34,177 [9] FATAL ProcessLogger [(null)] - login12/24/2017 20:26:34
+2017-12-24 20:26:38,692 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 20:26:38
+2017-12-24 20:26:49,748 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:26:49
+2017-12-24 20:26:49,764 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:26:49
+2017-12-24 20:26:49,801 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:26:49
+2017-12-24 20:26:49,860 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:26:49
+2017-12-24 20:26:51,314 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:26:51
+2017-12-24 20:26:51,315 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:26:51
+2017-12-24 20:26:51,393 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:26:51
+2017-12-24 20:26:51,394 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:26:51
+2017-12-24 20:26:51,394 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:26:51
+2017-12-24 20:26:54,959 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:26:54
+2017-12-24 20:26:54,959 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:26:54
+2017-12-24 20:26:54,963 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:26:54
+2017-12-24 20:26:54,973 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:26:54
+2017-12-24 20:26:59,334 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:26:59
+2017-12-24 20:26:59,334 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:26:59
+2017-12-24 20:26:59,336 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:26:59
+2017-12-24 20:26:59,336 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:26:59
+2017-12-24 20:26:59,337 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:26:59
+2017-12-24 20:26:59,443 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:26:59
+2017-12-24 20:26:59,627 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:26:59
+2017-12-24 20:26:59,634 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:26:59
+2017-12-24 20:27:03,929 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:03
+2017-12-24 20:27:03,930 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:27:03
+2017-12-24 20:27:03,931 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:03
+2017-12-24 20:27:03,932 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:27:03
+2017-12-24 20:27:04,102 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:04
+2017-12-24 20:27:04,102 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:27:04
+2017-12-24 20:27:04,102 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:27:04
+2017-12-24 20:27:05,680 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:27:05
+2017-12-24 20:27:05,710 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:27:05
+2017-12-24 20:27:05,710 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:27:05
+2017-12-24 20:27:05,916 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:27:05
+2017-12-24 20:27:05,919 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:27:05
+2017-12-24 20:27:05,921 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:27:05
+2017-12-24 20:27:07,613 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:07
+2017-12-24 20:27:07,614 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:27:07
+2017-12-24 20:27:07,647 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:27:07
+2017-12-24 20:27:07,650 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:07
+2017-12-24 20:27:07,650 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:27:07
+2017-12-24 20:27:12,085 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:12
+2017-12-24 20:27:12,085 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:27:12
+2017-12-24 20:27:12,089 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:12
+2017-12-24 20:27:12,093 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:12
+2017-12-24 20:27:20,089 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:20
+2017-12-24 20:27:20,089 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:27:20
+2017-12-24 20:27:20,091 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:20
+2017-12-24 20:27:20,091 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:27:20
+2017-12-24 20:27:20,092 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:27:20
+2017-12-24 20:27:20,143 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:27:20
+2017-12-24 20:27:20,476 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:27:20
+2017-12-24 20:27:20,480 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:20
+2017-12-24 20:27:26,634 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:26
+2017-12-24 20:27:26,634 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:27:26
+2017-12-24 20:27:26,636 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:26
+2017-12-24 20:27:26,637 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:27:26
+2017-12-24 20:27:26,649 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:27:26
+2017-12-24 20:27:26,650 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:27:26
+2017-12-24 20:27:26,650 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:27:26
+2017-12-24 20:27:28,496 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:27:28
+2017-12-24 20:27:28,547 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:27:28
+2017-12-24 20:27:28,547 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:27:28
+2017-12-24 20:27:28,758 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:27:28
+2017-12-24 20:27:28,824 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:27:28
+2017-12-24 20:27:28,825 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:27:28
+2017-12-24 20:27:28,827 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:27:28
+2017-12-24 20:27:28,832 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:27:28
+2017-12-24 20:27:28,902 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:27:28
+2017-12-24 20:27:29,083 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:27:29
+2017-12-24 20:27:29,083 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:27:29
+2017-12-24 20:27:29,149 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:27:29
+2017-12-24 20:27:29,817 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:27:29
+2017-12-24 20:27:29,817 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:27:29
+2017-12-24 20:27:29,820 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:27:29
+2017-12-24 20:29:02,914 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:29:02
+2017-12-24 20:29:02,915 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:29:02
+2017-12-24 20:29:02,922 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:29:02
+2017-12-24 20:29:02,930 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:29:02
+2017-12-24 20:29:04,125 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:04
+2017-12-24 20:29:04,126 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:29:04
+2017-12-24 20:29:04,156 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:29:04
+2017-12-24 20:29:04,157 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:04
+2017-12-24 20:29:04,157 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:29:04
+2017-12-24 20:29:07,628 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:07
+2017-12-24 20:29:07,629 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:29:07
+2017-12-24 20:29:07,631 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:07
+2017-12-24 20:29:07,641 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:07
+2017-12-24 20:29:09,969 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:09
+2017-12-24 20:29:09,969 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:29:09
+2017-12-24 20:29:09,971 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:09
+2017-12-24 20:29:09,971 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:29:09
+2017-12-24 20:29:09,971 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:29:09
+2017-12-24 20:29:09,981 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:29:09
+2017-12-24 20:29:10,041 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:29:10
+2017-12-24 20:29:10,052 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:10
+2017-12-24 20:29:12,705 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:12
+2017-12-24 20:29:12,708 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:29:12
+2017-12-24 20:29:12,710 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:12
+2017-12-24 20:29:12,710 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:29:12
+2017-12-24 20:29:12,720 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:12
+2017-12-24 20:29:12,721 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:29:12
+2017-12-24 20:29:12,721 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:29:12
+2017-12-24 20:29:14,574 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:29:14
+2017-12-24 20:29:14,627 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:29:14
+2017-12-24 20:29:14,628 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:29:14
+2017-12-24 20:29:14,822 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:29:14
+2017-12-24 20:29:14,823 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:29:14
+2017-12-24 20:29:14,823 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:29:14
+2017-12-24 20:29:14,824 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:29:14
+2017-12-24 20:29:14,824 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:29:14
+2017-12-24 20:29:14,894 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:29:14
+2017-12-24 20:29:15,215 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:29:15
+2017-12-24 20:29:15,215 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:29:15
+2017-12-24 20:29:15,216 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:29:15
+2017-12-24 20:29:15,926 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:29:15
+2017-12-24 20:29:15,926 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:29:15
+2017-12-24 20:29:15,928 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:29:15
+2017-12-24 20:29:41,819 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:29:41
+2017-12-24 20:29:41,823 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:29:41
+2017-12-24 20:29:41,828 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:29:41
+2017-12-24 20:29:41,833 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:29:41
+2017-12-24 20:29:42,880 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:42
+2017-12-24 20:29:42,880 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:29:42
+2017-12-24 20:29:42,911 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:29:42
+2017-12-24 20:29:42,913 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:42
+2017-12-24 20:29:42,913 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:29:42
+2017-12-24 20:29:46,576 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:46
+2017-12-24 20:29:46,576 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:29:46
+2017-12-24 20:29:46,580 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:46
+2017-12-24 20:29:46,587 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:46
+2017-12-24 20:29:50,716 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:50
+2017-12-24 20:29:50,716 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:29:50
+2017-12-24 20:29:50,720 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:50
+2017-12-24 20:29:50,720 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:29:50
+2017-12-24 20:29:50,720 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:29:50
+2017-12-24 20:29:50,743 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:29:50
+2017-12-24 20:29:50,906 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:29:50
+2017-12-24 20:29:50,916 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:50
+2017-12-24 20:29:55,186 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:55
+2017-12-24 20:29:55,187 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:29:55
+2017-12-24 20:29:55,189 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:55
+2017-12-24 20:29:55,190 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:29:55
+2017-12-24 20:29:55,202 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:29:55
+2017-12-24 20:29:55,203 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:29:55
+2017-12-24 20:29:55,203 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:29:55
+2017-12-24 20:29:57,244 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:29:57
+2017-12-24 20:29:57,288 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:29:57
+2017-12-24 20:29:57,288 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:29:57
+2017-12-24 20:29:57,504 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:29:57
+2017-12-24 20:29:57,505 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:29:57
+2017-12-24 20:29:57,505 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:29:57
+2017-12-24 20:29:57,506 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:29:57
+2017-12-24 20:29:57,506 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:29:57
+2017-12-24 20:29:57,579 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:29:57
+2017-12-24 20:29:57,702 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:29:57
+2017-12-24 20:29:57,702 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:29:57
+2017-12-24 20:29:57,705 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:29:57
+2017-12-24 20:29:58,401 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:29:58
+2017-12-24 20:29:58,401 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:29:58
+2017-12-24 20:29:58,402 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:29:58
+2017-12-24 20:31:09,655 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:31:09
+2017-12-24 20:31:09,662 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:31:09
+2017-12-24 20:31:09,670 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:31:09
+2017-12-24 20:31:09,676 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:31:09
+2017-12-24 20:31:11,300 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:11
+2017-12-24 20:31:11,300 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:31:11
+2017-12-24 20:31:11,325 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:31:11
+2017-12-24 20:31:11,327 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:11
+2017-12-24 20:31:11,327 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:31:11
+2017-12-24 20:31:23,731 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:23
+2017-12-24 20:31:23,731 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:31:23
+2017-12-24 20:31:23,733 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:23
+2017-12-24 20:31:23,748 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:23
+2017-12-24 20:31:32,869 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:32
+2017-12-24 20:31:32,869 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:31:32
+2017-12-24 20:31:32,871 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:32
+2017-12-24 20:31:32,871 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:31:32
+2017-12-24 20:31:32,871 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:31:32
+2017-12-24 20:31:32,948 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:31:32
+2017-12-24 20:31:33,498 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:31:33
+2017-12-24 20:31:33,513 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:33
+2017-12-24 20:31:40,923 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:40
+2017-12-24 20:31:40,924 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:31:40
+2017-12-24 20:31:40,926 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:40
+2017-12-24 20:31:40,927 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:31:40
+2017-12-24 20:31:40,937 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:40
+2017-12-24 20:31:40,938 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:31:40
+2017-12-24 20:31:40,938 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:31:40
+2017-12-24 20:31:42,795 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:31:42
+2017-12-24 20:31:42,835 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:31:42
+2017-12-24 20:31:42,836 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:31:42
+2017-12-24 20:31:43,022 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:31:43
+2017-12-24 20:31:43,023 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:31:43
+2017-12-24 20:31:43,023 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:31:43
+2017-12-24 20:31:43,024 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:31:43
+2017-12-24 20:31:43,024 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:31:43
+2017-12-24 20:31:43,095 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:31:43
+2017-12-24 20:31:43,356 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:31:43
+2017-12-24 20:31:43,356 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:31:43
+2017-12-24 20:31:43,358 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:31:43
+2017-12-24 20:31:44,029 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:31:44
+2017-12-24 20:31:44,029 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:31:44
+2017-12-24 20:31:44,031 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:31:44
+2017-12-24 20:31:54,322 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:31:54
+2017-12-24 20:31:54,323 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:31:54
+2017-12-24 20:31:54,333 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:31:54
+2017-12-24 20:31:54,337 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:31:54
+2017-12-24 20:31:55,449 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:55
+2017-12-24 20:31:55,450 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:31:55
+2017-12-24 20:31:55,479 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:31:55
+2017-12-24 20:31:55,483 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:31:55
+2017-12-24 20:31:55,483 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:31:55
+2017-12-24 20:32:00,629 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:00
+2017-12-24 20:32:00,629 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:32:00
+2017-12-24 20:32:00,631 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:00
+2017-12-24 20:32:00,641 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:00
+2017-12-24 20:32:11,829 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:11
+2017-12-24 20:32:11,829 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:32:11
+2017-12-24 20:32:11,831 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:11
+2017-12-24 20:32:11,831 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:32:11
+2017-12-24 20:32:11,832 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:32:11
+2017-12-24 20:32:11,893 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:32:11
+2017-12-24 20:32:12,325 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:32:12
+2017-12-24 20:32:12,337 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:12
+2017-12-24 20:32:21,347 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:21
+2017-12-24 20:32:21,348 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:32:21
+2017-12-24 20:32:21,350 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:21
+2017-12-24 20:32:21,351 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:32:21
+2017-12-24 20:32:21,363 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:21
+2017-12-24 20:32:21,364 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:32:21
+2017-12-24 20:32:21,364 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:32:21
+2017-12-24 20:32:23,229 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:32:23
+2017-12-24 20:32:23,272 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:32:23
+2017-12-24 20:32:23,272 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:32:23
+2017-12-24 20:32:23,456 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:32:23
+2017-12-24 20:32:23,457 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:32:23
+2017-12-24 20:32:23,457 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:32:23
+2017-12-24 20:32:23,458 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:32:23
+2017-12-24 20:32:23,458 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:32:23
+2017-12-24 20:32:23,547 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:32:23
+2017-12-24 20:32:23,643 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:32:23
+2017-12-24 20:32:23,643 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:32:23
+2017-12-24 20:32:23,645 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:32:23
+2017-12-24 20:32:24,304 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:32:24
+2017-12-24 20:32:24,304 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:32:24
+2017-12-24 20:32:24,306 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:32:24
+2017-12-24 20:32:37,907 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:32:37
+2017-12-24 20:32:37,909 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:32:37
+2017-12-24 20:32:37,915 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:32:37
+2017-12-24 20:32:37,919 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:32:37
+2017-12-24 20:32:39,080 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:39
+2017-12-24 20:32:39,081 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:32:39
+2017-12-24 20:32:39,122 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 20:32:39
+2017-12-24 20:32:39,123 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:39
+2017-12-24 20:32:39,123 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:32:39
+2017-12-24 20:32:43,770 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:43
+2017-12-24 20:32:43,770 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:32:43
+2017-12-24 20:32:43,771 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:43
+2017-12-24 20:32:43,782 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:43
+2017-12-24 20:32:51,475 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:51
+2017-12-24 20:32:51,475 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:32:51
+2017-12-24 20:32:51,477 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:51
+2017-12-24 20:32:51,477 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:32:51
+2017-12-24 20:32:51,477 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:32:51
+2017-12-24 20:32:51,519 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:32:51
+2017-12-24 20:32:51,791 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:32:51
+2017-12-24 20:32:51,797 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:51
+2017-12-24 20:32:57,846 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:57
+2017-12-24 20:32:57,847 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:32:57
+2017-12-24 20:32:57,849 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:57
+2017-12-24 20:32:57,850 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:32:57
+2017-12-24 20:32:57,861 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:32:57
+2017-12-24 20:32:57,862 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:32:57
+2017-12-24 20:32:57,862 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:32:57
+2017-12-24 20:32:59,500 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:32:59
+2017-12-24 20:32:59,543 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:32:59
+2017-12-24 20:32:59,544 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:32:59
+2017-12-24 20:32:59,719 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:32:59
+2017-12-24 20:32:59,720 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:32:59
+2017-12-24 20:32:59,720 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:32:59
+2017-12-24 20:32:59,721 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:32:59
+2017-12-24 20:32:59,722 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:32:59
+2017-12-24 20:32:59,874 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:32:59
+2017-12-24 20:32:59,948 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:32:59
+2017-12-24 20:32:59,948 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:32:59
+2017-12-24 20:32:59,951 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:32:59
+2017-12-24 20:33:00,766 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:33:00
+2017-12-24 20:33:00,766 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:33:00
+2017-12-24 20:33:00,768 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:33:00
+2017-12-24 20:33:19,032 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:33:19
+2017-12-24 20:33:19,034 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:33:19
+2017-12-24 20:33:19,038 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:33:19
+2017-12-24 20:33:19,041 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:33:19
+2017-12-24 20:33:20,182 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:20
+2017-12-24 20:33:20,182 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:33:20
+2017-12-24 20:33:20,182 [9] FATAL ProcessLogger [(null)] - 接入界面 00112/24/2017 20:33:20
+2017-12-24 20:33:20,183 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:20
+2017-12-24 20:33:20,184 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:33:20
+2017-12-24 20:33:20,200 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:20
+2017-12-24 20:33:20,200 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:33:20
+2017-12-24 20:33:22,291 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:22
+2017-12-24 20:33:22,292 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:33:22
+2017-12-24 20:33:22,293 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:22
+2017-12-24 20:33:22,293 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:33:22
+2017-12-24 20:33:22,294 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:33:22
+2017-12-24 20:33:22,298 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:33:22
+2017-12-24 20:33:22,311 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:33:22
+2017-12-24 20:33:22,415 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:22
+2017-12-24 20:33:24,011 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:24
+2017-12-24 20:33:24,012 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:33:24
+2017-12-24 20:33:24,014 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:24
+2017-12-24 20:33:24,015 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:33:24
+2017-12-24 20:33:24,023 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:24
+2017-12-24 20:33:24,024 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:33:24
+2017-12-24 20:33:24,024 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:33:24
+2017-12-24 20:33:25,866 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:33:25
+2017-12-24 20:33:25,914 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:33:25
+2017-12-24 20:33:25,914 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:33:25
+2017-12-24 20:33:26,121 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:33:26
+2017-12-24 20:33:26,122 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:33:26
+2017-12-24 20:33:26,122 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:33:26
+2017-12-24 20:33:26,123 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:33:26
+2017-12-24 20:33:26,123 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:33:26
+2017-12-24 20:33:26,245 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:33:26
+2017-12-24 20:33:26,378 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:33:26
+2017-12-24 20:33:26,378 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:33:26
+2017-12-24 20:33:26,380 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:33:26
+2017-12-24 20:33:27,056 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:33:27
+2017-12-24 20:33:27,056 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:33:27
+2017-12-24 20:33:27,057 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:33:27
+2017-12-24 20:33:46,438 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:33:46
+2017-12-24 20:33:46,439 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:33:46
+2017-12-24 20:33:46,445 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:33:46
+2017-12-24 20:33:46,449 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:33:46
+2017-12-24 20:33:48,514 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:48
+2017-12-24 20:33:48,515 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:33:48
+2017-12-24 20:33:48,515 [9] FATAL ProcessLogger [(null)] - 接入界面 00112/24/2017 20:33:48
+2017-12-24 20:33:48,516 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:48
+2017-12-24 20:33:48,516 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:33:48
+2017-12-24 20:33:48,650 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:48
+2017-12-24 20:33:48,650 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:33:48
+2017-12-24 20:33:51,610 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:51
+2017-12-24 20:33:51,610 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:33:51
+2017-12-24 20:33:51,613 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:51
+2017-12-24 20:33:51,613 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:33:51
+2017-12-24 20:33:51,613 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:33:51
+2017-12-24 20:33:51,631 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:33:51
+2017-12-24 20:33:51,741 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:33:51
+2017-12-24 20:33:54,760 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:54
+2017-12-24 20:33:54,761 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:33:54
+2017-12-24 20:33:54,763 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:54
+2017-12-24 20:33:54,764 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:33:54
+2017-12-24 20:33:54,779 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:33:54
+2017-12-24 20:33:54,779 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:33:54
+2017-12-24 20:33:54,779 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:33:54
+2017-12-24 20:33:56,628 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:33:56
+2017-12-24 20:33:56,665 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:33:56
+2017-12-24 20:33:56,665 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:33:56
+2017-12-24 20:33:56,874 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:33:56
+2017-12-24 20:33:56,875 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:33:56
+2017-12-24 20:33:56,875 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:33:56
+2017-12-24 20:33:56,876 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:33:56
+2017-12-24 20:33:56,876 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:33:56
+2017-12-24 20:33:57,005 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:33:57
+2017-12-24 20:33:57,262 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:33:57
+2017-12-24 20:33:57,262 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:33:57
+2017-12-24 20:33:57,264 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:33:57
+2017-12-24 20:33:57,920 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:33:57
+2017-12-24 20:33:57,920 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:33:57
+2017-12-24 20:33:57,922 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:33:57
+2017-12-24 20:34:17,842 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:34:17
+2017-12-24 20:34:17,844 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:34:17
+2017-12-24 20:34:17,852 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:34:17
+2017-12-24 20:34:17,855 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:34:17
+2017-12-24 20:34:20,894 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:34:20
+2017-12-24 20:34:20,894 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:34:20
+2017-12-24 20:34:20,894 [9] FATAL ProcessLogger [(null)] - 接入界面 00112/24/2017 20:34:20
+2017-12-24 20:34:20,896 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:34:20
+2017-12-24 20:34:20,896 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:34:20
+2017-12-24 20:34:21,629 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:34:21
+2017-12-24 20:34:21,629 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:34:21
+2017-12-24 20:34:38,875 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:34:38
+2017-12-24 20:34:38,876 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:34:38
+2017-12-24 20:34:38,878 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:34:38
+2017-12-24 20:34:38,878 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:34:38
+2017-12-24 20:34:38,879 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:34:38
+2017-12-24 20:34:39,177 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:34:39
+2017-12-24 20:34:40,181 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:34:40
+2017-12-24 20:34:40,837 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:34:40
+2017-12-24 20:39:04,724 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 20:39:04
+2017-12-24 20:39:04,788 [9] FATAL ProcessLogger [(null)] - login12/24/2017 20:39:04
+2017-12-24 20:39:08,777 [9] FATAL ProcessLogger [(null)] - System Start 12/24/2017 20:39:08
+2017-12-24 20:39:15,281 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:39:15
+2017-12-24 20:39:15,292 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:39:15
+2017-12-24 20:39:15,323 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:39:15
+2017-12-24 20:39:15,372 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:39:15
+2017-12-24 20:39:17,437 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:17
+2017-12-24 20:39:17,437 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:39:17
+2017-12-24 20:39:17,437 [9] FATAL ProcessLogger [(null)] - 接入界面 00112/24/2017 20:39:17
+2017-12-24 20:39:17,439 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:17
+2017-12-24 20:39:17,439 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:39:17
+2017-12-24 20:39:17,479 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:17
+2017-12-24 20:39:17,479 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:39:17
+2017-12-24 20:39:19,402 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:19
+2017-12-24 20:39:19,402 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:39:19
+2017-12-24 20:39:19,403 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:19
+2017-12-24 20:39:19,403 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:39:19
+2017-12-24 20:39:19,404 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:39:19
+2017-12-24 20:39:19,492 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:39:19
+2017-12-24 20:39:19,569 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:39:19
+2017-12-24 20:39:19,581 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:19
+2017-12-24 20:39:21,968 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:21
+2017-12-24 20:39:21,969 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:39:21
+2017-12-24 20:39:21,971 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:21
+2017-12-24 20:39:21,972 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:39:21
+2017-12-24 20:39:21,982 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:39:21
+2017-12-24 20:39:21,982 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:39:21
+2017-12-24 20:39:21,982 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:39:21
+2017-12-24 20:39:23,870 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:39:23
+2017-12-24 20:39:23,909 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:39:23
+2017-12-24 20:39:23,910 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:39:23
+2017-12-24 20:39:24,138 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:39:24
+2017-12-24 20:39:24,208 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:39:24
+2017-12-24 20:39:24,208 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:39:24
+2017-12-24 20:39:24,212 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:39:24
+2017-12-24 20:39:24,216 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:39:24
+2017-12-24 20:39:24,356 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:39:24
+2017-12-24 20:39:24,598 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:39:24
+2017-12-24 20:39:24,599 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:39:24
+2017-12-24 20:39:24,653 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:39:24
+2017-12-24 20:39:25,352 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:39:25
+2017-12-24 20:39:25,352 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:39:25
+2017-12-24 20:39:25,353 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:39:25
+2017-12-24 20:39:26,050 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:39:26
+2017-12-24 20:39:26,051 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:39:26
+2017-12-24 20:39:26,052 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:39:26
+2017-12-24 20:39:26,928 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:39:26
+2017-12-24 20:39:26,928 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:39:26
+2017-12-24 20:39:26,929 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:39:26
+2017-12-24 20:45:08,757 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:45:08
+2017-12-24 20:45:08,758 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:45:08
+2017-12-24 20:45:08,763 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:45:08
+2017-12-24 20:45:08,766 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:45:08
+2017-12-24 20:45:09,958 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:45:09
+2017-12-24 20:45:09,958 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:45:09
+2017-12-24 20:45:09,959 [9] FATAL ProcessLogger [(null)] - 接入界面 00112/24/2017 20:45:09
+2017-12-24 20:45:09,960 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:45:09
+2017-12-24 20:45:09,960 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:45:09
+2017-12-24 20:45:09,974 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:45:09
+2017-12-24 20:45:09,974 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:45:09
+2017-12-24 20:45:14,889 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:45:14
+2017-12-24 20:45:14,889 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:45:14
+2017-12-24 20:45:14,891 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:45:14
+2017-12-24 20:45:14,891 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:45:14
+2017-12-24 20:45:14,891 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:45:14
+2017-12-24 20:45:14,923 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:45:14
+2017-12-24 20:45:15,127 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:45:15
+2017-12-24 20:45:19,056 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:45:19
+2017-12-24 20:45:19,057 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:45:19
+2017-12-24 20:45:19,059 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:45:19
+2017-12-24 20:45:19,060 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:45:19
+2017-12-24 20:45:19,071 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:45:19
+2017-12-24 20:45:19,072 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:45:19
+2017-12-24 20:45:19,072 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:45:19
+2017-12-24 20:45:20,984 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:45:20
+2017-12-24 20:45:21,026 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:45:21
+2017-12-24 20:45:21,026 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:45:21
+2017-12-24 20:45:21,223 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:45:21
+2017-12-24 20:45:21,224 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:45:21
+2017-12-24 20:45:21,224 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:45:21
+2017-12-24 20:45:21,225 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:45:21
+2017-12-24 20:45:21,225 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:45:21
+2017-12-24 20:45:21,367 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:45:21
+2017-12-24 20:45:21,530 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:45:21
+2017-12-24 20:45:21,530 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:45:21
+2017-12-24 20:45:21,534 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:45:21
+2017-12-24 20:45:22,215 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:45:22
+2017-12-24 20:45:22,215 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:45:22
+2017-12-24 20:45:22,217 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:45:22
+2017-12-24 20:45:22,993 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:45:22
+2017-12-24 20:45:22,993 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:45:22
+2017-12-24 20:45:22,994 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:45:22
+2017-12-24 20:45:23,707 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:45:23
+2017-12-24 20:45:23,707 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:45:23
+2017-12-24 20:45:23,710 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:45:23
+2017-12-24 20:46:21,850 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 20:46:21
+2017-12-24 20:46:21,852 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 20:46:21
+2017-12-24 20:46:21,859 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 20:46:21
+2017-12-24 20:46:21,863 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 20:46:21
+2017-12-24 20:46:22,832 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:22
+2017-12-24 20:46:22,832 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 20:46:22
+2017-12-24 20:46:22,832 [9] FATAL ProcessLogger [(null)] - 接入界面 00112/24/2017 20:46:22
+2017-12-24 20:46:22,834 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:22
+2017-12-24 20:46:22,834 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:46:22
+2017-12-24 20:46:22,841 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:22
+2017-12-24 20:46:22,841 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 20:46:22
+2017-12-24 20:46:24,635 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:24
+2017-12-24 20:46:24,636 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:46:24
+2017-12-24 20:46:24,651 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:24
+2017-12-24 20:46:24,652 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 20:46:24
+2017-12-24 20:46:24,652 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 20:46:24
+2017-12-24 20:46:24,659 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 20:46:24
+2017-12-24 20:46:24,708 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 20:46:24
+2017-12-24 20:46:24,717 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:24
+2017-12-24 20:46:27,125 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:27
+2017-12-24 20:46:27,126 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:46:27
+2017-12-24 20:46:27,128 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:27
+2017-12-24 20:46:27,129 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:46:27
+2017-12-24 20:46:27,140 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 20:46:27
+2017-12-24 20:46:27,141 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 20:46:27
+2017-12-24 20:46:27,141 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 20:46:27
+2017-12-24 20:46:29,066 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:46:29
+2017-12-24 20:46:29,112 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 20:46:29
+2017-12-24 20:46:29,112 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 20:46:29
+2017-12-24 20:46:29,332 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 20:46:29
+2017-12-24 20:46:29,333 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 20:46:29
+2017-12-24 20:46:29,333 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 20:46:29
+2017-12-24 20:46:29,334 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 20:46:29
+2017-12-24 20:46:29,334 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 20:46:29
+2017-12-24 20:46:29,500 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 20:46:29
+2017-12-24 20:46:29,736 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:46:29
+2017-12-24 20:46:29,736 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:46:29
+2017-12-24 20:46:29,737 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:46:29
+2017-12-24 20:46:30,521 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:46:30
+2017-12-24 20:46:30,521 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:46:30
+2017-12-24 20:46:30,523 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:46:30
+2017-12-24 20:46:31,305 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:46:31
+2017-12-24 20:46:31,306 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:46:31
+2017-12-24 20:46:31,307 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:46:31
+2017-12-24 20:46:32,363 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 20:46:32
+2017-12-24 20:46:32,364 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 20:46:32
+2017-12-24 20:46:32,366 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971112/24/2017 20:46:32
+2017-12-24 21:49:40,344 [9] FATAL ProcessLogger [(null)] - 读取NewMethod12/24/2017 21:49:40
+2017-12-24 21:49:40,345 [9] FATAL ProcessLogger [(null)] - 读取中 090112/24/2017 21:49:40
+2017-12-24 21:49:40,351 [9] FATAL ProcessLogger [(null)] - 读取中 09010 12/24/2017 21:49:40
+2017-12-24 21:49:40,355 [9] FATAL ProcessLogger [(null)] - 接入 前 09110 12/24/2017 21:49:40
+2017-12-24 21:49:42,508 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:42
+2017-12-24 21:49:42,509 [9] FATAL ProcessLogger [(null)] - 接入界面12/24/2017 21:49:42
+2017-12-24 21:49:42,568 [9] FATAL ProcessLogger [(null)] - 接入界面 00212/24/2017 21:49:42
+2017-12-24 21:49:42,569 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:42
+2017-12-24 21:49:42,570 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 21:49:42
+2017-12-24 21:49:45,671 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:45
+2017-12-24 21:49:45,671 [9] FATAL ProcessLogger [(null)] - 界面2  190112/24/2017 21:49:45
+2017-12-24 21:49:45,672 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:45
+2017-12-24 21:49:45,681 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:45
+2017-12-24 21:49:50,722 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:50
+2017-12-24 21:49:50,722 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 21:49:50
+2017-12-24 21:49:50,723 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:50
+2017-12-24 21:49:50,723 [9] FATAL ProcessLogger [(null)] - 界面3  190212/24/2017 21:49:50
+2017-12-24 21:49:50,724 [9] FATAL ProcessLogger [(null)] - 界面3  190312/24/2017 21:49:50
+2017-12-24 21:49:50,760 [9] FATAL ProcessLogger [(null)] - 界面3  190412/24/2017 21:49:50
+2017-12-24 21:49:50,988 [9] FATAL ProcessLogger [(null)] - 界面4  190512/24/2017 21:49:50
+2017-12-24 21:49:50,995 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:50
+2017-12-24 21:49:56,034 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:56
+2017-12-24 21:49:56,035 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 21:49:56
+2017-12-24 21:49:56,036 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:56
+2017-12-24 21:49:56,036 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 21:49:56
+2017-12-24 21:49:56,053 [9] FATAL ProcessLogger [(null)] - 接入12/24/2017 21:49:56
+2017-12-24 21:49:56,054 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190612/24/2017 21:49:56
+2017-12-24 21:49:56,054 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190712/24/2017 21:49:56
+2017-12-24 21:49:57,478 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 21:49:57
+2017-12-24 21:49:57,512 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  191012/24/2017 21:49:57
+2017-12-24 21:49:57,512 [9] FATAL ProcessLogger [(null)] - 获取中奖信息  190912/24/2017 21:49:57
+2017-12-24 21:49:57,671 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open12/24/2017 21:49:57
+2017-12-24 21:49:57,672 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 112/24/2017 21:49:57
+2017-12-24 21:49:57,672 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 212/24/2017 21:49:57
+2017-12-24 21:49:57,673 [9] FATAL ProcessLogger [(null)] - ReadServer_tuijanhaoma open 312/24/2017 21:49:57
+2017-12-24 21:49:57,673 [9] FATAL ProcessLogger [(null)] - ReadServer_lishizhongjian 112/24/2017 21:49:57
+2017-12-24 21:49:57,857 [9] FATAL ProcessLogger [(null)] - ReadHistroy 991212/24/2017 21:49:57
+2017-12-24 21:49:58,245 [9] FATAL ProcessLogger [(null)] - ReadHistroy 9971212/24/2017 21:49:58
+2017-12-24 21:49:58,245 [9] FATAL ProcessLogger [(null)] - ReadHistroy 971212/24/2017 21:49:58

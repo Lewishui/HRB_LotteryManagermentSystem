@@ -12,9 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBoxComboBox", "CheckBoxComboBox\CheckBoxComboBox.csproj", "{70A25201-8EA4-48F8-A4A6-ED13ADF8823C}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj", "{7170BC42-7A52-4BDC-AB02-5796908ABE8A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{4F0F6B51-F8BD-462A-B610-DF2C1A2E27D8} = {4F0F6B51-F8BD-462A-B610-DF2C1A2E27D8}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

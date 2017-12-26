@@ -340,24 +340,25 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>CheckBoxComboBox.dll</td><td>{CE2B0CB1-D380-44C0-A52A-798D6A40922F}</td><td>INSTALLDIR</td><td>2</td><td/><td>checkboxcombobox.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Component</td><td>{501C4A3C-6FDF-406A-BEFD-9DE828E740DD}</td><td>INSTALLDIR</td><td>2</td><td/><td>hrb_lotterymanagermentsystem3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>HRB_LotteryManagermentSystem.exe</td><td>{2F0A4DFB-DF11-4F0E-8E57-0325C03952B2}</td><td>INSTALLDIR</td><td>2</td><td/><td>hrb_lotterymanagermentsystem</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>{9E8CFAB5-39D7-46AF-A6AE-9D05E18B959A}</td><td>INSTALLDIR</td><td>2</td><td/><td>hrb_lotterymanagermentsystem2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>CheckBoxComboBox.dll</td><td>{E065C0F5-E003-4936-BD1F-0CDB66B7D3B7}</td><td>INSTALLDIR</td><td>2</td><td/><td>checkboxcombobox.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>HRB_LotteryManagermentSystem.exe</td><td>{53094B2C-BD90-42DC-8ECB-5A59D8EA2343}</td><td>INSTALLDIR</td><td>2</td><td/><td>hrb_lotterymanagermentsystem</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>{C2B03C39-3E9A-470A-9F44-E52CAB05303B}</td><td>INSTALLDIR</td><td>2</td><td/><td>hrb_lotterymanagermentsystem2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{3B40D05C-477D-44F7-99AE-1213BC19339B}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{4FF1376D-6703-4BF9-B49C-E0B9FBD4AB0A}</td><td>SYSTEM</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Interop.SHDocVw.dll</td><td>{5A689B57-BCA1-48E0-9CF2-90F07F8E359C}</td><td>INSTALLDIR</td><td>2</td><td/><td>interop.shdocvw.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>IrisSkin2.dll</td><td>{82AC655F-A7D9-41BF-B5FE-ECC3F64E82A1}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Lottery.Buiness.dll</td><td>{FF697E42-794A-4866-853D-91A3F59DA974}</td><td>INSTALLDIR</td><td>2</td><td/><td>lottery.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Lottery.DB.dll</td><td>{06DE767F-0073-4643-AADA-6269EF0909E5}</td><td>INSTALLDIR</td><td>2</td><td/><td>lottery.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{A63AB2BF-AE36-47D8-B6AD-77625C0FF6E4}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MySql.Data.dll</td><td>{296D7E4F-E915-4F66-A636-F15D2A82D1BE}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{E29CDE60-F733-400F-9EAE-88D2692DBBDD}</td><td>LOGS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Interop.SHDocVw.dll</td><td>{6CA91FD5-6E87-4DE6-876E-DBC661BFA682}</td><td>INSTALLDIR</td><td>2</td><td/><td>interop.shdocvw.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>IrisSkin2.dll</td><td>{01D07700-BE9C-41A4-A76C-CCA243D48FFF}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Lottery.Buiness.dll</td><td>{654CD26C-B6BB-464E-9503-44BF75D78D82}</td><td>INSTALLDIR</td><td>2</td><td/><td>lottery.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Lottery.DB.dll</td><td>{3DC3E216-D137-4A6F-9212-F4150619C83F}</td><td>INSTALLDIR</td><td>2</td><td/><td>lottery.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{9A719F59-FC08-4762-A0D9-B8906E05B0B1}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.mshtml.dll</td><td>{98B4ADA0-1521-4264-A182-D67945C47CDC}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.mshtml.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MySql.Data.dll</td><td>{0E1A214C-C5CC-4ACA-9056-067B52BDC2A5}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{EEB61DC6-9E00-4306-9402-AC7A1D9E539D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Order.Common.dll</td><td>{C63714AA-AA53-4B96-9832-2B72BCCD90D7}</td><td>INSTALLDIR</td><td>2</td><td/><td>order.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Data.SQLite.dll</td><td>{6FEED1E9-5D92-427B-A97D-E1AF7D9420AB}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{65417780-95E2-4721-AE4E-719AD17EABFB}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>log4net.dll</td><td>{9BF49939-0E76-4C7A-9AC0-5D1142D4B69F}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>office.dll</td><td>{946A6CAE-0A91-473D-8047-5BB9B4719FE3}</td><td>INSTALLDIR</td><td>2</td><td/><td>office.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Order.Common.dll</td><td>{0524A215-CA02-4103-9CA4-D4F865DFACB9}</td><td>INSTALLDIR</td><td>2</td><td/><td>order.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Data.SQLite.dll</td><td>{EDA11D1E-A306-451A-BF7D-35AC7ECE45A0}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{90F291B8-2A2E-4387-9E57-082E43CECC43}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>log4net.dll</td><td>{7905FDB1-DD68-4649-B2EE-809967B39C6A}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>office.dll</td><td>{48CBE667-7BE8-45D3-A69E-7B8335A0630F}</td><td>INSTALLDIR</td><td>2</td><td/><td>office.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1161,6 +1162,7 @@
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
+		<row><td>LOGS</td><td>INSTALLDIR</td><td>Logs</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
 		<row><td>MY_PRODUCT_NAME</td><td>DIRECTORY</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
@@ -1878,16 +1880,17 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>CheckBoxComboBox.dll</td></row>
-		<row><td>AlwaysInstall</td><td>Component</td></row>
 		<row><td>AlwaysInstall</td><td>HRB_LotteryManagermentSystem.exe</td></row>
 		<row><td>AlwaysInstall</td><td>HRB_LotteryManagermentSystem.vshost.exe</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 		<row><td>AlwaysInstall</td><td>Interop.SHDocVw.dll</td></row>
 		<row><td>AlwaysInstall</td><td>IrisSkin2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Lottery.Buiness.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Lottery.DB.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.Office.Interop.Excel.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.mshtml.dll</td></row>
 		<row><td>AlwaysInstall</td><td>MySql.Data.dll</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent1</td></row>
 		<row><td>AlwaysInstall</td><td>Order.Common.dll</td></row>
@@ -1915,14 +1918,16 @@
 		<row><td>hrb_lotterymanagermentsystem</td><td>HRB_LotteryManagermentSystem.exe</td><td>HRB_LO~1.EXE|HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>1</td><td/></row>
 		<row><td>hrb_lotterymanagermentsystem1</td><td>ISX_DEFAULTCOMPONENT</td><td>HRB_LO~1.PDB|HRB_LotteryManagermentSystem.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.pdb</td><td>1</td><td/></row>
 		<row><td>hrb_lotterymanagermentsystem2</td><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>HRB_LO~1.EXE|HRB_LotteryManagermentSystem.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.vshost.exe</td><td>1</td><td/></row>
-		<row><td>hrb_lotterymanagermentsystem3</td><td>Component</td><td>HRB_LotteryManagermentSystem.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;HRB_LotteryManagermentSystem&gt;|Built</td><td>3</td><td/></row>
+		<row><td>hrb_lotterymanagermentsystem3</td><td>ISX_DEFAULTCOMPONENT</td><td>HRB_LO~1.MAN|HRB_LotteryManagermentSystem.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.vshost.exe.manifest</td><td>1</td><td/></row>
 		<row><td>interop.shdocvw.dll</td><td>Interop.SHDocVw.dll</td><td>INTERO~1.DLL|Interop.SHDocVw.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Interop.SHDocVw.dll</td><td>1</td><td/></row>
 		<row><td>irisskin2.dll</td><td>IrisSkin2.dll</td><td>IRISSK~1.DLL|IrisSkin2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\IrisSkin2.dll</td><td>1</td><td/></row>
+		<row><td>log4net.config</td><td>ISX_DEFAULTCOMPONENT</td><td>LOG4NE~1.CON|Log4Net.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Log4Net.config</td><td>1</td><td/></row>
 		<row><td>log4net.dll</td><td>log4net.dll</td><td>log4net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\log4net.dll</td><td>1</td><td/></row>
 		<row><td>lottery.buiness.dll</td><td>Lottery.Buiness.dll</td><td>LOTTER~1.DLL|Lottery.Buiness.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Lottery.Buiness.dll</td><td>1</td><td/></row>
 		<row><td>lottery.buiness.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>LOTTER~1.PDB|Lottery.Buiness.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Lottery.Buiness.pdb</td><td>1</td><td/></row>
 		<row><td>lottery.db.dll</td><td>Lottery.DB.dll</td><td>LOTTER~1.DLL|Lottery.DB.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Lottery.DB.dll</td><td>1</td><td/></row>
 		<row><td>lottery.db.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>LOTTER~1.PDB|Lottery.DB.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Lottery.DB.pdb</td><td>1</td><td/></row>
+		<row><td>microsoft.mshtml.dll</td><td>Microsoft.mshtml.dll</td><td>MICROS~1.DLL|Microsoft.mshtml.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Microsoft.mshtml.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.office.interop.exc</td><td>Microsoft.Office.Interop.Excel.dll</td><td>MICROS~1.DLL|Microsoft.Office.Interop.Excel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Microsoft.Office.Interop.Excel.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.office.interop.exc1</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.Office.Interop.Excel.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Microsoft.Office.Interop.Excel.xml</td><td>1</td><td/></row>
 		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\MySql.Data.dll</td><td>1</td><td/></row>
@@ -1933,6 +1938,8 @@
 		<row><td>pagecolor1.ssk</td><td>ISX_DEFAULTCOMPONENT</td><td>PAGECO~1.SSK|PageColor1.ssk</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\PageColor1.ssk</td><td>1</td><td/></row>
 		<row><td>system.data.sqlite.dll</td><td>System.Data.SQLite.dll</td><td>SYSTEM~1.DLL|System.Data.SQLite.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\System.Data.SQLite.dll</td><td>1</td><td/></row>
 		<row><td>system.data.sqlite.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>SYSTEM~1.XML|System.Data.SQLite.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\System.Data.SQLite.xml</td><td>1</td><td/></row>
+		<row><td>systemlog_process20171224.lo</td><td>ISX_DEFAULTCOMPONENT2</td><td>SYSTEM~1.LOG|SystemLog_Process20171224.log</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Logs\SystemLog_Process20171224.log</td><td>1</td><td/></row>
+		<row><td>systemlog_systemexception201</td><td>ISX_DEFAULTCOMPONENT2</td><td>SYSTEM~1.LOG|SystemLog_SystemException20171224.log</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Logs\SystemLog_SystemException20171224.log</td><td>1</td><td/></row>
 		<row><td>weifenluo.winformsui.docking</td><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>WEIFEN~1.DLL|WeifenLuo.WinFormsUI.Docking.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</td><td>1</td><td/></row>
 	</table>
 
@@ -2190,24 +2197,25 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>CheckBoxComboBox.dll</td><td/><td/><td>_75C554AF_4C5B_4827_9550_5314C661ACC4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Component</td><td/><td/><td>_7527447F_1CCD_46F6_9A41_0FD86074E23E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>HRB_LotteryManagermentSystem.exe</td><td/><td/><td>_E2206621_A21C_43FB_AE77_F5BA2384E700_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td/><td/><td>_96BA07A0_3BB9_4010_B37C_33BED1A8103A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>CheckBoxComboBox.dll</td><td/><td/><td>_2E7B2A55_664D_4E9C_9FC6_7A0DC5406615_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>HRB_LotteryManagermentSystem.exe</td><td/><td/><td>_22C2AFD6_FFD7_4C88_B631_E688B927BA5C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td/><td/><td>_BF329942_5102_4E7C_9438_2D5FE9A8B3CC_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_A721902A_10AF_4130_9DF4_A5558FD6BE3C_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_4531927B_5F4C_4C0A_9FDC_DD8A0DFA44A1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Interop.SHDocVw.dll</td><td/><td/><td>_24B1C67F_6460_484F_8DD5_BB21D4A79647_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>IrisSkin2.dll</td><td/><td/><td>_012DC766_69AD_4A52_89CE_18B3D15EC6AB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Lottery.Buiness.dll</td><td/><td/><td>_E7BED0A2_496A_4C71_84E9_CA0708B39702_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Lottery.DB.dll</td><td/><td/><td>_36ED1EC6_0F19_4277_A6E8_C7830BF0E9FF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_759CC876_7F3F_4F9E_86B8_6AEBEF4BA872_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MySql.Data.dll</td><td/><td/><td>_6B14790A_5C51_417E_8AA0_9286301E88F4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_3204F6E2_C726_46BB_BA84_536A015048D0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Interop.SHDocVw.dll</td><td/><td/><td>_2A9D18E3_A60A_4E96_820D_68461EC89CCC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>IrisSkin2.dll</td><td/><td/><td>_4F7B3F1D_D626_4CD4_A6B7_532F8E1107C2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Lottery.Buiness.dll</td><td/><td/><td>_F54100D7_0748_4DF9_B488_D8BEEE29168F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Lottery.DB.dll</td><td/><td/><td>_F880256D_8378_43C1_A5B2_89BDEE1ACA79_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_EA646C9C_17D5_46BE_8755_6C7567718CB0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.mshtml.dll</td><td/><td/><td>_4B053335_291B_4F0A_BBB3_7DA617329BCA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MySql.Data.dll</td><td/><td/><td>_5EB2658F_2AB3_4640_B9CF_1419CC2F1D69_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_7F1F928F_D2D9_4ADF_9F08_CE37561D255A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Order.Common.dll</td><td/><td/><td>_3B8EAD78_3C36_4A0A_B625_43C514BD24C0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Data.SQLite.dll</td><td/><td/><td>_707A8447_1D76_49C6_9906_BCB07A5BE619_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_BD69DA67_C2D8_4A35_AABD_8F828A0AB98E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>log4net.dll</td><td/><td/><td>_D7F991B5_4399_443B_9510_43F17367DF92_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>office.dll</td><td/><td/><td>_C26A8AE1_C43D_46F2_B86F_B0B85B903D9A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Order.Common.dll</td><td/><td/><td>_47C4A0A1_5106_4B17_9B6F_154173F1B581_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Data.SQLite.dll</td><td/><td/><td>_989CFE33_8D35_4D4D_ABC7_8A9D800CEC0F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_81F73F97_88A2_40BD_9D4B_257A69B58409_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>log4net.dll</td><td/><td/><td>_A141B157_4E4A_40E1_AF96_1A6550427099_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>office.dll</td><td/><td/><td>_715555C1_2072_4FAD_93A1_8320A9EA3502_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3652,6 +3660,8 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>2052</td><td>本安装程序的使用期到 %s 结束。安装程序现在将退出。</td><td>0</td><td/><td>-2044358347</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td/><td>0</td><td/><td>-2044362379</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-2044362379</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td/><td>0</td><td/><td>-702200116</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.vshost.exe</td><td>0</td><td/><td>-702200116</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td/><td>0</td><td/><td>-2044362379</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.vshost.exe</td><td>0</td><td/><td>-2044362379</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td/><td>0</td><td/><td>-2044384619</td></row>
@@ -3662,6 +3672,12 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>2052</td><td>LotteryManagermentSystem.exe</td><td>0</td><td/><td>-2044373291</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td/><td>0</td><td/><td>-2044355307</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.vshost.exe</td><td>0</td><td/><td>-2044355307</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td/><td>0</td><td/><td>-970651277</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-970651277</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td/><td>0</td><td/><td>-970651277</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.vshost.exe</td><td>0</td><td/><td>-970651277</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td/><td>0</td><td/><td>-702200116</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-702200116</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>2052</td><td>从以下服务器列表中选择要连接的数据库服务器。</td><td>0</td><td/><td>-2044358347</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>2052</td><td>从以下的编录名称列表中，选择您希望将其作为目标的数据库编录。</td><td>0</td><td/><td>-2044358347</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>2052</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-2044358347</td></row>
@@ -4068,9 +4084,13 @@
 		<row><td>HRB_LotteryManager_43765F27B6C045D8B337A5CBECB218F6.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_4B6F9BDB883142AD931C63DD5DCBD78F.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_6F2D818A88154EE09FBCF00216E050D2.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
+		<row><td>HRB_LotteryManager_7955D912379D4DFAB1D1F9420A05B0DB.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_85E1A926C45D4BA48367F8071F976AAF.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_8C21B2B1F3D3465DB92F93C0AD0F3083.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_B197685FB09340FAB0A1FC49BC3F87FF.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>HRB_LotteryManager_C8FB21010D7A42D79D3872ECAFF8EAC8.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>HRB_LotteryManager_DB05F5BFF8E54FC186C501402F7C2901.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>HRB_LotteryManager_F6953B2EDED644B7B40E31FD5243F421.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_S_62444681C20C42828BEC896789725D02.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
@@ -4743,9 +4763,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>HRB_LotteryManagermentSystem.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>HRB_LotteryManagermentSystem.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>HRB_LotteryManager_153AE6A8E9964527A89057778A31168E.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>HRB_LotteryManagermentSystem.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>HRB_LotteryManagermentSystem.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>HRB_LotteryManager_6F2D818A88154EE09FBCF00216E050D2.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME6##</td><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>HRB_LotteryManager_4B6F9BDB883142AD931C63DD5DCBD78F.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>HRB_LotteryManagermentSystem.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>HRB_LotteryManagermentSystem.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>HRB_LotteryManager_7955D912379D4DFAB1D1F9420A05B0DB.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>HRB_LotteryManager_C8FB21010D7A42D79D3872ECAFF8EAC8.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>setup</td><td>UNINST|Uninstall Setup</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {B2C117B5-F361-4807-A433-EDA1ECD966CB}</td><td/><td/><td>UNINST_Uninstall_S_62444681C20C42828BEC896789725D02.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 

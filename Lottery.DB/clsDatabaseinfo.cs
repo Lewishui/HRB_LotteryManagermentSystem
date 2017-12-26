@@ -49,6 +49,9 @@ namespace Lottery.DB
 
         //方案期数
         public string fanganqishu { get; set; }
+        //方案期数
+        public string Message { get; set; }
+
     }
     public class clsJisuanqi_info
     {

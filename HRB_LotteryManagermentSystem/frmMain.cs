@@ -235,9 +235,12 @@ namespace HRB_LotteryManagermentSystem
                 BusinessHelp.pbStatus = pbStatus;
                 BusinessHelp.tsStatusLabel1 = toolStripLabel1;
                 ProcessLogger.Fatal("读取NewMethod" + DateTime.Now.ToString());
+                pbStatus.Maximum = 5;
+                pbStatus.Value = 1;
 
                 Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, selectitem, mapping_Result);
                 zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
+                pbStatus.Value = 2;
 
                 this.toolStripLabel1.Text = "整理数据中....";
 
@@ -278,16 +281,14 @@ namespace HRB_LotteryManagermentSystem
                              select o);
                     NewResult = q.ToList();
                     NewResult = NewResult.FindAll(s => s.chuxiancishu != null && s.chuxiancishu == NewResult[0].chuxiancishu);
-                    List<clTuijianhaomalan_info> NewResultNew = q.ToList().FindAll(s => s.chuxiancishu != null && s.chuxiancishu == NewResult[0].chuxiancishu);
-                    dataGridView4.DataSource = NewResultNew;
+                    //List<clTuijianhaomalan_info> NewResultNew = q.ToList().FindAll(s => s.chuxiancishu != null && s.chuxiancishu == NewResult[0].chuxiancishu);
+                    //dataGridView4.DataSource = NewResultNew;
 
                     //descending ascending
 
                     q = (from o in NewResult
                          orderby Convert.ToInt32(o.zuidayilou) descending
                          select o);
-
-
 
                     var qq = q.Last();
                     List<clTuijianhaomalan_info> zuidayilou_same = NewResult.FindAll(s => s.zuidayilou != null && s.zuidayilou == qq.zuidayilou);
@@ -316,29 +317,33 @@ namespace HRB_LotteryManagermentSystem
                         item.tuijianhaoma = item.haomaileixing;
                         item.nizhuihaoqishu = item.zuidayilou;
 
-                        //查找中奖的期数
-                        string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
-                        List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) >= Convert.ToDouble(item.dangriqihao));
 
-                        if (filter_zhongjiangxinxi != null && filter_zhongjiangxinxi.Count > 0)
-                            foreach (clTuijianhaomalan_info temp in filter_zhongjiangxinxi)
-                            {
+                        #region    //查找中奖的期数
+                        //string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
+                        //List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) >= Convert.ToDouble(item.dangriqihao));
 
-                                int time = 0;
-                                //string[] tatile2 = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
-                                for (int iq = 0; iq < tatile1.Length; iq++)
-                                {
-                                    if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
-                                        time++;
+                        //if (filter_zhongjiangxinxi != null && filter_zhongjiangxinxi.Count > 0)
+                        //    foreach (clTuijianhaomalan_info temp in filter_zhongjiangxinxi)
+                        //    {
 
-                                }
-                                if (time == tatile1.Length)
-                                {
-                                    item.zhongjiangqishu = temp.zhongjiangqishu;
+                        //        int time = 0;
+                        //        //string[] tatile2 = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
+                        //        for (int iq = 0; iq < tatile1.Length; iq++)
+                        //        {
+                        //            if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
+                        //                time++;
 
-                                    break;
-                                }
-                            }
+                        //        }
+                        //        if (time == tatile1.Length)
+                        //        {
+                        //            item.zhongjiangqishu = temp.zhongjiangqishu;
+
+                        //            break;
+                        //        }
+                        //    } 
+                        #endregion
+                        item.Message = "New";
+
                         hebing_NewResult.Add(item);
                     }
                 }
@@ -351,26 +356,129 @@ namespace HRB_LotteryManagermentSystem
                 {
                     //查找中奖的期数
                     string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
-                    List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) >= Convert.ToDouble(item.dangriqihao));
-
+                    List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) > Convert.ToDouble(item.dangriqihao));
+                    bool qianis_ture = false;
                     if (filter_zhongjiangxinxi != null && filter_zhongjiangxinxi.Count > 0)
+                    {
                         foreach (clTuijianhaomalan_info temp in filter_zhongjiangxinxi)
                         {
-
+                            //刨除  不是前的 玩法  只算包含的的次数
                             int time = 0;
-                            for (int iq = 0; iq < tatile1.Length; iq++)
+                            if (!item.wanfazhonglei.Contains("前"))
                             {
-                                if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
-                                    time++;
+                                for (int iq = 0; iq < tatile1.Length; iq++)
+                                {
+                                    if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
+                                        time++;
+                                }
                             }
-                            if (time == tatile1.Length)
+                            //计算前一直 和前一组的 算法
+                            else if (item.wanfazhonglei.Contains("前"))
+                            {
+                                //前一直
+                                if (item.wanfazhonglei.Contains("直"))
+                                {
+                                    //前一直
+                                    if (item.wanfazhonglei.Contains("一"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 2) == item.wanfazhonglei.Substring(0,2))
+                                        {
+                                            time++;
+                                            qianis_ture = true;
+
+                                        }
+                                    }
+                                    //前二直
+                                    else if (item.wanfazhonglei.Contains("二"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 5) == item.tuijianhaoma.Substring(0, 5))
+                                        {
+                                            time++;
+                                            qianis_ture = true;
+
+                                        }
+                                    }
+                                    //前三直
+                                    else if (item.wanfazhonglei.Contains("三"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 8) == item.tuijianhaoma.Substring(0, 8))
+                                        {
+                                            time++;
+                                            qianis_ture = true;
+
+                                        }
+                                    }
+
+                                }
+                                //前一组 只要 前几位对应有此数即可
+                                else if (item.wanfazhonglei.Contains("组"))
+                                {
+                                    //前一组
+                                    if (item.wanfazhonglei.Contains("一"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 2) == item.wanfazhonglei.Substring(0, 2))
+                                        {
+                                            // && temp.wanfazhonglei.Substring(0, 5) == item.wanfazhonglei.Substring(0, 5)
+
+                                            time++;
+                                            qianis_ture = true;
+
+                                        }
+                                    }
+                                    else if (item.wanfazhonglei.Contains("二"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
+                                        {
+                                           
+                                            string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
+                                            for (int iq = 0; iq < tatile1.Length; iq++)
+                                            {
+                                                for (int iq1 = 0; iq1 < 2; iq1++)
+                                                {
+                                                    if (splittemp[iq1].Contains(tatile1[iq])) 
+                                                        time++;
+                                                }
+                                            }
+
+                                            if (time == 2)
+                                                qianis_ture = true;
+
+                                        }
+                                    }
+                                    else if (item.wanfazhonglei.Contains("三"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
+                                        {
+
+                                            string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
+                                            for (int iq = 0; iq < tatile1.Length; iq++)
+                                            {
+                                                for (int iq1 = 0; iq1 < 3; iq1++)
+                                                {
+                                                    if (splittemp[iq1].Contains(tatile1[iq]))
+                                                        time++;
+                                                }
+                                            }
+
+                                            if (time == 3)
+                                                qianis_ture = true;
+
+                                        }
+                                    }
+                                }
+
+                            }
+                            if (time == tatile1.Length || qianis_ture == true)
                             {
                                 item.zhongjiangqishu = temp.zhongjiangqishu;
 
                                 break;
                             }
                         }
+                    }
                 }
+                pbStatus.Value = 3;
+
                 //保存新的推荐号
                 int ss1 = this.tabControl1.SelectedIndex;
                 if (ss1 == 0)
@@ -385,12 +493,14 @@ namespace HRB_LotteryManagermentSystem
                 Zhongjiangle_Result = NewResult.FindAll(so => so.zhongjiangqishu != null && so.zhongjiangqishu != "");
                 //去除已中奖的条目
                 NewResult = NewResult.Except(Zhongjiangle_Result).ToList();
+                pbStatus.Value = 4;
 
                 #endregion
                 JisuanqiResult = new List<clsJisuanqi_info>();
                 #region 查询金额
                 this.toolStripLabel1.Text = "计算金额....";
 
+                ProcessLogger.Fatal("ReadHistroy 9912" + DateTime.Now.ToString());
 
                 JisuanqiResult = BusinessHelp.ReadHistroy(ref this.bgWorker, selectitem, Zhongjiangle_Result);
                 if (JisuanqiResult != null && JisuanqiResult.Count > 0)
@@ -407,6 +517,7 @@ namespace HRB_LotteryManagermentSystem
 
                 if (ss == 0)
                     this.toolStripLabel1.Text = NewResult.Count.ToString() + "  刷新结束，请查看～";
+                pbStatus.Value = 5;
 
                 this.pbStatus.Visible = false;
 
@@ -465,6 +576,9 @@ namespace HRB_LotteryManagermentSystem
 
                 if (toolStripButton5.Text == "全自动")
                 {
+
+                    this.filterButton.Enabled = false;
+
                     Control.CheckForIllegalCrossThreadCalls = false;
 
                     aTimer = new System.Timers.Timer(30000);
@@ -509,6 +623,8 @@ namespace HRB_LotteryManagermentSystem
             }
             else
             {
+                this.filterButton.Enabled = true;
+
                 //this.button1.Enabled = true;
                 aTimer.Stop();
 
@@ -709,12 +825,17 @@ namespace HRB_LotteryManagermentSystem
                     conditions = "select * from lishizongjiang";//成功
                 else
                     conditions = "select * from lishizongjiang where dangriqihao like '" + sql;//成功
+                JisuanqiResult = new List<clsJisuanqi_info>();
 
-                DataTable dataTable = BusinessHelp.read_lishizhongjiang(conditions);
-                //dataGridView1.AutoGenerateColumns = true;
-                dataGridView2.DataSource = dataTable;
-                label1.Text = dataTable.Rows.Count.ToString();
-                this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
+
+                JisuanqiResult = BusinessHelp.ReadServer_lishizhongjiang(conditions);
+                Showdave2(JisuanqiResult);
+
+                //DataTable dataTable = BusinessHelp.read_lishizhongjiang(conditions);
+                ////dataGridView1.AutoGenerateColumns = true;
+                //dataGridView2.DataSource = dataTable;
+                //label1.Text = dataTable.Rows.Count.ToString();
+                //this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
 
             }
             if (s == 0)
@@ -1032,15 +1153,17 @@ namespace HRB_LotteryManagermentSystem
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<clsJisuanqi_info> FilterResult = JisuanqiResult.FindAll(s => s.wanfazhonglei != null && s.wanfazhonglei.Contains(comboBox1.Text));
+            if (JisuanqiResult != null)
+            {
+                List<clsJisuanqi_info> FilterResult = JisuanqiResult.FindAll(s => s.wanfazhonglei != null && s.wanfazhonglei.Contains(comboBox1.Text));
 
-            sortableJisuanqiList = new SortableBindingList<clsJisuanqi_info>(FilterResult);
-            this.bindingSource3.DataSource = this.sortableJisuanqiList;
-            dataGridView2.AutoGenerateColumns = false;
-            dataGridView2.DataSource = this.bindingSource3;
-            this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
+                sortableJisuanqiList = new SortableBindingList<clsJisuanqi_info>(FilterResult);
+                this.bindingSource3.DataSource = this.sortableJisuanqiList;
+                dataGridView2.AutoGenerateColumns = false;
+                dataGridView2.DataSource = this.bindingSource3;
+                this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
+            }
         }
-
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clsAllnew BusinessHelp = new clsAllnew();

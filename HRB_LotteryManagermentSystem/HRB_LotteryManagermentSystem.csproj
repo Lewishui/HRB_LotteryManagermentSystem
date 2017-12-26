@@ -41,6 +41,9 @@
     <Reference Include="log4net">
       <HintPath>..\Reference\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -101,6 +104,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WbBlockNewUrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="xcmb.cs">
       <SubType>Component</SubType>
     </Compile>

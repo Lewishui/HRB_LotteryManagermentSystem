@@ -30,9 +30,5 @@
 	<ItemGroup>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem.csproj">
-			<Name>HRB_LotteryManagermentSystem</Name>
-			<Project>{4F0F6B51-F8BD-462A-B610-DF2C1A2E27D8}</Project>
-		</ProjectReference>
 	</ItemGroup>
 </Project>
