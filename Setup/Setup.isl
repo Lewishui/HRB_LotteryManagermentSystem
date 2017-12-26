@@ -3972,6 +3972,8 @@
 		<row><td>ID_STRING3</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-2044380779</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-2044351115</td></row>
 		<row><td>ID_STRING4</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-2044351115</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-702159473</td></row>
+		<row><td>ID_STRING5</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-702159473</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>2052</td><td>系统将不安装此功能。</td><td>0</td><td/><td>-2044358347</td></row>
 	</table>
 
@@ -4082,13 +4084,13 @@
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_153AE6A8E9964527A89057778A31168E.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_43765F27B6C045D8B337A5CBECB218F6.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
+		<row><td>HRB_LotteryManager_46615DBC795E4EF6B5C85F27D94EE6B8.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_4B6F9BDB883142AD931C63DD5DCBD78F.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_6F2D818A88154EE09FBCF00216E050D2.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_7955D912379D4DFAB1D1F9420A05B0DB.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_85E1A926C45D4BA48367F8071F976AAF.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_8C21B2B1F3D3465DB92F93C0AD0F3083.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_B197685FB09340FAB0A1FC49BC3F87FF.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>HRB_LotteryManager_C8FB21010D7A42D79D3872ECAFF8EAC8.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_DB05F5BFF8E54FC186C501402F7C2901.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>HRB_LotteryManager_F6953B2EDED644B7B40E31FD5243F421.exe</td><td/><td>C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_S_62444681C20C42828BEC896789725D02.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
@@ -4676,7 +4678,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
 		<row><td>HRB_LotteryManagermentSystem.exe</td><td>HRB_LotteryManagermentSystem.exe</td><td/><td>setup</td><td>2</td></row>
-		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>HRB_LotteryManagermentSystem.vshost.exe</td><td/><td>setup</td><td>2</td></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>NewComponent1</td><td/><td>setup</td><td>2</td></row>
 	</table>
 
@@ -4764,7 +4765,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>HRB_LotteryManagermentSystem.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>HRB_LotteryManagermentSystem.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>HRB_LotteryManager_7955D912379D4DFAB1D1F9420A05B0DB.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>HRB_LotteryManagermentSystem.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>HRB_LotteryManager_C8FB21010D7A42D79D3872ECAFF8EAC8.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>HRB_LotteryManagermentSystem.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>HRB_LotteryManagermentSystem.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>HRB_LotteryManager_46615DBC795E4EF6B5C85F27D94EE6B8.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>setup</td><td>UNINST|Uninstall Setup</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {B2C117B5-F361-4807-A433-EDA1ECD966CB}</td><td/><td/><td>UNINST_Uninstall_S_62444681C20C42828BEC896789725D02.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
