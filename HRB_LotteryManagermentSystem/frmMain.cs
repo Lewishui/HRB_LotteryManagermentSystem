@@ -242,6 +242,12 @@ namespace HRB_LotteryManagermentSystem
                 zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
                 pbStatus.Value = 2;
 
+                if (Result == null || zhongjiangxinxi_Result == null)
+                {
+                    this.toolStripLabel1.Text = "信息获取失败，请确认网站访问正常后重新尝试 ！";
+                    pbStatus.Visible = false;
+
+                }
                 this.toolStripLabel1.Text = "整理数据中....";
 
                 #region 计算逻辑
@@ -381,7 +387,7 @@ namespace HRB_LotteryManagermentSystem
                                     //前一直
                                     if (item.wanfazhonglei.Contains("一"))
                                     {
-                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 2) == item.wanfazhonglei.Substring(0,2))
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 2) == item.wanfazhonglei.Substring(0, 2))
                                         {
                                             time++;
                                             qianis_ture = true;
@@ -429,13 +435,13 @@ namespace HRB_LotteryManagermentSystem
                                     {
                                         if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
                                         {
-                                           
+
                                             string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
                                             for (int iq = 0; iq < tatile1.Length; iq++)
                                             {
                                                 for (int iq1 = 0; iq1 < 2; iq1++)
                                                 {
-                                                    if (splittemp[iq1].Contains(tatile1[iq])) 
+                                                    if (splittemp[iq1].Contains(tatile1[iq]))
                                                         time++;
                                                 }
                                             }

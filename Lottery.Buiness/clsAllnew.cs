@@ -655,13 +655,17 @@ namespace Lottery.Buiness
                     System.Windows.Forms.Application.DoEvents();
                     DateTime rq2 = DateTime.Now;  //结束时间
                     int a = rq2.Second - StopTime.Second;
-                    if (a == 30 && isrun == ProcessStatus.Filter下拉)
+                    TimeSpan ts = rq2 - StopTime;
+                    int timeTotal = ts.Minutes;
+
+                    if (timeTotal >= 1)
                     {
                         tsStatusLabel1.Text = caizhong + "超出时间 正在退出....";
                         ProcessLogger.Fatal("超出时间 89011" + DateTime.Now.ToString());
+                        isOneFinished = true;
 
-                        MyWebBrower = null;
-                        viewForm.Close();
+                        //MyWebBrower = null;
+                        //viewForm.Close();
                         //MyWebBrower.Refresh();
                         StopTime = DateTime.Now;
                     }
@@ -708,7 +712,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                //viewForm.Show();
+                viewForm.Show();
                 ProcessLogger.Fatal("读取中 09010 " + DateTime.Now.ToString());
 
                 MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
@@ -864,7 +868,7 @@ namespace Lottery.Buiness
                     {
                         ProcessLogger.Fatal("接入界面 001" + DateTime.Now.ToString());
 
-                         isrun = ProcessStatus.登录界面;
+                        isrun = ProcessStatus.登录界面;
                         login++;
                         return;
 
@@ -1023,7 +1027,8 @@ namespace Lottery.Buiness
                         try
                         {
                             WaitWebPageLoad();
-                            tsStatusLabel1.Text = caizhong + "获取[数据]信息中 (190012) ....";
+                            tsStatusLabel1.Text = caizhong + "获取[走势数据]信息中 ....";
+                            ProcessLogger.Fatal("界面3  190012" + DateTime.Now.ToString());
 
                             loading = true;
                             while (loading == true)
@@ -1098,7 +1103,7 @@ namespace Lottery.Buiness
             catch (Exception ex)
             {
                 MessageBox.Show("ex" + ex, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
 
                 throw ex;
             }
@@ -1628,7 +1633,8 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("系统异常：" + ex);
+                return;
                 throw;
             }
         }
