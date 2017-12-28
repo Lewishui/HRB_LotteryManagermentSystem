@@ -712,7 +712,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                viewForm.Show();
+                //  viewForm.Show();
                 ProcessLogger.Fatal("读取中 09010 " + DateTime.Now.ToString());
 
                 MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
