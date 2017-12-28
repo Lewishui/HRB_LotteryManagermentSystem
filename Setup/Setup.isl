@@ -3677,7 +3677,7 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td/><td>0</td><td/><td>-970651277</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.vshost.exe</td><td>0</td><td/><td>-970651277</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td/><td>0</td><td/><td>-702200116</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>2052</td><td>LAUNCH~1.EXE|Launch HRB_LotteryManagermentSystem.exe</td><td>0</td><td/><td>-702200116</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>2052</td><td>Lottery.exe</td><td>0</td><td/><td>-433745399</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>2052</td><td>从以下服务器列表中选择要连接的数据库服务器。</td><td>0</td><td/><td>-2044358347</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>2052</td><td>从以下的编录名称列表中，选择您希望将其作为目标的数据库编录。</td><td>0</td><td/><td>-2044358347</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>2052</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-2044358347</td></row>
