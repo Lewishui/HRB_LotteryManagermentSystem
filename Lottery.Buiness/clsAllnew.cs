@@ -712,10 +712,15 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                //  viewForm.Show();
+                viewForm.Show();
                 ProcessLogger.Fatal("读取中 09010 " + DateTime.Now.ToString());
+                //
+                //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
 
-                MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
+                //new  二期
+                MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=yl3m"); 
+               // MyWebBrower.Url = new Uri("https://www.baidu.com");//&num=15
+
                 if (caizhong != null && caizhong != "")
                 {
                     tsStatusLabel1.Text = caizhong + "接入 前 ...." + MyWebBrower.Url;
@@ -724,27 +729,50 @@ namespace Lottery.Buiness
 
                     if (caizhong.Contains("前一直"))
                     {
-                        MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q11m");
+                        //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q11m");
+                        //new  二期
+                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q11m");
 
                     }
                     else if (caizhong.Contains("前二直"))
                     {
-                        MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q2zhix");
+                        //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q2zhix");
+                        //new  二期
+                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q2zhix");
 
                     }
                     else if (caizhong.Contains("前三直"))
                     {
-                        MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q3zhix");
+                        //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q3zhix");
+                        //new  二期
+                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q3zhix");
 
                     }
                     else if (caizhong.Contains("前二组"))
                     {
-                        MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q2zux");
+                        //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q2zux");
+                        //new  二期
+                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q2zux");
 
                     }
                     else if (caizhong.Contains("前三组"))
                     {
-                        MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q3zux");
+                        //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q3zux");
+                        //new  二期
+                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q3zux");
+
+                    }
+                    //
+                    else if (caizhong.Contains("乐选四"))
+                    {
+                        //new  二期
+                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=r34m");
+
+                    }
+                    else if (caizhong.Contains("乐选五"))
+                    {
+                        //new  二期
+                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=r45m");
 
                     }
                     ProcessLogger.Fatal("接入 前 091102 " + DateTime.Now.ToString());
@@ -808,7 +836,7 @@ namespace Lottery.Buiness
                 #region 登录页面
                 //http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15
                 //点击彩种
-                if (myDoc.Url.ToString().IndexOf("http://chart.icaile.com/hlj11x5.php?op") >= 0 && login == 0)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                if (myDoc.Url.ToString().IndexOf("http://hlj11x5.icaile.com/?op") >= 0 && login == 0)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
 
                     tsStatusLabel1.Text = caizhong + "接入界面 ....";
@@ -864,7 +892,7 @@ namespace Lottery.Buiness
                         clickid = "hmyl";
                         //
                     }
-                    else if (caizhong.Contains("前一直") || caizhong.Contains("前二直") || caizhong.Contains("前三直") || caizhong.Contains("前二组") || caizhong.Contains("前三组"))
+                    else if (caizhong.Contains("前一直") || caizhong.Contains("前二直") || caizhong.Contains("前三直") || caizhong.Contains("前二组") || caizhong.Contains("前三组") || caizhong.Contains("乐选四") || caizhong.Contains("乐选五"))
                     {
                         ProcessLogger.Fatal("接入界面 001" + DateTime.Now.ToString());
 
@@ -889,7 +917,7 @@ namespace Lottery.Buiness
 
                 }
                 //
-                else if (myDoc.Url.ToString().IndexOf("http://chart.icaile.com/hlj11x5.php?op") >= 0 && isrun == ProcessStatus.登录界面)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                else if (myDoc.Url.ToString().IndexOf("http://hlj11x5.icaile.com/?op") >= 0 && isrun == ProcessStatus.登录界面)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
                     ProcessLogger.Fatal("界面2  1901" + DateTime.Now.ToString());
 
@@ -906,7 +934,7 @@ namespace Lottery.Buiness
                     isrun = ProcessStatus.第一页面;
                     return;
                 }
-                else if (myDoc.Url.ToString().IndexOf("http://chart.icaile.com/hlj11x5.php?op") >= 0 && myDoc.Url.ToString().IndexOf("&num=" + filter_qishu.ToString()) >= 0 && isrun == ProcessStatus.第一页面)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                else if (myDoc.Url.ToString().IndexOf("http://hlj11x5.icaile.com/?op") >= 0 && myDoc.Url.ToString().IndexOf("&num=" + filter_qishu.ToString()) >= 0 && isrun == ProcessStatus.第一页面)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
                     ProcessLogger.Fatal("界面3  1902" + DateTime.Now.ToString());
 
@@ -1056,7 +1084,7 @@ namespace Lottery.Buiness
 
                         //isOneFinished = true;
                         //转到中奖信息页面
-                        MyWebBrower.Navigate("http://chart.icaile.com/hlj11x5.php?op=dcjb");
+                        MyWebBrower.Navigate("http://hlj11x5.icaile.com/?op=dcjb");
 
                         isrun = ProcessStatus.确认YES;
                         tsStatusLabel1.Text = caizhong + "加载中奖信息....";
@@ -1064,7 +1092,7 @@ namespace Lottery.Buiness
                     }
                 }
                 //获取中奖信息
-                else if (myDoc.Url.ToString().IndexOf("http://chart.icaile.com/hlj11x5.php?op=dcjb") >= 0 && isrun == ProcessStatus.确认YES)
+                else if (myDoc.Url.ToString().IndexOf("http://hlj11x5.icaile.com/?op=dcjb") >= 0 && isrun == ProcessStatus.确认YES)
                 {
                     tsStatusLabel1.Text = caizhong + "获取中奖信息  ....";
                     ProcessLogger.Fatal("获取中奖信息  1906" + DateTime.Now.ToString());
@@ -1093,7 +1121,7 @@ namespace Lottery.Buiness
                         //   myDoc.Refresh();
                         //   return;
                         isrun = ProcessStatus.关闭页面;
-                        tsStatusLabel1.Text = caizhong + "分析....";
+                        tsStatusLabel1.Text = caizhong + "查询结束....";
                         login++;
                     }
                 }
@@ -1117,8 +1145,9 @@ namespace Lottery.Buiness
             IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
             foreach (IHTMLElement items in Tablelin)
             {
-
-                if (items.outerText != null && items.outerText.Contains("号码类型") && items.outerText.Contains("----"))
+                string aresult = System.Text.RegularExpressions.Regex.Replace(items.outerText, @"[^0-9]+", "");
+                //if (items.outerText != null && items.outerText.Contains("号码类型") && items.outerText.Contains("----"))//没有加二期前的 （ 乐选四 乐选五）
+                if (items.outerText != null && items.outerText.Contains("号码类型") && aresult.Length > 50)
                 {
 
                     HTMLTable materialTable = items as HTMLTable;

@@ -19,3 +19,4 @@ C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.C
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\office.xml
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.pdb
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache

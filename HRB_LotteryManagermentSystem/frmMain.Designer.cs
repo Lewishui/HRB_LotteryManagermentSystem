@@ -38,6 +38,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.pbStatus = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -55,6 +62,12 @@
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.wanfazhonglei = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tuijianhaoma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nizhuihaoqishu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dangriqihao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zhongjiangqishu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Message = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.读取 = new System.Windows.Forms.ToolStripButton();
@@ -97,16 +110,22 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.zhongjiangqishuColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kaijianghaoma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.indexRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.wanfazhonglei = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tuijianhaoma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nizhuihaoqishu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dangriqihao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zhongjiangqishu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Message = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -124,6 +143,10 @@
             this.groupBox4.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).BeginInit();
@@ -262,7 +285,9 @@
             "前二直",
             "前三直",
             "前二组",
-            "前三组"});
+            "前三组",
+            "乐选四",
+            "乐选五"});
             this.checkBoxComboBox1.Location = new System.Drawing.Point(71, 39);
             this.checkBoxComboBox1.Name = "checkBoxComboBox1";
             this.checkBoxComboBox1.Size = new System.Drawing.Size(121, 21);
@@ -318,6 +343,42 @@
             this.dataGridView.Size = new System.Drawing.Size(892, 413);
             this.dataGridView.TabIndex = 4;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            // 
+            // wanfazhonglei
+            // 
+            this.wanfazhonglei.DataPropertyName = "wanfazhonglei";
+            this.wanfazhonglei.HeaderText = "玩法种类";
+            this.wanfazhonglei.Name = "wanfazhonglei";
+            // 
+            // tuijianhaoma
+            // 
+            this.tuijianhaoma.DataPropertyName = "tuijianhaoma";
+            this.tuijianhaoma.HeaderText = "推荐号码";
+            this.tuijianhaoma.Name = "tuijianhaoma";
+            // 
+            // nizhuihaoqishu
+            // 
+            this.nizhuihaoqishu.DataPropertyName = "nizhuihaoqishu";
+            this.nizhuihaoqishu.HeaderText = "拟追号期数";
+            this.nizhuihaoqishu.Name = "nizhuihaoqishu";
+            // 
+            // dangriqihao
+            // 
+            this.dangriqihao.DataPropertyName = "dangriqihao";
+            this.dangriqihao.HeaderText = "当日期号";
+            this.dangriqihao.Name = "dangriqihao";
+            // 
+            // zhongjiangqishu
+            // 
+            this.zhongjiangqishu.DataPropertyName = "zhongjiangqishu";
+            this.zhongjiangqishu.HeaderText = "中奖期数";
+            this.zhongjiangqishu.Name = "zhongjiangqishu";
+            // 
+            // Message
+            // 
+            this.Message.DataPropertyName = "Message";
+            this.Message.HeaderText = "信息";
+            this.Message.Name = "Message";
             // 
             // tableLayoutPanel1
             // 
@@ -429,6 +490,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.Location = new System.Drawing.Point(3, 16);
@@ -731,41 +793,175 @@
             this.kaijianghaoma.HeaderText = "开奖号码";
             this.kaijianghaoma.Name = "kaijianghaoma";
             // 
-            // wanfazhonglei
+            // tabPage5
             // 
-            this.wanfazhonglei.DataPropertyName = "wanfazhonglei";
-            this.wanfazhonglei.HeaderText = "玩法种类";
-            this.wanfazhonglei.Name = "wanfazhonglei";
+            this.tabPage5.Controls.Add(this.tableLayoutPanel2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 23);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(898, 511);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "滚动信息";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tuijianhaoma
+            // tableLayoutPanel2
             // 
-            this.tuijianhaoma.DataPropertyName = "tuijianhaoma";
-            this.tuijianhaoma.HeaderText = "推荐号码";
-            this.tuijianhaoma.Name = "tuijianhaoma";
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.dataGridView5, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridView4, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.712872F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.28713F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(892, 505);
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // nizhuihaoqishu
+            // dataGridView5
             // 
-            this.nizhuihaoqishu.DataPropertyName = "nizhuihaoqishu";
-            this.nizhuihaoqishu.HeaderText = "拟追号期数";
-            this.nizhuihaoqishu.Name = "nizhuihaoqishu";
+            this.dataGridView5.AllowUserToAddRows = false;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView5.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn27});
+            this.dataGridView5.ContextMenuStrip = this.contextMenuStrip1;
+            this.dataGridView5.Location = new System.Drawing.Point(449, 47);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersVisible = false;
+            this.dataGridView5.Size = new System.Drawing.Size(440, 455);
+            this.dataGridView5.TabIndex = 7;
             // 
-            // dangriqihao
+            // dataGridViewTextBoxColumn22
             // 
-            this.dangriqihao.DataPropertyName = "dangriqihao";
-            this.dangriqihao.HeaderText = "当日期号";
-            this.dangriqihao.Name = "dangriqihao";
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "wanfazhonglei";
+            this.dataGridViewTextBoxColumn22.HeaderText = "玩法种类";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             // 
-            // zhongjiangqishu
+            // dataGridViewTextBoxColumn23
             // 
-            this.zhongjiangqishu.DataPropertyName = "zhongjiangqishu";
-            this.zhongjiangqishu.HeaderText = "中奖期数";
-            this.zhongjiangqishu.Name = "zhongjiangqishu";
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "tuijianhaoma";
+            this.dataGridViewTextBoxColumn23.HeaderText = "推荐号码";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             // 
-            // Message
+            // dataGridViewTextBoxColumn27
             // 
-            this.Message.DataPropertyName = "Message";
-            this.Message.HeaderText = "信息";
-            this.Message.Name = "Message";
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "benqishouyi";
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Red;
+            this.dataGridViewTextBoxColumn27.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewTextBoxColumn27.HeaderText = "中奖金额";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.indexRow,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn17});
+            this.dataGridView4.ContextMenuStrip = this.contextMenuStrip1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView4.Location = new System.Drawing.Point(3, 47);
+            this.dataGridView4.Name = "dataGridView4";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridView4.RowHeadersVisible = false;
+            this.dataGridView4.Size = new System.Drawing.Size(440, 455);
+            this.dataGridView4.TabIndex = 5;
+            this.dataGridView4.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView4_RowPostPaint);
+            // 
+            // indexRow
+            // 
+            this.indexRow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.indexRow.FillWeight = 76.14214F;
+            this.indexRow.HeaderText = "序号";
+            this.indexRow.Name = "indexRow";
+            this.indexRow.Width = 68;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "wanfazhonglei";
+            this.dataGridViewTextBoxColumn14.FillWeight = 111.9289F;
+            this.dataGridViewTextBoxColumn14.HeaderText = "玩法种类";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "tuijianhaoma";
+            this.dataGridViewTextBoxColumn17.FillWeight = 111.9289F;
+            this.dataGridViewTextBoxColumn17.HeaderText = "推荐号码";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(592, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 31);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "历史号码栏";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(146, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "推荐号码栏";
             // 
             // frmMain
             // 
@@ -799,6 +995,11 @@
             this.groupBox4.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).EndInit();
@@ -878,6 +1079,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dangriqihao;
         private System.Windows.Forms.DataGridViewTextBoxColumn zhongjiangqishu;
         private System.Windows.Forms.DataGridViewTextBoxColumn Message;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn indexRow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
 
     }
 }

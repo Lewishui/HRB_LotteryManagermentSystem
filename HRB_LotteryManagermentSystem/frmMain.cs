@@ -549,6 +549,10 @@ namespace HRB_LotteryManagermentSystem
             dataGridView.AutoGenerateColumns = false;
             dataGridView.DataSource = this.bindingSource1;
 
+            //new  e二期
+            dataGridView4.AutoGenerateColumns = false;
+            dataGridView4.DataSource = this.bindingSource1;
+
 
 
             sortableList = new SortableBindingList<clTuijianhaomalan_info>(Result);
@@ -587,7 +591,7 @@ namespace HRB_LotteryManagermentSystem
 
                     Control.CheckForIllegalCrossThreadCalls = false;
 
-                    aTimer = new System.Timers.Timer(30000);
+                    aTimer = new System.Timers.Timer(40000);
                     aTimer.Elapsed += new System.Timers.ElapsedEventHandler(TimeControl);
                     aTimer.AutoReset = true;
                     aTimer.Start();
@@ -762,6 +766,11 @@ namespace HRB_LotteryManagermentSystem
             this.bindingSource3.DataSource = this.sortableJisuanqiList;
             dataGridView2.AutoGenerateColumns = false;
             dataGridView2.DataSource = this.bindingSource3;
+
+            //new 
+            dataGridView5.AutoGenerateColumns = false;
+            dataGridView5.DataSource = this.bindingSource3;
+
             this.pbStatus.Visible = false;
 
             List<clsJisuanqi_info> JisuanqiResultcombox = JisuanqiResult.FindAll(s => s.wanfazhonglei != null && s.wanfazhonglei != "");
@@ -1214,6 +1223,13 @@ namespace HRB_LotteryManagermentSystem
         {
             RowRemark = e.RowIndex;
             cloumn = e.ColumnIndex;
+        }
+
+        private void dataGridView4_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            SolidBrush b = new SolidBrush(this.dataGridView1.RowHeadersDefaultCellStyle.ForeColor);
+            e.Graphics.DrawString((e.RowIndex + 1).ToString(System.Globalization.CultureInfo.CurrentUICulture), this.dataGridView1.DefaultCellStyle.Font, b, e.RowBounds.Location.X + 20, e.RowBounds.Location.Y + 4);
+ 
         }
     }
 }

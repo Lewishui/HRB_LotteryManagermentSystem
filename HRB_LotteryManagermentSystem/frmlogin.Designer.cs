@@ -49,6 +49,7 @@
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.初始化数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtSAPUserId = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -60,7 +61,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.scrollingText1 = new Order.Common.ScrollingText();
-            this.初始化数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -84,13 +85,21 @@
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.关于系统ToolStripMenuItem,
             this.eToolStripMenuItem,
-            this.初始化数据ToolStripMenuItem});
+            this.初始化数据ToolStripMenuItem,
+            this.testToolStripMenuItem});
             this.toolStripDropDownButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             this.toolStripDropDownButton3.Size = new System.Drawing.Size(55, 25);
             this.toolStripDropDownButton3.Text = "关于";
             this.toolStripDropDownButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // 初始化数据ToolStripMenuItem
+            // 
+            this.初始化数据ToolStripMenuItem.Name = "初始化数据ToolStripMenuItem";
+            this.初始化数据ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.初始化数据ToolStripMenuItem.Text = "初始化数据";
+            this.初始化数据ToolStripMenuItem.Click += new System.EventHandler(this.初始化数据ToolStripMenuItem_Click);
             // 
             // toolStripLabel1
             // 
@@ -263,12 +272,12 @@
             this.scrollingText1.VerticleTextPosition = Order.Common.VerticleTextPosition.Center;
             this.scrollingText1.Visible = false;
             // 
-            // 初始化数据ToolStripMenuItem
+            // testToolStripMenuItem
             // 
-            this.初始化数据ToolStripMenuItem.Name = "初始化数据ToolStripMenuItem";
-            this.初始化数据ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
-            this.初始化数据ToolStripMenuItem.Text = "初始化数据";
-            this.初始化数据ToolStripMenuItem.Click += new System.EventHandler(this.初始化数据ToolStripMenuItem_Click);
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.testToolStripMenuItem.Text = "test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // frmlogin
             // 
@@ -306,6 +315,7 @@
         private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel2;
         private Order.Common.ScrollingText scrollingText1;
         private System.Windows.Forms.ToolStripMenuItem 初始化数据ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
 
     }
 }

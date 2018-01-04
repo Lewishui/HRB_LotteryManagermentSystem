@@ -110,7 +110,7 @@ namespace HRB_LotteryManagermentSystem
         private void 导入彩票数据ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.scrollingText1.Visible = true;
-            toolStrip1.Visible = false;
+            //toolStrip1.Visible = false;
 
 
             if (frmMain == null)
@@ -123,12 +123,7 @@ namespace HRB_LotteryManagermentSystem
                 frmMain = new frmMain();
             }
             frmMain.Show(this.dockPanel2);
-            //var form = new frmMain( );
-
-            //if (form.ShowDialog() == DialogResult.OK)
-            //{
-
-            //}
+        
 
         }
         void FrmOMS_FormClosed(object sender, FormClosedEventArgs e)
@@ -297,6 +292,16 @@ namespace HRB_LotteryManagermentSystem
         private void 初始化数据ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             copydb_file();
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //var form = new frmSetProxyIP();
+
+            //if (form.ShowDialog() == DialogResult.OK)
+            //{
+
+            //}
         }
 
 

@@ -35,6 +35,9 @@
     <ApplicationIcon>56.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\Reference\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="IrisSkin2">
       <HintPath>..\Reference\IrisSkin2.dll</HintPath>
     </Reference>
