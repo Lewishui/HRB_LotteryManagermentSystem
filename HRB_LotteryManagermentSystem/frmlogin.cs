@@ -115,12 +115,12 @@ namespace HRB_LotteryManagermentSystem
 
             if (frmMain == null)
             {
-                frmMain = new frmMain();
+                frmMain = new frmMain(scrollingText1);
                 frmMain.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
             }
             if (frmMain == null)
             {
-                frmMain = new frmMain();
+                frmMain = new frmMain(scrollingText1);
             }
             frmMain.Show(this.dockPanel2);
         
