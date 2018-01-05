@@ -67,6 +67,7 @@ namespace Lottery.Buiness
         string caizhong;
         string filter_qishu;
         bool has_alter = false;
+        string NOW_link = "";
 
         bool loading;
         clTuijianhaomalan_info ITEM;
@@ -97,7 +98,21 @@ namespace Lottery.Buiness
             ProcessLogger.Fatal("System Start " + DateTime.Now.ToString());
             #endregion
         }
+        public string linkid(int typeid)
+        {
+            string link = "";
+            if (typeid == 0)
+                link = "http://chart.icaile.com/hlj11x5.php?op";//&num=15
+            //http://chart.icaile.com/hlj11x5.php?op=yl2m
 
+            //new  二期
+            else if (typeid == 1)
+                link = "http://hlj11x5.icaile.com/?op";
+            NOW_link = link;
+
+            return link;
+
+        }
 
         public bool read_sqlitefile()
         {
@@ -662,7 +677,7 @@ namespace Lottery.Buiness
                     {
                         tsStatusLabel1.Text = caizhong + "超出时间 正在退出....";
                         ProcessLogger.Fatal("超出时间 89011" + DateTime.Now.ToString());
-                        isOneFinished = true;
+                        //isOneFinished = true;
 
                         //MyWebBrower = null;
                         //viewForm.Close();
@@ -718,7 +733,13 @@ namespace Lottery.Buiness
                 //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
 
                 //new  二期
-                MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=yl3m"); 
+                //MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=yl3m");
+
+                //share
+                 MyWebBrower.Url = new Uri(NOW_link + "=yl3m");
+
+               // MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");
+
                // MyWebBrower.Url = new Uri("https://www.baidu.com");//&num=15
 
                 if (caizhong != null && caizhong != "")
@@ -731,48 +752,63 @@ namespace Lottery.Buiness
                     {
                         //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q11m");
                         //new  二期
-                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q11m");
+                        //  MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q11m");
+                        //share
+                        MyWebBrower.Url = new Uri(NOW_link + "=q11m");
+
 
                     }
                     else if (caizhong.Contains("前二直"))
                     {
                         //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q2zhix");
                         //new  二期
-                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q2zhix");
+                        // MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q2zhix");
+                        //share
+                        MyWebBrower.Url = new Uri(NOW_link + "=q2zhix");
 
                     }
                     else if (caizhong.Contains("前三直"))
                     {
                         //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q3zhix");
                         //new  二期
-                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q3zhix");
+                        // MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q3zhix");
+                        //share
+                        MyWebBrower.Url = new Uri(NOW_link + "=q3zhix");
 
                     }
                     else if (caizhong.Contains("前二组"))
                     {
                         //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q2zux");
                         //new  二期
-                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q2zux");
+                        // MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q2zux");
+                        //share
+                        MyWebBrower.Url = new Uri(NOW_link + "=q2zux");
 
                     }
                     else if (caizhong.Contains("前三组"))
                     {
                         //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=q3zux");
                         //new  二期
-                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q3zux");
+                        // MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=q3zux");
+                        //share
+                        MyWebBrower.Url = new Uri(NOW_link + "=q3zux");
 
                     }
                     //
                     else if (caizhong.Contains("乐选四"))
                     {
                         //new  二期
-                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=r34m");
+                        //  MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=r34m");
+                        //share
+                        MyWebBrower.Url = new Uri(NOW_link + "=r34m");
 
                     }
                     else if (caizhong.Contains("乐选五"))
                     {
                         //new  二期
-                        MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=r45m");
+                        // MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=r45m");
+                        //share
+                        MyWebBrower.Url = new Uri(NOW_link + "=r45m");
 
                     }
                     ProcessLogger.Fatal("接入 前 091102 " + DateTime.Now.ToString());
@@ -836,7 +872,7 @@ namespace Lottery.Buiness
                 #region 登录页面
                 //http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15
                 //点击彩种
-                if (myDoc.Url.ToString().IndexOf("http://hlj11x5.icaile.com/?op") >= 0 && login == 0)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && login == 0)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
 
                     tsStatusLabel1.Text = caizhong + "接入界面 ....";
@@ -917,7 +953,7 @@ namespace Lottery.Buiness
 
                 }
                 //
-                else if (myDoc.Url.ToString().IndexOf("http://hlj11x5.icaile.com/?op") >= 0 && isrun == ProcessStatus.登录界面)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                else if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && isrun == ProcessStatus.登录界面)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
                     ProcessLogger.Fatal("界面2  1901" + DateTime.Now.ToString());
 
@@ -934,7 +970,7 @@ namespace Lottery.Buiness
                     isrun = ProcessStatus.第一页面;
                     return;
                 }
-                else if (myDoc.Url.ToString().IndexOf("http://hlj11x5.icaile.com/?op") >= 0 && myDoc.Url.ToString().IndexOf("&num=" + filter_qishu.ToString()) >= 0 && isrun == ProcessStatus.第一页面)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                else if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && myDoc.Url.ToString().IndexOf("&num=" + filter_qishu.ToString()) >= 0 && isrun == ProcessStatus.第一页面)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
                     ProcessLogger.Fatal("界面3  1902" + DateTime.Now.ToString());
 
@@ -1084,7 +1120,11 @@ namespace Lottery.Buiness
 
                         //isOneFinished = true;
                         //转到中奖信息页面
-                        MyWebBrower.Navigate("http://hlj11x5.icaile.com/?op=dcjb");
+                        //  MyWebBrower.Navigate("http://hlj11x5.icaile.com/?op=dcjb");
+                        //share
+                        //转到中奖信息页面
+                        MyWebBrower.Navigate(NOW_link + "=dcjb");
+
 
                         isrun = ProcessStatus.确认YES;
                         tsStatusLabel1.Text = caizhong + "加载中奖信息....";
@@ -1092,7 +1132,7 @@ namespace Lottery.Buiness
                     }
                 }
                 //获取中奖信息
-                else if (myDoc.Url.ToString().IndexOf("http://hlj11x5.icaile.com/?op=dcjb") >= 0 && isrun == ProcessStatus.确认YES)
+                else if (myDoc.Url.ToString().IndexOf(NOW_link + "=dcjb") >= 0 && isrun == ProcessStatus.确认YES)
                 {
                     tsStatusLabel1.Text = caizhong + "获取中奖信息  ....";
                     ProcessLogger.Fatal("获取中奖信息  1906" + DateTime.Now.ToString());

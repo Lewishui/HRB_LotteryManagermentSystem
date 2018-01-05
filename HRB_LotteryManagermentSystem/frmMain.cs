@@ -19,6 +19,9 @@ namespace HRB_LotteryManagermentSystem
 {
     public partial class frmMain : DockContent
     {
+        public Order.Common.ScrollingText scrollingText1;
+
+
         public log4net.ILog ProcessLogger;
         public log4net.ILog ExceptionLogger;
         // 后台执行控件
@@ -48,9 +51,12 @@ namespace HRB_LotteryManagermentSystem
         int rowcount = 0;
         int RowRemark = 0;
         int cloumn = 0;
-        public frmMain()
+        public frmMain(Order.Common.ScrollingText scrollingText)
         {
             InitializeComponent();
+
+            scrollingText1 = scrollingText;
+
             //this.comboBox1.SelectedIndex = 0;
             InitialSystemInfo();
 
@@ -237,6 +243,7 @@ namespace HRB_LotteryManagermentSystem
                 ProcessLogger.Fatal("读取NewMethod" + DateTime.Now.ToString());
                 pbStatus.Maximum = 5;
                 pbStatus.Value = 1;
+                BusinessHelp.linkid(1);
 
                 Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, selectitem, mapping_Result);
                 zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
@@ -1229,7 +1236,7 @@ namespace HRB_LotteryManagermentSystem
         {
             SolidBrush b = new SolidBrush(this.dataGridView1.RowHeadersDefaultCellStyle.ForeColor);
             e.Graphics.DrawString((e.RowIndex + 1).ToString(System.Globalization.CultureInfo.CurrentUICulture), this.dataGridView1.DefaultCellStyle.Font, b, e.RowBounds.Location.X + 20, e.RowBounds.Location.Y + 4);
- 
+
         }
     }
 }
