@@ -17,7 +17,7 @@ namespace Order.Common
         public const string RegEdit_Key_User = "user";
         public const string RegEdit_Key_PassWord = "password";
         public const string RegEdit_Key_Date = "date";
-        public const string RegEdit_Key_Checkbox = "Checkbox";
+        public const string RegEdit_Key_LinkID = "LinkID";
         public const string RegEdit_Key_NPO_cloumn = "ChinaRawDataHide_cloumn";
         public const string RegEdit_Key_Save_S = "ChinaAM_Save_S ";
         public const string RegEdit_Key_assistMain = "ChinaAM_assistMain ";

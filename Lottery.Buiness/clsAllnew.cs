@@ -13,6 +13,7 @@ using System.Timers;
 using System.Windows.Forms;
 using ISR_System;
 using Lottery.DB;
+using Microsoft.Win32;
 using mshtml;
 using Order.Common;
 
@@ -101,12 +102,12 @@ namespace Lottery.Buiness
         public string linkid(int typeid)
         {
             string link = "";
-            if (typeid == 0)
-                link = "http://chart.icaile.com/hlj11x5.php?op";//&num=15
-            //http://chart.icaile.com/hlj11x5.php?op=yl2m
-
+            if (typeid == 1)
+                link = "http://chart.icaile.com/?op";//&num=15
+            //http://chart.icaile.com/?op=yl3m
+            //http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15
             //new  二期
-            else if (typeid == 1)
+            else if (typeid == 2)
                 link = "http://hlj11x5.icaile.com/?op";
             NOW_link = link;
 
@@ -677,7 +678,7 @@ namespace Lottery.Buiness
                     {
                         tsStatusLabel1.Text = caizhong + "超出时间 正在退出....";
                         ProcessLogger.Fatal("超出时间 89011" + DateTime.Now.ToString());
-                        //isOneFinished = true;
+                        isOneFinished = true;
 
                         //MyWebBrower = null;
                         //viewForm.Close();
@@ -736,11 +737,11 @@ namespace Lottery.Buiness
                 //MyWebBrower.Url = new Uri("http://hlj11x5.icaile.com/?op=yl3m");
 
                 //share
-                 MyWebBrower.Url = new Uri(NOW_link + "=yl3m");
+                MyWebBrower.Url = new Uri(NOW_link + "=yl3m");
 
-               // MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");
+                // MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");
 
-               // MyWebBrower.Url = new Uri("https://www.baidu.com");//&num=15
+                // MyWebBrower.Url = new Uri("https://www.baidu.com");//&num=15
 
                 if (caizhong != null && caizhong != "")
                 {
@@ -1354,6 +1355,13 @@ namespace Lottery.Buiness
                     System.Windows.Forms.Application.DoEvents();
                     DateTime rq2 = DateTime.Now;  //结束时间
                     int a = rq2.Second - StopTime.Second;
+                    TimeSpan ts = rq2 - StopTime;
+                    int timeTotal = ts.Minutes;
+                    if (timeTotal >= 1)
+                    {
+                        isOneFinished = true;
+                        StopTime = DateTime.Now;
+                    }
                     if (a == 30 && isrun == ProcessStatus.Filter下拉)
                     {
                         MyWebBrower = null;
@@ -1753,6 +1761,61 @@ namespace Lottery.Buiness
             }
             return;
         }
+        #endregion
+
+        #region 保存查找的链接
+        public string getUserAndPassword()
+        {
+            try
+            {
+                string LinkID = "";
+
+                RegistryKey rkLocalMachine = Registry.LocalMachine;
+                RegistryKey rkSoftWare = rkLocalMachine.OpenSubKey(clsConstant.RegEdit_Key_SoftWare);
+                RegistryKey rkAmdape2e = rkSoftWare.OpenSubKey(clsConstant.RegEdit_Key_AMDAPE2E);
+                if (rkAmdape2e != null)
+                {
+                    LinkID = clsCommHelp.encryptString(clsCommHelp.NullToString(rkAmdape2e.GetValue(clsConstant.RegEdit_Key_LinkID)));
+
+                    rkAmdape2e.Close();
+                }
+                rkSoftWare.Close();
+                rkLocalMachine.Close();
+                return LinkID;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw ex;
+            }
+        }
+        public void saveUserAndPassword(string LinkID)
+        {
+            try
+            {
+                RegistryKey rkLocalMachine = Registry.LocalMachine;
+                RegistryKey rkSoftWare = rkLocalMachine.OpenSubKey(clsConstant.RegEdit_Key_SoftWare, true);
+                RegistryKey rkAmdape2e = rkSoftWare.CreateSubKey(clsConstant.RegEdit_Key_AMDAPE2E);
+                if (rkAmdape2e != null)
+                {
+                    rkAmdape2e.SetValue(clsConstant.RegEdit_Key_LinkID, clsCommHelp.encryptString(LinkID.Trim()));
+
+                    rkAmdape2e.SetValue(clsConstant.RegEdit_Key_Date, DateTime.Now.ToString("yyyMMdd"));
+                }
+                rkAmdape2e.Close();
+                rkSoftWare.Close();
+                rkLocalMachine.Close();
+
+            }
+            catch (Exception ex)
+            {
+                //ClsLogPrint.WriteLog("<frmMain> saveUserAndPassword:" + ex.Message);
+                throw ex;
+            }
+        }
+
+
         #endregion
     }
 }

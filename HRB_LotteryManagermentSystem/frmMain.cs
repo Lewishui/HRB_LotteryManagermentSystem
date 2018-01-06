@@ -56,6 +56,11 @@ namespace HRB_LotteryManagermentSystem
             InitializeComponent();
 
             scrollingText1 = scrollingText;
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            string tx = BusinessHelp.getUserAndPassword();
+            if (tx != null && tx != "")
+                toolStripComboBox1.Text = tx;
 
             //this.comboBox1.SelectedIndex = 0;
             InitialSystemInfo();
@@ -171,6 +176,13 @@ namespace HRB_LotteryManagermentSystem
 
         private void filterButton_Click(object sender, EventArgs e)
         {
+            if (toolStripComboBox1.Text == "网址ID")
+            {
+                MessageBox.Show("请选择网址ID,然后重试");
+                return;
+
+
+            }
             Main();
 
         }
@@ -199,7 +211,9 @@ namespace HRB_LotteryManagermentSystem
                 return;
             }
             NewMethod();
+            //判断是否 执行上次timer 工作
             IsRun = false;
+            toolStripLabel2.Text ="上次刷新时间:  "+ DateTime.Now.ToString("HH:mm:ss");
         }
 
         private void get_combox()
@@ -230,6 +244,7 @@ namespace HRB_LotteryManagermentSystem
         }
         private void NewMethod()
         {
+
             try
             {
                 Result = new List<clTuijianhaomalan_info>();
@@ -243,7 +258,8 @@ namespace HRB_LotteryManagermentSystem
                 ProcessLogger.Fatal("读取NewMethod" + DateTime.Now.ToString());
                 pbStatus.Maximum = 5;
                 pbStatus.Value = 1;
-                BusinessHelp.linkid(1);
+
+                BusinessHelp.linkid(Convert.ToInt32(toolStripComboBox1.Text));
 
                 Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, selectitem, mapping_Result);
                 zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
@@ -584,7 +600,13 @@ namespace HRB_LotteryManagermentSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            get_combox();
+            if (selectitem[0] == "")
+            {
+                MessageBox.Show("请选择玩法,再次尝试！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+                return;
+            }
 
             if (checkBox1.Checked == true && timers_resfresh == true)
             {
@@ -598,16 +620,18 @@ namespace HRB_LotteryManagermentSystem
 
                     Control.CheckForIllegalCrossThreadCalls = false;
 
-                    aTimer = new System.Timers.Timer(40000);
+                    aTimer = new System.Timers.Timer(240000);
                     aTimer.Elapsed += new System.Timers.ElapsedEventHandler(TimeControl);
                     aTimer.AutoReset = true;
                     aTimer.Start();
                     toolStripButton5.Text = "已自动";
-
+                    toolStripButton5.BackColor = Color.Red;
                 }
                 else
                 {
                     toolStripButton5.Text = "全自动";
+                    toolStripButton5.BackColor = Color.Green;
+            
                     aTimer.Stop();
 
                 }
@@ -1236,6 +1260,14 @@ namespace HRB_LotteryManagermentSystem
         {
             SolidBrush b = new SolidBrush(this.dataGridView1.RowHeadersDefaultCellStyle.ForeColor);
             e.Graphics.DrawString((e.RowIndex + 1).ToString(System.Globalization.CultureInfo.CurrentUICulture), this.dataGridView1.DefaultCellStyle.Font, b, e.RowBounds.Location.X + 20, e.RowBounds.Location.Y + 4);
+
+        }
+
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.saveUserAndPassword(toolStripComboBox1.Text);
 
         }
     }
