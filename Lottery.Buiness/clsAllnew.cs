@@ -55,6 +55,7 @@ namespace Lottery.Buiness
         System.Timers.Timer aTimer = new System.Timers.Timer(100);//实例化Timer类，设置间隔时间为10000毫秒； 
         System.Timers.Timer t = new System.Timers.Timer(1000);//实例化Timer类，设置间隔时间为10000毫秒； 
         private DateTime StopTime;
+        private DateTime MainStopTime;
         WbBlockNewUrl myDoc = null;
         private int login;
         private string dataSource = "Lottery.sqlite";
@@ -69,7 +70,7 @@ namespace Lottery.Buiness
         string filter_qishu;
         bool has_alter = false;
         string NOW_link = "";
-
+        bool islastReadCaizhong = false;
         bool loading;
         clTuijianhaomalan_info ITEM;
         List<clTuijianhaomalan_info> Find_JisuanqiResult2;
@@ -590,6 +591,7 @@ namespace Lottery.Buiness
             {
                 Tuijianhaomalan_ResultAll = new List<clTuijianhaomalan_info>();
                 zhongjiangxinxi_ResultAll = new List<clTuijianhaomalan_info>();
+                islastReadCaizhong = false;
 
 
                 isrun = ProcessStatus.初始化;
@@ -619,23 +621,54 @@ namespace Lottery.Buiness
                         ProcessLogger.Fatal("读取中 0901" + DateTime.Now.ToString());
 
                         tsStatusLabel1.Text = caizhong + "读取中....";
+                        if (i == selectitem.Count - 1)
+                            islastReadCaizhong = true;
+
+                        //如果超出时常自动断掉重新运行
+
+                        aTimer.Elapsed += new ElapsedEventHandler(IfWebNoRespond);
+                        aTimer.Start();
+
+
                         ReadWEBAquila();
-                        //if (DCN_downloadpath != "")
+
+                        isrun = ProcessStatus.关闭页面;
+                        if (viewForm != null)
                         {
-                            isrun = ProcessStatus.关闭页面;
-                            if (viewForm != null)
-                            {
-                                MyWebBrower = null;
-                                viewForm.Close();
-                                // aTimer.Stop();
-                            }
+                            MyWebBrower = null;
+                            viewForm.Close();
+                            // aTimer.Stop();
                         }
+
                         Tuijianhaomalan_ResultAll = Tuijianhaomalan_ResultAll.Concat(Tuijianhaomalan_Result).ToList();
                         //zhongjiangxinxi_ResultAll = zhongjiangxinxi_ResultAll.Concat(zhongjiangxinxi_Result).ToList();
                         //中奖信息都是一样的
                         zhongjiangxinxi_ResultAll = zhongjiangxinxi_Result;
                     }
                 }
+
+                //重新检查是否有查询到 中奖信息
+                if (zhongjiangxinxi_ResultAll == null || zhongjiangxinxi_ResultAll.Count == 0)
+                {
+                    isrun = ProcessStatus.关闭页面;
+                    if (viewForm != null)
+                    {
+                        MyWebBrower = null;
+                        viewForm.Close();
+                        aTimer.Stop();
+                    }
+
+                    isrun = ProcessStatus.初始化;
+
+                    aTimer.Elapsed += new ElapsedEventHandler(IfWebNoRespond);
+                    aTimer.Start();
+                    ReadWEB_zhongjianghaoma();
+                    //还原事件
+                    aTimer.Stop();
+                    isrun = ProcessStatus.初始化;
+
+                }
+
                 //导入数据库
                 tsStatusLabel1.Text = "结束";
 
@@ -650,6 +683,28 @@ namespace Lottery.Buiness
             }
             return null;
         }
+        private void IfWebNoRespond(object sender, EventArgs e)
+        {
+            DateTime rq2 = DateTime.Now;  //结束时间
+
+            TimeSpan ts = rq2 - StopTime;
+            int timeTotal = ts.Minutes;
+
+            if (timeTotal >= 3)
+            {
+                isrun = ProcessStatus.关闭页面;
+
+                if (viewForm != null)
+                {
+                    MyWebBrower = null;
+                    viewForm.Close();
+                    aTimer.Stop();
+                }
+            }
+
+        }
+
+
         public List<clTuijianhaomalan_info> ReadWEBAquila()
         {
             login = 0;
@@ -688,13 +743,13 @@ namespace Lottery.Buiness
                 }
                 tsStatusLabel1.Text = caizhong + "关闭1  ....";
 
-                if (viewForm != null)
-                {
-                    MyWebBrower = null;
-                    viewForm.Close();
-                    //aTimer.Stop();
-                }
-                tsStatusLabel1.Text = caizhong + "关闭2  ....";
+                //if (viewForm != null)
+                //{
+                //    MyWebBrower = null;
+                //    viewForm.Close();
+                //    //aTimer.Stop();
+                //}
+                //tsStatusLabel1.Text = caizhong + "关闭2  ....";
 
                 isOneFinished = false;
 
@@ -862,19 +917,23 @@ namespace Lottery.Buiness
         }
         protected void AnalysisWebInfo2(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+            int runindex = 0;
+
             try
             {
+
+
                 //  WbBlockNewUrl myDoc = sender as WbBlockNewUrl;
                 tsStatusLabel1.Text = caizhong + "接入 89902 ....";
                 ProcessLogger.Fatal("AnalysisWebInfo2接入 89902" + DateTime.Now.ToString());
-                //  MessageBox.Show("" + "接入");
 
                 myDoc = sender as WbBlockNewUrl;
-                #region 登录页面
-                //http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15
-                //点击彩种
+                #region 登录页面  //http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15
+
+                #region 界面1  //点击彩种
                 if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && login == 0)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
+                    runindex = 1;
 
                     tsStatusLabel1.Text = caizhong + "接入界面 ....";
                     ProcessLogger.Fatal("接入界面" + DateTime.Now.ToString());
@@ -953,9 +1012,13 @@ namespace Lottery.Buiness
                     login++;
 
                 }
-                //
+                #endregion
+
+                #region 导航到具体哪个期数 下
                 else if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && isrun == ProcessStatus.登录界面)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
+                    runindex = 2;
+
                     ProcessLogger.Fatal("界面2  1901" + DateTime.Now.ToString());
 
                     tsStatusLabel1.Text = caizhong + "界面2 ....";
@@ -971,8 +1034,13 @@ namespace Lottery.Buiness
                     isrun = ProcessStatus.第一页面;
                     return;
                 }
+                #endregion
+
+                #region 读取走势 信息 & 导航到 开奖期数的页面
                 else if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && myDoc.Url.ToString().IndexOf("&num=" + filter_qishu.ToString()) >= 0 && isrun == ProcessStatus.第一页面)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
+                    runindex = 3;
+
                     ProcessLogger.Fatal("界面3  1902" + DateTime.Now.ToString());
 
                     // return;
@@ -997,124 +1065,128 @@ namespace Lottery.Buiness
                     HtmlElement lan = null;
                     HtmlElementCollection body_tdlist;
                     HtmlElementCollection body_trlist;
-                    HtmlElement userNames = myDoc.Document.GetElementById("tablesort");
-                    HtmlElementCollection tab = myDoc.Document.GetElementsByTagName("table");
-
-                    if (userNames.OuterText != null && userNames.OuterText.Contains("号码类型"))
+                    if (MyWebBrower != null)
                     {
-                        #region 直接循环取值 比较耗时
-                        //body_tdlist = userNames.Document.GetElementsByTagName("tr");
-                        ////foreach (HtmlElement temp in body_tdlist)
-                        //{
-
-                        //    HtmlElementCollection trlist = userNames.Document.GetElementsByTagName("tr");//获取本层TR
-                        //    foreach (HtmlElement item1 in trlist)
-                        //    {
-                        //        bool ischina = clsCommHelp.HasChineseTest(item1.OuterText.ToString());
-                        //        if (ischina == true)
-                        //            continue;
-
-                        //        clTuijianhaomalan_info item = new clTuijianhaomalan_info();
-
-                        //        //if (item1.InnerHtml.Contains("号码类型"))
-                        //        {
-                        //            //string[] tatile = System.Text.RegularExpressions.Regex.Split(item1.InnerHtml, "</TH>");
 
 
-                        //        }
-                        //        HtmlElementCollection tdlist = item1.Document.GetElementsByTagName("td");//循环本tr 下的所有TD取得 号码
-                        //        int i = 0;
-                        //        foreach (HtmlElement item2 in tdlist)
-                        //        {
-                        //            {
-                        //                ischina = clsCommHelp.HasChineseTest(item2.OuterText.ToString());
-                        //                if (ischina == false)
-                        //                {
-                        //                    ischina = clsCommHelp.HasChineseTest(item2.OuterText.ToString());
-                        //                    if (ischina == false)
-                        //                    {
-                        //                        i++;
-                        //                        if (i == 1)
-                        //                            item.haomaileixing = item2.OuterText;
-                        //                        else if (i == 2)
-                        //                            item.chuxiancishu = item2.OuterText;
-                        //                        else if (i == 3)
-                        //                            item.pingjunyilou = item2.OuterText;
-                        //                        else if (i == 4)
-                        //                            item.zuidayilou = item2.OuterText;
-                        //                        else if (i == 5)
-                        //                            item.diwuyilou = item2.OuterText;
-                        //                        else if (i == 6)
-                        //                            item.disiyilou = item2.OuterText;
-                        //                        else if (i == 7)
-                        //                            item.disanyilou = item2.OuterText;
-                        //                        else if (i == 8)
-                        //                            item.dieryilou = item2.OuterText;
-                        //                        else if (i == 9)
-                        //                            item.shangciyilou = item2.OuterText;
-                        //                        else if (i == 10)
-                        //                            item.dangqianyilou = item2.OuterText;
-                        //                        else if (i == 11)
-                        //                        {
-                        //                            item.yuchujilv = item2.OuterText;
-                        //                            break;
+                        HtmlElement userNames = myDoc.Document.GetElementById("tablesort");
+                        HtmlElementCollection tab = myDoc.Document.GetElementsByTagName("table");
 
-                        //                        }
-                        //                        userName = item1;
-                        //                    }
-                        //                }
-                        //            }
-                        //        }
-                        //        Tuijianhaomalan_Result.Add(item);
-                        //    }
-
-
-                        //} 
-                        #endregion
-
-                        //获取玩法的种类
-
-                        string wanfazhonglei = "";
-                        string[] tatile = System.Text.RegularExpressions.Regex.Split(myDoc.Url.ToString(), "=");
-                        HtmlElementCollection activetxt = myDoc.Document.GetElementsByTagName("li");
-                        if (tatile[1].Contains("&"))
+                        if (userNames != null && userNames.OuterText != null && userNames.OuterText.Contains("号码类型"))
                         {
-                            tatile = System.Text.RegularExpressions.Regex.Split(tatile[1].ToString(), "&");
+                            #region 直接循环取值 比较耗时
+                            //body_tdlist = userNames.Document.GetElementsByTagName("tr");
+                            ////foreach (HtmlElement temp in body_tdlist)
+                            //{
 
-                        }
-                        HtmlElement parent_li = myDoc.Document.GetElementById(tatile[0]);//.Substring(0, 4)
-                        if (parent_li != null && parent_li.InnerText != null)
-                            wanfazhonglei = parent_li.InnerText.Replace("[多码遗漏]", "").Trim();
-                        if (wanfazhonglei == "[常规遗漏] 直选遗漏" || wanfazhonglei == "组选遗漏")
-                            wanfazhonglei = caizhong;
+                            //    HtmlElementCollection trlist = userNames.Document.GetElementsByTagName("tr");//获取本层TR
+                            //    foreach (HtmlElement item1 in trlist)
+                            //    {
+                            //        bool ischina = clsCommHelp.HasChineseTest(item1.OuterText.ToString());
+                            //        if (ischina == true)
+                            //            continue;
 
-                        //利用 HTMLTable 抓取信息
-                        try
-                        {
-                            WaitWebPageLoad();
-                            tsStatusLabel1.Text = caizhong + "获取[走势数据]信息中 ....";
-                            ProcessLogger.Fatal("界面3  190012" + DateTime.Now.ToString());
+                            //        clTuijianhaomalan_info item = new clTuijianhaomalan_info();
 
-                            loading = true;
-                            while (loading == true)
+                            //        //if (item1.InnerHtml.Contains("号码类型"))
+                            //        {
+                            //            //string[] tatile = System.Text.RegularExpressions.Regex.Split(item1.InnerHtml, "</TH>");
+
+
+                            //        }
+                            //        HtmlElementCollection tdlist = item1.Document.GetElementsByTagName("td");//循环本tr 下的所有TD取得 号码
+                            //        int i = 0;
+                            //        foreach (HtmlElement item2 in tdlist)
+                            //        {
+                            //            {
+                            //                ischina = clsCommHelp.HasChineseTest(item2.OuterText.ToString());
+                            //                if (ischina == false)
+                            //                {
+                            //                    ischina = clsCommHelp.HasChineseTest(item2.OuterText.ToString());
+                            //                    if (ischina == false)
+                            //                    {
+                            //                        i++;
+                            //                        if (i == 1)
+                            //                            item.haomaileixing = item2.OuterText;
+                            //                        else if (i == 2)
+                            //                            item.chuxiancishu = item2.OuterText;
+                            //                        else if (i == 3)
+                            //                            item.pingjunyilou = item2.OuterText;
+                            //                        else if (i == 4)
+                            //                            item.zuidayilou = item2.OuterText;
+                            //                        else if (i == 5)
+                            //                            item.diwuyilou = item2.OuterText;
+                            //                        else if (i == 6)
+                            //                            item.disiyilou = item2.OuterText;
+                            //                        else if (i == 7)
+                            //                            item.disanyilou = item2.OuterText;
+                            //                        else if (i == 8)
+                            //                            item.dieryilou = item2.OuterText;
+                            //                        else if (i == 9)
+                            //                            item.shangciyilou = item2.OuterText;
+                            //                        else if (i == 10)
+                            //                            item.dangqianyilou = item2.OuterText;
+                            //                        else if (i == 11)
+                            //                        {
+                            //                            item.yuchujilv = item2.OuterText;
+                            //                            break;
+
+                            //                        }
+                            //                        userName = item1;
+                            //                    }
+                            //                }
+                            //            }
+                            //        }
+                            //        Tuijianhaomalan_Result.Add(item);
+                            //    }
+
+
+                            //} 
+                            #endregion
+
+                            //获取玩法的种类
+
+                            string wanfazhonglei = "";
+                            string[] tatile = System.Text.RegularExpressions.Regex.Split(myDoc.Url.ToString(), "=");
+                            HtmlElementCollection activetxt = myDoc.Document.GetElementsByTagName("li");
+                            if (tatile[1].Contains("&"))
                             {
-                                Application.DoEvents();
-                                getwanfa_table(wanfazhonglei);
+                                tatile = System.Text.RegularExpressions.Regex.Split(tatile[1].ToString(), "&");
+
                             }
+                            HtmlElement parent_li = myDoc.Document.GetElementById(tatile[0]);//.Substring(0, 4)
+                            if (parent_li != null && parent_li.InnerText != null)
+                                wanfazhonglei = parent_li.InnerText.Replace("[多码遗漏]", "").Trim();
+                            if (wanfazhonglei == "[常规遗漏] 直选遗漏" || wanfazhonglei == "组选遗漏")
+                                wanfazhonglei = caizhong;
+
+                            //利用 HTMLTable 抓取信息
+                            try
+                            {
+                                WaitWebPageLoad();
+                                tsStatusLabel1.Text = caizhong + "获取[走势数据]信息中 ....";
+                                ProcessLogger.Fatal("界面3  190012" + DateTime.Now.ToString());
+
+                                loading = true;
+                                while (loading == true)
+                                {
+                                    Application.DoEvents();
+                                    getwanfa_table(wanfazhonglei);
+                                }
 
 
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("错误：" + ex);
-                            return;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("错误12211：" + ex);
+                                return;
 
-                            throw;
+                                throw;
+                            }
                         }
                     }
-
-
-                    //if (userName == null)
+                    //想让在做后一个彩种中读取 中奖信息
+                    if (islastReadCaizhong == true && MyWebBrower != null)
                     {
                         tsStatusLabel1.Text = caizhong + "加载中奖信息 ....";
                         ProcessLogger.Fatal("读取中奖信息  192305" + DateTime.Now.ToString());
@@ -1128,29 +1200,55 @@ namespace Lottery.Buiness
 
 
                         isrun = ProcessStatus.确认YES;
-                        tsStatusLabel1.Text = caizhong + "加载中奖信息....";
+                        tsStatusLabel1.Text = caizhong + "开始加载中奖信息....";
                         login++;
                     }
+                    else
+                    {
+                        isOneFinished = true;
+                        isrun = ProcessStatus.关闭页面;
+                        return;
+                    }
                 }
-                //获取中奖信息
+                #endregion
+
+                #region   //获取中奖信息
                 else if (myDoc.Url.ToString().IndexOf(NOW_link + "=dcjb") >= 0 && isrun == ProcessStatus.确认YES)
                 {
+                    runindex = 4;
+
                     tsStatusLabel1.Text = caizhong + "获取中奖信息  ....";
                     ProcessLogger.Fatal("获取中奖信息  1906" + DateTime.Now.ToString());
 
-                    if (login < 7)
+                    //if (login < 7)
                     {
                         login++;
-                        return;
+
+                        IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
+                        HTMLDocument myDoc1 = doc as HTMLDocument;
+
+                        IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
+                        bool isreturn = false;
+                        foreach (IHTMLElement items in Tablelin)
+                        {
+
+                            if (items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
+                            {
+                                isreturn = true;
+                            }
+                        }
+                        if (isreturn == false)
+                            return;
 
                     }
                     ProcessLogger.Fatal("获取中奖信息  1907" + DateTime.Now.ToString());
 
-                    tsStatusLabel1.Text = caizhong + "获取中奖信息....";
+                    tsStatusLabel1.Text = caizhong + "开始获取中奖信息....";
 
                     loading = true;
                     while (loading == true)
                     {
+
                         Application.DoEvents();
                         Get_Kaijiang();
                     }
@@ -1167,11 +1265,12 @@ namespace Lottery.Buiness
                     }
                 }
                 #endregion
+                #endregion
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ex" + ex, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ex  AnalysisWebInfo2[" + runindex + "]   " + ex, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
                 throw ex;
@@ -1180,6 +1279,12 @@ namespace Lottery.Buiness
 
         private void getwanfa_table(string wanfazhonglei)
         {
+            if (MyWebBrower == null)
+            {
+                loading = false;
+                return;
+
+            }
             IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
             HTMLDocument myDoc1 = doc as HTMLDocument;
             //IHTMLElement doc1 = (IHTMLElement)MyWebBrower.Document.DomDocument;
@@ -1254,6 +1359,12 @@ namespace Lottery.Buiness
 
         private void Get_Kaijiang()
         {
+            if (MyWebBrower == null)
+            {
+                loading = false;
+                return;
+
+            }
             try
             {
                 zhongjiangxinxi_Result = new List<clTuijianhaomalan_info>();
@@ -1335,13 +1446,13 @@ namespace Lottery.Buiness
                 Find_JisuanqiResult2 = new List<clTuijianhaomalan_info>();
                 runtime = 0;
 
-                Find_JisuanqiResult2 = NewResult.FindAll(so => so.zhongjiangqishu != null && so.zhongjiangqishu != "");
+                Find_JisuanqiResult2 = NewResult.FindAll(so => so.zhongjiangqishu != null && so.zhongjiangqishu != "" && so.dangriqihao != null && so.dangriqihao != "");
                 if (Find_JisuanqiResult2.Count == 0)
                     return null;
 
                 ITEM = Find_JisuanqiResult2[0];
 
-                tsStatusLabel1.Text = "玩命获取中....";
+                tsStatusLabel1.Text = "玩命获取中奖金额中....";
                 isOneFinished = false;
                 StopTime = DateTime.Now;
                 InitialWebbroswerIE();
@@ -1350,14 +1461,14 @@ namespace Lottery.Buiness
                 aTimer.Start();
                 while (!isOneFinished)
                 {
-                    tsStatusLabel1.Text = "玩命获取中...." + runtime + "/" + Find_JisuanqiResult2.Count.ToString();
+                    tsStatusLabel1.Text = "玩命获取中奖金额中...." + runtime + "/" + Find_JisuanqiResult2.Count.ToString();
 
                     System.Windows.Forms.Application.DoEvents();
                     DateTime rq2 = DateTime.Now;  //结束时间
                     int a = rq2.Second - StopTime.Second;
                     TimeSpan ts = rq2 - StopTime;
                     int timeTotal = ts.Minutes;
-                    if (timeTotal >= 1)
+                    if (timeTotal >= 2)
                     {
                         isOneFinished = true;
                         StopTime = DateTime.Now;
@@ -1372,6 +1483,8 @@ namespace Lottery.Buiness
                     //
                     //myDoc = sender as WbBlockNewUrl;
                 }
+                isrun = ProcessStatus.关闭页面;
+
                 if (viewForm != null)
                 {
                     MyWebBrower = null;
@@ -1407,7 +1520,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                //viewForm.Show();
+                 viewForm.Show();
                 MyWebBrower.Url = new Uri("http://zx.dahecp.com/tool/beitou.aspx");
 
 
@@ -1483,6 +1596,8 @@ namespace Lottery.Buiness
                         MyWebBrower.Navigate("http://zx.dahecp.com/tool/beitou.aspx");
                         MyWebBrower.Refresh();
                         ITEM = Find_JisuanqiResult2[runtime];
+                        StopTime = DateTime.Now;
+            
                         login = 0;
                         return;
                     }
@@ -1553,6 +1668,8 @@ namespace Lottery.Buiness
                         MyWebBrower.Navigate("http://zx.dahecp.com/tool/beitou.aspx");
                         MyWebBrower.Refresh();
                         ITEM = Find_JisuanqiResult2[runtime];
+                        StopTime = DateTime.Now;
+            
                         login = 0;
                         return;
                     }
@@ -1727,7 +1844,7 @@ namespace Lottery.Buiness
             while (true)
             {
                 Delay(50);  //系统延迟50毫秒，够少了吧！             
-                if (MyWebBrower.ReadyState == WebBrowserReadyState.Interactive) //先判断是否发生完成事件。
+                if (MyWebBrower != null && MyWebBrower.ReadyState == WebBrowserReadyState.Interactive) //先判断是否发生完成事件。
                 {
                     if (!MyWebBrower.IsBusy) //再判断是浏览器是否繁忙                  
                     {
@@ -1747,6 +1864,11 @@ namespace Lottery.Buiness
                         continue;
                     }
                     i = 0;
+                }
+                else
+                {
+                    return false;
+
                 }
             }
         }
@@ -1815,6 +1937,194 @@ namespace Lottery.Buiness
             }
         }
 
+
+        #endregion
+        #region 查找中奖号码
+        public List<clTuijianhaomalan_info> ReadWEB_zhongjianghaoma()
+        {
+            login = 0;
+            try
+            {
+                tsStatusLabel1.Text = caizhong + "玩命获取中奖号码中....";
+                isOneFinished = false;
+                StopTime = DateTime.Now;
+                InitialWebbroswerIE_Zhongjiang();
+                tsStatusLabel1.Text = "玩命获取中奖号码中 657237....";
+                int time = 0;
+                while (!isOneFinished)
+                {
+                    time++;
+                    tsStatusLabel1.Text = caizhong + "刷新中  " + time.ToString() + "....";
+
+                    System.Windows.Forms.Application.DoEvents();
+                    DateTime rq2 = DateTime.Now;  //结束时间
+                    int a = rq2.Second - StopTime.Second;
+                    TimeSpan ts = rq2 - StopTime;
+                    int timeTotal = ts.Minutes;
+
+                    if (timeTotal >= 1)
+                    {
+                        tsStatusLabel1.Text = caizhong + "超出时间 正在退出....";
+                        ProcessLogger.Fatal("超出时间 21332" + DateTime.Now.ToString());
+                        isOneFinished = true;
+                        StopTime = DateTime.Now;
+                    }
+                    //
+                    if (MyWebBrower != null && MyWebBrower.Document != null)
+                    {
+                        IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
+                        HTMLDocument myDoc1 = doc as HTMLDocument;
+
+                        IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
+                        bool isreturn = false;
+                        foreach (IHTMLElement items in Tablelin)
+                        {
+
+                            if (items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
+                            {
+                                isreturn = true;
+                            }
+                        }
+                        if (isreturn == true)
+                        {
+                            Get_Kaijiang();
+                            if (loading == false)
+                            {
+                                isOneFinished = true;
+                                zhongjiangxinxi_ResultAll = zhongjiangxinxi_Result;
+                                loading = true;
+
+                            }
+                        }
+                    }
+
+                }
+                tsStatusLabel1.Text = caizhong + "关闭 ....";
+                isrun = ProcessStatus.关闭页面;
+                if (viewForm != null)
+                {
+                    MyWebBrower = null;
+                    viewForm.Close();
+                }
+                isOneFinished = false;
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+                throw;
+            }
+        }
+        public void InitialWebbroswerIE_Zhongjiang()
+        {
+            try
+            {
+
+                MyWebBrower = new WbBlockNewUrl();
+                //不显示弹出错误继续运行框（HP方可）
+                MyWebBrower.ScriptErrorsSuppressed = true;
+                MyWebBrower.BeforeNewWindow += new EventHandler<WebBrowserExtendedNavigatingEventArgs>(MyWebBrower_BeforeNewWindow2);
+                MyWebBrower.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(AnalysisWebInfo_Zhongjiang);
+                MyWebBrower.Dock = DockStyle.Fill;
+                MyWebBrower.IsWebBrowserContextMenuEnabled = true;
+                //显示用的窗体
+                viewForm = new Form();
+
+                viewForm.ClientSize = new System.Drawing.Size(550, 600);
+                viewForm.StartPosition = FormStartPosition.CenterScreen;
+                viewForm.Controls.Clear();
+                viewForm.Controls.Add(MyWebBrower);
+                viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
+                viewForm.Show();
+                ProcessLogger.Fatal("读取中 2345 " + DateTime.Now.ToString());
+
+                //share
+                MyWebBrower.Url = new Uri(NOW_link + "=dcjb");
+                tsStatusLabel1.Text = "接入 ...." + MyWebBrower.Url;
+
+            }
+            catch (Exception ex)
+            {
+                ProcessLogger.Fatal("接入 前 09110 " + ex + DateTime.Now.ToString());
+
+                MessageBox.Show("错误：0001" + ex);
+                throw ex;
+            }
+
+        }
+        protected void AnalysisWebInfo_Zhongjiang(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            int runindex = 0;
+
+            try
+            {
+                tsStatusLabel1.Text = caizhong + "接入 0013 ....";
+                ProcessLogger.Fatal("AnalysisWebInfo_Zhongjiang接入 0013" + DateTime.Now.ToString());
+
+                myDoc = sender as WbBlockNewUrl;
+                #region 登录页面
+
+
+                #region   //获取中奖信息
+                if (myDoc.Url.ToString().IndexOf(NOW_link + "=dcjb") >= 0 && isrun == ProcessStatus.初始化)
+                {
+                    runindex = 4;
+
+                    tsStatusLabel1.Text = caizhong + "获取中奖信息  ....";
+                    ProcessLogger.Fatal("获取中奖信息  1906" + DateTime.Now.ToString());
+
+                    //if (login < 7)
+                    {
+                        login++;
+
+                        IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
+                        HTMLDocument myDoc1 = doc as HTMLDocument;
+
+                        IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
+                        bool isreturn = false;
+                        foreach (IHTMLElement items in Tablelin)
+                        {
+
+                            if (items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
+                            {
+                                isreturn = true;
+                            }
+                        }
+                        //if (isreturn == false)
+                        return;
+
+                    }
+                    ProcessLogger.Fatal("获取中奖信息  12211" + DateTime.Now.ToString());
+
+                    tsStatusLabel1.Text = caizhong + "开始获取中奖信息....";
+
+                    loading = true;
+                    while (loading == true)
+                    {
+                        // Application.DoEvents();
+                        System.Windows.Forms.Application.DoEvents();
+                        Get_Kaijiang();
+                    }
+                    ProcessLogger.Fatal("获取中奖信息结束  23452" + DateTime.Now.ToString());
+                    {
+                        isOneFinished = true;
+                        isrun = ProcessStatus.关闭页面;
+                        tsStatusLabel1.Text = caizhong + "查询结束....";
+                        login++;
+                    }
+                }
+                #endregion
+                #endregion
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ex  AnalysisWebInfo_Zhongjiang[" + runindex + "]   " + ex, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+                throw ex;
+            }
+        }
 
         #endregion
     }

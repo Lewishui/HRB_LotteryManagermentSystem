@@ -50,6 +50,7 @@
             this.关于系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.初始化数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtSAPUserId = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -60,8 +61,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dockPanel2 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.scrollingText1 = new Order.Common.ScrollingText();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +99,13 @@
             this.初始化数据ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.初始化数据ToolStripMenuItem.Text = "初始化数据";
             this.初始化数据ToolStripMenuItem.Click += new System.EventHandler(this.初始化数据ToolStripMenuItem_Click);
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.testToolStripMenuItem.Text = "test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // toolStripLabel1
             // 
@@ -174,7 +180,7 @@
             this.txtSAPUserId,
             this.toolStripLabel1,
             this.toolStripDropDownButton3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 40);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(966, 28);
             this.toolStrip1.TabIndex = 6;
@@ -185,7 +191,6 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.dockPanel2);
             this.panel1.Controls.Add(this.toolStrip1);
-            this.panel1.Controls.Add(this.scrollingText1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -202,9 +207,9 @@
             this.dockPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dockPanel2.DockBackColor = System.Drawing.Color.Transparent;
             this.dockPanel2.DocumentStyle = WeifenLuo.WinFormsUI.Docking.DocumentStyle.DockingWindow;
-            this.dockPanel2.Location = new System.Drawing.Point(0, 68);
+            this.dockPanel2.Location = new System.Drawing.Point(0, 28);
             this.dockPanel2.Name = "dockPanel2";
-            this.dockPanel2.Size = new System.Drawing.Size(966, 468);
+            this.dockPanel2.Size = new System.Drawing.Size(966, 508);
             dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
             dockPanelGradient1.StartColor = System.Drawing.SystemColors.ControlLight;
             autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
@@ -251,34 +256,6 @@
             this.dockPanel2.Skin = dockPanelSkin1;
             this.dockPanel2.TabIndex = 9;
             // 
-            // scrollingText1
-            // 
-            this.scrollingText1.BackColor = System.Drawing.Color.White;
-            this.scrollingText1.BorderColor = System.Drawing.Color.Black;
-            this.scrollingText1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.scrollingText1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scrollingText1.ForeColor = System.Drawing.Color.Red;
-            this.scrollingText1.ForegroundBrush = null;
-            this.scrollingText1.Location = new System.Drawing.Point(0, 0);
-            this.scrollingText1.Name = "scrollingText1";
-            this.scrollingText1.ScrollDirection = Order.Common.ScrollDirection.RightToLeft;
-            this.scrollingText1.ScrollText = "";
-            this.scrollingText1.ShowBorder = true;
-            this.scrollingText1.Size = new System.Drawing.Size(966, 40);
-            this.scrollingText1.StopScrollOnMouseOver = false;
-            this.scrollingText1.TabIndex = 10;
-            this.scrollingText1.TextScrollDistance = 2;
-            this.scrollingText1.TextScrollSpeed = 25;
-            this.scrollingText1.VerticleTextPosition = Order.Common.VerticleTextPosition.Center;
-            this.scrollingText1.Visible = false;
-            // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
-            this.testToolStripMenuItem.Text = "test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
-            // 
             // frmlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,7 +290,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.Panel panel1;
         private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel2;
-        private Order.Common.ScrollingText scrollingText1;
         private System.Windows.Forms.ToolStripMenuItem 初始化数据ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
 

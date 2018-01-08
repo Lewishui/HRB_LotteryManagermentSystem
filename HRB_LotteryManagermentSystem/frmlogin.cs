@@ -37,13 +37,13 @@ namespace HRB_LotteryManagermentSystem
 
             InitialPassword();
             ProcessLogger.Fatal("login" + DateTime.Now.ToString());
-            messages = new List<string>();
-            messages.Add("欢迎使用彩票号码自动推荐管理系统  " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-            messages.Add("主界面的左侧一排按键是操作历史信息  ");
+            //messages = new List<string>();
+            //messages.Add("欢迎使用彩票号码自动推荐管理系统  " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            //messages.Add("主界面的左侧一排按键是操作历史信息  ");
 
-            timer1.Interval = 12000;
-            timer1.Start();
-            timer1.Tick += timer1_Tick;
+            //timer1.Interval = 12000;
+            //timer1.Start();
+            //timer1.Tick += timer1_Tick;
 
             clsAllnew BusinessHelp = new clsAllnew();
 
@@ -103,24 +103,22 @@ namespace HRB_LotteryManagermentSystem
             //滚动显示
             index = (index + 1) % messages.Count;
             //toolStripLabel9.Text = messages[index];
-            this.scrollingText1.ScrollText = messages[index];
-
+          
         }
 
         private void 导入彩票数据ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.scrollingText1.Visible = true;
-            //toolStrip1.Visible = false;
+           //toolStrip1.Visible = false;
 
 
             if (frmMain == null)
             {
-                frmMain = new frmMain(scrollingText1);
+                frmMain = new frmMain();
                 frmMain.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
             }
             if (frmMain == null)
             {
-                frmMain = new frmMain(scrollingText1);
+                frmMain = new frmMain();
             }
             frmMain.Show(this.dockPanel2);
         
@@ -266,8 +264,7 @@ namespace HRB_LotteryManagermentSystem
                     toolStripDropDownButton1.Enabled = true;
                     if (chkSaveInfo.Checked == true)
                         saveUserAndPassword();
-                    this.scrollingText1.Visible = true;
-
+                  
                 }
                 else
                     tsbLogin.Text = "登录失败，密码错误";
