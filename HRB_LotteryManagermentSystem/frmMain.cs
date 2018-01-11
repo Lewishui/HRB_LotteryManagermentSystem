@@ -47,6 +47,8 @@ namespace HRB_LotteryManagermentSystem
         List<clTuijianhaomalan_info> Result;
         private List<clszhongleiDuiyingQishu_info> mapping_Result;
         private bool IsRun = false;
+        private DateTime StopTime;
+
         private Thread GetDataforRawDataThread;
         int rowcount = 0;
         int RowRemark = 0;
@@ -212,6 +214,7 @@ namespace HRB_LotteryManagermentSystem
             NewMethod();
             //判断是否 执行上次timer 工作
             IsRun = false;
+            StopTime = DateTime.Now;//
             toolStripLabel2.Text = "上次刷新时间:  " + DateTime.Now.ToString("HH:mm:ss");
         }
 
@@ -567,8 +570,9 @@ namespace HRB_LotteryManagermentSystem
 
         private void Showdave(List<clTuijianhaomalan_info> Result)
         {
+            //50 = 60 - 10;
 
-
+          //  NewResult = NewResult.Skip(NewResult.Count-50).ToList();
 
             sortableList = new SortableBindingList<clTuijianhaomalan_info>(NewResult);
             this.bindingSource1.DataSource = this.sortableList;
@@ -576,10 +580,13 @@ namespace HRB_LotteryManagermentSystem
             dataGridView.DataSource = this.bindingSource1;
 
             //new  e二期
+            bindingSource1.Sort = "wanfazhonglei ASC";
+
             dataGridView4.AutoGenerateColumns = false;
             dataGridView4.DataSource = this.bindingSource1;
 
 
+            //Result = Result.Skip(Result.Count - 50).ToList();
 
             sortableList = new SortableBindingList<clTuijianhaomalan_info>(Result);
             this.bindingSource2.DataSource = this.sortableList;
@@ -595,6 +602,8 @@ namespace HRB_LotteryManagermentSystem
             //开奖信息
             if (zhongjiangxinxi_Result != null)
             {
+              //  zhongjiangxinxi_Result = zhongjiangxinxi_Result.Skip(zhongjiangxinxi_Result.Count - 50).ToList();
+
                 sortableList_zhongjiangxinxi = new SortableBindingList<clTuijianhaomalan_info>(zhongjiangxinxi_Result);
                 this.bindingSource4.DataSource = this.sortableList_zhongjiangxinxi;
                 dataGridView3.AutoGenerateColumns = false;
@@ -615,22 +624,22 @@ namespace HRB_LotteryManagermentSystem
 
             if (checkBox1.Checked == true && timers_resfresh == true)
             {
-        
+
                 this.toolStripLabel1.Text = "自动获取中,无需任何操作...";
 
                 if (toolStripButton5.Text == "全自动")
                 {
-
+                    toolStripButton5.Text = "已自动";
                     this.filterButton.Enabled = false;
 
                     Control.CheckForIllegalCrossThreadCalls = false;
                     int jiange_time = selectitem.Count * 60000;
 
-                    aTimer = new System.Timers.Timer(jiange_time);//300000
+                    aTimer = new System.Timers.Timer(60000);//300000
                     aTimer.Elapsed += new System.Timers.ElapsedEventHandler(TimeControl);
                     aTimer.AutoReset = true;
                     aTimer.Start();
-                    toolStripButton5.Text = "已自动";
+                  
                     toolStripButton5.BackColor = Color.Red;
                 }
                 else
@@ -647,7 +656,7 @@ namespace HRB_LotteryManagermentSystem
             else
             {
                 this.filterButton.Enabled = true;
-          
+                toolStripButton5.Text = "全自动";
                 aTimer.Stop();
 
             }
@@ -774,9 +783,16 @@ namespace HRB_LotteryManagermentSystem
 
         private void Showdave2(List<clsJisuanqi_info> Result)
         {
+            //取出最后50数据
+
+            //JisuanqiResult = JisuanqiResult.Skip(JisuanqiResult.Count- 50).ToList();
+          
             sortableJisuanqiList = new SortableBindingList<clsJisuanqi_info>(JisuanqiResult);
             this.bindingSource3.DataSource = this.sortableJisuanqiList;
             dataGridView2.AutoGenerateColumns = false;
+
+            bindingSource3.Sort = "wanfazhonglei ASC";
+
             dataGridView2.DataSource = this.bindingSource3;
 
             //new 
@@ -907,6 +923,12 @@ namespace HRB_LotteryManagermentSystem
             {
                 downEXCEL(dataGridView3);
             }
+            else if (s == 4)
+            {
+                downEXCEL(dataGridView4);
+                downEXCEL(dataGridView5);
+            }
+
         }
         public void downEXCEL(DataGridView dgv)
         {
@@ -1155,7 +1177,15 @@ namespace HRB_LotteryManagermentSystem
         }
         private void TimeControl(object sender, EventArgs e)
         {
-            if (!IsRun)
+            DateTime rq2 = DateTime.Now;  //结束时间
+
+            TimeSpan ts = rq2 - StopTime;
+            int timeTotal = ts.Minutes;
+
+            if (timeTotal >= 3)
+            {
+            }
+            if (!IsRun && timeTotal >= 3)
             {
                 IsRun = true;
                 GetDataforRawDataThread = new Thread(Main);

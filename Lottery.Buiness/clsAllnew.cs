@@ -783,7 +783,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                viewForm.Show();
+                //  viewForm.Show();
                 ProcessLogger.Fatal("读取中 09010 " + DateTime.Now.ToString());
                 //
                 //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
@@ -1348,6 +1348,13 @@ namespace Lottery.Buiness
                             item.yuchujilv = yuchujilvLocation.innerText;
                         #endregion
                             loading = false;
+                            if (wanfazhonglei != "" && wanfazhonglei == "四码")
+                                wanfazhonglei = "乐四";
+                            if (wanfazhonglei != "" && wanfazhonglei == "五码")
+                                wanfazhonglei = "乐五";
+                            if (wanfazhonglei != null)
+                                wanfazhonglei = wanfazhonglei.Replace("[", "").Replace("]", "");
+
                             item.wanfazhonglei = wanfazhonglei;
                             Tuijianhaomalan_Result.Add(item);
                             KeyInfoRowIndex++;
@@ -1520,7 +1527,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                 viewForm.Show();
+                // viewForm.Show();
                 MyWebBrower.Url = new Uri("http://zx.dahecp.com/tool/beitou.aspx");
 
 
@@ -1597,7 +1604,7 @@ namespace Lottery.Buiness
                         MyWebBrower.Refresh();
                         ITEM = Find_JisuanqiResult2[runtime];
                         StopTime = DateTime.Now;
-            
+
                         login = 0;
                         return;
                     }
@@ -1669,7 +1676,7 @@ namespace Lottery.Buiness
                         MyWebBrower.Refresh();
                         ITEM = Find_JisuanqiResult2[runtime];
                         StopTime = DateTime.Now;
-            
+
                         login = 0;
                         return;
                     }
@@ -2035,7 +2042,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                viewForm.Show();
+                // viewForm.Show();
                 ProcessLogger.Fatal("读取中 2345 " + DateTime.Now.ToString());
 
                 //share
