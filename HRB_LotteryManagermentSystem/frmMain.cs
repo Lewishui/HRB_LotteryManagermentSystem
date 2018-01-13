@@ -558,7 +558,7 @@ namespace HRB_LotteryManagermentSystem
                 Showdave(Result);
                 int ss = this.tabControl1.SelectedIndex;
 
-                if (ss == 0)
+                if (ss == 0 && NewResult != null)
                     this.toolStripLabel1.Text = NewResult.Count.ToString() + "  刷新结束，请查看～";
                 pbStatus.Value = 5;
 
@@ -819,7 +819,8 @@ namespace HRB_LotteryManagermentSystem
                 comboBox1.DataSource = quchongnashuidanwei;
                 comboBox1.SelectedIndex = 0;
             }
-            this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
+            if (sortableJisuanqiList != null)
+                this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
 
         }
 
@@ -855,7 +856,8 @@ namespace HRB_LotteryManagermentSystem
                 //dataGridView3.AutoGenerateColumns = true;
                 dataGridView3.DataSource = dataTable;
                 label1.Text = dataTable.Rows.Count.ToString();
-                this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
+                if (dataTable != null)
+                    this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
 
             }
             if (s == 2)
@@ -869,7 +871,9 @@ namespace HRB_LotteryManagermentSystem
                 //dataGridView1.AutoGenerateColumns = true;
                 dataGridView1.DataSource = dataTable;
                 label1.Text = dataTable.Rows.Count.ToString();
-                this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
+                if (dataTable != null)
+
+                    this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
 
             }
             if (s == 1)
@@ -902,7 +906,9 @@ namespace HRB_LotteryManagermentSystem
 
                 dataGridView.DataSource = dataTable;
                 label1.Text = dataTable.Rows.Count.ToString();
-                this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
+                if (dataTable != null)
+
+                    this.toolStripLabel1.Text = dataTable.Rows.Count + " -刷新结束，请查看～";
 
 
             }
@@ -1033,23 +1039,26 @@ namespace HRB_LotteryManagermentSystem
             int s = this.tabControl1.SelectedIndex;
             if (s == 0)
             {
-
-                this.toolStripLabel1.Text = dataGridView.RowCount + " -条";
+                if (dataGridView != null)
+                    this.toolStripLabel1.Text = dataGridView.RowCount + " -条";
             }
             else if (s == 1)
             {
+                if (dataGridView2 != null)
 
-                this.toolStripLabel1.Text = dataGridView2.RowCount + " -条";
+                    this.toolStripLabel1.Text = dataGridView2.RowCount + " -条";
             }
             else if (s == 2)
             {
+                if (dataGridView1 != null)
 
-                this.toolStripLabel1.Text = dataGridView1.RowCount + " -条";
+                    this.toolStripLabel1.Text = dataGridView1.RowCount + " -条";
             }
             else if (s == 3)
             {
+                if (dataGridView3 != null)
 
-                this.toolStripLabel1.Text = dataGridView3.RowCount + " -条";
+                    this.toolStripLabel1.Text = dataGridView3.RowCount + " -条";
             }
         }
 
@@ -1215,7 +1224,8 @@ namespace HRB_LotteryManagermentSystem
             this.bindingSource2.DataSource = this.sortableList;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = this.bindingSource2;
-            this.toolStripLabel1.Text = bindingSource2.Count + " -刷新结束，请查看～";
+            if (bindingSource2 != null)
+                this.toolStripLabel1.Text = bindingSource2.Count + " -刷新结束，请查看～";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1228,7 +1238,8 @@ namespace HRB_LotteryManagermentSystem
                 this.bindingSource3.DataSource = this.sortableJisuanqiList;
                 dataGridView2.AutoGenerateColumns = false;
                 dataGridView2.DataSource = this.bindingSource3;
-                this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
+                if (sortableJisuanqiList != null)
+                    this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
             }
         }
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)

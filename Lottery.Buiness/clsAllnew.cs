@@ -690,7 +690,7 @@ namespace Lottery.Buiness
             TimeSpan ts = rq2 - StopTime;
             int timeTotal = ts.Minutes;
 
-            if (timeTotal >= 3)
+            if (timeTotal >= 2)
             {
                 isrun = ProcessStatus.关闭页面;
 
@@ -722,6 +722,8 @@ namespace Lottery.Buiness
                 {
                     time++;
                     tsStatusLabel1.Text = caizhong + "刷新中  " + time.ToString() + "....";
+                    if (time > 2000000)
+                        time = 0;
 
                     System.Windows.Forms.Application.DoEvents();
                     DateTime rq2 = DateTime.Now;  //结束时间
@@ -759,7 +761,8 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                //  MessageBox.Show("" + ex);
+                return null;
                 throw;
             }
         }
@@ -1468,7 +1471,8 @@ namespace Lottery.Buiness
                 aTimer.Start();
                 while (!isOneFinished)
                 {
-                    tsStatusLabel1.Text = "玩命获取中奖金额中...." + runtime + "/" + Find_JisuanqiResult2.Count.ToString();
+                    if (Find_JisuanqiResult2 != null)
+                        tsStatusLabel1.Text = "玩命获取中奖金额中...." + runtime + "/" + Find_JisuanqiResult2.Count.ToString();
 
                     System.Windows.Forms.Application.DoEvents();
                     DateTime rq2 = DateTime.Now;  //结束时间
