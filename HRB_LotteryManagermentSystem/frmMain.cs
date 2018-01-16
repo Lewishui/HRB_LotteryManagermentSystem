@@ -270,6 +270,11 @@ namespace HRB_LotteryManagermentSystem
                     List<clTuijianhaomalan_info> quchong_Result1 = (from v in Result select v).Distinct().ToList();
                 }
                 zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
+                if (zhongjiangxinxi_Result == null || zhongjiangxinxi_Result.Count == 0 || Result == null || Result.Count == 0)
+                {
+                    pbStatus.Visible = false;
+                    return;
+                }
                 pbStatus.Value = 2;
 
                 if (Result == null || zhongjiangxinxi_Result == null)
@@ -406,7 +411,7 @@ namespace HRB_LotteryManagermentSystem
                             {
                                 //刨除  不是前的 玩法  只算包含的的次数
                                 int time = 0;
-                                if (!item.wanfazhonglei.Contains("前"))
+                                if (!item.wanfazhonglei.Contains("前") && !item.wanfazhonglei.Contains("乐"))
                                 {
                                     for (int iq = 0; iq < tatile1.Length; iq++)
                                     {
@@ -414,7 +419,8 @@ namespace HRB_LotteryManagermentSystem
                                             time++;
                                     }
                                 }
-                                //计算前一直 和前一组的 算法
+
+                                #region   //计算前一直 和前一组的 算法
                                 else if (item.wanfazhonglei.Contains("前"))
                                 {
                                     //前一直
@@ -510,9 +516,81 @@ namespace HRB_LotteryManagermentSystem
                                     }
 
                                 }
+                                #endregion
+
+                                #region  //乐四 乐五 玩法的 中奖金额计算
+                                //else if (item.wanfazhonglei.Contains("乐"))
+                                //{
+
+                                //    for (int iq = 0; iq < tatile1.Length; iq++)
+                                //    {
+                                //        if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
+                                //            time++;
+                                //    }
+
+                                //}
+
+                                //乐选四中奖条件：5个中奖号码中，乐选四号码中包含3个中19元，包含4个中154元。乐选五中奖条件：
+                                //5个中奖号码中，乐选五号码中包含4个中90元，包含5个中1080元。中奖金额用红色标记。   
+                                else if (item.wanfazhonglei.Contains("乐"))
+                                {
+
+                                    if (item.wanfazhonglei.Contains("乐四"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
+                                        {
+                                            string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
+                                            for (int iq = 0; iq < tatile1.Length; iq++)
+                                            {
+                                                for (int iq1 = 0; iq1 < 3; iq1++)
+                                                {
+                                                    if (splittemp[iq1].Contains(tatile1[iq]))
+                                                        time++;
+                                                }
+                                            }
+
+                                            if (time == 3)
+                                            {
+                                                clsJisuanqi_info newitem = new clsJisuanqi_info();
+
+                                                qianis_ture = true;
+                                            }
+                                        }
+                                    }
+                                    else if (item.wanfazhonglei.Contains("乐五"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
+                                        {
+                                            string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
+                                            for (int iq = 0; iq < tatile1.Length; iq++)
+                                            {
+                                                for (int iq1 = 0; iq1 < 3; iq1++)
+                                                {
+                                                    if (splittemp[iq1].Contains(tatile1[iq]))
+                                                        time++;
+                                                }
+                                            }
+
+                                            if (time == 4)
+                                            {
+                                                clsJisuanqi_info newitem = new clsJisuanqi_info();
+
+                                                qianis_ture = true;
+                                            }
+
+                                        }
+                                    }
+                                }
+                                #endregion
+
+                                //如果中奖标记期数
                                 if (time == tatile1.Length || qianis_ture == true)
                                 {
                                     item.zhongjiangqishu = temp.zhongjiangqishu;
+                                    string inputJiangjin = "";
+                                    BusinessHelp.ITEM = item;
+                                    inputJiangjin = BusinessHelp.chaxunjiangjin(inputJiangjin, 0);
+                                    item.zhongjiangjine = inputJiangjin;
 
                                     break;
                                 }
@@ -520,11 +598,18 @@ namespace HRB_LotteryManagermentSystem
                         }
                     }
                 }
-                pbStatus.Value = 3;
+                try
+                {
+                    pbStatus.Value = 3;
+                }
+                catch
+                {
+
+                }
 
                 //保存新的推荐号
                 int ss1 = this.tabControl1.SelectedIndex;
-                if (ss1 == 0)
+                //if (ss1 == 0)
                 {
 
                     if (NewResult.Count > 0)
@@ -536,7 +621,15 @@ namespace HRB_LotteryManagermentSystem
                 Zhongjiangle_Result = NewResult.FindAll(so => so.zhongjiangqishu != null && so.zhongjiangqishu != "");
                 //去除已中奖的条目
                 NewResult = NewResult.Except(Zhongjiangle_Result).ToList();
-                pbStatus.Value = 4;
+                try
+                {
+                    pbStatus.Value = 4;
+                }
+                catch
+                {
+
+
+                }
 
                 #endregion
                 JisuanqiResult = new List<clsJisuanqi_info>();
@@ -544,8 +637,47 @@ namespace HRB_LotteryManagermentSystem
                 this.toolStripLabel1.Text = "计算金额....";
 
                 ProcessLogger.Fatal("ReadHistroy 9912" + DateTime.Now.ToString());
+                //网页查找的方法 由于新改逻辑 取消网页方法
+                //JisuanqiResult = BusinessHelp.ReadHistroy(ref this.bgWorker, selectitem, Zhongjiangle_Result);
 
-                JisuanqiResult = BusinessHelp.ReadHistroy(ref this.bgWorker, selectitem, Zhongjiangle_Result);
+                #region    //二期后 改成直接固定值
+
+                foreach (clTuijianhaomalan_info ITEM in Zhongjiangle_Result)
+                {
+                    clsJisuanqi_info item = new clsJisuanqi_info();
+                    var qushutxt = Convert.ToDouble(ITEM.zhongjiangqishu.Substring(6, ITEM.zhongjiangqishu.Length - 6)) - Convert.ToDouble(ITEM.dangriqihao.Substring(6, ITEM.dangriqihao.Length - 6)) + 1;
+                    qushutxt = Math.Abs(Convert.ToDouble(qushutxt));
+                    string chaoqishu = "";
+                    BusinessHelp.ITEM = ITEM;
+                    string fa = Convert.ToInt32(qushutxt.ToString()).ToString().Replace("-", "").ToString();
+                    chaoqishu = BusinessHelp.chaxun_chaoqishu(chaoqishu);
+
+                    if (chaoqishu != "" && Convert.ToInt32(chaoqishu) < Convert.ToInt32(fa.ToString()))
+                    {
+                        continue;
+                    }
+                    item.qishu = fa;
+                    ITEM.fanganqishu = item.qishu;
+
+                    item.tourubeishu = "1";
+                    //item.benqitouru = pingjunyilouLocation.innerText;
+                    //item.leijitouru = zuidayilouLocation.innerText;
+                    item.benqishouyi = ITEM.zhongjiangjine;
+                    //item.yilishouyi = disiyilouLocation.innerText;
+
+                    //item.shouyilv = disanyilouLocation.innerText;
+
+                    item.dangriqihao = ITEM.dangriqihao;
+                    item.tuijianhaoma = ITEM.tuijianhaoma;
+                    item.wanfazhonglei = ITEM.wanfazhonglei;
+                    item.zhongjiangqishu = ITEM.zhongjiangqishu;
+                    item.fanganqishu = ITEM.fanganqishu;
+                    item.Input_Date = DateTime.Now.ToString("yyyy/MM/dd");
+                    JisuanqiResult.Add(item);
+
+                }
+                #endregion
+
                 if (JisuanqiResult != null && JisuanqiResult.Count > 0)
                     BusinessHelp.inster_lishizongjianglan(JisuanqiResult);
                 //JisuanqiResult = JisuanqiResult.Concat(Jisuanqi_Server).ToList();
@@ -560,7 +692,15 @@ namespace HRB_LotteryManagermentSystem
 
                 if (ss == 0 && NewResult != null)
                     this.toolStripLabel1.Text = NewResult.Count.ToString() + "  刷新结束，请查看～";
-                pbStatus.Value = 5;
+                try
+                {
+                    pbStatus.Value = 5;
+                }
+                catch
+                {
+
+
+                }
 
                 this.pbStatus.Visible = false;
 
@@ -578,47 +718,55 @@ namespace HRB_LotteryManagermentSystem
 
         private void Showdave(List<clTuijianhaomalan_info> Result)
         {
-            //50 = 60 - 10;
-
-            //  NewResult = NewResult.Skip(NewResult.Count-50).ToList();
-
-            sortableList = new SortableBindingList<clTuijianhaomalan_info>(NewResult);
-            this.bindingSource1.DataSource = this.sortableList;
-            dataGridView.AutoGenerateColumns = false;
-            dataGridView.DataSource = this.bindingSource1;
-
-            //new  e二期
-            bindingSource1.Sort = "wanfazhonglei ASC";
-
-            dataGridView4.AutoGenerateColumns = false;
-            dataGridView4.DataSource = this.bindingSource1;
-
-
-            //Result = Result.Skip(Result.Count - 50).ToList();
-
-            sortableList = new SortableBindingList<clTuijianhaomalan_info>(Result);
-            this.bindingSource2.DataSource = this.sortableList;
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = this.bindingSource2;
-            //List<User> nonDuplicateList2 = Result.Where((x, i) => Result.FindIndex(z => z.wanfazhonglei == x.wanfazhonglei) == i).ToList();
-            List<string> quchongnashuidanwei = (from v in Result select v.wanfazhonglei).Distinct().ToList();
-            if (quchongnashuidanwei.Count > 0)
+            try
             {
-                comboBox2.DataSource = quchongnashuidanwei;
-                comboBox2.SelectedIndex = 0;
+                //50 = 60 - 10;
+
+                //  NewResult = NewResult.Skip(NewResult.Count-50).ToList();
+
+                sortableList = new SortableBindingList<clTuijianhaomalan_info>(NewResult);
+                this.bindingSource1.DataSource = this.sortableList;
+                dataGridView.AutoGenerateColumns = false;
+                dataGridView.DataSource = this.bindingSource1;
+
+                //new  e二期
+                bindingSource1.Sort = "wanfazhonglei ASC";
+
+                dataGridView4.AutoGenerateColumns = false;
+                dataGridView4.DataSource = this.bindingSource1;
+
+
+                //Result = Result.Skip(Result.Count - 50).ToList();
+
+                sortableList = new SortableBindingList<clTuijianhaomalan_info>(Result);
+                this.bindingSource2.DataSource = this.sortableList;
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = this.bindingSource2;
+                //List<User> nonDuplicateList2 = Result.Where((x, i) => Result.FindIndex(z => z.wanfazhonglei == x.wanfazhonglei) == i).ToList();
+                List<string> quchongnashuidanwei = (from v in Result select v.wanfazhonglei).Distinct().ToList();
+                if (quchongnashuidanwei.Count > 0)
+                {
+                    comboBox2.DataSource = quchongnashuidanwei;
+                    comboBox2.SelectedIndex = 0;
+                }
+
+                timers_resfresh = true;
+                //开奖信息
+                if (zhongjiangxinxi_Result != null)
+                {
+                    //  zhongjiangxinxi_Result = zhongjiangxinxi_Result.Skip(zhongjiangxinxi_Result.Count - 50).ToList();
+
+                    sortableList_zhongjiangxinxi = new SortableBindingList<clTuijianhaomalan_info>(zhongjiangxinxi_Result);
+                    this.bindingSource4.DataSource = this.sortableList_zhongjiangxinxi;
+                    dataGridView3.AutoGenerateColumns = false;
+                    dataGridView3.DataSource = this.bindingSource4;
+
+                }
             }
-
-            timers_resfresh = true;
-            //开奖信息
-            if (zhongjiangxinxi_Result != null)
+            catch (Exception ex)
             {
-                //  zhongjiangxinxi_Result = zhongjiangxinxi_Result.Skip(zhongjiangxinxi_Result.Count - 50).ToList();
 
-                sortableList_zhongjiangxinxi = new SortableBindingList<clTuijianhaomalan_info>(zhongjiangxinxi_Result);
-                this.bindingSource4.DataSource = this.sortableList_zhongjiangxinxi;
-                dataGridView3.AutoGenerateColumns = false;
-                dataGridView3.DataSource = this.bindingSource4;
-
+                throw;
             }
         }
 
@@ -793,35 +941,43 @@ namespace HRB_LotteryManagermentSystem
 
         private void Showdave2(List<clsJisuanqi_info> Result)
         {
-            //取出最后50数据
+            try
+            {
+                //取出最后50数据
 
-            //JisuanqiResult = JisuanqiResult.Skip(JisuanqiResult.Count- 50).ToList();
+                //JisuanqiResult = JisuanqiResult.Skip(JisuanqiResult.Count- 50).ToList();
 
-            sortableJisuanqiList = new SortableBindingList<clsJisuanqi_info>(JisuanqiResult);
-            this.bindingSource3.DataSource = this.sortableJisuanqiList;
-            dataGridView2.AutoGenerateColumns = false;
+                sortableJisuanqiList = new SortableBindingList<clsJisuanqi_info>(JisuanqiResult);
+                this.bindingSource3.DataSource = this.sortableJisuanqiList;
+                dataGridView2.AutoGenerateColumns = false;
 
-            bindingSource3.Sort = "wanfazhonglei ASC";
+                bindingSource3.Sort = "wanfazhonglei ASC";
 
-            dataGridView2.DataSource = this.bindingSource3;
+                dataGridView2.DataSource = this.bindingSource3;
 
-            //new 
-            dataGridView5.AutoGenerateColumns = false;
-            dataGridView5.DataSource = this.bindingSource3;
+                //new 
+                dataGridView5.AutoGenerateColumns = false;
+                dataGridView5.DataSource = this.bindingSource3;
 
-            this.pbStatus.Visible = false;
+                this.pbStatus.Visible = false;
 
-            List<clsJisuanqi_info> JisuanqiResultcombox = JisuanqiResult.FindAll(s => s.wanfazhonglei != null && s.wanfazhonglei != "");
-            List<string> quchongnashuidanwei = (from v in JisuanqiResultcombox select v.wanfazhonglei).Distinct().ToList();
-            if (quchongnashuidanwei.Count != 0)
+                List<clsJisuanqi_info> JisuanqiResultcombox = JisuanqiResult.FindAll(s => s.wanfazhonglei != null && s.wanfazhonglei != "");
+                List<string> quchongnashuidanwei = (from v in JisuanqiResultcombox select v.wanfazhonglei).Distinct().ToList();
+                if (quchongnashuidanwei.Count != 0)
+                {
+
+                    comboBox1.DataSource = quchongnashuidanwei;
+                    comboBox1.SelectedIndex = 0;
+                }
+                if (sortableJisuanqiList != null)
+                    this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
+
+            }
+            catch (Exception ex)
             {
 
-                comboBox1.DataSource = quchongnashuidanwei;
-                comboBox1.SelectedIndex = 0;
+                throw;
             }
-            if (sortableJisuanqiList != null)
-                this.toolStripLabel1.Text = sortableJisuanqiList.Count + " -刷新结束，请查看～";
-
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -1330,6 +1486,32 @@ namespace HRB_LotteryManagermentSystem
                 checkBoxComboBox1.Text = "";
                 button1.Text = "全选";
             }
+        }
+
+        private void dataGridView4_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            bool handle;
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.Equals(DBNull.Value))
+            {
+                handle = true;
+            }
+            else
+                handle = false;
+            e.Cancel = handle;
+
+        }
+
+        private void dataGridView5_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            bool handle;
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.Equals(DBNull.Value))
+            {
+                handle = true;
+            }
+            else
+                handle = false;
+            e.Cancel = handle;
+
         }
     }
 }

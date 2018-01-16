@@ -72,7 +72,7 @@ namespace Lottery.Buiness
         string NOW_link = "";
         bool islastReadCaizhong = false;
         bool loading;
-        clTuijianhaomalan_info ITEM;
+        public clTuijianhaomalan_info ITEM;
         List<clTuijianhaomalan_info> Find_JisuanqiResult2;
         int runtime = 0;
         [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
@@ -83,6 +83,8 @@ namespace Lottery.Buiness
 
         [DllImport("user32.dll", EntryPoint = "SendMessage", SetLastError = true, CharSet = CharSet.Auto)]
         private static extern int SendMessage(IntPtr hwnd, uint wMsg, IntPtr wParam, int lParam);
+
+        int Typeidlink = 0;
 
         public clsAllnew()
         {
@@ -102,6 +104,8 @@ namespace Lottery.Buiness
         }
         public string linkid(int typeid)
         {
+            Typeidlink = typeid;
+
             string link = "";
             if (typeid == 1)
                 link = "http://chart.icaile.com/?op";//&num=15
@@ -677,7 +681,7 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                //  MessageBox.Show("" + ex);
                 return null;
                 throw;
             }
@@ -1640,7 +1644,7 @@ namespace Lottery.Buiness
                     //查询值
                     string inputJiangjin = "";
 
-                    inputJiangjin = chaxunjiangjin(inputJiangjin);
+                    inputJiangjin = chaxunjiangjin(inputJiangjin, 0);
 
                     if (inputJiangjin != "")
                         danbeijiangjin.SetAttribute("Value", inputJiangjin);
@@ -1697,7 +1701,7 @@ namespace Lottery.Buiness
 
         }
 
-        private string chaxunjiangjin(string inputJiangjin)
+        public string chaxunjiangjin(string inputJiangjin, int baohangeshu)
         {
             if (ITEM.wanfazhonglei != null)
             {
@@ -1729,12 +1733,30 @@ namespace Lottery.Buiness
                     inputJiangjin = "195";
                 if (ITEM.wanfazhonglei.Contains("前一"))
                     inputJiangjin = "13";
+                if (ITEM.wanfazhonglei.Contains("乐"))
+                {
+                    if (ITEM.wanfazhonglei.Contains("乐四"))
+                    {
+                        if (baohangeshu == 3)
+                            inputJiangjin = "19";
+                        else if (baohangeshu == 4)
+                            inputJiangjin = "154";
+                    }
+                    else if (ITEM.wanfazhonglei.Contains("乐五"))
+                    {
+                        if (baohangeshu == 4)
+                            inputJiangjin = "90";
+                        else if (baohangeshu == 5)
+                            inputJiangjin = "1080";
+                    }
+                }
+
             }
             else
                 inputJiangjin = "1";
             return inputJiangjin;
         }
-        private string chaxun_chaoqishu(string inputJiangjin)
+        public string chaxun_chaoqishu(string inputJiangjin)
         {
             if (ITEM.wanfazhonglei != null)
             {
@@ -1762,6 +1784,7 @@ namespace Lottery.Buiness
                     inputJiangjin = "1000";
                 else if (ITEM.wanfazhonglei.Contains("三组"))
                     inputJiangjin = "250";
+
             }
             else
                 inputJiangjin = "0";
@@ -2046,11 +2069,19 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                // viewForm.Show();
+                //  viewForm.Show();
                 ProcessLogger.Fatal("读取中 2345 " + DateTime.Now.ToString());
 
                 //share
-                MyWebBrower.Url = new Uri(NOW_link + "=dcjb");
+                // MyWebBrower.Url = new Uri(NOW_link + "=dcjb");
+                //new add 
+                if (Typeidlink == 2)
+                {
+                    string newlink = NOW_link.Replace("/?op", "");
+
+                    MyWebBrower.Url = new Uri(NOW_link.Replace("/?op", ""));
+                }
+
                 tsStatusLabel1.Text = "接入 ...." + MyWebBrower.Url;
 
             }
