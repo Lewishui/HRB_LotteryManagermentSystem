@@ -31,9 +31,11 @@ namespace HRB_LotteryManagermentSystem
             InitializeComponent();
             aboutbox = new frmAboutBox();
             InitialSystemInfo();
-            se = new Sunisoft.IrisSkin.SkinEngine();
-            se.SkinAllForm = true;
-            se.SkinFile = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ""), "PageColor1.ssk");
+            #region 引用皮肤 
+            //se = new Sunisoft.IrisSkin.SkinEngine();
+            //se.SkinAllForm = true;
+            //se.SkinFile = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ""), "PageColor1.ssk"); 
+            #endregion
 
             InitialPassword();
             ProcessLogger.Fatal("login" + DateTime.Now.ToString());

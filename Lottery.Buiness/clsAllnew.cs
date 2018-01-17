@@ -490,7 +490,7 @@ namespace Lottery.Buiness
 
             foreach (clsJisuanqi_info item in zhongjiangxinxi_Result)
             {
-                string dele_sql = "delete FROM lishizongjiang  WHERE wanfazhonglei ='" + item.wanfazhonglei + "'And tuijianhaoma='" + item.tuijianhaoma + "'And dangriqihao='" + item.dangriqihao + "'And zhongjiangqishu='" + item.zhongjiangqishu + "'And leijitouru='" + item.leijitouru + "'And benqishouyi='" + item.benqishouyi + "'And yilishouyi='" + item.yilishouyi + "'And Input_Date='" + item.Input_Date + "'";
+                string dele_sql = "delete FROM lishizongjiang  WHERE wanfazhonglei ='" + item.wanfazhonglei + "'And tuijianhaoma='" + item.tuijianhaoma + "'And dangriqihao='" + item.dangriqihao + "'And Input_Date='" + item.Input_Date + "'";
                 delete_step(dele_sql);
 
                 string sql = "INSERT INTO lishizongjiang ( wanfazhonglei, tuijianhaoma, dangriqihao, zhongjiangqishu, leijitouru, benqishouyi, yilishouyi,fanganqishu,Input_Date ) " +
@@ -701,7 +701,14 @@ namespace Lottery.Buiness
                 if (viewForm != null)
                 {
                     MyWebBrower = null;
-                    viewForm.Close();
+                    try
+                    {
+                        viewForm.Close();
+                    }
+                    catch  
+                    {                        
+                     
+                    }
                     aTimer.Stop();
                 }
             }
@@ -725,8 +732,8 @@ namespace Lottery.Buiness
                 while (!isOneFinished)
                 {
                     time++;
-                    tsStatusLabel1.Text = caizhong + "刷新中  " + time.ToString() + "....";
-                    if (time > 2000000)
+                    //tsStatusLabel1.Text = caizhong + "刷新中  " + time.ToString() + "....";
+                    if (time > 200000)
                         time = 0;
 
                     System.Windows.Forms.Application.DoEvents();
@@ -1988,8 +1995,9 @@ namespace Lottery.Buiness
                 while (!isOneFinished)
                 {
                     time++;
-                    tsStatusLabel1.Text = caizhong + "刷新中  " + time.ToString() + "....";
-
+                    tsStatusLabel1.Text = caizhong + "中奖号码刷新中  " + time.ToString() + "....";
+                    if (time > 20000)
+                        time = 0;
                     System.Windows.Forms.Application.DoEvents();
                     DateTime rq2 = DateTime.Now;  //结束时间
                     int a = rq2.Second - StopTime.Second;
