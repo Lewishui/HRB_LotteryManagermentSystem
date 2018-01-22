@@ -681,6 +681,8 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("EX7866" + ex + DateTime.Now.ToString());
+
                 //  MessageBox.Show("" + ex);
                 return null;
                 throw;
@@ -705,9 +707,9 @@ namespace Lottery.Buiness
                     {
                         viewForm.Close();
                     }
-                    catch  
-                    {                        
-                     
+                    catch
+                    {
+
                     }
                     aTimer.Stop();
                 }
@@ -772,6 +774,8 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("EX9092" + DateTime.Now.ToString() + ex);
+
                 //  MessageBox.Show("" + ex);
                 return null;
                 throw;
@@ -797,7 +801,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                //  viewForm.Show();
+               //  viewForm.Show();
                 ProcessLogger.Fatal("读取中 09010 " + DateTime.Now.ToString());
                 //
                 //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
@@ -893,9 +897,10 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-                ProcessLogger.Fatal("接入 前 09110 " + ex + DateTime.Now.ToString());
+                ProcessLogger.Fatal("Ex881" + ex + DateTime.Now.ToString());
 
-                MessageBox.Show("错误：0001" + ex);
+                //   MessageBox.Show("错误：0001" + ex);
+                return;
                 throw ex;
             }
 
@@ -945,7 +950,7 @@ namespace Lottery.Buiness
                 #region 登录页面  //http://chart.icaile.com/hlj11x5.php?op=yl3m&num=15
 
                 #region 界面1  //点击彩种
-                if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && login == 0)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                if (myDoc != null && myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && login == 0)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
                     runindex = 1;
 
@@ -1012,13 +1017,14 @@ namespace Lottery.Buiness
 
                     }
                     HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("a");
-                    foreach (HtmlElement item in atab)
-                    {
-                        if (item.OuterHtml.Contains(clickid) && item.OuterHtml.Contains("<A href=\"?op=") && item.OuterHtml.Contains("</B></A>"))
+                    if (atab != null)
+                        foreach (HtmlElement item in atab)
                         {
-                            item.InvokeMember("Click");
+                            if (item.OuterHtml.Contains(clickid) && item.OuterHtml.Contains("<A href=\"?op=") && item.OuterHtml.Contains("</B></A>"))
+                            {
+                                item.InvokeMember("Click");
+                            }
                         }
-                    }
                     tsStatusLabel1.Text = caizhong + "界面1 ....";
                     ProcessLogger.Fatal("接入界面 002" + DateTime.Now.ToString());
 
@@ -1029,7 +1035,7 @@ namespace Lottery.Buiness
                 #endregion
 
                 #region 导航到具体哪个期数 下
-                else if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && isrun == ProcessStatus.登录界面)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                else if (myDoc != null && myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && isrun == ProcessStatus.登录界面)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
                     runindex = 2;
 
@@ -1043,7 +1049,8 @@ namespace Lottery.Buiness
 
                     }
                     int ii = 0;
-                    MyWebBrower.Navigate(myDoc.Url.ToString() + "&num=" + filter_qishu.ToString());
+                    if (MyWebBrower != null)
+                        MyWebBrower.Navigate(myDoc.Url.ToString() + "&num=" + filter_qishu.ToString());
                     login++;
                     isrun = ProcessStatus.第一页面;
                     return;
@@ -1051,7 +1058,7 @@ namespace Lottery.Buiness
                 #endregion
 
                 #region 读取走势 信息 & 导航到 开奖期数的页面
-                else if (myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && myDoc.Url.ToString().IndexOf("&num=" + filter_qishu.ToString()) >= 0 && isrun == ProcessStatus.第一页面)//http://chart.icaile.com/hlj11x5.php?op=yl3
+                else if (myDoc != null && myDoc.Url.ToString().IndexOf(NOW_link) >= 0 && myDoc.Url.ToString().IndexOf("&num=" + filter_qishu.ToString()) >= 0 && isrun == ProcessStatus.第一页面)//http://chart.icaile.com/hlj11x5.php?op=yl3
                 {
                     runindex = 3;
 
@@ -1192,7 +1199,9 @@ namespace Lottery.Buiness
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show("错误12211：" + ex);
+                                ProcessLogger.Fatal("EX2012" + DateTime.Now.ToString() + ex);
+
+                                //   MessageBox.Show("错误12211：" + ex);
                                 return;
 
                                 throw;
@@ -1210,7 +1219,8 @@ namespace Lottery.Buiness
                         //  MyWebBrower.Navigate("http://hlj11x5.icaile.com/?op=dcjb");
                         //share
                         //转到中奖信息页面
-                        MyWebBrower.Navigate(NOW_link + "=dcjb");
+                        if (MyWebBrower != null)
+                            MyWebBrower.Navigate(NOW_link + "=dcjb");
 
 
                         isrun = ProcessStatus.确认YES;
@@ -1227,7 +1237,7 @@ namespace Lottery.Buiness
                 #endregion
 
                 #region   //获取中奖信息
-                else if (myDoc.Url.ToString().IndexOf(NOW_link + "=dcjb") >= 0 && isrun == ProcessStatus.确认YES)
+                else if (myDoc != null && myDoc.Url.ToString().IndexOf(NOW_link + "=dcjb") >= 0 && isrun == ProcessStatus.确认YES)
                 {
                     runindex = 4;
 
@@ -1243,14 +1253,15 @@ namespace Lottery.Buiness
 
                         IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
                         bool isreturn = false;
-                        foreach (IHTMLElement items in Tablelin)
-                        {
-
-                            if (items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
+                        if (Tablelin != null)
+                            foreach (IHTMLElement items in Tablelin)
                             {
-                                isreturn = true;
+
+                                if (items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
+                                {
+                                    isreturn = true;
+                                }
                             }
-                        }
                         if (isreturn == false)
                             return;
 
@@ -1284,7 +1295,9 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ex  AnalysisWebInfo2[" + runindex + "]   " + ex, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ProcessLogger.Fatal("EX1092" + DateTime.Now.ToString() + ex);
+
+                //  MessageBox.Show("ex  AnalysisWebInfo2[" + runindex + "]   " + ex, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
                 throw ex;
@@ -1303,75 +1316,78 @@ namespace Lottery.Buiness
             HTMLDocument myDoc1 = doc as HTMLDocument;
             //IHTMLElement doc1 = (IHTMLElement)MyWebBrower.Document.DomDocument;
             IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
-            foreach (IHTMLElement items in Tablelin)
+            if (Tablelin != null)
             {
-                string aresult = System.Text.RegularExpressions.Regex.Replace(items.outerText, @"[^0-9]+", "");
-                //if (items.outerText != null && items.outerText.Contains("号码类型") && items.outerText.Contains("----"))//没有加二期前的 （ 乐选四 乐选五）
-                if (items.outerText != null && items.outerText.Contains("号码类型") && aresult.Length > 50)
+                foreach (IHTMLElement items in Tablelin)
                 {
-
-                    HTMLTable materialTable = items as HTMLTable;
-                    IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
-                    int KeyInfoRowIndex = 1;
-                    int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
-                    ProcessLogger.Fatal("界面3  1904-" + rows.length.ToString() + "   " + DateTime.Now.ToString());
-
-                    for (int i = 0; i < rows.length - 1; i++)
+                    string aresult = System.Text.RegularExpressions.Regex.Replace(items.outerText, @"[^0-9]+", "");
+                    //if (items.outerText != null && items.outerText.Contains("号码类型") && items.outerText.Contains("----"))//没有加二期前的 （ 乐选四 乐选五）
+                    if (items.outerText != null && items.outerText.Contains("号码类型") && aresult.Length > 50)
                     {
-                        clTuijianhaomalan_info item = new clTuijianhaomalan_info();
-                        #region MyRegion
 
-                        HTMLTableRowClass KeyRow = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
-                        ProcessLogger.Fatal("界面3  190432-" + rows.length.ToString() + "   " + DateTime.Now.ToString());
+                        HTMLTable materialTable = items as HTMLTable;
+                        IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
+                        int KeyInfoRowIndex = 1;
+                        int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
+                        ProcessLogger.Fatal("界面3  1904-" + rows.length.ToString() + "   " + DateTime.Now.ToString());
 
-                        if (KeyRow != null)
+                        for (int i = 0; i < rows.length - 1; i++)
                         {
-                            ProcessLogger.Fatal("界面3  190321-" + rows.length.ToString() + "   " + DateTime.Now.ToString());
+                            clTuijianhaomalan_info item = new clTuijianhaomalan_info();
+                            #region MyRegion
 
-                            HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
-                            item.haomaileixing = shiming.innerText;
-                            //HTMLTableRowClass KeyRowLocation = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
-                            HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
-                            item.chuxiancishu = shimingLocation.innerText;
+                            HTMLTableRowClass KeyRow = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
+                            ProcessLogger.Fatal("界面3  190432-" + rows.length.ToString() + "   " + DateTime.Now.ToString());
 
-                            HTMLTableCell pingjunyilouLocation = KeyRow.cells.item(KeyInfoCellPN, null) as HTMLTableCell;
-                            item.pingjunyilou = pingjunyilouLocation.innerText;
+                            if (KeyRow != null)
+                            {
+                                ProcessLogger.Fatal("界面3  190321-" + rows.length.ToString() + "   " + DateTime.Now.ToString());
 
-                            HTMLTableCell zuidayilouLocation = KeyRow.cells.item(KeyInfoCellLocation, null) as HTMLTableCell;
-                            item.zuidayilou = zuidayilouLocation.innerText;
+                                HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
+                                item.haomaileixing = shiming.innerText;
+                                //HTMLTableRowClass KeyRowLocation = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
+                                HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
+                                item.chuxiancishu = shimingLocation.innerText;
 
-                            HTMLTableCell diwuyilouLocation = KeyRow.cells.item(KeyInfoCellDataSource, null) as HTMLTableCell;
-                            item.diwuyilou = diwuyilouLocation.innerText;
+                                HTMLTableCell pingjunyilouLocation = KeyRow.cells.item(KeyInfoCellPN, null) as HTMLTableCell;
+                                item.pingjunyilou = pingjunyilouLocation.innerText;
 
-                            HTMLTableCell disiyilouLocation = KeyRow.cells.item(KeyInfoCellOrder, null) as HTMLTableCell;
-                            item.disiyilou = disiyilouLocation.innerText;
+                                HTMLTableCell zuidayilouLocation = KeyRow.cells.item(KeyInfoCellLocation, null) as HTMLTableCell;
+                                item.zuidayilou = zuidayilouLocation.innerText;
 
-                            HTMLTableCell disanyilouLocation = KeyRow.cells.item(KeyInfoCell_disanyilou, null) as HTMLTableCell;
-                            item.disanyilou = disanyilouLocation.innerText;
+                                HTMLTableCell diwuyilouLocation = KeyRow.cells.item(KeyInfoCellDataSource, null) as HTMLTableCell;
+                                item.diwuyilou = diwuyilouLocation.innerText;
 
-                            HTMLTableCell dieryilouLocation = KeyRow.cells.item(KeyInfoCell_dieryilou, null) as HTMLTableCell;
-                            item.dieryilou = dieryilouLocation.innerText;
+                                HTMLTableCell disiyilouLocation = KeyRow.cells.item(KeyInfoCellOrder, null) as HTMLTableCell;
+                                item.disiyilou = disiyilouLocation.innerText;
 
-                            HTMLTableCell shangciyilouLocation = KeyRow.cells.item(KeyInfoCell_shangciyilou, null) as HTMLTableCell;
-                            item.shangciyilou = shangciyilouLocation.innerText;
+                                HTMLTableCell disanyilouLocation = KeyRow.cells.item(KeyInfoCell_disanyilou, null) as HTMLTableCell;
+                                item.disanyilou = disanyilouLocation.innerText;
 
-                            HTMLTableCell dangqianyilouLocation = KeyRow.cells.item(KeyInfoCell_dangqianyilou, null) as HTMLTableCell;
-                            item.dangqianyilou = dangqianyilouLocation.innerText;
+                                HTMLTableCell dieryilouLocation = KeyRow.cells.item(KeyInfoCell_dieryilou, null) as HTMLTableCell;
+                                item.dieryilou = dieryilouLocation.innerText;
 
-                            HTMLTableCell yuchujilvLocation = KeyRow.cells.item(KeyInfoCell_yuchujilv, null) as HTMLTableCell;
-                            item.yuchujilv = yuchujilvLocation.innerText;
-                        #endregion
-                            loading = false;
-                            if (wanfazhonglei != "" && wanfazhonglei == "四码")
-                                wanfazhonglei = "乐四";
-                            if (wanfazhonglei != "" && wanfazhonglei == "五码")
-                                wanfazhonglei = "乐五";
-                            if (wanfazhonglei != null)
-                                wanfazhonglei = wanfazhonglei.Replace("[", "").Replace("]", "");
+                                HTMLTableCell shangciyilouLocation = KeyRow.cells.item(KeyInfoCell_shangciyilou, null) as HTMLTableCell;
+                                item.shangciyilou = shangciyilouLocation.innerText;
 
-                            item.wanfazhonglei = wanfazhonglei;
-                            Tuijianhaomalan_Result.Add(item);
-                            KeyInfoRowIndex++;
+                                HTMLTableCell dangqianyilouLocation = KeyRow.cells.item(KeyInfoCell_dangqianyilou, null) as HTMLTableCell;
+                                item.dangqianyilou = dangqianyilouLocation.innerText;
+
+                                HTMLTableCell yuchujilvLocation = KeyRow.cells.item(KeyInfoCell_yuchujilv, null) as HTMLTableCell;
+                                item.yuchujilv = yuchujilvLocation.innerText;
+                            #endregion
+                                loading = false;
+                                if (wanfazhonglei != "" && wanfazhonglei == "四码")
+                                    wanfazhonglei = "乐四";
+                                if (wanfazhonglei != "" && wanfazhonglei == "五码")
+                                    wanfazhonglei = "乐五";
+                                if (wanfazhonglei != null)
+                                    wanfazhonglei = wanfazhonglei.Replace("[", "").Replace("]", "");
+
+                                item.wanfazhonglei = wanfazhonglei;
+                                Tuijianhaomalan_Result.Add(item);
+                                KeyInfoRowIndex++;
+                            }
                         }
                     }
                 }
@@ -1392,68 +1408,73 @@ namespace Lottery.Buiness
 
                 IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
                 HTMLDocument myDoc1 = doc as HTMLDocument;
-
-                IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
-                foreach (IHTMLElement items in Tablelin)
+                if (myDoc1 != null)
                 {
-
-                    if (items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
-                    {
-                        ProcessLogger.Fatal("获取中奖信息  1910" + DateTime.Now.ToString());
-
-                        HTMLTable materialTable = items as HTMLTable;
-                        IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
-                        int KeyInfoRowIndex = 2;
-                        int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
-
-                        for (int i = 0; i < rows.length - 1; i++)
+                    IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
+                    if (Tablelin != null)
+                        foreach (IHTMLElement items in Tablelin)
                         {
-                            clTuijianhaomalan_info item = new clTuijianhaomalan_info();
-                            #region MyRegion
 
-                            HTMLTableRowClass KeyRow = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
-                            HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
-                            item.zhongjiangqishu = shiming.innerText;
-                            bool ischina = clsCommHelp.HasChineseTest(item.zhongjiangqishu.ToString());
-                            if (ischina == true)
-                                break;
+                            if (items != null && items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
+                            {
+                                ProcessLogger.Fatal("获取中奖信息  1910" + DateTime.Now.ToString());
 
-                            //HTMLTableRowClass KeyRowLocation = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
-                            HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
-                            item.kaijianghaoma = shimingLocation.innerText;
+                                HTMLTable materialTable = items as HTMLTable;
+                                IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
+                                int KeyInfoRowIndex = 2;
+                                int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
 
+                                for (int i = 0; i < rows.length - 1; i++)
+                                {
+                                    clTuijianhaomalan_info item = new clTuijianhaomalan_info();
+                                    #region MyRegion
 
+                                    HTMLTableRowClass KeyRow = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
+                                    HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
+                                    item.zhongjiangqishu = shiming.innerText;
+                                    bool ischina = clsCommHelp.HasChineseTest(item.zhongjiangqishu.ToString());
+                                    if (ischina == true)
+                                        break;
 
-                            HTMLTableCell zuidayilouLocation = KeyRow.cells.item(KeyInfoCellLocation, null) as HTMLTableCell;
-                            item.kaijianghaoma = item.kaijianghaoma + " " + zuidayilouLocation.innerText;
-
-
-
-                            HTMLTableCell disiyilouLocation = KeyRow.cells.item(KeyInfoCellOrder, null) as HTMLTableCell;
-                            item.kaijianghaoma = item.kaijianghaoma + " " + disiyilouLocation.innerText;
-
-
-
-                            HTMLTableCell dieryilouLocation = KeyRow.cells.item(KeyInfoCell_dieryilou, null) as HTMLTableCell;
-                            item.kaijianghaoma = item.kaijianghaoma + " " + dieryilouLocation.innerText;
+                                    //HTMLTableRowClass KeyRowLocation = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
+                                    HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
+                                    item.kaijianghaoma = shimingLocation.innerText;
 
 
 
-                            HTMLTableCell dangqianyilouLocation = KeyRow.cells.item(KeyInfoCell_dangqianyilou, null) as HTMLTableCell;
-                            item.kaijianghaoma = item.kaijianghaoma + " " + dangqianyilouLocation.innerText;
+                                    HTMLTableCell zuidayilouLocation = KeyRow.cells.item(KeyInfoCellLocation, null) as HTMLTableCell;
+                                    item.kaijianghaoma = item.kaijianghaoma + " " + zuidayilouLocation.innerText;
 
-                            #endregion
 
-                            loading = false;
-                            zhongjiangxinxi_Result.Add(item);
-                            KeyInfoRowIndex++;
+
+                                    HTMLTableCell disiyilouLocation = KeyRow.cells.item(KeyInfoCellOrder, null) as HTMLTableCell;
+                                    item.kaijianghaoma = item.kaijianghaoma + " " + disiyilouLocation.innerText;
+
+
+
+                                    HTMLTableCell dieryilouLocation = KeyRow.cells.item(KeyInfoCell_dieryilou, null) as HTMLTableCell;
+                                    item.kaijianghaoma = item.kaijianghaoma + " " + dieryilouLocation.innerText;
+
+
+
+                                    HTMLTableCell dangqianyilouLocation = KeyRow.cells.item(KeyInfoCell_dangqianyilou, null) as HTMLTableCell;
+                                    item.kaijianghaoma = item.kaijianghaoma + " " + dangqianyilouLocation.innerText;
+
+                                    #endregion
+
+                                    loading = false;
+                                    zhongjiangxinxi_Result.Add(item);
+                                    KeyInfoRowIndex++;
+                                }
+
+                            }
                         }
-
-                    }
                 }
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("EX23092" + DateTime.Now.ToString() + ex);
+                return;
                 throw;
             }
         }
@@ -1518,7 +1539,11 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                ProcessLogger.Fatal("EX00092" + DateTime.Now.ToString() + ex);
+
+                //    MessageBox.Show("" + ex);
+                return null;
+
                 throw;
             }
         }
@@ -1549,6 +1574,8 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("EX4092" + DateTime.Now.ToString() + ex);
+                return;
                 throw ex;
             }
 
@@ -1586,7 +1613,7 @@ namespace Lottery.Buiness
             myDoc = sender as WbBlockNewUrl;
             #region
 
-            if (myDoc.Url.ToString().IndexOf("http://zx.dahecp.com/tool/beitou.aspx") >= 0 && login == 0)
+            if (myDoc != null && myDoc.Url.ToString().IndexOf("http://zx.dahecp.com/tool/beitou.aspx") >= 0 && login == 0)
             {
                 ProcessLogger.Fatal("ReadHistroy 9712" + DateTime.Now.ToString());
 
@@ -1614,8 +1641,8 @@ namespace Lottery.Buiness
                     runtime++;
                     if (Find_JisuanqiResult2.Count > runtime)
                     {
-
-                        MyWebBrower.Navigate("http://zx.dahecp.com/tool/beitou.aspx");
+                        if (MyWebBrower != null)
+                            MyWebBrower.Navigate("http://zx.dahecp.com/tool/beitou.aspx");
                         MyWebBrower.Refresh();
                         ITEM = Find_JisuanqiResult2[runtime];
                         StopTime = DateTime.Now;
@@ -1686,9 +1713,11 @@ namespace Lottery.Buiness
                     runtime++;
                     if (Find_JisuanqiResult2.Count > runtime)
                     {
-
-                        MyWebBrower.Navigate("http://zx.dahecp.com/tool/beitou.aspx");
-                        MyWebBrower.Refresh();
+                        if (MyWebBrower != null)
+                        {
+                            MyWebBrower.Navigate("http://zx.dahecp.com/tool/beitou.aspx");
+                            MyWebBrower.Refresh();
+                        }
                         ITEM = Find_JisuanqiResult2[runtime];
                         StopTime = DateTime.Now;
 
@@ -1807,68 +1836,71 @@ namespace Lottery.Buiness
                 IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
                 HTMLDocument myDoc1 = doc as HTMLDocument;
                 IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
-                foreach (IHTMLElement items in Tablelin)
-                {
-                    int yue_valoume = System.Text.RegularExpressions.Regex.Matches(items.outerText, "\r\n").Count;
-
-                    if (items.outerText != null && items.outerText.Contains("投入倍数") && yue_valoume >= 1)
+                if (Tablelin != null)
+                    foreach (IHTMLElement items in Tablelin)
                     {
+                        int yue_valoume = System.Text.RegularExpressions.Regex.Matches(items.outerText, "\r\n").Count;
 
-                        HTMLTable materialTable = items as HTMLTable;
-                        IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
-                        int KeyInfoRowIndex = 1;
-                        int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
-
-                        //for (int i = 0; i < rows.length - 1; i++)
+                        if (items.outerText != null && items.outerText.Contains("投入倍数") && yue_valoume >= 1)
                         {
-                            //修改成只取得最后一行即可
-                            KeyInfoRowIndex = rows.length - 1;
 
-                            clsJisuanqi_info item = new clsJisuanqi_info();
-                            #region MyRegion
+                            HTMLTable materialTable = items as HTMLTable;
+                            IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
+                            int KeyInfoRowIndex = 1;
+                            int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
 
-                            HTMLTableRowClass KeyRow = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
-                            HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
-                            item.qishu = shiming.innerText;
-                            //HTMLTableRowClass KeyRowLocation = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
-                            HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
-                            item.tourubeishu = shimingLocation.innerText;
+                            //for (int i = 0; i < rows.length - 1; i++)
+                            {
+                                //修改成只取得最后一行即可
+                                KeyInfoRowIndex = rows.length - 1;
 
-                            HTMLTableCell pingjunyilouLocation = KeyRow.cells.item(KeyInfoCellPN, null) as HTMLTableCell;
-                            item.benqitouru = pingjunyilouLocation.innerText;
+                                clsJisuanqi_info item = new clsJisuanqi_info();
+                                #region MyRegion
 
-                            HTMLTableCell zuidayilouLocation = KeyRow.cells.item(KeyInfoCellLocation, null) as HTMLTableCell;
-                            item.leijitouru = zuidayilouLocation.innerText;
+                                HTMLTableRowClass KeyRow = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
+                                HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
+                                item.qishu = shiming.innerText;
+                                //HTMLTableRowClass KeyRowLocation = rows.item(KeyInfoRowIndex, null) as HTMLTableRowClass;
+                                HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
+                                item.tourubeishu = shimingLocation.innerText;
 
-                            HTMLTableCell diwuyilouLocation = KeyRow.cells.item(KeyInfoCellDataSource, null) as HTMLTableCell;
-                            item.benqishouyi = diwuyilouLocation.innerText;
+                                HTMLTableCell pingjunyilouLocation = KeyRow.cells.item(KeyInfoCellPN, null) as HTMLTableCell;
+                                item.benqitouru = pingjunyilouLocation.innerText;
 
-                            HTMLTableCell disiyilouLocation = KeyRow.cells.item(KeyInfoCellOrder, null) as HTMLTableCell;
-                            item.yilishouyi = disiyilouLocation.innerText;
+                                HTMLTableCell zuidayilouLocation = KeyRow.cells.item(KeyInfoCellLocation, null) as HTMLTableCell;
+                                item.leijitouru = zuidayilouLocation.innerText;
 
-                            HTMLTableCell disanyilouLocation = KeyRow.cells.item(KeyInfoCell_disanyilou, null) as HTMLTableCell;
-                            item.shouyilv = disanyilouLocation.innerText;
+                                HTMLTableCell diwuyilouLocation = KeyRow.cells.item(KeyInfoCellDataSource, null) as HTMLTableCell;
+                                item.benqishouyi = diwuyilouLocation.innerText;
+
+                                HTMLTableCell disiyilouLocation = KeyRow.cells.item(KeyInfoCellOrder, null) as HTMLTableCell;
+                                item.yilishouyi = disiyilouLocation.innerText;
+
+                                HTMLTableCell disanyilouLocation = KeyRow.cells.item(KeyInfoCell_disanyilou, null) as HTMLTableCell;
+                                item.shouyilv = disanyilouLocation.innerText;
 
 
-                            #endregion
+                                #endregion
 
-                            loading = false;
-                            item.dangriqihao = ITEM.dangriqihao;
-                            item.tuijianhaoma = ITEM.tuijianhaoma;
-                            item.wanfazhonglei = ITEM.wanfazhonglei;
-                            item.zhongjiangqishu = ITEM.zhongjiangqishu;
-                            item.fanganqishu = ITEM.fanganqishu;
-                            item.Input_Date = DateTime.Now.ToString("yyyy/MM/dd");
-                            if (has_alter == false)
-                                jisuanqi_Result.Add(item);
-                            KeyInfoRowIndex++;
+                                loading = false;
+                                item.dangriqihao = ITEM.dangriqihao;
+                                item.tuijianhaoma = ITEM.tuijianhaoma;
+                                item.wanfazhonglei = ITEM.wanfazhonglei;
+                                item.zhongjiangqishu = ITEM.zhongjiangqishu;
+                                item.fanganqishu = ITEM.fanganqishu;
+                                item.Input_Date = DateTime.Now.ToString("yyyy/MM/dd");
+                                if (has_alter == false)
+                                    jisuanqi_Result.Add(item);
+                                KeyInfoRowIndex++;
+                            }
                         }
                     }
-                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("系统异常：" + ex);
+                ProcessLogger.Fatal("EX954092" + DateTime.Now.ToString() + ex);
+
+                //  MessageBox.Show("系统异常：" + ex);
                 return;
                 throw;
             }
@@ -1949,7 +1981,10 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ProcessLogger.Fatal("EX01092" + DateTime.Now.ToString() + ex);
+
+                //MessageBox.Show("" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
                 throw ex;
             }
         }
@@ -1973,6 +2008,8 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("EX21092" + DateTime.Now.ToString() + ex);
+                return;
                 //ClsLogPrint.WriteLog("<frmMain> saveUserAndPassword:" + ex.Message);
                 throw ex;
             }
@@ -2019,14 +2056,15 @@ namespace Lottery.Buiness
 
                         IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
                         bool isreturn = false;
-                        foreach (IHTMLElement items in Tablelin)
-                        {
-
-                            if (items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
+                        if (Tablelin != null)
+                            foreach (IHTMLElement items in Tablelin)
                             {
-                                isreturn = true;
+
+                                if (items.outerText != null && items.outerText.Contains("开奖号码") && !items.outerText.Contains("**"))
+                                {
+                                    isreturn = true;
+                                }
                             }
-                        }
                         if (isreturn == true)
                         {
                             Get_Kaijiang();
@@ -2053,7 +2091,11 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                ProcessLogger.Fatal("EX6092" + DateTime.Now.ToString() + ex);
+
+              //  MessageBox.Show("" + ex);
+                return null;
+
                 throw;
             }
         }
@@ -2095,9 +2137,10 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
-                ProcessLogger.Fatal("接入 前 09110 " + ex + DateTime.Now.ToString());
+                ProcessLogger.Fatal("EX7092" + DateTime.Now.ToString() + ex);
 
-                MessageBox.Show("错误：0001" + ex);
+                //MessageBox.Show("错误：0001" + ex);
+                return;
                 throw ex;
             }
 
@@ -2169,6 +2212,8 @@ namespace Lottery.Buiness
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("Ex09021" + ex + DateTime.Now.ToString());
+                return;
                 MessageBox.Show("ex  AnalysisWebInfo_Zhongjiang[" + runindex + "]   " + ex, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 

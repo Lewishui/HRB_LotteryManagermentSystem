@@ -31,7 +31,7 @@ namespace HRB_LotteryManagermentSystem
             InitializeComponent();
             aboutbox = new frmAboutBox();
             InitialSystemInfo();
-            #region 引用皮肤 
+            #region 引用皮肤
             //se = new Sunisoft.IrisSkin.SkinEngine();
             //se.SkinAllForm = true;
             //se.SkinFile = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ""), "PageColor1.ssk"); 
@@ -105,12 +105,12 @@ namespace HRB_LotteryManagermentSystem
             //滚动显示
             index = (index + 1) % messages.Count;
             //toolStripLabel9.Text = messages[index];
-          
+
         }
 
         private void 导入彩票数据ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           //toolStrip1.Visible = false;
+            //toolStrip1.Visible = false;
 
 
             if (frmMain == null)
@@ -123,7 +123,7 @@ namespace HRB_LotteryManagermentSystem
                 frmMain = new frmMain();
             }
             frmMain.Show(this.dockPanel2);
-        
+
 
         }
         void FrmOMS_FormClosed(object sender, FormClosedEventArgs e)
@@ -169,6 +169,8 @@ namespace HRB_LotteryManagermentSystem
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("EX88678" + ex + DateTime.Now.ToString());
+                return;
                 //clsLogPrint.WriteLog("<frmMain> InitialPassword:" + ex.Message);
                 throw ex;
             }
@@ -199,6 +201,8 @@ namespace HRB_LotteryManagermentSystem
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("EX88212" + ex + DateTime.Now.ToString());
+
                 MessageBox.Show("" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw ex;
             }
@@ -223,6 +227,8 @@ namespace HRB_LotteryManagermentSystem
             }
             catch (Exception ex)
             {
+                ProcessLogger.Fatal("EX98891" + ex + DateTime.Now.ToString());
+
                 //ClsLogPrint.WriteLog("<frmMain> saveUserAndPassword:" + ex.Message);
                 throw ex;
             }
@@ -266,7 +272,7 @@ namespace HRB_LotteryManagermentSystem
                     toolStripDropDownButton1.Enabled = true;
                     if (chkSaveInfo.Checked == true)
                         saveUserAndPassword();
-                  
+
                 }
                 else
                     tsbLogin.Text = "登录失败，密码错误";
