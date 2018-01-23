@@ -370,6 +370,7 @@
             this.dataGridView.TabIndex = 4;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_DataError);
+            this.dataGridView.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView_Paint);
             // 
             // wanfazhonglei
             // 
@@ -589,6 +590,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(892, 456);
             this.dataGridView2.TabIndex = 6;
             this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
+            this.dataGridView2.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView2_Paint);
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -708,6 +710,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(892, 458);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -825,6 +828,7 @@
             this.dataGridView3.Size = new System.Drawing.Size(892, 505);
             this.dataGridView3.TabIndex = 5;
             this.dataGridView3.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView3_DataError);
+            this.dataGridView3.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView3_Paint);
             // 
             // zhongjiangqishuColumn1
             // 
@@ -976,6 +980,7 @@
             this.dataGridView4.TabIndex = 5;
             this.dataGridView4.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView4_DataError);
             this.dataGridView4.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView4_RowPostPaint);
+            this.dataGridView4.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView4_Paint);
             // 
             // indexRow
             // 

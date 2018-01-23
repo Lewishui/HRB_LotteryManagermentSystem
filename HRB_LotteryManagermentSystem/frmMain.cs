@@ -548,7 +548,7 @@ namespace HRB_LotteryManagermentSystem
                                             string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
                                             for (int iq = 0; iq < tatile1.Length; iq++)
                                             {
-                                                for (int iq1 = 0; iq1 < 3; iq1++)
+                                                for (int iq1 = 0; iq1 < 5; iq1++)
                                                 {
                                                     if (splittemp[iq1].Contains(tatile1[iq]))
                                                         time++;
@@ -570,7 +570,7 @@ namespace HRB_LotteryManagermentSystem
                                             string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
                                             for (int iq = 0; iq < tatile1.Length; iq++)
                                             {
-                                                for (int iq1 = 0; iq1 < 3; iq1++)
+                                                for (int iq1 = 0; iq1 < 5; iq1++)
                                                 {
                                                     if (splittemp[iq1].Contains(tatile1[iq]))
                                                         time++;
@@ -1663,7 +1663,50 @@ namespace HRB_LotteryManagermentSystem
         private void dataGridView5_Paint(object sender, PaintEventArgs e)
         {
             //DataGridViewForWs.OnPaint(e);
+            OnPaint(e);
+        }
+
+        private void dataGridView4_Paint(object sender, PaintEventArgs e)
+        {
+            OnPaint(e);
 
         }
+
+        private void dataGridView_Paint(object sender, PaintEventArgs e)
+        {
+            OnPaint(e);
+        }
+
+        private void dataGridView2_Paint(object sender, PaintEventArgs e)
+        {
+            OnPaint(e);
+        }
+
+        private void dataGridView1_Paint(object sender, PaintEventArgs e)
+        {
+            OnPaint(e);
+        }
+
+        private void dataGridView3_Paint(object sender, PaintEventArgs e)
+        {
+            OnPaint(e);
+        }
     }
+
+    public class DataGridViewForWs : DataGridView
+    {
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            try
+            {
+                base.OnPaint(e);
+            }
+            catch
+            {
+
+                Invalidate();
+            }
+        }
+    }
+
 }
