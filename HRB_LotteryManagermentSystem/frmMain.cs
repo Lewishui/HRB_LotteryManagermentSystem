@@ -267,29 +267,40 @@ namespace HRB_LotteryManagermentSystem
                 BusinessHelp.linkid(Convert.ToInt32(toolStripComboBox1.Text));
 
                 Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, selectitem, mapping_Result);
-                if (Result != null && Result.Count > 0)
-                {
-                    List<clTuijianhaomalan_info> quchong_Result = Result.Where((x, ii) => Result.FindIndex(z => z.wanfazhonglei == x.wanfazhonglei && z.haomaileixing == x.haomaileixing) == ii).ToList();//Lambda表达式去重  
-                    List<clTuijianhaomalan_info> quchong_Result1 = (from v in Result select v).Distinct().ToList();
-                }
+                //if (Result != null && Result.Count > 0)
+                //{
+                //    List<clTuijianhaomalan_info> quchong_Result = Result.Where((x, ii) => Result.FindIndex(z => z.wanfazhonglei == x.wanfazhonglei && z.haomaileixing == x.haomaileixing) == ii).ToList();//Lambda表达式去重  
+                //    List<clTuijianhaomalan_info> quchong_Result1 = (from v in Result select v).Distinct().ToList();
+                //}
                 zhongjiangxinxi_Result = BusinessHelp.zhongjiangxinxi_ResultAll;
                 if (zhongjiangxinxi_Result == null || zhongjiangxinxi_Result.Count == 0 || Result == null || Result.Count == 0)
                 {
                     //  pbStatus.Visible = false;
                     pbStatus.Value = 0;
+                    //this.toolStripLabel1.Text = "信息获取失败，请确认网站访问正常后重新尝试 ！";
+
                     return;
                 }
                 pbStatus.Value = 2;
 
-                if (Result == null || zhongjiangxinxi_Result == null)
-                {
-                    if (pbStatus.ProgressBar != null)
-                        pbStatus.Value = 0;
-                    this.toolStripLabel1.Text = "信息获取失败，请确认网站访问正常后重新尝试 ！";
-                    //  pbStatus.Visible = false;
 
-                }
                 this.toolStripLabel1.Text = "整理数据中....";
+
+                #region 推荐号码 造的 假数据
+                //clTuijianhaomalan_info iii = new clTuijianhaomalan_info();
+                //iii.wanfazhonglei = "乐四";
+                //iii.haomaileixing = "04 06 08 09";
+                //iii.chuxiancishu = "9";
+                //iii.zuidayilou = "1";
+                //Result.Add(iii);
+                //iii = new clTuijianhaomalan_info();
+                //iii.wanfazhonglei = "乐五";
+                //iii.chuxiancishu = "9";
+                //iii.zuidayilou = "1";
+                //iii.haomaileixing = "09 08 10 02 12";
+                //Result.Add(iii); 
+                #endregion
+
 
                 #region 计算逻辑
 
@@ -343,7 +354,7 @@ namespace HRB_LotteryManagermentSystem
                     var qq = q.Last();
                     List<clTuijianhaomalan_info> zuidayilou_same = NewResult.FindAll(s => s.zuidayilou != null && s.zuidayilou == qq.zuidayilou);
 
-                    //clTuijianhaomalan_info yete = new clTuijianhaomalan_info();
+
                     NewResult = new List<clTuijianhaomalan_info>();
                     if (zuidayilou_same != null && zuidayilou_same.Count == 1)
                         NewResult.Add(qq);
@@ -355,10 +366,9 @@ namespace HRB_LotteryManagermentSystem
                     foreach (clTuijianhaomalan_info item in NewResult)
                     {
                         //如果以前已存在此推荐号则不追加
-                        clTuijianhaomalan_info temp1 = ClaimReport_Server.Find(s => s.tuijianhaoma != null && s.tuijianhaoma == item.haomaileixing);
+                        clTuijianhaomalan_info temp1 = ClaimReport_Server.Find(s => s.tuijianhaoma != null && s.tuijianhaoma == item.haomaileixing && s.wanfazhonglei != null && s.wanfazhonglei == item.wanfazhonglei);
                         if (temp1 != null)
                             break;
-
                         i++;
                         //item.dangriqihao = DateTime.Now.ToString("yyyyMMdd").Substring(2, 6) + i.ToString().PadLeft(2, '0');
                         //
@@ -367,243 +377,24 @@ namespace HRB_LotteryManagermentSystem
 
                         item.tuijianhaoma = item.haomaileixing;
                         item.nizhuihaoqishu = item.zuidayilou;
-
-
-                        #region    //查找中奖的期数
-                        //string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
-                        //List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) >= Convert.ToDouble(item.dangriqihao));
-
-                        //if (filter_zhongjiangxinxi != null && filter_zhongjiangxinxi.Count > 0)
-                        //    foreach (clTuijianhaomalan_info temp in filter_zhongjiangxinxi)
-                        //    {
-
-                        //        int time = 0;
-                        //        //string[] tatile2 = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
-                        //        for (int iq = 0; iq < tatile1.Length; iq++)
-                        //        {
-                        //            if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
-                        //                time++;
-
-                        //        }
-                        //        if (time == tatile1.Length)
-                        //        {
-                        //            item.zhongjiangqishu = temp.zhongjiangqishu;
-
-                        //            break;
-                        //        }
-                        //    } 
-                        #endregion
                         item.Message = "New";
 
                         hebing_NewResult.Add(item);
                     }
                 }
-
                 NewResult = new List<clTuijianhaomalan_info>();
                 NewResult = hebing_NewResult.Concat(ClaimReport_Server).ToList();
+                #region  //开奖号码 的 假数据
+                //clTuijianhaomalan_info iit = new clTuijianhaomalan_info();
+                //iit.kaijianghaoma = "11 08 10 06 09";
+                //iit.zhongjiangqishu = "180129111";
+
+                //zhongjiangxinxi_Result.Add(iit);
+                #endregion
+
                 //计算 中奖信息
                 #region MyRegion
-                foreach (clTuijianhaomalan_info item in NewResult)
-                {
-                    //查找中奖的期数
-                    string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
-                    if (zhongjiangxinxi_Result != null)
-                    {
-                        List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) > Convert.ToDouble(item.dangriqihao));
-                        bool qianis_ture = false;
-                        if (filter_zhongjiangxinxi != null && filter_zhongjiangxinxi.Count > 0)
-                        {
-                            foreach (clTuijianhaomalan_info temp in filter_zhongjiangxinxi)
-                            {
-                                //刨除  不是前的 玩法  只算包含的的次数
-                                int time = 0;
-                                if (!item.wanfazhonglei.Contains("前") && !item.wanfazhonglei.Contains("乐"))
-                                {
-                                    for (int iq = 0; iq < tatile1.Length; iq++)
-                                    {
-                                        if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
-                                            time++;
-                                    }
-                                }
-
-                                #region   //计算前一直 和前一组的 算法
-                                else if (item.wanfazhonglei.Contains("前"))
-                                {
-                                    //前一直
-                                    if (item.wanfazhonglei.Contains("直"))
-                                    {
-                                        //前一直
-                                        if (item.wanfazhonglei.Contains("一"))
-                                        {
-                                            if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 2) == item.wanfazhonglei.Substring(0, 2))
-                                            {
-                                                time++;
-                                                qianis_ture = true;
-
-                                            }
-                                        }
-                                        //前二直
-                                        else if (item.wanfazhonglei.Contains("二"))
-                                        {
-                                            if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 5) == item.tuijianhaoma.Substring(0, 5))
-                                            {
-                                                time++;
-                                                qianis_ture = true;
-
-                                            }
-                                        }
-                                        //前三直
-                                        else if (item.wanfazhonglei.Contains("三"))
-                                        {
-                                            if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 8) == item.tuijianhaoma.Substring(0, 8))
-                                            {
-                                                time++;
-                                                qianis_ture = true;
-
-                                            }
-                                        }
-
-                                    }
-                                    //前一组 只要 前几位对应有此数即可
-                                    else if (item.wanfazhonglei.Contains("组"))
-                                    {
-                                        //前一组
-                                        if (item.wanfazhonglei.Contains("一"))
-                                        {
-                                            if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 2) == item.wanfazhonglei.Substring(0, 2))
-                                            {
-                                                // && temp.wanfazhonglei.Substring(0, 5) == item.wanfazhonglei.Substring(0, 5)
-
-                                                time++;
-                                                qianis_ture = true;
-
-                                            }
-                                        }
-                                        else if (item.wanfazhonglei.Contains("二"))
-                                        {
-                                            if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
-                                            {
-
-                                                string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
-                                                for (int iq = 0; iq < tatile1.Length; iq++)
-                                                {
-                                                    for (int iq1 = 0; iq1 < 2; iq1++)
-                                                    {
-                                                        if (splittemp[iq1].Contains(tatile1[iq]))
-                                                            time++;
-                                                    }
-                                                }
-
-                                                if (time == 2)
-                                                    qianis_ture = true;
-
-                                            }
-                                        }
-                                        else if (item.wanfazhonglei.Contains("三"))
-                                        {
-                                            if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
-                                            {
-
-                                                string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
-                                                for (int iq = 0; iq < tatile1.Length; iq++)
-                                                {
-                                                    for (int iq1 = 0; iq1 < 3; iq1++)
-                                                    {
-                                                        if (splittemp[iq1].Contains(tatile1[iq]))
-                                                            time++;
-                                                    }
-                                                }
-
-                                                if (time == 3)
-                                                    qianis_ture = true;
-
-                                            }
-                                        }
-                                    }
-
-                                }
-                                #endregion
-
-                                #region  //乐四 乐五 玩法的 中奖金额计算
-                                //else if (item.wanfazhonglei.Contains("乐"))
-                                //{
-
-                                //    for (int iq = 0; iq < tatile1.Length; iq++)
-                                //    {
-                                //        if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
-                                //            time++;
-                                //    }
-
-                                //}
-
-                                //乐选四中奖条件：5个中奖号码中，乐选四号码中包含3个中19元，包含4个中154元。乐选五中奖条件：
-                                //5个中奖号码中，乐选五号码中包含4个中90元，包含5个中1080元。中奖金额用红色标记。   
-                                else if (item.wanfazhonglei.Contains("乐"))
-                                {
-
-                                    if (item.wanfazhonglei.Contains("乐四"))
-                                    {
-                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
-                                        {
-                                            string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
-                                            for (int iq = 0; iq < tatile1.Length; iq++)
-                                            {
-                                                for (int iq1 = 0; iq1 < 5; iq1++)
-                                                {
-                                                    if (splittemp[iq1].Contains(tatile1[iq]))
-                                                        time++;
-                                                }
-                                            }
-
-                                            if (time >= 3)
-                                            {
-                                                clsJisuanqi_info newitem = new clsJisuanqi_info();
-
-                                                qianis_ture = true;
-                                            }
-                                        }
-                                    }
-                                    else if (item.wanfazhonglei.Contains("乐五"))
-                                    {
-                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
-                                        {
-                                            string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
-                                            for (int iq = 0; iq < tatile1.Length; iq++)
-                                            {
-                                                for (int iq1 = 0; iq1 < 5; iq1++)
-                                                {
-                                                    if (splittemp[iq1].Contains(tatile1[iq]))
-                                                        time++;
-                                                }
-                                            }
-
-                                            if (time >= 4)
-                                            {
-                                                clsJisuanqi_info newitem = new clsJisuanqi_info();
-
-                                                qianis_ture = true;
-                                            }
-
-                                        }
-                                    }
-                                }
-                                #endregion
-
-                                //如果中奖标记期数
-                                if (time == tatile1.Length || qianis_ture == true)
-                                {
-                                    item.zhongjiangqishu = temp.zhongjiangqishu;
-                                    string inputJiangjin = "";
-                                    BusinessHelp.ITEM = item;
-                                    inputJiangjin = BusinessHelp.chaxunjiangjin(inputJiangjin, time);
-                                    item.zhongjiangjine = inputJiangjin;
-
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
+                Is_Zhongjiang(BusinessHelp);
                 try
                 {
                     pbStatus.Value = 3;
@@ -617,7 +408,6 @@ namespace HRB_LotteryManagermentSystem
                 int ss1 = this.tabControl1.SelectedIndex;
                 //if (ss1 == 0)
                 {
-
                     if (NewResult.Count > 0)
                         BusinessHelp.inster_tuijanhaoma(NewResult);
                 }
@@ -634,9 +424,7 @@ namespace HRB_LotteryManagermentSystem
                 catch
                 {
 
-
                 }
-
                 #endregion
                 JisuanqiResult = new List<clsJisuanqi_info>();
                 #region 查询金额
@@ -660,7 +448,7 @@ namespace HRB_LotteryManagermentSystem
 
                     if (chaoqishu != "" && Convert.ToInt32(chaoqishu) < Convert.ToInt32(fa.ToString()))
                     {
-                        continue;
+                        //  continue;
                     }
                     item.qishu = fa;
                     ITEM.fanganqishu = item.qishu;
@@ -688,10 +476,11 @@ namespace HRB_LotteryManagermentSystem
                     BusinessHelp.inster_lishizongjianglan(JisuanqiResult);
                 //JisuanqiResult = JisuanqiResult.Concat(Jisuanqi_Server).ToList();
                 //刷新读取数据库数据
-
                 JisuanqiResult = BusinessHelp.ReadServer_lishizhongjiang(conditions);
                 JisuanqiResult = JisuanqiResult.Where((x, ii) => JisuanqiResult.FindIndex(z => z.wanfazhonglei == x.wanfazhonglei && z.tuijianhaoma == x.tuijianhaoma) == ii).ToList();//Lambda表达式去重  
 
+                #endregion
+                #region 二次确认是否将中奖划拨过去
 
                 #endregion
                 Showdave2(JisuanqiResult);
@@ -709,13 +498,9 @@ namespace HRB_LotteryManagermentSystem
                 catch
                 {
 
-
                 }
-
                 //pbStatus.Visible = false;
 
-                //MessageBox.Show(
-                //    "Sucessful ,down file completed");
             }
             catch (Exception ex)
             {
@@ -725,6 +510,222 @@ namespace HRB_LotteryManagermentSystem
                 return;
 
                 throw;
+            }
+        }
+
+        private void Is_Zhongjiang(clsAllnew BusinessHelp)
+        {
+            foreach (clTuijianhaomalan_info item in NewResult)
+            {
+                if (item.tuijianhaoma.Contains("04 06 08 09"))
+                {
+
+
+                }
+                //查找中奖的期数
+                string[] tatile1 = System.Text.RegularExpressions.Regex.Split(item.tuijianhaoma, " ");
+                if (zhongjiangxinxi_Result != null)
+                {
+                    List<clTuijianhaomalan_info> filter_zhongjiangxinxi = zhongjiangxinxi_Result.FindAll(so => so.zhongjiangqishu != null && Convert.ToDouble(so.zhongjiangqishu) > Convert.ToDouble(item.dangriqihao));
+                    filter_zhongjiangxinxi = filter_zhongjiangxinxi.OrderBy(o => o.zhongjiangqishu).ToList();
+
+                    bool qianis_ture = false;
+                    if (filter_zhongjiangxinxi != null && filter_zhongjiangxinxi.Count > 0)
+                    {
+                        foreach (clTuijianhaomalan_info temp in filter_zhongjiangxinxi)
+                        {
+                            //刨除  不是前的 玩法  只算包含的的次数
+                            int time = 0;
+                            if (!item.wanfazhonglei.Contains("前") && !item.wanfazhonglei.Contains("乐"))
+                            {
+                                for (int iq = 0; iq < tatile1.Length; iq++)
+                                {
+                                    if (temp.kaijianghaoma.Contains(tatile1[iq]))//10 07 02 04 03   01 02
+                                        time++;
+                                }
+                                //判断是否达到中奖次数
+                                if (item.wanfazhonglei == "任八遗漏" && time == 5)
+                                    qianis_ture = true;
+                                else if (item.wanfazhonglei == "任七遗漏" && time == 5)
+                                    qianis_ture = true;
+                                else if (item.wanfazhonglei == "任六遗漏" && time == 5)
+                                    qianis_ture = true;
+                                else if (item.wanfazhonglei == "任五遗漏" && time == 5)
+                                    qianis_ture = true;
+                                else if (item.wanfazhonglei == "任四遗漏" && time == 4)
+                                    qianis_ture = true;
+                                else if (item.wanfazhonglei == "任三遗漏" && time == 3)
+                                    qianis_ture = true;
+                                else if (item.wanfazhonglei == "任二遗漏" && time == 2)
+                                    qianis_ture = true;
+                                else if (item.wanfazhonglei == "任一遗漏" && time == 1)
+                                    qianis_ture = true;
+                            }
+
+                            #region   //计算前一直 和前一组的 算法
+                            else if (item.wanfazhonglei.Contains("前"))
+                            {
+                                //前一直
+                                if (item.wanfazhonglei.Contains("直") || item.wanfazhonglei.Contains("遗漏")) //前一遗漏
+                                {
+                                    //前一直
+                                    if (item.wanfazhonglei.Contains("一"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 2) == item.tuijianhaoma.Substring(0, 2))
+                                        {
+                                            time++;
+                                            qianis_ture = true;
+
+                                        }
+                                    }
+                                    //前二直
+                                    else if (item.wanfazhonglei.Contains("二"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 5) == item.tuijianhaoma.Substring(0, 5))
+                                        {
+                                            time++;
+                                            qianis_ture = true;
+
+                                        }
+                                    }
+                                    //前三直
+                                    else if (item.wanfazhonglei.Contains("三"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 8) == item.tuijianhaoma.Substring(0, 8))
+                                        {
+                                            time++;
+                                            qianis_ture = true;
+
+                                        }
+                                    }
+
+                                }
+                                //前一组 只要 前几位对应有此数即可
+                                else if (item.wanfazhonglei.Contains("组"))
+                                {
+                                    //前一组
+                                    if (item.wanfazhonglei.Contains("一"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "" && temp.kaijianghaoma.Substring(0, 2) == item.tuijianhaoma.Substring(0, 2))
+                                        {
+                                            // && temp.wanfazhonglei.Substring(0, 5) == item.wanfazhonglei.Substring(0, 5)
+
+                                            time++;
+                                            qianis_ture = true;
+
+                                        }
+                                    }
+                                    else if (item.wanfazhonglei.Contains("二"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
+                                        {
+
+                                            string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
+                                            for (int iq = 0; iq < tatile1.Length; iq++)
+                                            {
+                                                for (int iq1 = 0; iq1 < 2; iq1++)
+                                                {
+                                                    if (splittemp[iq1].Contains(tatile1[iq]))
+                                                        time++;
+                                                }
+                                            }
+
+                                            if (time == 2)
+                                                qianis_ture = true;
+
+                                        }
+                                    }
+                                    else if (item.wanfazhonglei.Contains("三"))
+                                    {
+                                        if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
+                                        {
+
+                                            string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma, " ");
+                                            for (int iq = 0; iq < tatile1.Length; iq++)
+                                            {
+                                                for (int iq1 = 0; iq1 < 3; iq1++)
+                                                {
+                                                    if (splittemp[iq1].Contains(tatile1[iq]))
+                                                        time++;
+                                                }
+                                            }
+
+                                            if (time == 3)
+                                                qianis_ture = true;
+
+                                        }
+                                    }
+                                }
+
+                            }
+                            #endregion
+
+                            #region  //乐四 乐五 玩法的 中奖金额计算
+
+
+                            //乐选四中奖条件：5个中奖号码中，乐选四号码中包含3个中19元，包含4个中154元。乐选五中奖条件：
+                            //5个中奖号码中，乐选五号码中包含4个中90元，包含5个中1080元。中奖金额用红色标记。   
+                            else if (item.wanfazhonglei.Contains("乐"))
+                            {
+
+                                if (item.wanfazhonglei.Contains("乐四"))
+                                {
+                                    if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
+                                    {
+                                        string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma.Trim(), " ");
+                                        for (int iq = 0; iq < tatile1.Length; iq++)
+                                        {
+                                            for (int iq1 = 0; iq1 < 5; iq1++)
+                                            {
+                                                if (splittemp[iq1].Contains(tatile1[iq]))
+                                                    time++;
+                                            }
+                                        }
+
+                                        if (time >= 3)
+                                        {
+                                            qianis_ture = true;
+                                        }
+                                    }
+                                }
+                                else if (item.wanfazhonglei.Contains("乐五"))
+                                {
+                                    if (temp.kaijianghaoma != null && temp.kaijianghaoma != "" && item.wanfazhonglei != null && item.wanfazhonglei != "")
+                                    {
+                                        string[] splittemp = System.Text.RegularExpressions.Regex.Split(temp.kaijianghaoma.Trim(), " ");
+                                        for (int iq = 0; iq < tatile1.Length; iq++)
+                                        {
+                                            for (int iq1 = 0; iq1 < 5; iq1++)
+                                            {
+                                                if (splittemp[iq1].Contains(tatile1[iq]))
+                                                    time++;
+                                            }
+                                        }
+
+                                        if (time >= 4)
+                                        {
+                                            qianis_ture = true;
+                                        }
+
+                                    }
+                                }
+                            }
+                            #endregion
+
+                            //如果中奖标记期数
+                            if (time == tatile1.Length || qianis_ture == true)
+                            {
+                                item.zhongjiangqishu = temp.zhongjiangqishu;
+                                string inputJiangjin = "";
+                                BusinessHelp.ITEM = item;
+                                inputJiangjin = BusinessHelp.chaxunjiangjin(inputJiangjin, time);
+                                item.zhongjiangjine = inputJiangjin;
+
+                                break;
+                            }
+                        }
+                    }
+                }
             }
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -925,7 +926,7 @@ namespace HRB_LotteryManagermentSystem
                 this.bindingSource2.DataSource = this.sortableList;
                 dataGridView1.AutoGenerateColumns = false;
                 dataGridView1.DataSource = this.bindingSource2;
-                 List<string> quchongnashuidanwei = (from v in Result select v.wanfazhonglei).Distinct().ToList();
+                List<string> quchongnashuidanwei = (from v in Result select v.wanfazhonglei).Distinct().ToList();
                 if (quchongnashuidanwei.Count > 0)
                 {
                     comboBox2.DataSource = quchongnashuidanwei;
@@ -984,7 +985,7 @@ namespace HRB_LotteryManagermentSystem
                     //    dataGridView5.DataSource = bindingSource3;
 
                     //}));
-     
+
 
                     // this.pbStatus.Visible = false;
 
@@ -1022,18 +1023,18 @@ namespace HRB_LotteryManagermentSystem
                 {
                     sortableJisuanqiList_dav5 = new SortableBindingList<clsJisuanqi_info>(JisuanqiResult);
                     this.bindingSource5.DataSource = this.sortableJisuanqiList_dav5;
-                  
-                    bindingSource5.Sort = "wanfazhonglei ASC";                
+
+                    bindingSource5.Sort = "wanfazhonglei ASC";
                     //new 
                     //子线程中
-                    this.Invoke(new InvokeHandler(delegate()
-                    {
+                    //this.Invoke(new InvokeHandler(delegate()
+                    //{
 
-                        dataGridView5.DataSource = null;
-                        dataGridView5.AutoGenerateColumns = false;
-                        dataGridView5.DataSource = bindingSource5;
+                    dataGridView5.DataSource = null;
+                    dataGridView5.AutoGenerateColumns = false;
+                    dataGridView5.DataSource = bindingSource5;
 
-                    }));
+                    //}));
 
                 }
                 if (NewResult != null && NewResult.Count > 0)
@@ -1041,14 +1042,14 @@ namespace HRB_LotteryManagermentSystem
                     sortableList_dav4 = new SortableBindingList<clTuijianhaomalan_info>(NewResult);
                     this.bindingSource6.DataSource = this.sortableList_dav4;
                     //new  e二期
-                    bindingSource6.Sort = "wanfazhonglei ASC"; 
-                    this.Invoke(new InvokeHandler(delegate()
-                    {
-                        dataGridView4.DataSource = null;
-                        dataGridView4.AutoGenerateColumns = false;
-                        dataGridView4.DataSource = bindingSource6;
+                    bindingSource6.Sort = "wanfazhonglei ASC";
+                    //this.Invoke(new InvokeHandler(delegate()
+                    //{
+                    dataGridView4.DataSource = null;
+                    dataGridView4.AutoGenerateColumns = false;
+                    dataGridView4.DataSource = bindingSource6;
 
-                    }));
+                    //}));
 
                 }
             }
