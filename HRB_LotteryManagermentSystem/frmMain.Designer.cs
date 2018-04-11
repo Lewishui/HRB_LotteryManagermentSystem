@@ -45,11 +45,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.pbStatus = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -121,13 +121,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.indexRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -136,6 +130,17 @@
             this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.indexRow = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nizhuihaoqishu1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dangriqihao1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dangriqihao2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zhongjiangqishu1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fanganqishu1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -930,11 +935,14 @@
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn22,
             this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn27});
+            this.dataGridViewTextBoxColumn27,
+            this.dangriqihao2,
+            this.zhongjiangqishu1,
+            this.fanganqishu1});
             this.dataGridView5.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -947,26 +955,6 @@
             this.dataGridView5.TabIndex = 7;
             this.dataGridView5.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView5_DataError);
             this.dataGridView5.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView5_Paint);
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "wanfazhonglei";
-            this.dataGridViewTextBoxColumn22.HeaderText = "玩法种类";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "tuijianhaoma";
-            this.dataGridViewTextBoxColumn23.HeaderText = "推荐号码";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "benqishouyi";
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Red;
-            this.dataGridViewTextBoxColumn27.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridViewTextBoxColumn27.HeaderText = "中奖金额";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
             // 
             // dataGridView4
             // 
@@ -991,11 +979,13 @@
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.indexRow,
             this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn17});
+            this.dataGridViewTextBoxColumn17,
+            this.nizhuihaoqishu1,
+            this.dangriqihao1});
             this.dataGridView4.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1018,25 +1008,6 @@
             this.dataGridView4.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView4_RowPostPaint);
             this.dataGridView4.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView4_Paint);
             // 
-            // indexRow
-            // 
-            this.indexRow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.indexRow.HeaderText = "序号";
-            this.indexRow.Name = "indexRow";
-            this.indexRow.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "wanfazhonglei";
-            this.dataGridViewTextBoxColumn14.HeaderText = "玩法种类";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "tuijianhaoma";
-            this.dataGridViewTextBoxColumn17.HeaderText = "推荐号码";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1058,6 +1029,75 @@
             this.label2.Size = new System.Drawing.Size(154, 31);
             this.label2.TabIndex = 0;
             this.label2.Text = "推荐号码栏";
+            // 
+            // indexRow
+            // 
+            this.indexRow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.indexRow.HeaderText = "序号";
+            this.indexRow.Name = "indexRow";
+            this.indexRow.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "wanfazhonglei";
+            this.dataGridViewTextBoxColumn14.HeaderText = "玩法种类";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "tuijianhaoma";
+            this.dataGridViewTextBoxColumn17.HeaderText = "推荐号码";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // nizhuihaoqishu1
+            // 
+            this.nizhuihaoqishu1.DataPropertyName = "nizhuihaoqishu";
+            this.nizhuihaoqishu1.HeaderText = "拟追号期数";
+            this.nizhuihaoqishu1.Name = "nizhuihaoqishu1";
+            // 
+            // dangriqihao1
+            // 
+            this.dangriqihao1.DataPropertyName = "dangriqihao";
+            this.dangriqihao1.HeaderText = "当日期号";
+            this.dangriqihao1.Name = "dangriqihao1";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "wanfazhonglei";
+            this.dataGridViewTextBoxColumn22.HeaderText = "玩法种类";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "tuijianhaoma";
+            this.dataGridViewTextBoxColumn23.HeaderText = "推荐号码";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "benqishouyi";
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Red;
+            this.dataGridViewTextBoxColumn27.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewTextBoxColumn27.HeaderText = "中奖金额";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dangriqihao2
+            // 
+            this.dangriqihao2.DataPropertyName = "dangriqihao";
+            this.dangriqihao2.HeaderText = "当日期号";
+            this.dangriqihao2.Name = "dangriqihao2";
+            // 
+            // zhongjiangqishu1
+            // 
+            this.zhongjiangqishu1.DataPropertyName = "zhongjiangqishu";
+            this.zhongjiangqishu1.HeaderText = "中奖期数";
+            this.zhongjiangqishu1.Name = "zhongjiangqishu1";
+            // 
+            // fanganqishu1
+            // 
+            this.fanganqishu1.DataPropertyName = "fanganqishu";
+            this.fanganqishu1.HeaderText = "方案期数";
+            this.fanganqishu1.Name = "fanganqishu1";
             // 
             // frmMain
             // 
@@ -1180,20 +1220,25 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource bindingSource5;
+        private System.Windows.Forms.BindingSource bindingSource6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dangriqihao2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zhongjiangqishu1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fanganqishu1;
         private System.Windows.Forms.DataGridViewTextBoxColumn indexRow;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.BindingSource bindingSource5;
-        private System.Windows.Forms.BindingSource bindingSource6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nizhuihaoqishu1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dangriqihao1;
 
     }
 }
