@@ -51,6 +51,7 @@ namespace HRB_LotteryManagermentSystem
         private List<clszhongleiDuiyingQishu_info> mapping_Result;
         private bool IsRun = false;
         private DateTime StopTime;
+        private string linkID;
 
         private Thread GetDataforRawDataThread;
         int rowcount = 0;
@@ -240,6 +241,12 @@ namespace HRB_LotteryManagermentSystem
                 //for (int i = 0; i < tatile1.Length; i++)
                 //    selectitem.Add(tatile1[i]);
             }
+            //LINK 
+            linkID = toolStripComboBox1.Text;
+
+
+
+
         }
         private void APIREST(object sender, EventArgs e)
         {
@@ -264,7 +271,10 @@ namespace HRB_LotteryManagermentSystem
                 pbStatus.Maximum = 5;
                 pbStatus.Value = 1;
 
-                BusinessHelp.linkid(Convert.ToInt32(toolStripComboBox1.Text));
+                //BusinessHelp.linkid(Convert.ToInt32(toolStripComboBox1.Text));
+                BusinessHelp.linkid(Convert.ToInt32(linkID));
+
+                
 
                 Result = BusinessHelp.ReadWeb_Report(ref this.bgWorker, selectitem, mapping_Result);
                 //if (Result != null && Result.Count > 0)

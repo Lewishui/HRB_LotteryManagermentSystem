@@ -1463,6 +1463,10 @@ namespace Lottery.Buiness
                                     #endregion
 
                                     loading = false;
+                                    if (item.zhongjiangqishu != null && item.zhongjiangqishu == "18030503")
+                                    { 
+                                    
+                                    }
                                     zhongjiangxinxi_Result.Add(item);
                                     KeyInfoRowIndex++;
                                 }
