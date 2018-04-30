@@ -20,3 +20,10 @@ C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.C
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.pdb
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Order.Common.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Order.Common.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\System.Data.SQLite.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\System.Data.SQLite.Linq.dll

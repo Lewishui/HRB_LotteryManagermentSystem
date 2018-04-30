@@ -12,3 +12,10 @@ C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBo
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.pdb
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.csprojResolveAssemblyReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\CheckBoxComboBox\bin\Debug\CheckBoxComboBox.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\CheckBoxComboBox\bin\Debug\CheckBoxComboBox.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\Debug\PresentationControls.PopupComboBox.resources
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.csproj.GenerateResource.Cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\CheckBoxComboBox\obj\Debug\CheckBoxComboBox.csprojResolveAssemblyReference.cache

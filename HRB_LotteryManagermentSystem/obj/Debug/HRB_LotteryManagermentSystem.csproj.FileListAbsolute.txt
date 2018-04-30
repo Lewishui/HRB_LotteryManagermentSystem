@@ -31,3 +31,33 @@ C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_Lot
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.csproj.GenerateResource.Cache
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.exe
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\Interop.SHDocVw.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.csproj.ResolveComReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.exe
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Log4Net.config
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.exe
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\HRB_LotteryManagermentSystem.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\CheckBoxComboBox.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\IrisSkin2.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\log4net.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Lottery.Buiness.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Lottery.DB.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Order.Common.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Interop.SHDocVw.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\MySql.Data.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\CheckBoxComboBox.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Lottery.Buiness.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Lottery.DB.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\bin\Debug\Order.Common.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.csprojResolveAssemblyReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.frmAboutBox.resources
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.frmFindinput.resources
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.frmlogin.resources
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.frmMain.resources
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.frmMessageShow.resources
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.frmPassword.resources
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.Properties.Resources.resources
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\HRB_LotteryManagermentSystem\obj\Debug\HRB_LotteryManagermentSystem.csproj.GenerateResource.Cache

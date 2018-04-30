@@ -801,7 +801,7 @@ namespace Lottery.Buiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-              //   viewForm.Show();
+                //   viewForm.Show();
                 ProcessLogger.Fatal("读取中 09010 " + DateTime.Now.ToString());
                 //
                 //MyWebBrower.Url = new Uri("http://chart.icaile.com/hlj11x5.php?op=yl3m");//&num=15
@@ -1220,9 +1220,14 @@ namespace Lottery.Buiness
                         //share
                         //转到中奖信息页面
                         if (MyWebBrower != null)
-                            MyWebBrower.Navigate(NOW_link + "=dcjb");
+                        {
+                            //之前没有指定到今天的页面
 
+                            //  MyWebBrower.Navigate(NOW_link + "=dcjb");
+                            //默认读取今天 20180429、
 
+                            MyWebBrower.Navigate(NOW_link + "=dcjb&num=jt");
+                        }
                         isrun = ProcessStatus.确认YES;
                         tsStatusLabel1.Text = caizhong + "开始加载中奖信息....";
                         login++;
@@ -1288,7 +1293,7 @@ namespace Lottery.Buiness
                         tsStatusLabel1.Text = caizhong + "查询结束....";
                         login++;
                     }
-                }
+                 }
                 #endregion
                 #endregion
 
@@ -1464,8 +1469,8 @@ namespace Lottery.Buiness
 
                                     loading = false;
                                     if (item.zhongjiangqishu != null && item.zhongjiangqishu == "18030503")
-                                    { 
-                                    
+                                    {
+
                                     }
                                     zhongjiangxinxi_Result.Add(item);
                                     KeyInfoRowIndex++;
@@ -2097,7 +2102,7 @@ namespace Lottery.Buiness
             {
                 ProcessLogger.Fatal("EX6092" + DateTime.Now.ToString() + ex);
 
-              //  MessageBox.Show("" + ex);
+                //  MessageBox.Show("" + ex);
                 return null;
 
                 throw;

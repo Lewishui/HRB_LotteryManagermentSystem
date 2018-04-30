@@ -16,3 +16,20 @@ C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.csproj.ResolveComReference.cache
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.dll
 C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.csprojResolveAssemblyReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Interop.SHDocVw.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.csproj.ResolveComReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\obj\Debug\Lottery.Buiness.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Lottery.Buiness.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Lottery.Buiness.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\log4net.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Lottery.DB.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Order.Common.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\System.Data.SQLite.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\MySql.Data.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Lottery.DB.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Order.Common.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Lottery.Buiness\bin\Debug\Interop.SHDocVw.dll
